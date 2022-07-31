@@ -1,0 +1,24 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> python=3.8.13
+# $ conda activate <env>
+# $ pip install -r requirements.txt
+ipykernel==6.15.1
+jinja2==3.1.2
+jupyter==1.0.0
+jupyter-book==0.13.0
+jupytext==1.14.1
+matplotlib==3.5.2
+myst-nb==0.13.2
+myst-parser==0.15.2
+nbconvert==6.5.0
+numpy==1.23.1
+pandas==1.4.3
+pillow==9.2.0
+pip==22.1.2
+pygments==2.12.0
+python-dateutil==2.8.2
+pyyaml==6.0
+setuptools==61.2.0
+sphinx==4.5.0
+sphinx-jupyterbook-latex==0.4.6
+toml==0.10.2
