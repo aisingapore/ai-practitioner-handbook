@@ -1,0 +1,4 @@
+# Pair notebooks in subfolders of 'notebooks' to scripts in subfolders of 'book'
+[formats]
+"notebooks/" = "ipynb"
+"book/" = "md"
