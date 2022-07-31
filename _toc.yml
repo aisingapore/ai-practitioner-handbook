@@ -1,0 +1,81 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+# ===== Main Landing Page ========================================
+format: jb-book
+root: book/intro
+parts:
+- chapters:
+# ===== 1. Pre-project Phase ========================================
+  - title: 1. Pre-project Phase
+    file: book/1-pre-project-phase/overview
+    sections:
+    - title: This is an example section under a chapter
+      file: book/1-pre-project-phase/example-section
+    # - title: 
+    #   file: 
+# ===== 2. Project Management & Technical Leadership ========================================
+  - title: 2. Project Management & Technical Leadership
+    file: book/2-proj-mgmt-tech-lead/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== 3. Collaborative Development Platforms ========================================
+  - title: 3. Collaborative Development Platforms
+    file: book/3-collab-dev-platforms/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== 4. Literature Review ========================================
+  - title: 4. Literature Review
+    file: book/4-lit-review/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== 5. Data Management Exploration & Processing ========================================
+  - title: 5. Data Management Exploration & Processing
+    file: book/5-data-mgmt-exp-proc/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== 6. Modelling ========================================
+  - title: 6. Modelling
+    file: book/6-modelling/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== 7. Solution Delivery ========================================
+  - title: 7. Solution Delivery
+    file: book/7-solution-delivery/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== 8. Documentation & Handover ========================================
+  - title: 8. Documentation & Handover
+    file: book/8-documentation-handover/overview
+    # sections:
+    # - title: 
+    #   file: 
+    # - title: 
+    #   file: 
+# ===== Miscellaneous ========================================
+  - caption: Miscellaneous
+    chapters:
+    - title: Cite
+      file: book/cite
+    - title: Contributing
+      file: book/_contributing
+    - title: Change Log
+      file: book/_changelog
