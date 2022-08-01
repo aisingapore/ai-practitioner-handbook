@@ -1,29 +1,31 @@
 ---
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.0
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
 # Example Section
 
++++
 
 This notebook is to demonstrate how it uses Jupytext's pairing function.
 
++++
 
 ## Subsection 1
 
++++
 
 Let's have some code and a plot!
 
-```python
+```{code-cell} ipython3
 from matplotlib import rcParams, cycler
 import matplotlib.pyplot as plt
 import numpy as np
