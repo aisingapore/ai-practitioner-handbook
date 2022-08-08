@@ -1,4 +1,4 @@
-# Handbook Review Guidelines
+# How do I review content?
 
 Contributor: Kenny WJ Chua
 
