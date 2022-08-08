@@ -8,7 +8,7 @@ This miscellaneous chapter covers the conventions that were adhered to
 in writing this book and how they affect the appearance as well as
 standardisation efforts. Aside from ensuring that this book remains
 readable and accessible, such conventions would make the process of
-maintaining and reviewing contributions manageable. The conventions are
+maintaining and [reviewing](REVIEWING.md) contributions manageable. The conventions are
 covered across 4 different sections:
 
 - Structure
