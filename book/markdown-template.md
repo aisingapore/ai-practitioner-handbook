@@ -20,6 +20,8 @@ Singular first person pronouns should be used; while readers can be addressed in
 
 Contractions should be avoided (e.g., "let us" instead of "let's").
 
+Avoid AISG-specific terminology, e.g., "100E", "AI Apprentices". Use neutral alternatives such as "AI/ML project" and "junior developers", respectively, that a general, external audience can better understand.
+
 Contributions shall be written in Singaporean Standard English, which uses British spelling.
 
 ## Code blocks, figures and tables

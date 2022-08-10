@@ -40,6 +40,7 @@ Content | Limit to 500 words.
 Language | Write in the form of a continuous prose.
 Language | Use singular first-person pronouns and address readers as second person.
 Language | Omit contractions.
+Language | Avoid AISG terminology.
 Formatting | Insert snippet for contributors at the top of your content.
 Formatting | Adhere to PEP 8 for Markdown files (line lengths), code and Jupyter Notebooks.
 Formatting | Use MyST flavour for Markdown documents. For notebooks, pair using Jupytext.
@@ -226,6 +227,9 @@ tone for contributions:
 - Do address readers as second person.
   Example: "__you__ may encounter..."
 - Avoid contractions. Example: "let us" instead of "let's".
+- Avoid AISG-specific terminology, e.g., "100E", "AI Apprentices". Use neutral 
+alternatives such as "AI/ML project" and "junior developers", respectively, that
+a general, external audience can better understand.
 
 This is a collective effort and everyone has a
 part to play in maintaining the quality of the book.
