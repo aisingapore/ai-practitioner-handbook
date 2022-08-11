@@ -4,7 +4,7 @@ Contributor: Kenny WJ Chua
 
 ---
 
-This is a Markdown template/contribution guide for a section within a chapter. Alternatively, sections can be written in [Jupyter notebooks](../notebooks/notebook-template.ipynb)
+This is a Markdown template/contribution guide for a section within a chapter. Alternatively, sections can be written in [Jupyter notebooks](../notebooks/notebook-template.ipynb).
 
 ## Content
 We want to focus on content that can stand the test of time. Examples include process frameworks, general principles, strategies and design patterns.
