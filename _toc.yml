@@ -50,6 +50,7 @@ chapters:
   sections:
   - file: book/markdown-template
   - file: book/notebook-template
+  - file: REVIEWING
 - file: book/cite
   title: Cite This Book
 - file: book/_changelog
