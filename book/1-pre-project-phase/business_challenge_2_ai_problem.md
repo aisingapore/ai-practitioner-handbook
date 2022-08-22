@@ -20,7 +20,7 @@ It takes a lot of creativity to formulate the problem statement. Sponsor tends t
 ![Map Diagram](../assets/images/diagrams/map_diagram.jpg)
 
 
-## Translation of Business Challenge into AI Problem
+## Translation of Problem Statement into AI Problem
 
 Next, it is wise to decompose the problem statement into different technical requirements of an AI problem. This can be done by asking a series of questions to prompt the sponsor to better describe their technical requirements. 
 
