@@ -19,7 +19,7 @@ It is important to identify if there are relevant features to construct the AI m
 
 2. Do you have the label data?
 
-Having labels is not sufficient if the label proportion is imbalanced. This would result in training an AI model biased towards the majority class. This is because the AI model is trained on limited examples to identify the minority class. However, if it is a regression target, then you need to have different ranges of values. You want to avoid training a regression model on the data that has clear discrete values (in the chart below). For examples, if you observe the target variable centres around 1 or 2 values such as 5 or 10, then it would be better to treat the variable as a categorical one. 
+Having labels is not sufficient if the label proportion is imbalanced. This would result in training an AI model biased towards the majority class. This is because the AI model is trained on limited examples to identify the minority class. But, if it is a regression target, it is ideal to have different ranges of values. You want to avoid training a regression model on the data that has clear discrete values (in the chart below). For examples, if you observe the target variable centres around 1 or 2 values such as 5 or 10, then it would be better to treat the variable as a categorical one. 
 
 ![Discreteplot](../assets/images/charts/discreteplot_chart.png)  
 
