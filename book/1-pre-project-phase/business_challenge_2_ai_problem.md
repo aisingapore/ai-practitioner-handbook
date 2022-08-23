@@ -35,7 +35,7 @@ Sponsor's Problem Statement: "How might we build an AI model to count cells on m
 | Is the main task achievable by AI model alone?| You check if there is a need to use heuristic method | Aggregate counts of the AI model predictions by prediction class |
 | How do you envision to use the AI model? | You understand how the sponsor uses the AI model | This gives you an insight into their deployment infrastructures|
 
-By now, you will have gain an understanding into the business challenge and the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model. 
+Now, you will have gain an understanding into the business challenge and the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model. 
 
 ## References
 - [Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days](https://www.thesprintbook.com/the-design-sprint)
