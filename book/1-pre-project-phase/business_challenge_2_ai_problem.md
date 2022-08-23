@@ -7,7 +7,7 @@ Contributor: Tan Kwan Chet
 
 Most projects begin when a sponsor has 1 or a few business challenges to solve. As an outsider, understanding business context and process is a great starting point to frame the AI problem. It allows you to understand the sponsor's long term goal and identify the problem statement that affects the sponsor's business or represents a pain point that the sponsor wants to solve.
 
-It takes a lot of creativity to formulate the problem statement. Sponsor tends to speak about their business problems at a high level. So your job is to filter the high level information shared by sponsor to a low level where the problem may relate to their employees who face the pain point on a day-to-day basis. This is important since your AI solution will likely be replacing a repetitive task that their employees may be facing. To form the problem statement, you could use the following steps to illustrate a map diagram below:
+It takes a lot of creativity to formulate the problem statement. Sponsor tends to speak about their business problems at a high level. So your job is to filter the high level information shared by sponsor to a low level where the problem may relate to their employees who face the pain point on a day-to-day basis. This is important since your AI solution will likely be replacing a repetitive task that their employees may be facing. To form the problem statement, you could use the following steps (illustrated as a map diagram below):
 
 1. Identify the target audience (e.g. employee)
 2. Define the problem from target audience's perspective (i.e. understand their pain point)
@@ -32,8 +32,8 @@ Sponsor's Problem Statement: "How might we build an AI model to count cells on m
 |---|---|---|
 | what is the main task that you are keen to replace? | This gives you an idea on what is the main task that AI needs to automate |  AI model to detect cells by size |
 |  What is the type of the data involved? | By knowing if the data is image/video, text or tabular, it will help you focus on a set of technologies such as Computer Vision and Natural Language Processing  | Annotation required to support the detection of cells in images |
-| Is the main task achievable by AI model alone?| You check if there is a need to use heuristic method | Sum the AI model prediction to aggregate the counts|
-| How do you envision to use the AI model? | You understand how the sponsor uses the AI model | This gives you an sight into their deployment infrastructures|
+| Is the main task achievable by AI model alone?| You check if there is a need to use heuristic method | Aggregate counts of the AI model predictions by prediction class |
+| How do you envision to use the AI model? | You understand how the sponsor uses the AI model | This gives you an insight into their deployment infrastructures|
 
 By now, you will have gain an understanding into the business challenge and the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model. 
 
