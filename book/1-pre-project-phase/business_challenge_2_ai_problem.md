@@ -1,4 +1,4 @@
-# How do I translate the business challenge into an AI problem?
+# How does the AI engineer translate the business challenge into an AI problem?
 Contributor: Tan Kwan Chet 
 
 ---
