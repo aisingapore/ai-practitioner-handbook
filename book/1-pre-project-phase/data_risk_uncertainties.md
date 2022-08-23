@@ -12,13 +12,22 @@ Having understood the business challenge and AI problem at hand, this is where y
 Here are 3 questions good for uncovering potential data risks/uncertainties:
 
 1. Does the data include features that can predict the target?
-In the case of detecting fraudulent transactions, it will be important to identify if there are relevant predictors to construct the AI model (e.g. transaction amount, transaction purpose). Another important point would be to ascertain the size of target to be detected within the image/video for object detection. Usually, it will be fairly resonable for the AI model to detect an object of between 10% and 50% of the image size. If there is a need for detecting objects smaller than 10% of the image size, then it will be deemed more challenging and you will need to do necessary research to find models for specifically detecting small objects. 
+
+It is important to identify if there are relevant features to construct the AI model. For example, in the case of detecting fraudulent transactions, these features may include, but not limited to, transaction amount and transaction purpose based on existing domain knowledge. Another way is to create a correlation plot between numerical features and the target variable where the relevant features have a correlation value is not (or close to) 0. Or, you could plot a bivariate plot between categorical feature and the target variable to observe if there is any correlation. 
+
+![Corrplot](../assets/images/charts/corrplot_chart.png)  
 
 2. Do you have the data labels?
-If it is a binary classification label - positive sentiment and negative sentiment, the imbalanced label proportion would result in training an AI model biased towards the majority class. This is because the AI model is trained on limited examples to identify the minority class. However, if it is a regression target, then you need to have different ranges of values. You want to avoid training a regression model on the data that has clear discrete values. For examples, if you observe the target variable centres around 1 or 2 values such as 5 or 10, then the question would be is it necessary to train the model on it? Or rather, is it better to convert this variable into a categorical one?
+
+If it is a binary classification label - positive sentiment and negative sentiment, the imbalanced label proportion would result in training an AI model biased towards the majority class. This is because the AI model is trained on limited examples to identify the minority class. However, if it is a regression target, then you need to have different ranges of values. You want to avoid training a regression model on the data that has clear discrete values (in the chart below). For examples, if you observe the target variable centres around 1 or 2 values such as 5 or 10, then it would be better to treat the variable as a categorical one. 
+
+![Discreteplot](../assets/images/charts/discreteplot_chart.png)  
 
 3. Do you have the correct granularity of the data?
-It is critical to ensure that the training data and production data share the same level of granularity (e.g. hourly, daily, weekly, monthly or yearly) as what your sponsor expects in prediction. So if the sponsor expects the prediction to on hourly basis and the sponsor collects the data daily, then it will not be possible to build such an AI model to produce a granular prediction based on aggregated data. It is also worthy to note that if expected prediction is at a higher or similar granularity as the training or production data, then it is possible to build an AI model. 
+
+It is critical to ensure that the training data and production data share the same level of granularity (e.g. hourly, daily, weekly, monthly or yearly) as what your sponsor expects in prediction. So if the sponsor expects the prediction on hourly basis and the sponsor collects the data daily, then it will not be possible to build such an AI model to produce a granular prediction based on aggregated data. It is also worthy to note that if expected prediction is at a higher or similar granularity as the training or production data, then it is possible to build an AI model. 
+
+![GranularityDiagram](../assets/images/diagrams/granularity_diagram.jpg)  
 
 
 ## References 
