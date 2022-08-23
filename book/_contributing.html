@@ -377,20 +377,62 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structure">
-   Structure
+  <a class="reference internal nav-link" href="#workflow-conventions-for-a-new-section">
+   Workflow conventions for a new section
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#repository-tree">
-     Repository Tree
+    <a class="reference internal nav-link" href="#create-a-new-issue">
+     1. Create a new issue
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#book-directory-contents">
-     Book Directory &amp; Contents
+    <a class="reference internal nav-link" href="#fill-in-issue-details">
+     2. Fill in issue details
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-issue-to-board-i-e-github-projects-move-to-review-section-when-completed">
+     3. Add issue to board (i.e., GitHub Projects); move to review section when completed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-new-feature-branch-with-name-chx-issuenum">
+     4. Open new feature branch with name
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       chX-issueNum
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submit-pull-request-to-main-branch">
+     5. Submit pull request to main branch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-conventions">
+   Content Conventions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structure">
+     Structure
     </a>
     <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#repository-tree">
+       Repository Tree
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#book-directory-contents">
+       Book Directory &amp; Contents
+      </a>
+     </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pre-project-phase">
        1. Pre-project Phase
@@ -415,11 +457,13 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#data-management-exploration-processing">
        5. Data Management, Exploration &amp; Processing
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling">
-       6. Modelling
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#modelling">
+         6. Modelling
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solution-delivery">
@@ -433,57 +477,57 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content">
-   Content
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#language">
-   Language
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formatting">
-   Formatting
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributors-credit">
-     Contributors’ Credit
+    <a class="reference internal nav-link" href="#content">
+     Content
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pep-8">
-     PEP 8
+    <a class="reference internal nav-link" href="#language">
+     Language
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#markdown-flavour">
-     Markdown Flavour
+    <a class="reference internal nav-link" href="#formatting">
+     Formatting
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#headers">
-     Headers
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents-for-sections">
-     Table of Contents for Sections
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figures-tables">
-     Figures &amp; Tables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crediting-references">
-     Crediting References
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#contributors-credit">
+       Contributors’ Credit
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pep-8">
+       PEP 8
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#markdown-flavour">
+       Markdown Flavour
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#headers">
+       Headers
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#table-of-contents-for-sections">
+       Table of Contents for Sections
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figures-tables">
+       Figures &amp; Tables
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crediting-references">
+       Crediting References
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -507,20 +551,62 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structure">
-   Structure
+  <a class="reference internal nav-link" href="#workflow-conventions-for-a-new-section">
+   Workflow conventions for a new section
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#repository-tree">
-     Repository Tree
+    <a class="reference internal nav-link" href="#create-a-new-issue">
+     1. Create a new issue
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#book-directory-contents">
-     Book Directory &amp; Contents
+    <a class="reference internal nav-link" href="#fill-in-issue-details">
+     2. Fill in issue details
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-issue-to-board-i-e-github-projects-move-to-review-section-when-completed">
+     3. Add issue to board (i.e., GitHub Projects); move to review section when completed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-new-feature-branch-with-name-chx-issuenum">
+     4. Open new feature branch with name
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       chX-issueNum
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submit-pull-request-to-main-branch">
+     5. Submit pull request to main branch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-conventions">
+   Content Conventions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structure">
+     Structure
     </a>
     <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#repository-tree">
+       Repository Tree
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#book-directory-contents">
+       Book Directory &amp; Contents
+      </a>
+     </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pre-project-phase">
        1. Pre-project Phase
@@ -545,11 +631,13 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#data-management-exploration-processing">
        5. Data Management, Exploration &amp; Processing
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling">
-       6. Modelling
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#modelling">
+         6. Modelling
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solution-delivery">
@@ -563,57 +651,57 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content">
-   Content
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#language">
-   Language
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formatting">
-   Formatting
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributors-credit">
-     Contributors’ Credit
+    <a class="reference internal nav-link" href="#content">
+     Content
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pep-8">
-     PEP 8
+    <a class="reference internal nav-link" href="#language">
+     Language
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#markdown-flavour">
-     Markdown Flavour
+    <a class="reference internal nav-link" href="#formatting">
+     Formatting
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#headers">
-     Headers
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents-for-sections">
-     Table of Contents for Sections
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#figures-tables">
-     Figures &amp; Tables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crediting-references">
-     Crediting References
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#contributors-credit">
+       Contributors’ Credit
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pep-8">
+       PEP 8
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#markdown-flavour">
+       Markdown Flavour
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#headers">
+       Headers
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#table-of-contents-for-sections">
+       Table of Contents for Sections
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figures-tables">
+       Figures &amp; Tables
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crediting-references">
+       Crediting References
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -631,7 +719,55 @@ title="Print to PDF"
 <h1>Contributing to AI Singapore’s AI Practitioner Handbook<a class="headerlink" href="#contributing-to-ai-singapore-s-ai-practitioner-handbook" title="Permalink to this headline">#</a></h1>
 <p>Contributors: Ryzal Kamis and Kenny WJ Chua</p>
 <hr class="docutils" />
-<p>This miscellaneous chapter covers the conventions that were adhered to
+<p>This miscellaneous chapter covers two main aspects of contributing to the handbook–
+workflow conventions for writing a new sections, and conventions for the content in
+each chapter.</p>
+<section id="workflow-conventions-for-a-new-section">
+<h2>Workflow conventions for a new section<a class="headerlink" href="#workflow-conventions-for-a-new-section" title="Permalink to this headline">#</a></h2>
+<p>This section covers the steps required to write a new section of the handbook.
+In summary, the 5 steps are as follows:</p>
+<ol class="simple">
+<li><p>Create new issue</p></li>
+<li><p>Fill in issue details</p></li>
+<li><p>Add issue to board (i.e., GitHub Projects); move to review section when completed</p></li>
+<li><p>Open new feature branch with name <code class="docutils literal notranslate"><span class="pre">chX-issueNum</span></code></p></li>
+<li><p>Submit pull request to main branch</p></li>
+</ol>
+<section id="create-a-new-issue">
+<h3>1. Create a new issue<a class="headerlink" href="#create-a-new-issue" title="Permalink to this headline">#</a></h3>
+<p><img alt="image info" src="../_images/workflow1.png" /></p>
+</section>
+<section id="fill-in-issue-details">
+<h3>2. Fill in issue details<a class="headerlink" href="#fill-in-issue-details" title="Permalink to this headline">#</a></h3>
+<p><img alt="image info" src="../_images/workflow2.png" /></p>
+</section>
+<section id="add-issue-to-board-i-e-github-projects-move-to-review-section-when-completed">
+<h3>3. Add issue to board (i.e., GitHub Projects); move to review section when completed<a class="headerlink" href="#add-issue-to-board-i-e-github-projects-move-to-review-section-when-completed" title="Permalink to this headline">#</a></h3>
+<p><img alt="image info" src="../_images/workflow3.png" /></p>
+</section>
+<section id="open-new-feature-branch-with-name-chx-issuenum">
+<h3>4. Open new feature branch with name <code class="docutils literal notranslate"><span class="pre">chX-issueNum</span></code><a class="headerlink" href="#open-new-feature-branch-with-name-chx-issuenum" title="Permalink to this headline">#</a></h3>
+<p>E.g., branch <code class="docutils literal notranslate"><span class="pre">ch1-issue5</span></code> denotes the feature branch for issue 5, which is a section within chapter 1</p>
+</section>
+<section id="submit-pull-request-to-main-branch">
+<h3>5. Submit pull request to main branch<a class="headerlink" href="#submit-pull-request-to-main-branch" title="Permalink to this headline">#</a></h3>
+<p>Before submitting the pull request, please ensure that all items in the definition
+of done are completed. Please build the site locally, and visually verify that
+your contributions are displayed as intended. You may build the site from the base
+directory of the repository using the the CLI command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build .
+</pre></div>
+</div>
+<p><img alt="image info" src="../_images/workflow5.png" /></p>
+<p>For AISG contributors, please submit your pull requests at least three working days
+before sprint review.</p>
+<p>After <span class="xref myst">reviewing</span> your issue, reviewers will provide suggestions
+for edits, if any.</p>
+</section>
+</section>
+<section id="content-conventions">
+<h2>Content Conventions<a class="headerlink" href="#content-conventions" title="Permalink to this headline">#</a></h2>
+<p>This section covers the conventions that were adhered to
 in writing this book and how they affect the appearance as well as
 standardisation efforts. Aside from ensuring that this book remains
 readable and accessible, such conventions would make the process of
@@ -712,11 +848,11 @@ BibTeX file <code class="docutils literal notranslate"><span class="pre">book/re
 </tbody>
 </table>
 <section id="structure">
-<h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">#</a></h2>
+<h3>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">#</a></h3>
 <p>You may refer to this section for the appropriate directories which
 files and assets are to be placed under.</p>
 <section id="repository-tree">
-<h3>Repository Tree<a class="headerlink" href="#repository-tree" title="Permalink to this headline">#</a></h3>
+<h4>Repository Tree<a class="headerlink" href="#repository-tree" title="Permalink to this headline">#</a></h4>
 <p>The tree of the repository containing the book is structured as such:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ai-practitioner-handbook
     │
@@ -759,11 +895,12 @@ with are the following:</p>
 required and requested by the core reviewers of the book.</p>
 </section>
 <section id="book-directory-contents">
-<h3>Book Directory &amp; Contents<a class="headerlink" href="#book-directory-contents" title="Permalink to this headline">#</a></h3>
+<h4>Book Directory &amp; Contents<a class="headerlink" href="#book-directory-contents" title="Permalink to this headline">#</a></h4>
 <p>Most contributions will be populating the <code class="docutils literal notranslate"><span class="pre">book</span></code> directory and mainly
 within directories pertaining to the different chapters.</p>
 <p>Below describes each of the chapters and their respective
 subdirectories:</p>
+</section>
 <section id="pre-project-phase">
 <h4>1. Pre-project Phase<a class="headerlink" href="#pre-project-phase" title="Permalink to this headline">#</a></h4>
 <p><strong>Directory Name:</strong> <code class="docutils literal notranslate"><span class="pre">book/1-pre-project-phase</span></code></p>
@@ -813,9 +950,8 @@ subdirectories:</p>
 <li><p><em>Section 1</em></p></li>
 <li><p><em>Section 2</em></p></li>
 </ul>
-</section>
 <section id="modelling">
-<h4>6. Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">#</a></h4>
+<h5>6. Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">#</a></h5>
 <p><strong>Directory Name:</strong> <code class="docutils literal notranslate"><span class="pre">book/6-modelling</span></code></p>
 <p><strong>Synopsis:</strong> <em>To be filled in…</em></p>
 <p><strong>Sections:</strong></p>
@@ -823,6 +959,7 @@ subdirectories:</p>
 <li><p><em>Section 1</em></p></li>
 <li><p><em>Section 2</em></p></li>
 </ul>
+</section>
 </section>
 <section id="solution-delivery">
 <h4>7. Solution Delivery<a class="headerlink" href="#solution-delivery" title="Permalink to this headline">#</a></h4>
@@ -849,9 +986,8 @@ Sections within chapters are all to be structured in a flat manner
 and <strong>subdirectories are not to be used</strong>.</p>
 </section>
 </section>
-</section>
 <section id="content">
-<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">#</a></h2>
+<h3>Content<a class="headerlink" href="#content" title="Permalink to this headline">#</a></h3>
 <p>Here, we list down some pointers for you to keep in mind when
 formulating your content:</p>
 <ul class="simple">
@@ -864,7 +1000,7 @@ to 500</strong>.</p></li>
 </ul>
 </section>
 <section id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">#</a></h2>
+<h3>Language<a class="headerlink" href="#language" title="Permalink to this headline">#</a></h3>
 <p>For consistency across all chapters, contributors are to stick to the
 usage of a single language: Singaporean Standard English, which is
 not much different from Standard British English.</p>
@@ -889,11 +1025,11 @@ part to play in maintaining the quality of the book.</p>
 </ul>
 </section>
 <section id="formatting">
-<h2>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">#</a></h2>
+<h3>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">#</a></h3>
 <p>This section details the format that contributors can refer to when
 contributing content and files to the book.</p>
 <section id="contributors-credit">
-<h3>Contributors’ Credit<a class="headerlink" href="#contributors-credit" title="Permalink to this headline">#</a></h3>
+<h4>Contributors’ Credit<a class="headerlink" href="#contributors-credit" title="Permalink to this headline">#</a></h4>
 <p>For the content pieces you have worked on, do remember to insert
 the following snippet right after the header title with your name for
 proper crediting.</p>
@@ -906,7 +1042,7 @@ Contributor(s): &lt;YOUR_NAME_HERE&gt;, &lt;ANOTHER_NAME_HERE&gt;
 </div>
 </section>
 <section id="pep-8">
-<h3>PEP 8<a class="headerlink" href="#pep-8" title="Permalink to this headline">#</a></h3>
+<h4>PEP 8<a class="headerlink" href="#pep-8" title="Permalink to this headline">#</a></h4>
 <p>All documents like Markdown, sample code, or Jupyter Notebooks are to be
 subjected to the conventions laid out by PEP 8. Especially the maximum
 line length; limit all lines to a maximum of 72 characters. For code,
@@ -921,7 +1057,7 @@ rulers.</p>
 </ul>
 </section>
 <section id="markdown-flavour">
-<h3>Markdown Flavour<a class="headerlink" href="#markdown-flavour" title="Permalink to this headline">#</a></h3>
+<h4>Markdown Flavour<a class="headerlink" href="#markdown-flavour" title="Permalink to this headline">#</a></h4>
 <p>This book treats Markdown files as first class citizens with regards
 to contents. Meaning: all of the book’s contents are to be strictly
 derived from
@@ -941,7 +1077,7 @@ committed.</p></li>
 </ul>
 </section>
 <section id="headers">
-<h3>Headers<a class="headerlink" href="#headers" title="Permalink to this headline">#</a></h3>
+<h4>Headers<a class="headerlink" href="#headers" title="Permalink to this headline">#</a></h4>
 <p>When using headers, please do use them sequentially.</p>
 <p>An example of inappropriate usage:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Top Heading</span>
@@ -955,13 +1091,13 @@ committed.</p></li>
 </div>
 </section>
 <section id="table-of-contents-for-sections">
-<h3>Table of Contents for Sections<a class="headerlink" href="#table-of-contents-for-sections" title="Permalink to this headline">#</a></h3>
+<h4>Table of Contents for Sections<a class="headerlink" href="#table-of-contents-for-sections" title="Permalink to this headline">#</a></h4>
 <p>Since Jupyter Book automatically generates table of contents (TOCs) that
 appears on either side of the sidebars, manually written TOCs are
 unnecessary.</p>
 </section>
 <section id="figures-tables">
-<h3>Figures &amp; Tables<a class="headerlink" href="#figures-tables" title="Permalink to this headline">#</a></h3>
+<h4>Figures &amp; Tables<a class="headerlink" href="#figures-tables" title="Permalink to this headline">#</a></h4>
 <p>Figures and tables are to be presented or inserted inline after it is
 first mentioned in main text. For example:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>In the chart below, you would observe that the model is overfitted.
@@ -976,7 +1112,7 @@ first mentioned in main text. For example:</p>
 </div>
 </section>
 <section id="crediting-references">
-<h3>Crediting References<a class="headerlink" href="#crediting-references" title="Permalink to this headline">#</a></h3>
+<h4>Crediting References<a class="headerlink" href="#crediting-references" title="Permalink to this headline">#</a></h4>
 <p>For any part of a content that references to external resources, you are
 to ensure that the resources are listed at the end of every document,
 like so:</p>
@@ -995,6 +1131,7 @@ like so:</p>
 </ul>
 </div>
 <p>There will be no need for in-text citations and bibliography.</p>
+</section>
 </section>
 </section>
 <div class="toctree-wrapper compound">
