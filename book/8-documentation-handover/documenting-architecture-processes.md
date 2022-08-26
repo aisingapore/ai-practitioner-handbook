@@ -24,7 +24,9 @@ Illustrate only one process per diagram. If there is a need to show lower-level 
 
 ## Consider your audience
 
-Within the development team, it may be worth the while to create up to level 3 (Component) diagrams. However, such diagrams may not be useful to non-technical people outside the development team. Furthermore, as they contain implementation details, these diagrams likely get outdated quickly. In documentation delivered to end-users, Context diagrams would typically suffice for the general audience, to whom the solution is a black box. On the other hand, if the users are technical people and require understanding the inner workings of the system, including the lower-level diagrams would be a good idea. It is recommended that you automate the generation of Component and Code diagrams to minimise the effort spent on maintaining them.
+Within the development team, it may be worth the while to create up to [level 3 (Component) diagrams](https://c4model.com/#ComponentDiagram). However, such diagrams may not be useful to non-technical people outside the development team. Furthermore, as they contain implementation details, these diagrams likely get outdated quickly. 
+
+In documentation delivered to end-users, Context diagrams would typically suffice for the general audience, to whom the solution is a black box. On the other hand, if the users are technical people and require understanding the inner workings of the system, including the lower-level diagrams would be a good idea. It is recommended that you automate the generation of Component and Code diagrams to minimise the effort spent on maintaining them.
 
 ## Design considerations
 
