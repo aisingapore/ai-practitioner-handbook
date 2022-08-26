@@ -17,8 +17,8 @@ chapters:
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
 - file: book/3-collab-dev-platforms/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/3-collab-dev-platforms/repo-structure-setup.md
   # - file: 
 # ===== 4. Literature Review ========================================
 - file: book/4-lit-review/overview
@@ -37,13 +37,13 @@ chapters:
   # - file: 
 # ===== 7. Solution Delivery ========================================
 - file: book/7-solution-delivery/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/7-solution-delivery/deployment-requirements-gathering.md 
   # - file: 
 # ===== 8. Documentation & Handover ========================================
 - file: book/8-documentation-handover/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/8-documentation-handover/documenting-architecture-processes.md
   # - file: 
 # ===== Miscellaneous ========================================
 - file: book/_contributing
