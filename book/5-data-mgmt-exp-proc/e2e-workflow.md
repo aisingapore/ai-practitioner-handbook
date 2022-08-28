@@ -79,7 +79,7 @@ while processed data is defined as data that is augmented by
 algorithm(s) or from another ML/DL model.
 
 It is also important that you know how the product is to be designed
-with regards to how data is being fed into the model, or through a
+with regard to how data is being fed into the model, or through a
 pre-processing algorithm first. You could ingest the data either 
 locally or remotely, and remote options differ between using object 
 storage for blob-like data such as image and audio files, database 
@@ -107,7 +107,7 @@ handbook for more information regarding this process.
 ## Developer Workspace
 
 A workspace is the easiest to understand within the workflow, but can 
-also be quite complex, especially with regards to authentication and
+also be quite complex, especially with regard to authentication and
 authorisation protocols that your organisation, or client, may have. 
 Some reasons may be due to data being sensitive, the machine being 
 airgapped, or that the code must be compatible with legacy hardware 
@@ -123,7 +123,7 @@ beyond your control.
 
 ## Model Serving
 
-This may very well the end goal for most, if not all, ML/DL projects. 
+This may well be the end goal for most, if not all, ML/DL projects. 
 Typical tutorials would usually just end it with the model to be served
 locally through script execution, more mature projects would require
 a remote callable API since processes are usually interacted between
