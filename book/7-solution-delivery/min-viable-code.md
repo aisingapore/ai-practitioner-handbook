@@ -74,10 +74,10 @@ project with large teams or with critical infrastructure.
 
 Every project is different, and therefore there is no one Minimum 
 Viable Code/Configuration that can be proposed without first 
-understanding the nature of such projects. However, hopefully this 
-guide can point out your first steps in building and integrating 
-CI/CD automation into your codebase for a more robust and resilient 
-one.
+understanding the nature of such projects. Nevertheless, it is with 
+hope that this guide can point out your first steps in building and 
+integrating CI/CD automation into your codebase for a more robust and 
+resilient one.
 
 Below are some of the references you can look at to supplement your
 CI/CD journey.
