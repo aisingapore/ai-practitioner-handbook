@@ -39,6 +39,7 @@ chapters:
 - file: book/7-solution-delivery/overview
   sections:
   - file: book/7-solution-delivery/deployment-requirements-gathering.md 
+  - file: book/7-solution-delivery/min-viable-code
   # - file: 
 # ===== 8. Documentation & Handover ========================================
 - file: book/8-documentation-handover/overview
