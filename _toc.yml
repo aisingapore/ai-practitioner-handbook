@@ -27,8 +27,8 @@ chapters:
 # - file: 
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/5-data-mgmt-exp-proc/e2e-workflow 
   # - file: 
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
