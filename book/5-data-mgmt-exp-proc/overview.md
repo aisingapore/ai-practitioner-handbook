@@ -4,3 +4,5 @@
 
 This is an overview for how a team can manage data, do some
 exploratory analyses with it and process it for the stages to follow.
+
+- [Types and Suitability of Data Management](data-mgmt.md)
