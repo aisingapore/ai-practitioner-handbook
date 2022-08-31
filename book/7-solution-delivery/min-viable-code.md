@@ -72,7 +72,7 @@ project with large teams or with critical infrastructure. Iterative
 development is key to managing a large undertaking, one step at a time.
 
 If you need some guidance on where to start, you could refer to 
-[this section of the the handbook][flowchart] under the simplified 
+[this section of the handbook][flowchart] under the simplified 
 workflow for more information.
 
 [flowchart]: ../5-data-mgmt-exp-proc/e2e-workflow.md
