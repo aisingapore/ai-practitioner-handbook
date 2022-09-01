@@ -1,5 +1,7 @@
 # How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
 
+Contributor(s): Syakyr Surani
+
 This guide assumes that you have some basic knowledge of CI/CD and an 
 existing codebase. The codebase is in a working state and while 
 currently you find it manageable, you anticipate that you need to move
