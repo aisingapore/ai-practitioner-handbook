@@ -1,4 +1,6 @@
-# Building a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase
+# How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
+
+Contributor(s): Syakyr Surani
 
 This guide assumes that you have some basic knowledge of CI/CD and an 
 existing codebase. The codebase is in a working state and while 
@@ -68,7 +70,14 @@ This final step in paramount as to not paralyse yourself in the vast
 overarching process of CI/CD automation. Start with a small subset of
 the codebase to familiarise yourself with the process before attempting
 to refactor an entire codebase, especially if you are working in a 
-project with large teams or with critical infrastructure.
+project with large teams or with critical infrastructure. Iterative 
+development is key to managing a large undertaking, one step at a time.
+
+If you need some guidance on where to start, you could refer to 
+[this section of the handbook][flowchart] under the simplified 
+workflow for more information.
+
+[flowchart]: ../5-data-mgmt-exp-proc/e2e-workflow.md
 
 ## Final Thoughts
 
