@@ -1,5 +1,7 @@
 # What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?
 
+Contributor(s): Syakyr Surani
+
 Data comes from various sources, but it is up to us to manage it 
 effectively on our side. So it is imperative for us to understand the 
 different types of data management solutions and its suitability for 
