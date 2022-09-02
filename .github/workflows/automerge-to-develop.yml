@@ -32,9 +32,9 @@ jobs:
         git config user.name "Automerge Bot"
         git config user.email "bot@example.com"
         git fetch origin ${{env.DEVELOP_BRANCH}}
-        git merge origin/${{env.DEVELOP_BRANCH}}
+        git merge origin/${{env.DEVELOP_BRANCH}} -Xours
         git checkout ${{env.DEVELOP_BRANCH}}
-        git merge ${{ github.head_ref }}
+        git merge ${{ github.head_ref }} -Xtheirs
         git push
 
 
