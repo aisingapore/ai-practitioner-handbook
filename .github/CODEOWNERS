@@ -5,5 +5,4 @@
 # the repo. Unless a later match takes precedence,
 # @ryzalk and @chuawjk will be requested for
 # review when someone opens a pull request.
-*       chuawjk
-# *       @ryzalk @chuawjk
+*       @ryzalk @chuawjk
