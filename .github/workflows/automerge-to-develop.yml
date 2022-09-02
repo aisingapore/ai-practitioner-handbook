@@ -21,7 +21,7 @@ jobs:
 
     - name: Merge with develop
       run: |
-        git clone ${{env.MY_REPO}} -b ${GITHUB_REF##*/} tmp
+        git clone ${{env.MY_REPO}} -b ${{ github.head_ref }} tmp
         cd tmp
         git config user.name "Automerge Bot"
         git config user.email "bot@example.com"
