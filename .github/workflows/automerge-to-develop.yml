@@ -16,8 +16,8 @@ jobs:
     - name: Git checkout
       uses: actions/checkout@v1
 
-    - name: Branch name
-      run: echo running on branch ${GITHUB_REF##*/}
+    - name: Source branch name
+      run: echo Running on source branch ${{ github.head_ref }}
 
     - name: Merge with develop
       run: |
