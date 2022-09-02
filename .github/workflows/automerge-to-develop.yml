@@ -27,8 +27,8 @@ jobs:
 
     - name: Merge to develop
       run: |
-        git clone ${{env.MY_REPO}} -b ${{ github.head_ref }} /automerge
-        cd /automerge
+        git clone ${{env.MY_REPO}} -b ${{ github.head_ref }} ~/automerge
+        cd ~/automerge
         git config user.name "Automerge Bot"
         git config user.email "bot@example.com"
         git fetch origin ${{env.DEVELOP_BRANCH}}
@@ -54,9 +54,9 @@ jobs:
 
     - name: Make staging dir
       run: |
-        mkdir /automerge/staging && \
-          mv /automerge/_build /automerge/staging && \
-          mv /automerge/.github /automerge/staging
+        mkdir ~/automerge/staging && \
+          mv ~/automerge/_build ~/automerge/staging && \
+          mv ~/automerge/.github ~/automerge/staging
 
     - name: Push to staging repo
       id: push_directory
