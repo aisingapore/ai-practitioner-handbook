@@ -21,11 +21,12 @@ jobs:
 
     - name: Merge with develop
       run: |
-        git clone ${{env.MY_REPO}} -b ${GITHUB_REF##*/} tmp
+        git clone ${{env.MY_REPO}} -b ${{ github.head_ref }} tmp
         cd tmp
         git config user.name "Automerge Bot"
         git config user.email "bot@example.com"
         git fetch origin ${{env.DEVELOP_BRANCH}}
+        git merge origin/${{env.DEVELOP_BRANCH}}
         git checkout ${{env.DEVELOP_BRANCH}}
-        git merge ${{env.MY_BRANCH}}
+        git merge ${{ github.head_ref }}
         git push
