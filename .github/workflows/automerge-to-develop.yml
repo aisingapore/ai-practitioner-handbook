@@ -1,0 +1,29 @@
+name: automerge-to-develop
+
+on:
+  pull_request:
+    branches: master
+
+env:
+  MY_REPO: https://aisingapore:${{secrets.GITHUB_TOKEN}}@https://github.com/aisingapore/ai-practitioner-handbook.git
+  DEVELOP_BRANCH: develop
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
+    - name: Merge with develop
+      run: |
+        git clone ${{env.MY_REPO}} -b ${{ steps.extract_branch.outputs.branch }} tmp
+        cd tmp
+        git config user.name "Automerge Bot"
+        git config user.email "bot@example.com"
+        git fetch origin ${{env.DEVELOP_BRANCH}}
+        git checkout ${{env.DEVELOP_BRANCH}}
+        git merge ${{env.MY_BRANCH}}
+        git push
