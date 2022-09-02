@@ -11,6 +11,7 @@ chapters:
   - file: book/1-pre-project-phase/business_challenge_2_ai_problem.md
   - file: book/1-pre-project-phase/data_risk_uncertainties.md
   - file: book/1-pre-project-phase/test_chapter.md
+  - file: book/1-pre-project-phase/test_chapter2.md
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   # sections:
