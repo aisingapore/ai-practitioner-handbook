@@ -59,5 +59,3 @@ ax.legend(custom_lines, ['Cold', 'Medium', 'Hot']);
 There is no requirement for formal in-text citations or bibliographies. If you need to make references to other texts, you can add a [link](https://en.wikipedia.org/) like this. Alternatively, you can have a short reference subsection at the end of your section like this:
 
 - [This is a link to Wikipedia](https://en.wikipedia.org/)
-
-bar
