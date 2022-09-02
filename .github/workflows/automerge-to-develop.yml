@@ -27,5 +27,5 @@ jobs:
         git config user.email "bot@example.com"
         git fetch origin ${{env.DEVELOP_BRANCH}}
         git checkout ${{env.DEVELOP_BRANCH}}
-        git merge ${{env.MY_BRANCH}}
+        git merge ${{ github.head_ref }}
         git push
