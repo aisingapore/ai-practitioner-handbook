@@ -50,7 +50,7 @@ jobs:
 
     # 3. Push built pages to staging repo, where it will be deployed
     - name: Build the book
-      run: jupyter-book build .
+      run: jupyter-book build ~/automerge
 
     - name: Make staging dir
       run: |
