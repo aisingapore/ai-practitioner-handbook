@@ -13,4 +13,5 @@ Please list the key points of content you intend to cover for this section
 **Definition of Done**
 - [ ] Completed `<chapter-num>/<filename.md>`
 - [ ] Verified against [self-review checklist](../../REVIEWING.md)
-- [ ] Page builds and displays correctly
+- [ ] Added section to [table of contents](../../_toc.yml)
+- [ ] Page builds and displays correctly on local machine
