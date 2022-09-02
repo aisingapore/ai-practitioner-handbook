@@ -13,8 +13,8 @@ This section covers the steps required to write a new section of the handbook.
 In summary, the 5 steps are as follows:
 1. Create new issue
 2. Fill in issue details
-3. Add issue to board (i.e., GitHub Projects); move to review section when completed
-4. Open new feature branch with name `chX-issueNum`
+3. Open new feature branch with name `chX-issueNum`
+4. Add issue to board (i.e., GitHub Projects); move to review section when completed
 5. Submit pull request to develop branch
 
 ### 1. Create a new issue
@@ -23,11 +23,12 @@ In summary, the 5 steps are as follows:
 ### 2. Fill in issue details
 ![image info](./book/assets/images/screenshots/workflow2.png)
 
-### 3. Add issue to board (i.e., GitHub Projects); move to review section when completed
+### 3. Open new feature branch with name `chX-issueNum`
+E.g., branch `ch1-issue5` denotes the feature branch for issue 5, which is a section within chapter 1
 ![image info](./book/assets/images/screenshots/workflow3.png)
 
-### 4. Open new feature branch with name `chX-issueNum`
-E.g., branch `ch1-issue5` denotes the feature branch for issue 5, which is a section within chapter 1
+### 4. Add issue to board (i.e., GitHub Projects); move to review section when completed
+![image info](./book/assets/images/screenshots/workflow4.png)
 
 ### 5. Submit pull request to develop branch
 Before submitting the pull request, please ensure that all items in the definition
