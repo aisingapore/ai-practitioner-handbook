@@ -143,3 +143,6 @@ dmypy.json
 
 # OSX
 .DS_Store
+
+# vim
+*.swp
