@@ -1,4 +1,9 @@
-name: automerge-to-develop
+name: automerge-and-stage
+
+# When a pull request to the main branch is added, this workflow does the following:
+# 1. Automerge feature branch into develop branch
+# 2. Build book on develop branch
+# 3. Push built pages to staging repo, where it will be deployed
 
 on:
   pull_request:
@@ -13,13 +18,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. Automerge feature branch into develop branch
     - name: Git checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Source branch name
       run: echo Running on source branch ${{ github.head_ref }}
 
-    - name: Merge with develop
+    - name: Merge to develop
       run: |
         git clone ${{env.MY_REPO}} -b ${{ github.head_ref }} tmp
         cd tmp
@@ -30,3 +36,37 @@ jobs:
         git checkout ${{env.DEVELOP_BRANCH}}
         git merge ${{ github.head_ref }}
         git push
+
+
+    # 2. Builds book on develop branch
+    - name: Set up Python 3.8.13
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8.13
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+
+    # 3. Push built pages to staging repo, where it will be deployed
+    - name: Build the book
+      run: jupyter-book build .
+
+    - name: Make staging dir
+      run: |
+        mkdir ./staging && \
+          mv ./_build ./staging && \
+          mv ./.github ./staging
+
+    - name: Push to staging repo
+      id: push_directory
+      uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      with:
+        source-directory: ./staging
+        destination-github-username: 'aisingapore'
+        destination-repository-name: 'handbook-staging'
+        user-email: bot@example.com
+        commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+        target-branch: staging

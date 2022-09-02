@@ -1,9 +1,10 @@
 name: push-to-staging
 
+# This workflow is for triggering a build and push to staging repo when changes
+# are added directly to develop branch (as opposed to automerged from a feature branch)
+
 on:
   push:
-    branches: develop
-  pull_request:
     branches: develop
 
 jobs:
