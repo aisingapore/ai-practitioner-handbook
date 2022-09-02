@@ -8,8 +8,8 @@ chapters:
 # ===== 1. Pre-project Phase ========================================
 - file: book/1-pre-project-phase/overview
   sections:
-  - file: book/1-pre-project-phase/test_chapter8.md
-  # - file: 
+  - file: book/1-pre-project-phase/business_challenge_2_ai_problem.md
+  - file: book/1-pre-project-phase/data_risk_uncertainties.md
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   # sections:
