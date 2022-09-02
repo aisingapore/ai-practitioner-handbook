@@ -7,6 +7,7 @@ root: book/intro
 chapters:
 # ===== 1. Pre-project Phase ========================================
 - file: book/1-pre-project-phase/overview
+  sections:
   - file: book/1-pre-project-phase/test_chapter8.md
   # - file: 
 # ===== 2. Project Management & Technical Leadership ========================================
