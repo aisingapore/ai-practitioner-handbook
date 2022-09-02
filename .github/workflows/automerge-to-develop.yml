@@ -5,7 +5,7 @@ on:
     branches: main
 
 env:
-  MY_REPO: https://aisingapore:${{secrets.GITHUB_TOKEN}}@https://github.com/aisingapore/ai-practitioner-handbook.git
+  MY_REPO: https://aisingapore:${{secrets.GITHUB_TOKEN}}@github.com/aisingapore/ai-practitioner-handbook.git
   DEVELOP_BRANCH: develop
 
 jobs:
