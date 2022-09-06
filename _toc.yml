@@ -28,6 +28,7 @@ chapters:
 - file: book/5-data-mgmt-exp-proc/overview
   sections:
   - file: book/5-data-mgmt-exp-proc/e2e-workflow 
+  - file: book/5-data-mgmt-exp-proc/e2e-workflow-adv 
   # - file: 
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
