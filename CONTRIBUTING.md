@@ -4,7 +4,52 @@ Contributors: Ryzal Kamis and Kenny WJ Chua
 
 ---
 
-This miscellaneous chapter covers the conventions that were adhered to
+This miscellaneous chapter covers two main aspects of contributing to the handbook--
+workflow conventions for writing a new sections, and conventions for the content in
+each chapter.
+
+## Workflow conventions for a new section
+This section covers the steps required to write a new section of the handbook. 
+In summary, the 5 steps are as follows:
+1. Create new issue
+2. Fill in issue details
+3. Open new feature branch with name `chX-issueNum`
+4. Add issue to board (i.e., GitHub Projects); move to review section when completed
+5. Submit pull request to develop branch
+
+### 1. Create a new issue
+![image info](./book/assets/images/screenshots/workflow1.png)
+
+### 2. Fill in issue details
+![image info](./book/assets/images/screenshots/workflow2.png)
+
+### 3. Open new feature branch with name `chX-issueNum`
+E.g., branch `ch1-issue5` denotes the feature branch for issue 5, which is a section within chapter 1
+![image info](./book/assets/images/screenshots/workflow3.png)
+
+### 4. Add issue to board (i.e., GitHub Projects); move to review section when completed
+![image info](./book/assets/images/screenshots/workflow4.png)
+
+### 5. Submit pull request to develop branch
+Before submitting the pull request, please ensure that all items in the definition
+of done are completed. Please build the site locally, and visually verify that
+your contributions are displayed as intended. You may build the site from the base
+directory of the repository using the the CLI command:
+```bash
+jupyter-book build .
+```
+![image info](./book/assets/images/screenshots/workflow5.png)
+
+For AISG contributors, please submit your pull requests at least three working days
+before sprint review.
+
+After [reviewing](./REVIEWING.md) your issue, reviewers will provide suggestions
+for edits, if any.
+
+
+## Content Conventions
+
+This section covers the conventions that were adhered to
 in writing this book and how they affect the appearance as well as
 standardisation efforts. Aside from ensuring that this book remains
 readable and accessible, such conventions would make the process of
@@ -49,12 +94,12 @@ Formatting | Do not create TOCs manually.
 Formatting | Present tables or figures inline after first mention.
 Formatting | Credit references at the end of your content. Do not use in-text citations or bibliographies.
 
-## Structure
+### Structure
 
 You may refer to this section for the appropriate directories which
 files and assets are to be placed under.
 
-### Repository Tree
+#### Repository Tree
 
 The tree of the repository containing the book is structured as such:
 
@@ -99,7 +144,7 @@ with are the following:
 Other files or directories are usually not to be modified unless
 required and requested by the core reviewers of the book.
 
-### Book Directory & Contents
+#### Book Directory & Contents
 
 Most contributions will be populating the `book` directory and mainly
 within directories pertaining to the different chapters.
@@ -162,7 +207,7 @@ __Sections:__
 - *Section 1*
 - *Section 2*
 
-#### 6. Modelling
+##### 6. Modelling
 
 __Directory Name:__ `book/6-modelling`
 
@@ -200,7 +245,7 @@ subjected to pull requests and further discussions and reviews.
 Sections within chapters are all to be structured in a flat manner
 and __subdirectories are not to be used__.
 
-## Content
+### Content
 
 Here, we list down some pointers for you to keep in mind when
 formulating your content:
@@ -212,7 +257,7 @@ formulating your content:
 - We aim to be concise but impactful so do __limit the number of words
   to 500__.
 
-## Language
+### Language
 
 For consistency across all chapters, contributors are to stick to the
 usage of a single language: Singaporean Standard English, which is
@@ -238,12 +283,12 @@ __Reference(s):__
 
 - [Differences between British and American English](https://www.britishcouncilfoundation.id/en/english/articles/british-and-american-english)
 
-## Formatting
+### Formatting
 
 This section details the format that contributors can refer to when
 contributing content and files to the book.
 
-### Contributors' Credit
+#### Contributors' Credit
 
 For the content pieces you have worked on, do remember to insert
 the following snippet right after the header title with your name for
@@ -257,7 +302,7 @@ Contributor(s): <YOUR_NAME_HERE>, <ANOTHER_NAME_HERE>
 ...
 ```
 
-### PEP 8
+#### PEP 8
 
 All documents like Markdown, sample code, or Jupyter Notebooks are to be
 subjected to the conventions laid out by PEP 8. Especially the maximum
@@ -273,7 +318,7 @@ __Reference(s):__
 - [PEP 8 - Maximum Line Length](https://peps.python.org/pep-0008/#maximum-line-length)
 - [Visual Studio Code Docs - Settings](https://code.visualstudio.com/docs/getstarted/settings)
 
-### Markdown Flavour
+#### Markdown Flavour
 
 This book treats Markdown files as first class citizens with regards
 to contents. Meaning: all of the book's contents are to be strictly
@@ -292,7 +337,7 @@ files. A contributor may formulate contents within Jupyter Notebooks
 - In this case, both the paired `.md` and `.ipynb` files are to be
   committed.
 
-### Headers
+#### Headers
 
 When using headers, please do use them sequentially.
 
@@ -310,13 +355,13 @@ Appropriate format:
 ## Section
 ```
 
-### Table of Contents for Sections
+#### Table of Contents for Sections
 
 Since Jupyter Book automatically generates table of contents (TOCs) that
 appears on either side of the sidebars, manually written TOCs are
 unnecessary.
 
-### Figures & Tables
+#### Figures & Tables
 
 Figures and tables are to be presented or inserted inline after it is
 first mentioned in main text. For example:
@@ -334,7 +379,7 @@ In the chart below, you would observe that the model is overfitted.
 ![Chart showing model overfitting](./book/assets/images/charts/example-chart.png)
 ````
 
-### Crediting References
+#### Crediting References
 
 For any part of a content that references to external resources, you are
 to ensure that the resources are listed at the end of every document,
