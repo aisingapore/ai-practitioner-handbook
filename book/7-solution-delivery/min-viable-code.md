@@ -2,14 +2,16 @@
 
 Contributor(s): Syakyr Surani
 
-This guide assumes that you have some basic knowledge of CI/CD and an 
-existing codebase. The codebase is in a working state and while 
+This guide assumes that you have some basic knowledge of [CI/CD][CICD] 
+and an existing codebase. The codebase is in a working state and while 
 currently you find it manageable, you anticipate that you need to move
 away from manual testing that can be unreliable even with a checklist
 to work with. You may have multiple projects to manage, or there are 
 more contributors raising a pull/merge request than you can possibly
 handle just by manual testing. You have heard about CI/CD, but you do
 not know where to start. 
+
+[CICD]: https://dev.to/kirekov/basics-of-cicd-5e16
 
 This guide will not recommend specific CI/CD products or tools, but 
 a general outline to adhere to for an effective minimum implementation,
