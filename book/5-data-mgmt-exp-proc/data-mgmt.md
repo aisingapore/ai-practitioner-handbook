@@ -1,73 +1,89 @@
-# What Kinds of Data Management Solutions Are There, And Which One is Suitable for My Project?
+# Which Data Storage Options are Suitable for My Project?
 
 Contributor(s): Syakyr Surani
 
-Data comes from various sources, but it is up to us to manage it 
-effectively on our side. So it is imperative for us to understand the 
-different types of data management solutions and its suitability for 
-different datatypes. These solutions include:
+There are many data storage options that one can implement for their
+project, but to choose one (or several) of these options can be 
+confusing to some. This guide hopes to give you some guidance in 
+navigating various data storage options that are suitable for your
+project by honing in on three main considerations when choosing the 
+right options for you.
 
-- Flat files (CSVs, Excels, SQLite, JSONs, etc.)
-- Object storage (S3, minIO, GCS, etc.)
-- Relational database (SQL and its variants, Microsoft Access, etc.)
-- Non-relational database (Redis, MongoDB, Cassandra, etc.) 
-  + This can also be divided into sub-types such as:
-    * Key-value store
-    * Wide-column store ("two-dimensional key-value store")
-    * Document store
-    * Graph database
+## Competency
 
-## Flat Files
+Data competency within your team cannot be understated when choosing a
+suitable data storage option, especially when they are not prepped up
+to be part of an AI-powered project. The skillsets of analysts in any
+given organisation can vary a lot from simple Excel data entry ones to
+highly automated processes employed by big tech companies. Therefore,
+it is important to understand the competency as well as the readiness
+of your team in committing on a set of data storage options. You can
+read more about this in our [AI Readiness Index][airi] article as one
+of the ways to ascertain your team's data competency.
 
-Flat files are the simplest form of a data management solution, and it 
-is usually the data type used in ML/DL tutorials. This includes CSVs,
-Excel files, JSONs and SQLite. This form of data is recommended if the 
-dataset is small (< 10GB) and/or needs to be portable.
+To give an example, you have a team that has only started going through
+AI tutorials, whether from YouTube or a reputable course provider. The
+data you need for your project is relatively small and only require the
+basic skills needed to build a model and to be used internally and 
+sparingly. Then, using CSV or Excel files may be sufficient enough for
+your project.
 
-The use of CSVs, while still prevalent in many tutorials and projects,
-is highly discouraged. CSVs doesn't store data types and would need to 
-be implicitly inferred, which may cause problems when ingesting data 
-into your model(s).
+On the other hand, if your project takes in a lot of data from multiple
+data sources, then you may need to implement a data lake to store those
+data before being processed and transformed into data warehouse(s). An 
+article from Guru99 gives more insight regarding about data lakes and 
+warehouses [here][lake-house]. 
 
-## Object Storage
+## Reliability and Consistency
 
-Object storage is a data management solution that relies connecting 
-with an API, whether local or remote, and stores data as blobs. This 
-is especially suitable for image, audio and video files. This type can
-also accomodate flat file storage, suitable for incoming data that come
-in multiple files. This type of data management solution is usually 
-provided directly by cloud providers (S3 from AWS, GCS from GCP, etc.),
-or being provisioned by your organisation's administrators using 
-self-hosted solutions like MinIO.
+Reliability and consistency may be important in your project, 
+especially when the latest dataset may be needed to reduce model 
+drifting or other similar issues. Flat files such as CSV and Excel 
+files may not be a viable solution as different members in your team 
+may be using different versions of data, which may result in unreliable 
+and inconsistent metrics when it comes to evaluation. 
 
-## Relational Database
+Therefore, it would be recommended to look at a more reliable solution 
+such as database management systems (examples include SQL) if that is 
+to be the case. A section provided by Microsoft Azure can give more 
+information regarding these types of systems [here][data-store].
 
-This should be another familiar form of a data management solution. 
-This includes various flavours of SQL servers (MySQL, PostgreSQL, 
-MariaDB, etc.). SQLite is also deemed to be a relational database type.
-This is highly recommended for data that can be kept in tabular form
-as well as fairly large sizes (excluding SQLite) since they are 
-designed to run under heavy load from multiple clients querying from 
-the servers. This also makes having the data being up-to-date easier 
-for users since all the querying is done from a single source of data.
+## Data Management (Simplicity vs Complexity)
 
-## Non-relational Database
+The topic of data management coincides with the competency of your team
+as well as how reliable you need the data to be in the manner of cost
+efficiency. This cost could be in financial terms, in terms of your 
+team's valuable time to pick up a new skillset, in terms of 
+potential security and privacy issues surrounding the use of 
+self-hosted or managed cloud solutions, or a mixture of all three. 
 
-This type of data management solution is for the types of data that is
-difficult to store in a structured form like within a SQL database. 
-There are many forms of non-relational databases (key-value store, 
-document store, wide-column store, graph, etc.), so this is the most 
-sophisticated form. This is highly recommended if you need to build a 
-data lake that requires high throughput of data into the database 
-before processing it into a data warehouse
+Does your organisation have the capability to resolve operational 
+issues with regards to any data store solutions proposed? Is the data 
+sensitive enough to warrant an in-house solution, or is it more 
+cost-effective to have it run in one of the many managed cloud 
+providers instead? Or is it less hassle to just share flat files such
+as CSV and Excel files in a cloud storage? These questions could be
+used to shape your current project's requirements, but you should also
+project those requirements towards the long term, and discuss within 
+your team to reduce the times needed to refactor your project.
 
-## Data Lakes vs Data Warehouses
+## Final Thoughts
 
-These terms might be thrown around whenever you read about articles 
-pertaining to data management, or ML/DL/AI in general. For the sake of 
-brevity, you could define data lake as a location to store raw data, 
-while a data warehouse can be defined as a location to store processed
-data. Usually a data lake uses a non-relational database to store since
-it is usually built for high-throughput, while you have different forms
-of data management solutions for data warehouses depending on the needs
-of the organisations or your clients.
+There are more considerations you may need to take note of other than
+the three that is discussed in this guide, but we believe that these 
+three are the main considerations to take note of. However, if you feel
+that you need more tips on navigating your way on finding a suitable
+data storage solution, there is a Microsoft Azure page you might find
+more insights [here][criteria].
+
+## References
+
+- [AI Readiness Index | AI Singapore][airi]
+- [Data Lake vs Data Warehouse: What's the Difference? | Guru99][lake-house]
+- [Understanding Data Store Models | Microsoft][data-store]
+- [Criteria for Choosing a Data Store | Microsoft][criteria]
+
+[airi]: https://aisingapore.org/airi/
+[lake-house]: https://www.guru99.com/data-lake-vs-data-warehouse.html
+[data-store]: https://docs.microsoft.com/en-sg/azure/architecture/guide/technology-choices/data-store-overview
+[criteria]: https://docs.microsoft.com/en-sg/azure/architecture/guide/technology-choices/data-store-considerations
