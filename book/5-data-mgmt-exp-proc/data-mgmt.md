@@ -25,8 +25,8 @@ To give an example, you have a team that has only started going through
 AI tutorials, whether from YouTube or a reputable course provider. The
 data you need for your project is relatively small and only require the
 basic skills needed to build a model and to be used internally and 
-sparingly. Then, using CSV or Excel files may be sufficient enough for
-your project.
+sparingly. Then, using CSV or Excel files may be sufficient for your 
+project.
 
 On the other hand, if your project takes in a lot of data from multiple
 data sources, then you may need to implement a data lake to store those
@@ -58,14 +58,14 @@ potential security and privacy issues surrounding the use of
 self-hosted or managed cloud solutions, or a mixture of all three. 
 
 Does your organisation have the capability to resolve operational 
-issues with regards to any data store solutions proposed? Is the data 
-sensitive enough to warrant an in-house solution, or is it more 
-cost-effective to have it run in one of the many managed cloud 
-providers instead? Or is it less hassle to just share flat files such
-as CSV and Excel files in a cloud storage? These questions could be
-used to shape your current project's requirements, but you should also
-project those requirements towards the long term, and discuss within 
-your team to reduce the times needed to refactor your project.
+issues to any data store solutions proposed? Is the data sensitive 
+enough to warrant an in-house solution, or is it more cost-effective to
+have it run in one of the many managed cloud providers instead? Or is 
+it less hassle to just share flat files such as CSV and Excel files in 
+a cloud storage? These questions could be used to shape your current 
+project's requirements, but you should also project those requirements 
+towards the long term, and discuss within your team to reduce the times
+needed to refactor your project.
 
 ## Final Thoughts
 
