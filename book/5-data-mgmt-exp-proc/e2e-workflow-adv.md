@@ -62,7 +62,7 @@ know more about CI/CD, you can refer to [this section][cicd] instead.
 
 [cicd]: ../7-solution-delivery/min-viable-code.md
 
-### Model Registry
+## Model Registry
 
 This could be seen as a version control for models to manage problems 
 such as model drifting and retraining. You may need this component as
@@ -72,7 +72,7 @@ model(s). This component would also make A/B testing easier since you
 could reference multiple versions of the same model to gauge any 
 improvements a new version may provide.
 
-### Container Registry
+## Container Registry
 
 Containers such as Docker abstracts the codebase while providing a 
 sandbox to reduce dependency conflicts while making component 
@@ -84,7 +84,7 @@ within your organisation/client may be against this process due to the
 overheads it may have, especially if the project does not require to be 
 designed for scaling.
 
-### Experiment, Pipeline & Model Monitoring/Tracking
+## Experiment, Pipeline & Model Monitoring/Tracking
 
 The experiment and pipeline tracking as well as model monitoring can be
 seen as similar components that target different processes. Experiment
