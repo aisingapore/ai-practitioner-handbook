@@ -8,16 +8,19 @@ Contributor(s): Siti Nuruljannah Baharudin
 2. How should the application be packaged for deployment? 
     - Although containerising the application is a common solution, some organisations may have restrictions on the containerisation technology allowed on their servers, or even disallow containerisation altogether. If so, it is recommended that you assess the impact on the deployment effort. For instance, the team may lack expertise in the containerisation technology used, or when containerisation is not used, more system integration testing may be required. These would result in additional effort to prepare the deployment package, which may impact the project schedule.
 3. Are there any restrictions or preferences regarding the operating system on which the solution should be deployed? 
-4. Would a staging environment or test device be provided for developers to test with prior to initial deployment? 
+4. Are there any restrictions on software licenses to be used?
+    - Many open source libraries used in machine learning projects are licensed under Apache 2.0, MIT and BSD licenses. If your solution requires the use of libraries with less permissive licenses, it would be best to check with the project sponsor. 
+5. Would a staging environment or test device be provided for developers to test with prior to initial deployment? 
     - If not provided, you would need to commission an internal environment that closely mirrors the specifications of the environment on which the solution would eventually be deployed.
 
-## Data
-1. Where would the data to be used for retraining and inference be located in the production environment? 
+## Data & Model Outputs
+1. Where would the data to be used for retraining and inference be located in the deployment environment? 
 2. Where would the model outputs be stored? Is there any storage size limit on this location? 
-3. If the data storage is located remotely, what is the authentication method to be used to access it? 
+3. If the data storage is located remotely, what is the authentication method to be used to access it?
 
 ## Usage
 1. What is the frequency at which the user intends to run the retraining and inference pipelines? 
+    - Generally, the requirements and considerations for inference are more critical compared to retraining, as the latter is usually performed less frequently and is less time-sensitive.
 2. Is batch inference a requirement? If so, what is the expected size or volume of data in a single batch? 
 3. What are the requirements on inference speed and training time? 
     - You would need to consider whether the limitations of the chosen deployment device would affect these requirements. If refinements can be made to the code to meet the requirements, the additional effort would also need to be considered.

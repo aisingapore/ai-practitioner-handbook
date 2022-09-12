@@ -68,7 +68,7 @@ follows:
 
 ## Start Small
 
-This final step in paramount as to not paralyse yourself in the vast 
+This final step is paramount as to not paralyse yourself in the vast 
 overarching process of CI/CD automation. Start with a small subset of
 the codebase to familiarise yourself with the process before attempting
 to refactor an entire codebase, especially if you are working in a 
