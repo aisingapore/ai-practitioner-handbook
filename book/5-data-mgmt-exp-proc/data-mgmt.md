@@ -1,4 +1,4 @@
-# Which Data Storage Options are Suitable for My Project?
+# Which data storage options are suitable for the project?
 
 Contributor(s): Syakyr Surani
 
@@ -9,30 +9,38 @@ navigating various data storage options that are suitable for your
 project by honing in on three main considerations when choosing the 
 right options for you.
 
-## Competency
+## Requirements and Competency of Project Sponsor
 
-Data competency within your team cannot be understated when choosing a
-suitable data storage option, especially when they are not prepped up
-to be part of an AI-powered project. The skillsets of analysts in any
-given organisation can vary a lot from simple Excel data entry ones to
-highly automated processes employed by big tech companies. Therefore,
-it is important to understand the competency as well as the readiness
-of your team in committing on a set of data storage options. You can
-read more about this in our [AI Readiness Index][airi] article as one
-of the ways to ascertain your team's data competency.
+Data competency of the Project Sponsor cannot be understated when 
+choosing a suitable data storage option, especially when they are not 
+prepped up to be part of an AI-powered project. The skillsets of 
+analysts in any given organisation can vary a lot from simple Excel 
+data entry ones to highly automated processes employed by big tech 
+companies. Therefore, it is important to understand the competency as 
+well as the readiness of the Project Sponsor in committing on a set of 
+data storage options. You can read more about this in our 
+[AI Readiness Index][airi] article as one of the ways to ascertain the 
+Project Sponsor's data competency.
 
-To give an example, you have a team that has only started going through
-AI tutorials, whether from YouTube or a reputable course provider. The
-data you need for your project is relatively small and only require the
-basic skills needed to build a model and to be used internally and 
-sparingly. Then, using CSV or Excel files may be sufficient for your 
-project.
+To give an example, you have a team from the Project sponsor that has 
+only started going through AI tutorials, whether from YouTube or a 
+reputable course provider. The data you need for the project is 
+relatively small and only require the basic skills needed to build a 
+model and to be used internally and sparingly. Then, using CSV or Excel 
+files may be sufficient for the project.
 
-On the other hand, if your project takes in a lot of data from multiple
-data sources, then you may need to implement a data lake to store those
-data before being processed and transformed into data warehouse(s). An 
-article from Guru99 gives more insight regarding about data lakes and 
-warehouses [here][lake-house]. 
+On the other hand, if the project takes in a lot of data from multiple
+data sources, then they may want to implement a data lake to store 
+those data before being processed and transformed into data 
+warehouse(s). An article from Guru99 gives more insight regarding about 
+data lakes and warehouses [here][lake-house].
+
+We would also need to take the willingness of the Project Sponsor to 
+accept a solution that is outside their comfort zone into consideration
+as well. In some cases, they might request something that is more
+sustainable than their current solution, while other Project Sponsors
+may not be ready to handle databases and are only comfortable with what
+they have been doing.
 
 ## Reliability and Consistency
 
