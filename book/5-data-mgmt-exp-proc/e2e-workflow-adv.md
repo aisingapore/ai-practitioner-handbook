@@ -22,6 +22,11 @@ flowchart TD
     exptrack(Experiment & Pipeline Tracking)
     modelserv[(Model Serving)]
     modelmon(Model Monitoring)
+    style cicd fill:#bbf
+    style modelreg fill:#bbf
+    style contreg fill:#bbf
+    style exptrack fill:#bbf
+    style modelmon fill:#bbf
     cicd <---> modelexp
     datastorage <---> modelexp
     datastorage <---> modelreg
@@ -62,7 +67,7 @@ know more about CI/CD, you can refer to [this section][cicd] instead.
 
 [cicd]: ../7-solution-delivery/min-viable-code.md
 
-### Model Registry
+## Model Registry
 
 This could be seen as a version control for models to manage problems 
 such as model drifting and retraining. You may need this component as
@@ -72,7 +77,7 @@ model(s). This component would also make A/B testing easier since you
 could reference multiple versions of the same model to gauge any 
 improvements a new version may provide.
 
-### Container Registry
+## Container Registry
 
 Containers such as Docker abstracts the codebase while providing a 
 sandbox to reduce dependency conflicts while making component 
@@ -84,10 +89,18 @@ within your organisation/client may be against this process due to the
 overheads it may have, especially if the project does not require to be 
 designed for scaling.
 
-### Model Monitoring
+## Experiment, Pipeline & Model Monitoring/Tracking
 
-This process is needed should you need to monitor issues while serving
-the model such as model drifting. These metrics would be collected and
+The experiment and pipeline tracking as well as model monitoring can be
+seen as similar components that target different processes. Experiment
+and pipeline tracking focuses more towards monitoring the models as 
+they are being trained, and from there, decisions are being made 
+through controlling the hyperparameters of the model, or use a 
+different model architecture altogether.
+
+On the other hand, model monitoring concerns overseeing the trained 
+models and see whether issues are present while it is used for 
+inference such as model drifting. These metrics would be collected and
 processed to make decisions such as controlling data input requirements
 or retraining the model.
 
@@ -98,5 +111,10 @@ end-to-end workflow that are not discussed in this as well as the basic
 workflow sections, but the ones that are discussed should be sufficient
 for you to build a robust and reliable AI end-to-end workflow. If you 
 want to know more about this and MLOps in general, you can take a look
-at [ml-ops.org](https://ml-ops.org/) for more insight.
+at [ml-ops.org][ml-ops] for more insight.
 
+## Reference
+
+- [MLOps: Machine Learning Operations | InnoQ][ml-ops]
+
+[ml-ops]: https://ml-ops.org/

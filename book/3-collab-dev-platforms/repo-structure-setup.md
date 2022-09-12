@@ -28,4 +28,5 @@ In a Git repository, [hooks](https://githooks.com/) are scripts that Git execute
 
 __Reference(s):__ 
 - [AI Singapore's Cookiecutter Template for End-to-end ML Projects](https://github.com/aisingapore/ml-project-cookiecutter-gcp)
+- [Kedro](https://github.com/kedro-org/kedro) - A Python framework for creating reproducible, maintainable and modular data science code
 - [Git Branch tutorial](https://www.atlassian.com/git/tutorials/using-branches)

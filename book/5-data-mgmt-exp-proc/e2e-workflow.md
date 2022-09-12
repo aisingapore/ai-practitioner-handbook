@@ -1,4 +1,4 @@
-# What are the Processes Involved to Build a Basic End-to-End Workflow?
+# What are the Processes Involved in Building a Basic End-to-End Workflow?
 
 Contributor(s): Syakyr Surani, Ryzal Kamis
 
@@ -31,6 +31,11 @@ flowchart TD
     exptrack(Experiment & Pipeline Tracking)
     modelserv[(Model Serving)]
     modelmon(Model Monitoring)
+    style cicd fill:#bbf
+    style modelreg fill:#bbf
+    style contreg fill:#bbf
+    style exptrack fill:#bbf
+    style modelmon fill:#bbf
     cicd <---> modelexp
     datastorage <---> modelexp
     datastorage <---> modelreg
@@ -94,7 +99,7 @@ be suboptimal when you could parallise both processes and possibly
 reducing training time. This may also make resuming work easier since 
 there are more checkpoints between the raw data and the model itself.
 
-You can check [this section](data-strg-opts.md) for more information on
+You can check [this section](data-mgmt.md) for more information on
 data storage options.
 
 ## Version Control
@@ -108,8 +113,7 @@ make the end-to-end workflow easier.
 
 For AI practitioners such as ourselves, there is also a subset of 
 version control that targets toward datasets, which you may read 
-[this article](https://lakefs.io/data-versioning/) for more 
-information.
+[this article][data-versioning] for more information.
 
 ## Developer Workspace
 
@@ -149,3 +153,8 @@ development process, this guide has recommended the processes you would
 want to focus on before expanding on other quality-of-life improvements
 that are described in [this section instead](e2e-workflow-adv.md).
 
+## References
+
+- [The Guide to Data Versioning | LakeFS][data-versioning]
+
+[data-versioning]: https://lakefs.io/data-versioning/ 
