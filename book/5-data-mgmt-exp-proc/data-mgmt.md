@@ -52,9 +52,10 @@ may be using different versions of data, which may result in unreliable
 and inconsistent metrics when it comes to evaluation. 
 
 Therefore, it would be recommended to look at a more reliable solution 
-such as database management systems (examples include SQL) if that is 
-to be the case. A section provided by Microsoft Azure can give more 
-information regarding these types of systems [here][data-store].
+such as database management systems (examples include SQL, MongoDB, 
+etc.) if that is to be the case. A section provided by Microsoft Azure 
+can give more information regarding these types of systems 
+[here][data-store], relational or non-relational.
 
 ## Data Management (Simplicity vs Complexity)
 
