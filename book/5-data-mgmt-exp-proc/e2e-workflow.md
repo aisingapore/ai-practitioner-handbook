@@ -31,6 +31,11 @@ flowchart TD
     exptrack(Experiment & Pipeline Tracking)
     modelserv[(Model Serving)]
     modelmon(Model Monitoring)
+    style cicd fill:#bbf
+    style modelreg fill:#bbf
+    style contreg fill:#bbf
+    style exptrack fill:#bbf
+    style modelmon fill:#bbf
     cicd <---> modelexp
     datastorage <---> modelexp
     datastorage <---> modelreg
