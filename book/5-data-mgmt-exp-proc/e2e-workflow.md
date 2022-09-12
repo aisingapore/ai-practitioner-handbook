@@ -152,4 +152,4 @@ that are described in [this section instead](e2e-workflow-adv.md).
 
 - [The Guide to Data Versioning | LakeFS][data-versioning]
 
-[data-versioning]: https://lakefs.io/data-versioning/) 
+[data-versioning]: https://lakefs.io/data-versioning/ 
