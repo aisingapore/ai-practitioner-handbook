@@ -22,4 +22,5 @@ pyyaml==6.0
 setuptools==61.2.0
 sphinx==4.5.0
 sphinx-jupyterbook-latex==0.4.6
+sphinxcontrib-mermaid==0.7.1
 toml==0.10.2

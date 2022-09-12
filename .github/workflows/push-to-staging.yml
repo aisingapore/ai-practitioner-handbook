@@ -1,0 +1,47 @@
+name: push-to-staging
+
+# This workflow is for triggering a build and push to staging repo when changes
+# are added directly to develop branch (as opposed to automerged from a feature branch)
+
+on:
+  push:
+    branches: develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+       # Install dependencies
+      - name: Set up Python 3.8.13
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8.13
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Build the book
+      - name: Build the book
+        run: jupyter-book build .
+
+      # Create staging directory
+      - name: Make staging dir
+        run: |
+          mkdir ./staging && \
+            mv ./_build ./staging && \
+            mv ./.github ./staging
+
+      - name: Push to staging repo
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: ./staging
+          destination-github-username: 'aisingapore'
+          destination-repository-name: 'handbook-staging'
+          user-email: chuawjk@gmail.com
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: staging
