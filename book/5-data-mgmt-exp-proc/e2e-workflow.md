@@ -1,4 +1,4 @@
-# What are the Processes Involved to Build a Basic End-to-End Workflow?
+# What are the Processes Involved in Building a Basic End-to-End Workflow?
 
 Contributor(s): Syakyr Surani, Ryzal Kamis
 
