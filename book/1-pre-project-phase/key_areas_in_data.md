@@ -1,5 +1,5 @@
 # What are the key areas to look out for in the data when framing the AI project?
-Contributor: Tan Kwan Chet, Lead AI Consultant
+Contributor: Tan Kwan Chet, Lead AI Technical Consultant
 
 ---
 ## Key Areas in Data
@@ -27,7 +27,7 @@ If the target belongs to a regression type, the question is more about ensuring 
 
 2. Does the data include features that can predict the target?
 
-An ideal way to estimate if the relevant features are present would to ask the sponsor the following questions based on a priori domain knowledge: 
+An ideal way to estimate if the relevant features are present would be to ask the sponsor the following questions based on a priori domain knowledge: 
 
 - If a human were to perform the task, what information would the person rely on to make the prediction? 
 - Is this information available for training the model?
@@ -36,7 +36,7 @@ There should be adequate signal and variance within the relevant features. Signa
 
 ![Corrplot](../assets/images/charts/corrplot_chart.png)  
 
-At times, you will face a situation in which sponsor claims that their domain knowledge is accurate in determining the predictive features while our exploratory data analysis (EDA) lends limited support for it. You could attempt some denoising techniques and check if the correlation improves. If it does not improve, this might be due to some confounding effect of a third feature that may influence the relationship between target and feature of interest. 
+At times, you will face a situation in which sponsor claims that their domain knowledge is accurate in determining the predictive features while our exploratory data analysis (EDA) lends limited support for it. You could attempt some denoising techniques (e.g. outlier removal, averaging/binning) and check if the correlation improves. If it does not improve, this might be due to some confounding effect of a third feature that may influence the relationship between target and feature of interest. 
 
 3. Is the data at the correct granularity?
 
@@ -52,7 +52,7 @@ It is critical that training data is representative of the production data to en
 
 - Avoid unintended bias. If the model is trained on training data that is dominated by a specific label (i.e. majority label), then it is very likely that the model is robust in predicting a majority label while it will unlikely predict a minority label. 
 
-- Improve robustness and generalisability. The distribution of training data will be what the model will learn from. Assuming that the distribution between training and production data is highly similar, this would mean that the trained model is able to generalise and make robust predictions in varying context that is often present in production data.  
+- Improve robustness and generalisability. The distribution of training data will be what the model will learn from. Assuming that the distribution between training and production data is highly similar, this would mean that the trained model is able to generalise and make robust predictions in varying contexts that are often present in production data.  
 
 - Mitigate "instant drift" the moment when the model is deployed into production. This can be observed by setting up input metrics to monitor the input distribution in production against the one in training or output metrics to check if the model is unable to confidently predict classes across many data points. This would signal a need for retraining the model. 
 
