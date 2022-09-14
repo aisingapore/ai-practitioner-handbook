@@ -21,10 +21,9 @@ Frequently, sponsor may not be able to articulate the target variable of interes
 
 If the target is of classification nature, it will be ideal to observe the current label proportion (e.g. binary label: "yes", "no") to ascertain if there is presence of label data imbalance. If the label data is highly imbalanced (e.g. 5% positive label and 95% negative label), an alternative would be to reframe the AI problem as an anomaly detection problem. More importantly, you would be keen to confirm if the label data corresponds to the definition of the target and the availability of the label data. 
 
-![Discreteplot](../assets/images/charts/discreteplot_chart.png)  
-
 If the target belongs to a regression type, the question is more about ensuring the target variable is truly numeric/continuous. If upon checking you find that there is only a limited set of discrete values that the target variable can take on, it is better to reframe it as a classification problem. This is a possible scenario in businesses that rely on domain experts to run product experiments by testing different combinations of inputs with varying levels.
 
+![Discreteplot](../assets/images/charts/discreteplot_chart.png)  
 
 2. Does the data include features that can predict the target?
 
