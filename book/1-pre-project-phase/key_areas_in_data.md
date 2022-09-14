@@ -64,7 +64,7 @@ Once the data definition is set, you could request the sponsor to estimate the p
 
 ![Objsizediag](../assets/images/diagrams/objsize_diagram.jpg)  
 
-
+Using these 4 key questions will allow you to have a gauge of the quality of the data for building the model. This is an important starting point for building a model with good predictive power.
 
 
 ## References 

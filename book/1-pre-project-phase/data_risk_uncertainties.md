@@ -29,7 +29,6 @@ It is critical to ensure that the training data and production data share the sa
 
 ![GranularityDiagram](../assets/images/diagrams/granularity_diagram.jpg)  
 
-
 ## References 
 - [MLOps-From-Model-centric-to-Data-centric-AI](https://www.deeplearning.ai/wp-content/uploads/2021/06/MLOps-From-Model-centric-to-Data-centric-AI.pdf)
 - [Why it’s time for 'data-centric artificial intelligence'](https://mitsloan.mit.edu/ideas-made-to-matter/why-its-time-data-centric-artificial-intelligence)
