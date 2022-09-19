@@ -49,3 +49,4 @@ For seasonal data, you may want to take seasonality into account when performing
 
 - Building Machine Learning Powered Applications: Going from Idea to Product
 - Machine Learning Design Patterns: Solutions to Common Challenges in Data Preparation, Model Building, and MLOps
+- Machine Leaning Yearning: Technical Strategy for AI Engineers, In the Era of Deep Learning
