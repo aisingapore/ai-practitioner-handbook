@@ -6,8 +6,9 @@ Contributor: Tan Kwan Chet, Lead AI Technical Consultant
 
 ### Quote from Andrew Ng
 > AI systems need both code and data, and “all that progress in algorithms means it's actually time to spend more time on the data,” Ng said at the recent EmTech Digital conference hosted by MIT Technology Review.
+
 ### Data Centricity
-With the rise of Data-Centric AI (DCAI) since 2021, there is a switch in focus on the code that builds the model to the data that model is trained on. The shift arises because improving the quality of the data could help model to perform better than improving the code. 
+With the rise of Data-Centric AI (DCAI) since 2021, there is a switch in focus from code that builds the model to the data that model is trained on. The shift arises because improving the quality of the data could help model to perform better, and in a fairer and more robust manner, than simply improving the code alone. 
 
 ### 4 Key Data Questions
 Having understood the business challenge and AI problem at hand, this is where you need to delve into understanding the data the sponsor will be providing. You need to assess if there are risks/uncertainties posed within the data collected and annotated for solving the AI problem. Because a good AI model not only relies on algorithms but also quality data.
@@ -16,7 +17,9 @@ In practice, there are many considerations and checks for data quality. In this 
 
 1. Is the target clearly defined and labels available?
 
-Frequently, sponsor may not be able to articulate the target variable of interest. You will need to explain it as a feature of the dataset that the sponsor is keen to predict. This target variable is related to a business outcome (e.g. reducing employee's repetitive tasks, prioritising patients for treatment based on mortality rate) that the sponsor wants to achieve. 
+Frequently, sponsor may not be able to articulate the target variable of interest. This is where the translation of the business problem in [this chapter](https://aisingapore.github.io/handbook-staging/book/1-pre-project-phase/business_challenge_2_ai_problem.html) becomes important.  This target variable must be related to a business outcome (e.g. reducing employee's repetitive tasks, prioritising patients for treatment based on mortality rate) that the sponsor wants to achieve.
+
+Based on the translated AI task, this is where you ascertain whether the sponsor has a clear definition for the class/value/object/entity/text etc that is to be inferred. This determines whether quality labels can be defined. 
 
 If the target is of classification nature, it will be ideal to observe the current label proportion (e.g. binary label: "yes", "no") to ascertain if there is presence of label data imbalance. If the label data is highly imbalanced (e.g. 5% positive label and 95% negative label), an alternative would be to reframe the AI problem as an anomaly detection problem. More importantly, you would be keen to confirm if the label data corresponds to the definition of the target and the availability of the label data. 
 
@@ -29,9 +32,14 @@ If the target belongs to a regression type, the question is more about ensuring 
 An ideal way to estimate if the relevant features are present would be to ask the sponsor the following questions based on a priori domain knowledge: 
 
 - If a human were to perform the task, what information would the person rely on to make the prediction? 
-- Is this information available for training the model?
+- Is this information available for training the model and during inference?
 
-There should be adequate signal and variance within the relevant features. Signal refers to the presence of important information relevant to predicting the target. This can be checked by creating a correlation plot (example chart below) between numerical features and the target variable where the relevant features have a correlation value that is not (or close to) 0. Variance refers to having a sufficient spread of values (eg. straight line and near-constant features are useless for prediction).
+There should be adequate signal and variance within the relevant features. Signal refers to the presence of sufficient information relevant to predicting the target. Variance refers to having sufficient range and diversity of data.
+
+This can be checked via a small, representative sample dataset from the sponsor.
+
+- for CV and NLP problems, using a pretrained model to run inference on sample data is a great way to assess the 'information-ness'. Sometimes, you can also 'eyeball' the data, since for images and text, WYSIWYG!
+- for tabular problems, you can create a plot of mutual information/correlation between features and the target variable. A simple example is shown below for numeric features.
 
 ![Corrplot](../assets/images/charts/corrplot_chart.png)  
 
@@ -47,22 +55,20 @@ Besides matching granularity between training and production data, understanding
 
 4. Is the training data representative of the production data?
 
-It is critical that training data is representative of the production data to ensure the trained model can attain decent prediction performances with following considerations:
+It is critical that training data is representative of the production data to ensure the trained model will be fair and robust:
 
 - Avoid unintended bias. If the model is trained on training data that is dominated by a specific label (i.e. majority label), then it is very likely that the model is robust in predicting a majority label while it will unlikely predict a minority label. 
 
-- Improve robustness and generalisability. The distribution of training data will be what the model will learn from. Assuming that the distribution between training and production data is highly similar, this would mean that the trained model is able to generalise and make robust predictions in varying contexts that are often present in production data.  
+- Improve robustness and generalisability. The distribution of training data will be what the model will learn from. Assuming that the distribution between training and production data is highly similar, this would mean that the trained model is able to generalise and make robust predictions in varying contexts that are often present in production data. It also means the model is less prone to immediately drift the moment it is applied in production.
 
-- Mitigate "instant drift" the moment when the model is deployed into production. This can be observed by setting up input metrics to monitor the input distribution in production against the one in training or output metrics to check if the model is unable to confidently predict classes across many data points. This would signal a need for retraining the model. 
-
-So how we check for representativeness? To do so, you would need to set the definition of the attributes found in the data:
+So how we check for representativeness? To do so, you would first need to discuss and identify a few key attributes that capture the defining characteristics of the data. Here is an example for a salient object detection problem, where 'size of objects' and 'whether there are multiple objects' are 2 attributes. For problems that involve human subjects like customers and patients, defining characteristics could include key demographics like age, gender and ethnicity.
 ![Datadefinition](../assets/images/diagrams/data_definition_diagram.jpg)
 
-Once the data definition is set, you could request the sponsor to estimate the proportion of the data by different attributes found in the dataset. For example, if it is a salient object detection task, you should be able to see the attribute distribution of the data.
+Once you are able to define these, you could request the sponsor to estimate the proportion of their **production** data broken down by different attributes. For example, below is a breakdown of the distribution of object size for the salient object detection dataset. The goal is then to ensure that the training data matches this production distribution:
 
 ![Objsizediag](../assets/images/diagrams/objsize_diagram.jpg)  
 
-Using these 4 key questions will allow you to have a gauge of the quality of the data for building the model. This is an important starting point for building a model with good predictive power.
+Using these 4 key questions will allow you to have a gauge of the quality of the data for building the model. This is an important starting point for building a model that has good predictive power, and it is also fair and robust.
 
 
 ## References 
