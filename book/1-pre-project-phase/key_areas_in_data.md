@@ -8,7 +8,7 @@ Contributor: Tan Kwan Chet, Lead AI Technical Consultant
 > AI systems need both code and data, and “all that progress in algorithms means it's actually time to spend more time on the data,” Ng said at the recent EmTech Digital conference hosted by MIT Technology Review.
 
 ### Data Centricity
-With the rise of Data-Centric AI (DCAI) since 2021, there is a switch in focus on from code that builds the model to the data that model is trained on. The shift arises because improving the quality of the data could help model to perform better, and in a fairer and more robust manner, than simply improving the code alone. 
+With the rise of Data-Centric AI (DCAI) since 2021, there is a switch in focus from code that builds the model to the data that model is trained on. The shift arises because improving the quality of the data could help model to perform better, and in a fairer and more robust manner, than simply improving the code alone. 
 
 ### 4 Key Data Questions
 Having understood the business challenge and AI problem at hand, this is where you need to delve into understanding the data the sponsor will be providing. You need to assess if there are risks/uncertainties posed within the data collected and annotated for solving the AI problem. Because a good AI model not only relies on algorithms but also quality data.
@@ -61,10 +61,10 @@ It is critical that training data is representative of the production data to en
 
 - Improve robustness and generalisability. The distribution of training data will be what the model will learn from. Assuming that the distribution between training and production data is highly similar, this would mean that the trained model is able to generalise and make robust predictions in varying contexts that are often present in production data. It also means the model is less prone to immediately drift the moment it is applied in production.
 
-So how we check for representativeness? To do so, you would first need to discuss and identify a few key attributes that capture the defining characteristics of the data. Here is an example for a salient object detection problem, where 'size of objects' and 'whether there are multiple objects' are 2 attributes. For problems that involve human subjects like customers and patients, defining characteristics could include key demographics like age, gender and ethnicity.:
+So how we check for representativeness? To do so, you would first need to discuss and identify a few key attributes that capture the defining characteristics of the data. Here is an example for a salient object detection problem, where 'size of objects' and 'whether there are multiple objects' are 2 attributes. For problems that involve human subjects like customers and patients, defining characteristics could include key demographics like age, gender and ethnicity.
 ![Datadefinition](../assets/images/diagrams/data_definition_diagram.jpg)
 
-Once you are able to define these, you could request the sponsor to estimate the proportion of their **production** data by different attributes. For example, below is a breakdown of the distribution of object size for the salient object detection dataset. The goal is then to ensure that the training data matches this production distribution:
+Once you are able to define these, you could request the sponsor to estimate the proportion of their **production** data broken down by different attributes. For example, below is a breakdown of the distribution of object size for the salient object detection dataset. The goal is then to ensure that the training data matches this production distribution:
 
 ![Objsizediag](../assets/images/diagrams/objsize_diagram.jpg)  
 
