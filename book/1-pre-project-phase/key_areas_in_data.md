@@ -15,7 +15,7 @@ Having understood the business challenge and AI problem at hand, this is where y
 
 In practice, there are many considerations and checks for data quality. In this article, we focus on 4 key questions that are highly relevant at the pre-project phase to ensure that the AI problem is feasible and well-scoped. Note that while this is written with a supervised learning approach in mind, most of the considerations are also applicable to other learning approaches.
 
-1. Is the target clearly defined and labels available?
+#### 1. Is the target clearly defined and labels available?
 
 Frequently, sponsor may not be able to articulate the target variable of interest. This is where the translation of the business problem in [this chapter](https://aisingapore.github.io/handbook-staging/book/1-pre-project-phase/business_challenge_2_ai_problem.html) becomes important.  This target variable must be related to a business outcome (e.g. reducing employee's repetitive tasks, prioritising patients for treatment based on mortality rate) that the sponsor wants to achieve.
 
@@ -27,7 +27,7 @@ If the target belongs to a regression type, the question is more about ensuring 
 
 ![Discreteplot](../assets/images/charts/discreteplot_chart.png)  
 
-2. Does the data include features that can predict the target?
+#### 2. Does the data include features that can predict the target?
 
 An ideal way to estimate if the relevant features are present would be to ask the sponsor the following questions based on a priori domain knowledge: 
 
@@ -45,7 +45,7 @@ This can be checked via a small, representative sample dataset from the sponsor.
 
 At times, you will face a situation in which sponsor claims that their domain knowledge is accurate in determining the predictive features while our exploratory data analysis (EDA) lends limited support for it. You could attempt some denoising techniques (e.g. outlier removal, averaging/binning) and check if the correlation improves. If it does not improve, this might be due to some confounding effect of a third feature that may influence the relationship between target and feature of interest. 
 
-3. Is the data at the correct granularity?
+#### 3. Is the data at the correct granularity?
 
 It is critical to ensure that the training data and production data share the same level of granularity (e.g. hourly, daily, weekly, monthly or yearly) as what your sponsor expects in prediction. So if the sponsor expects the prediction on an hourly basis and the sponsor collects the data daily, then it will not be possible to build such an AI model to produce a granular prediction based on aggregated data. It is also worthy to note that if expected prediction is at a higher or similar granularity as the training or production data, then it is possible to build an AI model. 
 
@@ -53,7 +53,7 @@ It is critical to ensure that the training data and production data share the sa
 
 Besides matching granularity between training and production data, understanding the correct granularity allows you to estimate the volume of data available for training. For example, if the goal is to aggregate a sensor's readings from seconds to hours for prediction, because the per-second readings contain mostly noise, then having "86,400 data points" may sound like a large dataset, but in actual fact, it is insufficient as there are only 24 hourly aggregates for you to work with.
 
-4. Is the training data representative of the production data?
+#### 4. Is the training data representative of the production data?
 
 It is critical that training data is representative of the production data to ensure the trained model will be fair and robust:
 
