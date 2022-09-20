@@ -1,13 +1,13 @@
 name: automerge-and-stage
 
-# When a pull request to the main branch is added, this workflow does the following:
+# When a pull request to the develop branch is added, this workflow does the following:
 # 1. Automerge feature branch into develop branch
 # 2. Build book on develop branch
 # 3. Push built pages to staging repo, where it will be deployed
 
 on:
   pull_request:
-    branches: main
+    branches: develop
 
 env:
   MY_REPO: https://aisingapore:${{secrets.GITHUB_TOKEN}}@github.com/aisingapore/ai-practitioner-handbook.git
