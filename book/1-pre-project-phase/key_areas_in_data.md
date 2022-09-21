@@ -74,7 +74,6 @@ Using these 4 key questions will allow you to have a gauge of the quality of the
 ## References 
 - [Data-Centric AI](https://datacentricai.org)
 - [Landing AI](https://landing.ai/data-centric-ai/)
-- [MLOps-From-Model-centric-to-Data-centric-AI](https://www.deeplearning.ai/wp-content/uploads/2021/06/MLOps-From-Model-centric-to-Data-centric-AI.pdf)
 - [Why it’s time for 'data-centric artificial intelligence'](https://mitsloan.mit.edu/ideas-made-to-matter/why-its-time-data-centric-artificial-intelligence)
 - [Is My Data Any Good? A Pre-ML Checklist](https://services.google.com/fh/files/blogs/data-prep-checklist-ml-bd-wp-v2.pdf)
 - [What to do After Deploying your Model to Production](https://www.analyticsvidhya.com/blog/2022/04/what-to-do-after-deploying-your-model-to-production/)
