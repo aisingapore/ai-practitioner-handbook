@@ -1,6 +1,6 @@
 # What are some questions to be asked to the project sponsor to understand their deployment requirements?
 
-Contributor(s): Siti Nuruljannah Baharudin
+Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 
 ## General
 1. Where would the final solution be deployed? 

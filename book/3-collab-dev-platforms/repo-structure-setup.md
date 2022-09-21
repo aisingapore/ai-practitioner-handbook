@@ -1,6 +1,6 @@
 # What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
 
-Contributor(s): Siti Nuruljannah Baharudin
+Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 
 ## Use of existing project templates
 
