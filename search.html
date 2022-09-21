@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -125,52 +127,132 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="book/1-pre-project-phase/overview.html">
    1. Pre-project Phase
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/1-pre-project-phase/business_challenge_2_ai_problem.html">
+     How does the AI engineer translate the business challenge into an AI problem?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/1-pre-project-phase/key_areas_in_data.html">
+     What are the key areas to look out for in the data when framing the AI project?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="book/2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="book/3-collab-dev-platforms/overview.html">
    3. Collaborative Development Platforms
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/3-collab-dev-platforms/repo-structure-setup.html">
+     What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="book/4-lit-review/overview.html">
    4. Literature Review
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="book/5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/5-data-mgmt-exp-proc/data-mgmt.html">
+     Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/5-data-mgmt-exp-proc/e2e-workflow.html">
+     What are the Processes Involved in Building a Basic End-to-End Workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+     How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="book/6-modelling/overview.html">
    6. Modelling
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="book/7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/7-solution-delivery/deployment-requirements-gathering.html">
+     What are some questions to be asked to the project sponsor to understand their deployment requirements?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/7-solution-delivery/min-viable-code.html">
+     How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="book/8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="book/8-documentation-handover/documenting-architecture-processes.html">
+     What are some good practices in documenting high-level system architecture and processes of an AI solution?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="book/_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>

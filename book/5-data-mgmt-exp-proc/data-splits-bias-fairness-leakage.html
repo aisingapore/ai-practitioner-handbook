@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Project Management &amp; Technical Leadership &#8212; AI Practitioner Handbook</title>
+    <title>Potential scenarios of bias, unfairness, data leakage in data splits and suggestions to remedy &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Collaborative Development Platforms" href="../3-collab-dev-platforms/overview.html" />
-    <link rel="prev" title="What are the key areas to look out for in the data when framing the AI project?" href="../1-pre-project-phase/key_areas_in_data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,7 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -146,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
@@ -174,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+  <a class="reference internal" href="overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -184,17 +182,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+    <a class="reference internal" href="data-mgmt.html">
      Which data storage options are suitable for the project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+    <a class="reference internal" href="e2e-workflow.html">
      What are the Processes Involved in Building a Basic End-to-End Workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+    <a class="reference internal" href="e2e-workflow-adv.html">
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
@@ -371,7 +369,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,7 +397,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/2-proj-mgmt-tech-lead/overview.md"
+        <a href="../../_sources/book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,8 +457,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#potential-scenarios-of-bias-and-unfairness-in-data-splits-and-suggestions-to-remedy">
+   Potential scenarios of bias and unfairness in data splits and suggestions to remedy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potential-scenarios-of-data-leakage-in-data-splits-and-suggestions-to-remedy">
+   Potential scenarios of data leakage in data splits and suggestions to remedy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -472,7 +480,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2. Project Management & Technical Leadership</h1>
+                <h1>Potential scenarios of bias, unfairness, data leakage in data splits and suggestions to remedy</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,8 +491,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#potential-scenarios-of-bias-and-unfairness-in-data-splits-and-suggestions-to-remedy">
+   Potential scenarios of bias and unfairness in data splits and suggestions to remedy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potential-scenarios-of-data-leakage-in-data-splits-and-suggestions-to-remedy">
+   Potential scenarios of data leakage in data splits and suggestions to remedy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -497,11 +515,31 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-management-technical-leadership">
-<h1>2. Project Management &amp; Technical Leadership<a class="headerlink" href="#project-management-technical-leadership" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for project management &amp; technical leadership.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="potential-scenarios-of-bias-unfairness-data-leakage-in-data-splits-and-suggestions-to-remedy">
+<h1>Potential scenarios of bias, unfairness, data leakage in data splits and suggestions to remedy<a class="headerlink" href="#potential-scenarios-of-bias-unfairness-data-leakage-in-data-splits-and-suggestions-to-remedy" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Lee Xin Jie</p>
+<section id="potential-scenarios-of-bias-and-unfairness-in-data-splits-and-suggestions-to-remedy">
+<h2>Potential scenarios of bias and unfairness in data splits and suggestions to remedy<a class="headerlink" href="#potential-scenarios-of-bias-and-unfairness-in-data-splits-and-suggestions-to-remedy" title="Permalink to this headline">#</a></h2>
+<p>Having biases in datasets may lead to unfairness in our models. We want to ensure that model predictions are fair for different groups of users and scenarios.</p>
+<p>Certain problems are inherently imbalanced. For example, fraud detection datasets usually have fewer fraudulent examples than normal examples. In such a scenario, you should favour a stratified data split over a random split to ensure that there are equal proportions of fraudulent to normal examples in each data split. You will want to avoid a situation where your train set is predominantly normal, and your development set has a higher proportion of fraudulent data than in reality.</p>
+<p>When dealing with datasets involving geographical and demographical slices, you may also want to consider stratified data split to ensure that each split contains a balanced set of examples across geographical and demographical attributes. This will help reduce any potential unfairness in model predictions between users from different geographical and demographical slices.</p>
+</section>
+<section id="potential-scenarios-of-data-leakage-in-data-splits-and-suggestions-to-remedy">
+<h2>Potential scenarios of data leakage in data splits and suggestions to remedy<a class="headerlink" href="#potential-scenarios-of-data-leakage-in-data-splits-and-suggestions-to-remedy" title="Permalink to this headline">#</a></h2>
+<p>Data leakage is the scenario where the model has access to information that will not be available during production. Often, if your model performs surprisingly well on the validation/test set (e.g. 100% test set performance), you should perform a check for data leakages. Data leakages should be avoided, as they allow the model to leverage on leaked information and achieve inflated performance on the validation/test set.</p>
+<p>A common example of data leakage is temporal data leakage, which may occur when you are building a model to forecast future events based on past events. For example, you are building a model to predict the price of a stock in future, and you have past daily data of the stock’s prices. If you perform a random data split, it is likely that the train set may contain future stock prices, while the test set may contain past stock prices. This will allow the model to leverage on future stock prices it encounters during training to predict past prices on the test set, thereby inflating the model’s performance.</p>
+<p>In temporal problems involving high correlations between successive times, you should also aim to group successive days together in the same data split to minimise data leakage.</p>
+<p>Datasets with duplicated data points are also likely to cause data leakages. If a random data split is adopted, you may have the same data points in both the train and test set. This will result in inflated test performance.</p>
+<p>Datasets with near duplicates can also subtly introduce data leakage. One example will be in computer vision, where it is possible to have multiple images that are near duplicates but not perfect duplicates. For example, if you are training a model to classify car models, you may have images of the exact same car taken 1 second apart. In this case the images are likely to have very similar characteristics. If you split the dataset randomly, you are likely to split these images into each of the train, validation and test set. Your model will then likely evaluate well on the images assigned to the test set, since it has already encountered similar images during training. In this scenario, you should consider a stratified splitting of your dataset, where images of the same car should be assigned to a single dataset split.</p>
+<p>When engineering features, ensure that you do not inject data leakage during the process. If you are building a model to predict how many items a user will purchase at a store on a particular day, you will want to only engineer features that are available during inference in production. Examples of features leveraging information that won’t be available are the number of items sold in the store during the same day, or a moving average of the number of items purchased by the user up to and including the day itself, etc.</p>
+<p>Having a repeatable data split algorithm is important to avoid introducing unforeseen data leakages during model retraining. Imagine the scenario where an unrepeatable random data split algorithm is adopted. When you have new datasets, you will likely generate new data splits and trigger model retraining. After retraining, you will often have to compare the performance of the old model vs the new model, to choose which model to deploy. An unrepeatable data split algorithm may mean that some of the old training data may fall into the new validation dataset. Hence, your old model may appear to perform better on the new validation dataset and you will deploy that model. However you may soon realise that the actual model performance in production is lower after deployment.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Building Machine Learning Powered Applications: Going from Idea to Product</p></li>
+<li><p>Machine Learning Design Patterns: Solutions to Common Challenges in Data Preparation, Model Building, and MLOps</p></li>
+</ul>
 </section>
 </section>
 
@@ -518,7 +556,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/2-proj-mgmt-tech-lead"
+            path: "./book/5-data-mgmt-exp-proc"
         },
         predefinedOutput: true
     }
@@ -532,20 +570,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../1-pre-project-phase/key_areas_in_data.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../3-collab-dev-platforms/overview.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Collaborative Development Platforms</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

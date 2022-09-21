@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Project Management &amp; Technical Leadership &#8212; AI Practitioner Handbook</title>
+    <title>How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Collaborative Development Platforms" href="../3-collab-dev-platforms/overview.html" />
-    <link rel="prev" title="What are the key areas to look out for in the data when framing the AI project?" href="../1-pre-project-phase/key_areas_in_data.html" />
+    <link rel="next" title="8. Documentation &amp; Handover" href="../8-documentation-handover/overview.html" />
+    <link rel="prev" title="What are some questions to be asked to the project sponsor to understand their deployment requirements?" href="deployment-requirements-gathering.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -146,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
@@ -205,23 +205,23 @@ const thebe_selector_output = ".output, .cell_output"
    6. Modelling
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../7-solution-delivery/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../7-solution-delivery/deployment-requirements-gathering.html">
+    <a class="reference internal" href="deployment-requirements-gathering.html">
      What are some questions to be asked to the project sponsor to understand their deployment requirements?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7-solution-delivery/min-viable-code.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
     </a>
    </li>
@@ -371,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/7-solution-delivery/min-viable-code.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/2-proj-mgmt-tech-lead/overview.md"
+        <a href="../../_sources/book/7-solution-delivery/min-viable-code.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,8 +459,33 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#identify-current-processes">
+   Identify Current Processes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-sample-data">
+   Create Sample Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identify-stages-of-deployment">
+   Identify Stages of Deployment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-small">
+   Start Small
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -472,7 +497,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2. Project Management & Technical Leadership</h1>
+                <h1>How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,8 +508,33 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#identify-current-processes">
+   Identify Current Processes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-sample-data">
+   Create Sample Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identify-stages-of-deployment">
+   Identify Stages of Deployment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-small">
+   Start Small
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -497,11 +547,97 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-management-technical-leadership">
-<h1>2. Project Management &amp; Technical Leadership<a class="headerlink" href="#project-management-technical-leadership" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for project management &amp; technical leadership.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-can-we-build-a-minimum-viable-code-configuration-for-ci-cd-automation-into-an-existing-codebase">
+<h1>How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?<a class="headerlink" href="#how-can-we-build-a-minimum-viable-code-configuration-for-ci-cd-automation-into-an-existing-codebase" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Syakyr Surani</p>
+<p>This guide assumes that you have some basic knowledge of <a class="reference external" href="https://dev.to/kirekov/basics-of-cicd-5e16">CI/CD</a>
+and an existing codebase. The codebase is in a working state and while
+currently you find it manageable, you anticipate that you need to move
+away from manual testing that can be unreliable even with a checklist
+to work with. You may have multiple projects to manage, or there are
+more contributors raising a pull/merge request than you can possibly
+handle just by manual testing. You have heard about CI/CD, but you do
+not know where to start.</p>
+<p>This guide will not recommend specific CI/CD products or tools, but
+a general outline to adhere to for an effective minimum implementation,
+and where to go from there. The flowchart below gives the outline of
+the guide:</p>
+<div class="mermaid">
+            flowchart LR
+    step1(Identify Current Processes)
+    step2(Create Sample Data)
+    step3(Identify Stages of Deployment)
+    step4(Start Small)
+    step1 --&gt; step2 --&gt; step3 --&gt; step4
+        </div><section id="identify-current-processes">
+<h2>Identify Current Processes<a class="headerlink" href="#identify-current-processes" title="Permalink to this headline">#</a></h2>
+<p>Before anything can happen, it is best to plan your actions out. For
+that, you would need to list out the actions taken to run manual
+testing for your codebase. This is made easier if you already have a
+checklist of processes to test before pushing/merging to a branch. Here
+is a list to check against to see if you have missed anything:</p>
+<ul class="simple">
+<li><p>Linting</p></li>
+<li><p>Error checking (whether the code produces any unexpected errors)</p></li>
+<li><p>Packaging (Docker, PyPI, etc.)</p></li>
+</ul>
+<p>Since we focus mainly on AI projects, there should also be a
+consideration to allow for fast prototyping of model training before
+packaging the project into a viable product to be interacted by the
+stakeholders.</p>
+</section>
+<section id="create-sample-data">
+<h2>Create Sample Data<a class="headerlink" href="#create-sample-data" title="Permalink to this headline">#</a></h2>
+<p>Due to the nature of our organisation, we deal with data more often
+than other tech firms. As such, it is imperative that we create and
+build sample data to test out the functionality of our codebase before
+running it on the full dataset in order to reduce time taken bugfixing
+or adding new features.</p>
+</section>
+<section id="identify-stages-of-deployment">
+<h2>Identify Stages of Deployment<a class="headerlink" href="#identify-stages-of-deployment" title="Permalink to this headline">#</a></h2>
+<p>This step is important in order to reduce time taken to test and have
+less resources used prior to the main events such as training and
+monitoring during deployment. Some stages of testing can be defined as
+follows:</p>
+<ul class="simple">
+<li><p>Tests made while committing to a bugfix/feature branch (linting,
+etc.)</p></li>
+<li><p>Tests made before doing a pull/merge request to dev (main) branch
+(error checking, etc.)</p></li>
+<li><p>Tests made from dev branch to release (production) (deployment
+builds, etc.)</p></li>
+</ul>
+</section>
+<section id="start-small">
+<h2>Start Small<a class="headerlink" href="#start-small" title="Permalink to this headline">#</a></h2>
+<p>This final step is paramount as to not paralyse yourself in the vast
+overarching process of CI/CD automation. Start with a small subset of
+the codebase to familiarise yourself with the process before attempting
+to refactor an entire codebase, especially if you are working in a
+project with large teams or with critical infrastructure. Iterative
+development is key to managing a large undertaking, one step at a time.</p>
+<p>If you need some guidance on where to start, you could refer to
+<a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html"><span class="doc std std-doc">this section of the handbook</span></a> under the simplified
+workflow for more information.</p>
+</section>
+<section id="final-thoughts">
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">#</a></h2>
+<p>Every project is different, and therefore there is no one Minimum
+Viable Code/Configuration that can be proposed without first
+understanding the nature of such projects. Nevertheless, it is with
+hope that this guide can point out your first steps in building and
+integrating CI/CD automation into your codebase for a more robust and
+resilient one.</p>
+<p>Below are some of the references you can look at to supplement your
+CI/CD journey.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://about.gitlab.com/blog/2022/04/13/how-to-learn-ci-cd-fast/">Gitlab - How to learn CI/CD fast</a></p></li>
+<li><p><a class="reference external" href="https://www.spiceworks.com/tech/devops/articles/what-is-ci-cd/#_004">Spiceworks - Top 10 CI/CD Best Practices for 2022</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -518,7 +654,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/2-proj-mgmt-tech-lead"
+            path: "./book/7-solution-delivery"
         },
         predefinedOutput: true
     }
@@ -532,17 +668,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../1-pre-project-phase/key_areas_in_data.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="deployment-requirements-gathering.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
+            <p class="prev-next-title">What are some questions to be asked to the project sponsor to understand their deployment requirements?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../3-collab-dev-platforms/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../8-documentation-handover/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Collaborative Development Platforms</p>
+        <p class="prev-next-title">8. Documentation &amp; Handover</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Project Management &amp; Technical Leadership &#8212; AI Practitioner Handbook</title>
+    <title>What are some good practices in documenting high-level system architecture and processes of an AI solution? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Collaborative Development Platforms" href="../3-collab-dev-platforms/overview.html" />
-    <link rel="prev" title="What are the key areas to look out for in the data when framing the AI project?" href="../1-pre-project-phase/key_areas_in_data.html" />
+    <link rel="next" title="Contributing to AI Singapore’s AI Practitioner Handbook" href="../_contributing.html" />
+    <link rel="prev" title="8. Documentation &amp; Handover" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -146,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
@@ -227,18 +227,18 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../8-documentation-handover/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../8-documentation-handover/documenting-architecture-processes.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      What are some good practices in documenting high-level system architecture and processes of an AI solution?
     </a>
    </li>
@@ -371,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/8-documentation-handover/documenting-architecture-processes.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/2-proj-mgmt-tech-lead/overview.md"
+        <a href="../../_sources/book/8-documentation-handover/documenting-architecture-processes.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,9 +459,41 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#use-simple-visuals">
+   Use simple visuals
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consistency-in-notation">
+   Consistency in notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-diagram-per-process">
+   One diagram per process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consider-your-audience">
+   Consider your audience
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-considerations">
+   Design considerations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colour">
+     Colour
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#labels">
+     Labels
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -472,7 +504,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2. Project Management & Technical Leadership</h1>
+                <h1>What are some good practices in documenting high-level system architecture and processes of an AI solution?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,9 +515,41 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#use-simple-visuals">
+   Use simple visuals
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consistency-in-notation">
+   Consistency in notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-diagram-per-process">
+   One diagram per process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consider-your-audience">
+   Consider your audience
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-considerations">
+   Design considerations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colour">
+     Colour
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#labels">
+     Labels
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -497,11 +561,48 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-management-technical-leadership">
-<h1>2. Project Management &amp; Technical Leadership<a class="headerlink" href="#project-management-technical-leadership" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for project management &amp; technical leadership.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-good-practices-in-documenting-high-level-system-architecture-and-processes-of-an-ai-solution">
+<h1>What are some good practices in documenting high-level system architecture and processes of an AI solution?<a class="headerlink" href="#what-are-some-good-practices-in-documenting-high-level-system-architecture-and-processes-of-an-ai-solution" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Siti Nuruljannah Baharudin</p>
+<p>In machine learning projects, documentation should be treated like a growing entity that is maintained the way we maintain code. At the same time, we do not want to spend excessive effort documenting details that may rapidly change over the course of the project. In the systems and software engineering fields, modelling languages such as UML are used to document system architecture and processes. Although they will not be discussed here, the concepts from these modelling languages can be adopted to suit the documentation requirements of your project.</p>
+<section id="use-simple-visuals">
+<h2>Use simple visuals<a class="headerlink" href="#use-simple-visuals" title="Permalink to this headline">#</a></h2>
+<p>Box-and-arrow diagrams are a simple and easily maintainable visual method to document system architecture and processes. This example shows how a high-level process can be illustrated with a box-and-arrow diagram:</p>
+<p><img alt="Box-and-arrow diagram describing high-level model training process" src="../../_images/box-arrow-example1.png" /></p>
+</section>
+<section id="consistency-in-notation">
+<h2>Consistency in notation<a class="headerlink" href="#consistency-in-notation" title="Permalink to this headline">#</a></h2>
+<p>Choose a shape to denote each element and a line to denote each relationship or flow, and stick to these choices for all diagrams used in your documentation. This basic set of notations is a good place to start.</p>
+<p><img alt="Example of basic notations for a box-and-arrow diagram" src="../../_images/box-arrow-notation-example.png" /></p>
+</section>
+<section id="one-diagram-per-process">
+<h2>One diagram per process<a class="headerlink" href="#one-diagram-per-process" title="Permalink to this headline">#</a></h2>
+<p>Illustrate only one process per diagram. If there is a need to show lower-level detail of a process, create a separate diagram for that. I would recommend using the <a class="reference external" href="https://c4model.com/">C4 model</a> as a guide. It defines <a class="reference external" href="https://c4model.com/#SystemContextDiagram">four levels of diagrams</a> - Context, Container, Component and Code - based on a hierarchy of abstractions.</p>
+</section>
+<section id="consider-your-audience">
+<h2>Consider your audience<a class="headerlink" href="#consider-your-audience" title="Permalink to this headline">#</a></h2>
+<p>Within the development team, it may be worth the while to create up to <a class="reference external" href="https://c4model.com/#ComponentDiagram">level 3 (Component) diagrams</a>. However, such diagrams may not be useful to non-technical people outside the development team. Furthermore, as they contain implementation details, these diagrams likely get outdated quickly.</p>
+<p>In documentation delivered to end-users, Context diagrams would typically suffice for the general audience, to whom the solution is a black box. On the other hand, if the users are technical people and require understanding the inner workings of the system, including the lower-level diagrams would be a good idea. It is recommended that you automate the generation of Component and Code diagrams to minimise the effort spent on maintaining them.</p>
+</section>
+<section id="design-considerations">
+<h2>Design considerations<a class="headerlink" href="#design-considerations" title="Permalink to this headline">#</a></h2>
+<section id="colour">
+<h3>Colour<a class="headerlink" href="#colour" title="Permalink to this headline">#</a></h3>
+<p>Besides shapes, colours may also be used to visually differentiate between element types. For instance, in the diagram below, purple is used to denote a remote storage location while yellow is used to denote a local storage location.</p>
+<p><img alt="Box-and-arrow diagram describing high-level model training process with colour codes" src="../../_images/box-arrow-example2.png" /></p>
+<p>It is best that you refrain from relying only on colours to relay information in your diagram as there could be readers who have difficulty distinguishing colours. The use of colours should serve to improve understanding of the diagram and increase its visual appeal for the average reader.</p>
+</section>
+<section id="labels">
+<h3>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">#</a></h3>
+<p>As seen in the earlier examples, every element and relationship in your diagram should be labelled. A label should be specific yet concise, in a legible font.</p>
+<p>In a system architecture diagram, the relationships between elements should have the protocol or technology explicitly labelled, as seen in the example below.</p>
+<p><img alt="Box-and-arrow diagram describing high-level architecture of a model serving module using REST API" src="../../_images/box-arrow-example3.png" /></p>
+<p><strong>Reference(s):</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://c4model.com/">The C4 model for visualising software architecture</a></p></li>
+<li><p>Bhatti et al. (2021) Docs for Developers: An Engineer’s Field Guide to Technical Writing.</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -518,7 +619,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/2-proj-mgmt-tech-lead"
+            path: "./book/8-documentation-handover"
         },
         predefinedOutput: true
     }
@@ -532,17 +633,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../1-pre-project-phase/key_areas_in_data.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
+            <p class="prev-next-title">8. Documentation &amp; Handover</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../3-collab-dev-platforms/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../_contributing.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Collaborative Development Platforms</p>
+        <p class="prev-next-title">Contributing to AI Singapore’s AI Practitioner Handbook</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

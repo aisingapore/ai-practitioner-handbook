@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Project Management &amp; Technical Leadership &#8212; AI Practitioner Handbook</title>
+    <title>How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Collaborative Development Platforms" href="../3-collab-dev-platforms/overview.html" />
-    <link rel="prev" title="What are the key areas to look out for in the data when framing the AI project?" href="../1-pre-project-phase/key_areas_in_data.html" />
+    <link rel="next" title="6. Modelling" href="../6-modelling/overview.html" />
+    <link rel="prev" title="What are the Processes Involved in Building a Basic End-to-End Workflow?" href="e2e-workflow.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -146,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
@@ -173,28 +173,28 @@ const thebe_selector_output = ".output, .cell_output"
    4. Literature Review
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+    <a class="reference internal" href="data-mgmt.html">
      Which data storage options are suitable for the project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+    <a class="reference internal" href="e2e-workflow.html">
      What are the Processes Involved in Building a Basic End-to-End Workflow?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
@@ -371,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/e2e-workflow-adv.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/2-proj-mgmt-tech-lead/overview.md"
+        <a href="../../_sources/book/5-data-mgmt-exp-proc/e2e-workflow-adv.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,8 +459,38 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#artifact-storage-governance">
+   Artifact Storage &amp; Governance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ci-cd">
+   CI/CD
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-registry">
+   Model Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#container-registry">
+   Container Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experiment-pipeline-model-monitoring-tracking">
+   Experiment, Pipeline &amp; Model Monitoring/Tracking
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
   </a>
  </li>
 </ul>
@@ -472,7 +502,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2. Project Management & Technical Leadership</h1>
+                <h1>How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,8 +513,38 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#artifact-storage-governance">
+   Artifact Storage &amp; Governance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ci-cd">
+   CI/CD
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-registry">
+   Model Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#container-registry">
+   Container Registry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experiment-pipeline-model-monitoring-tracking">
+   Experiment, Pipeline &amp; Model Monitoring/Tracking
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
   </a>
  </li>
 </ul>
@@ -497,11 +557,117 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-management-technical-leadership">
-<h1>2. Project Management &amp; Technical Leadership<a class="headerlink" href="#project-management-technical-leadership" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for project management &amp; technical leadership.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-do-i-enhance-the-workflow-with-quality-of-life-improvements-for-my-end-to-end-workflow">
+<h1>How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?<a class="headerlink" href="#how-do-i-enhance-the-workflow-with-quality-of-life-improvements-for-my-end-to-end-workflow" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Syakyr Surani, Ryzal Kamis</p>
+<p>This guide assumes that you have built a basic end-to-end workflow and
+want to scale up your workflow while increasing robustness and
+reliability. If you want to know more about building a basic workflow
+instead, then you can go to <a class="reference internal" href="e2e-workflow.html"><span class="doc std std-doc">this section instead</span></a>.</p>
+<p>As per from that section, this flowchart describes the typical
+end-to-end workflow of an AI project:</p>
+<div class="mermaid">
+            flowchart TD
+    cicd(CI/CD)
+    datastorage[(Data/Artifact Storage &amp; Governance)]
+    verctl[(Version Control)]
+    devwspace[Developer Workspace]
+    modelexp(Model Experimentation)
+    modelreg[(Model Registry)]
+    contreg[(Container Registry)]
+    exptrack(Experiment &amp; Pipeline Tracking)
+    modelserv[(Model Serving)]
+    modelmon(Model Monitoring)
+    style cicd fill:#bbf
+    style modelreg fill:#bbf
+    style contreg fill:#bbf
+    style exptrack fill:#bbf
+    style modelmon fill:#bbf
+    cicd &lt;---&gt; modelexp
+    datastorage &lt;---&gt; modelexp
+    datastorage &lt;---&gt; modelreg
+    datastorage &lt;-.-&gt; verctl
+    verctl &lt;.-&gt; modelreg
+    verctl --&gt; devwspace
+    verctl &lt;---&gt; contreg
+    devwspace --&gt; modelexp
+    modelexp --&gt; modelreg
+    modelexp &lt;---&gt; contreg
+    modelexp ---&gt; exptrack
+    modelreg ---&gt; modelserv
+    contreg &lt;--&gt; modelserv
+    modelserv ---&gt; modelmon
+        </div><p>This section deals with the other components and processes that are
+present in this workflow, but not the simplified version in the other
+section.</p>
+<section id="artifact-storage-governance">
+<h2>Artifact Storage &amp; Governance<a class="headerlink" href="#artifact-storage-governance" title="Permalink to this headline">#</a></h2>
+<p>Artifacts pertain to data that are not used in training the models in
+your project. This can be your configuration settings, logs, etc. On
+the other hand, data and artifact governance refers to the
+authentication and authorisation protocols that are discussed
+previously in the
+<a class="reference external" href="e2e-workflow.html#developer-workspace">Developer Workspace</a> section.</p>
+</section>
+<section id="ci-cd">
+<h2>CI/CD<a class="headerlink" href="#ci-cd" title="Permalink to this headline">#</a></h2>
+<p>Continuous integration and continuous delivery/deployment processes
+pertain to the automation of various processes within the workflow
+itself. While this would benefit end-to-end workflows greatly, it is
+not implemented within many ML/DL projects due to its complexity and
+time needed to design an effective CI/CD process. If you do want to
+know more about CI/CD, you can refer to <a class="reference internal" href="../7-solution-delivery/min-viable-code.html"><span class="doc std std-doc">this section</span></a> instead.</p>
+</section>
+<section id="model-registry">
+<h2>Model Registry<a class="headerlink" href="#model-registry" title="Permalink to this headline">#</a></h2>
+<p>This could be seen as a version control for models to manage problems
+such as model drifting and retraining. You may need this component as
+your project scales up, and you need to manage multiple models within
+the project as well as across multiple projects that may use the same
+model(s). This component would also make A/B testing easier since you
+could reference multiple versions of the same model to gauge any
+improvements a new version may provide.</p>
+</section>
+<section id="container-registry">
+<h2>Container Registry<a class="headerlink" href="#container-registry" title="Permalink to this headline">#</a></h2>
+<p>Containers such as Docker abstracts the codebase while providing a
+sandbox to reduce dependency conflicts while making component
+management easier. This allows better scaling and modularity by
+setting manageable blocks according to their use case instead of by
+just the products themselves. However, you should take note whether
+your project requirements allow containerisation as some policies
+within your organisation/client may be against this process due to the
+overheads it may have, especially if the project does not require to be
+designed for scaling.</p>
+</section>
+<section id="experiment-pipeline-model-monitoring-tracking">
+<h2>Experiment, Pipeline &amp; Model Monitoring/Tracking<a class="headerlink" href="#experiment-pipeline-model-monitoring-tracking" title="Permalink to this headline">#</a></h2>
+<p>The experiment and pipeline tracking as well as model monitoring can be
+seen as similar components that target different processes. Experiment
+and pipeline tracking focuses more towards monitoring the models as
+they are being trained, and from there, decisions are being made
+through controlling the hyperparameters of the model, or use a
+different model architecture altogether.</p>
+<p>On the other hand, model monitoring concerns overseeing the trained
+models and see whether issues are present while it is used for
+inference such as model drifting. These metrics would be collected and
+processed to make decisions such as controlling data input requirements
+or retraining the model.</p>
+</section>
+<section id="final-thoughts">
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">#</a></h2>
+<p>There are many more components and processes that could be part of your
+end-to-end workflow that are not discussed in this as well as the basic
+workflow sections, but the ones that are discussed should be sufficient
+for you to build a robust and reliable AI end-to-end workflow. If you
+want to know more about this and MLOps in general, you can take a look
+at <a class="reference external" href="https://ml-ops.org/">ml-ops.org</a> for more insight.</p>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ml-ops.org/">MLOps: Machine Learning Operations | InnoQ</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -518,7 +684,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/2-proj-mgmt-tech-lead"
+            path: "./book/5-data-mgmt-exp-proc"
         },
         predefinedOutput: true
     }
@@ -532,17 +698,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../1-pre-project-phase/key_areas_in_data.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="e2e-workflow.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
+            <p class="prev-next-title">What are the Processes Involved in Building a Basic End-to-End Workflow?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../3-collab-dev-platforms/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../6-modelling/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Collaborative Development Platforms</p>
+        <p class="prev-next-title">6. Modelling</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

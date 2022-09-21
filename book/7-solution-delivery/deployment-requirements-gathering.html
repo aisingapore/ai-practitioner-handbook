@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Project Management &amp; Technical Leadership &#8212; AI Practitioner Handbook</title>
+    <title>What are some questions to be asked to the project sponsor to understand their deployment requirements? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Collaborative Development Platforms" href="../3-collab-dev-platforms/overview.html" />
-    <link rel="prev" title="What are the key areas to look out for in the data when framing the AI project?" href="../1-pre-project-phase/key_areas_in_data.html" />
+    <link rel="next" title="How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?" href="min-viable-code.html" />
+    <link rel="prev" title="7. Solution Delivery" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -146,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
   </a>
  </li>
@@ -205,23 +205,23 @@ const thebe_selector_output = ".output, .cell_output"
    6. Modelling
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../7-solution-delivery/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7-solution-delivery/deployment-requirements-gathering.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      What are some questions to be asked to the project sponsor to understand their deployment requirements?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../7-solution-delivery/min-viable-code.html">
+    <a class="reference internal" href="min-viable-code.html">
      How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
     </a>
    </li>
@@ -371,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/7-solution-delivery/deployment-requirements-gathering.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/2-proj-mgmt-tech-lead/overview.md"
+        <a href="../../_sources/book/7-solution-delivery/deployment-requirements-gathering.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -459,8 +459,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#general">
+   General
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-model-outputs">
+   Data &amp; Model Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration">
+   Integration
   </a>
  </li>
 </ul>
@@ -472,7 +487,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2. Project Management & Technical Leadership</h1>
+                <h1>What are some questions to be asked to the project sponsor to understand their deployment requirements?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,8 +498,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#general">
+   General
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-model-outputs">
+   Data &amp; Model Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integration">
+   Integration
   </a>
  </li>
 </ul>
@@ -497,11 +527,77 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="project-management-technical-leadership">
-<h1>2. Project Management &amp; Technical Leadership<a class="headerlink" href="#project-management-technical-leadership" title="Permalink to this headline">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>This is an overview for project management &amp; technical leadership.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-questions-to-be-asked-to-the-project-sponsor-to-understand-their-deployment-requirements">
+<h1>What are some questions to be asked to the project sponsor to understand their deployment requirements?<a class="headerlink" href="#what-are-some-questions-to-be-asked-to-the-project-sponsor-to-understand-their-deployment-requirements" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Siti Nuruljannah Baharudin</p>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Where would the final solution be deployed?</p>
+<ul class="simple">
+<li><p>Options may include a cloud service, an on-premise server, or an edge device. If the specifications are fixed, the client should provide them as soon as possible in order for the team to assess whether they are sufficient for the AI solution to operate on.</p></li>
+</ul>
+</li>
+<li><p>How should the application be packaged for deployment?</p>
+<ul class="simple">
+<li><p>Although containerising the application is a common solution, some organisations may have restrictions on the containerisation technology allowed on their servers, or even disallow containerisation altogether. If so, it is recommended that you assess the impact on the deployment effort. For instance, the team may lack expertise in the containerisation technology used, or when containerisation is not used, more system integration testing may be required. These would result in additional effort to prepare the deployment package, which may impact the project schedule.</p></li>
+</ul>
+</li>
+<li><p>Are there any restrictions or preferences regarding the operating system on which the solution should be deployed?</p></li>
+<li><p>Are there any restrictions on software licenses to be used?</p>
+<ul class="simple">
+<li><p>Many open source libraries used in machine learning projects are licensed under Apache 2.0, MIT and BSD licenses. If your solution requires the use of libraries with less permissive licenses, it would be best to check with the project sponsor.</p></li>
+</ul>
+</li>
+<li><p>Would a staging environment or test device be provided for developers to test with prior to initial deployment?</p>
+<ul class="simple">
+<li><p>If not provided, you would need to commission an internal environment that closely mirrors the specifications of the environment on which the solution would eventually be deployed.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="data-model-outputs">
+<h2>Data &amp; Model Outputs<a class="headerlink" href="#data-model-outputs" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Where would the data to be used for retraining and inference be located in the deployment environment?</p></li>
+<li><p>Where would the model outputs be stored? Is there any storage size limit on this location?</p></li>
+<li><p>If the data storage is located remotely, what is the authentication method to be used to access it?</p></li>
+</ol>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>What is the frequency at which the user intends to run the retraining and inference pipelines?</p>
+<ul class="simple">
+<li><p>Generally, the requirements and considerations for inference are more critical compared to retraining, as the latter is usually performed less frequently and is less time-sensitive.</p></li>
+</ul>
+</li>
+<li><p>Is batch inference a requirement? If so, what is the expected size or volume of data in a single batch?</p></li>
+<li><p>What are the requirements on inference speed and training time?</p>
+<ul class="simple">
+<li><p>You would need to consider whether the limitations of the chosen deployment device would affect these requirements. If refinements can be made to the code to meet the requirements, the additional effort would also need to be considered.</p></li>
+</ul>
+</li>
+<li><p>What are the requirements on the size of the trained model?</p></li>
+</ol>
+</section>
+<section id="integration">
+<h2>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Is the application required to interface with another system via an API?</p></li>
+<li><p>If an API is to be supported, would the application function as the server or a client?</p></li>
+<li><p>Which type of API should be supported?</p>
+<ul class="simple">
+<li><p>If the client does not have specific requirements on the API, you may recommend them the most commonly used choice that can be easily supported by the tech stack you are using.</p></li>
+</ul>
+</li>
+<li><p>What is the required format of the API payload?</p>
+<ul class="simple">
+<li><p>If the client has provided a specific format, you would need to consider how the size of the payload may affect the inference speed requirements. Performing some benchmarking tests using sample payload files would enable you to better determine this.</p></li>
+</ul>
+</li>
+<li><p>If no API is required, is there any preferred way for users to trigger the training or inference engine?</p></li>
+</ol>
 </section>
 </section>
 
@@ -518,7 +614,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/2-proj-mgmt-tech-lead"
+            path: "./book/7-solution-delivery"
         },
         predefinedOutput: true
     }
@@ -532,17 +628,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../1-pre-project-phase/key_areas_in_data.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
+            <p class="prev-next-title">7. Solution Delivery</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../3-collab-dev-platforms/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="min-viable-code.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3. Collaborative Development Platforms</p>
+        <p class="prev-next-title">How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
