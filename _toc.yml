@@ -7,8 +7,9 @@ root: book/intro
 chapters:
 # ===== 1. Pre-project Phase ========================================
 - file: book/1-pre-project-phase/overview
-  # - file: 
-  # - file: 
+  sections:
+  - file: book/1-pre-project-phase/business_challenge_2_ai_problem.md
+  - file: book/1-pre-project-phase/key_areas_in_data.md
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   # sections:
@@ -16,8 +17,8 @@ chapters:
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
 - file: book/3-collab-dev-platforms/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/3-collab-dev-platforms/repo-structure-setup.md
   # - file: 
 # ===== 4. Literature Review ========================================
 - file: book/4-lit-review/overview
@@ -26,8 +27,12 @@ chapters:
 # - file: 
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/5-data-mgmt-exp-proc/data-mgmt
+  # - file: book/5-data-mgmt-exp-proc/data-splits
+  # - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
+  - file: book/5-data-mgmt-exp-proc/e2e-workflow 
+  - file: book/5-data-mgmt-exp-proc/e2e-workflow-adv 
   # - file: 
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
@@ -36,13 +41,14 @@ chapters:
   # - file: 
 # ===== 7. Solution Delivery ========================================
 - file: book/7-solution-delivery/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/7-solution-delivery/deployment-requirements-gathering.md 
+  - file: book/7-solution-delivery/min-viable-code
   # - file: 
 # ===== 8. Documentation & Handover ========================================
 - file: book/8-documentation-handover/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/8-documentation-handover/documenting-architecture-processes.md
   # - file: 
 # ===== Miscellaneous ========================================
 - file: book/_contributing
