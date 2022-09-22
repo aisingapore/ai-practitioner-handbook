@@ -7,7 +7,7 @@ name: automerge-and-stage
 
 on:
   pull_request:
-    branches: develop
+    branches: main
 
 env:
   MY_REPO: https://aisingapore:${{secrets.GITHUB_TOKEN}}@github.com/aisingapore/ai-practitioner-handbook.git
