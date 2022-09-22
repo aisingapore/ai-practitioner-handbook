@@ -1,6 +1,6 @@
 # How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
 
-Contributor(s): Syakyr Surani, Ryzal Kamis
+Contributor(s): Syakyr Surani, Platforms Engineer & Ryzal Kamis, Assistant Head (MLOps)
 
 This guide assumes that you have built a basic end-to-end workflow and
 want to scale up your workflow while increasing robustness and 

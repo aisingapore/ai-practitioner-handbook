@@ -1,6 +1,6 @@
 # Which data storage options are suitable for the project?
 
-Contributor(s): Syakyr Surani
+Contributor(s): Syakyr Surani, Platforms Engineer
 
 There are many data storage options that one can implement for their
 project, but to choose one (or several) of these options can be 

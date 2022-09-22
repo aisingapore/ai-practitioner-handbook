@@ -28,9 +28,11 @@ chapters:
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
   sections:
+  - file: book/5-data-mgmt-exp-proc/data-mgmt
+  # - file: book/5-data-mgmt-exp-proc/data-splits
+  # - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
   - file: book/5-data-mgmt-exp-proc/e2e-workflow 
   - file: book/5-data-mgmt-exp-proc/e2e-workflow-adv 
-  - file: book/5-data-mgmt-exp-proc/data-mgmt
   # - file: 
   # - file: 
 # ===== 6. Modelling ========================================
