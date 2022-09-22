@@ -17,7 +17,7 @@ We envisioned this handbook as a useful guide for new AI Engineers joining AI Si
 
 Delivering production AI models goes beyond building AI models in Jupyter notebooks. It includes preliminary data identification, cleaning and curation, followed by building, training and testing the models and finally deploying the model. Throughout the process, AI and ML Ops play a fundamental role to enable the whole end-to-end process. 
 
-There are many excellent books and resources already on various AI algorithms, and we will not replicate them here. Instead, we will focus on the best practices and knowledge required to deliver an AI project end to end.
+There are many excellent books and resources on various AI algorithms, and we will not replicate them here. Instead, we will focus on the best practices and knowledge required to deliver an AI project from end to end.
 
 
 ## Identifying AI Ready Projects
