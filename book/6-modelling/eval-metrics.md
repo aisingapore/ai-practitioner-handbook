@@ -2,13 +2,11 @@
 
 Contributor(s): Er YuYang
 
-This guide assumes that you have a fair understanding of why the shareholders is 
-developing the AI/ML project (understand the business value), and have a reasonable 
-understanding for the implementation difficulty of the evaluation for given the dataset
+This guide assumes that you have a fair understanding of why the stakeholders is developing the AI/ML project (understand the business value), and have a reasonable understanding for the implementation difficulty of the evaluation for given the dataset.
 
 
-# High level metrics
-This section covers some of the most common metrics used for evaluating model. Do note that this is not exhaustive list by covers common high level metrics that are useful when communicating with stakeholders.
+# High level metrics (classification)
+This section covers some of the most common metrics used for evaluating model for classification problem. Do note that this is not exhaustive list by covers common high level metrics that are useful when communicating with stakeholders.
 
 1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
    
@@ -34,6 +32,14 @@ Example: Missing out to detect spam email is okay but missing out of detecting f
 
 If both Precision and Recall are equally important than F1 score should be used.
 
+5. Others common metrics
+
+    a. ROC curve (receiver operating characteristic curve) 
+
+    b. AUC (Area Under the ROC Curve)
+
+Both above metrics requires predicted labels & predicted probabilities in order to plot curve
+
 # In-depth metrics
 This section covers some of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
 
@@ -52,5 +58,13 @@ This section covers some of the depth metrics used in different AI domain. Do no
 
 2. Evaluation metrics for Object Detection
    - Intersection over Union (IOU)
-   - Average Precision(AP)
-   - Mean Average Precision(mAP)
+   - Average Precision (AP)
+   - Mean Average Precision (mAP)
+
+
+# High level metrics (Regression)
+1. MAE
+2. MSE
+3. RMSE
+4. RMSE
+5. R2
