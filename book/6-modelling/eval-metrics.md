@@ -14,23 +14,28 @@ This section covers some of the most common metrics used for evaluating model fo
 
 2. Precision = $\frac{TP}{TP+FP}$
 
-   Precision focus on finding positive cases
+   Definition: Out of the <u>positive predictions</u>, how many are correct. It focuses on finding positive cases
 
 3. Recall = $\frac{TP}{TP+FN}$
 
-   Recall focus on weeding out the negative cases
+   Definition: Out of the <u>actual positive</u>, how many are correct. It focuses on weeding out the negative cases
 
 4. F1 Score = 2 * $\frac{Precision * Recall}{Precision + Recall}$
    
    F1 score is the weighted mean of precision and recall
 
-Precision is more important than recall when you cannot afford to have any FP as compare to FN. Also, often assoicate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred.
+Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred.
 
 Recall is more important than precision whe you cannot afford to have any FN as compare to FP. Recall is important when the opportunity cost of passing up is high. 
 
-Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics). Finding as many spam email is desirable than missing out to detect spam email (use precision). 
+Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics for the latter). Finding as many spam email is desirable than missing out to detect spam email (use precision). 
 
-If both Precision and Recall are equally important than F1 score should be used.
+If both Precision and Recall are equally important than F1 score should be used. There are variation of F1 score: 
+- micro (globally by counting total positive)
+- macro (calculate f1 for each label then complete <u>unweighted</u> mean)
+- weighted (calculate f1 for each label then complete <u>weighted</u> mean)
+
+Use weighted f1 when data is unbalanced.
 
 5. Others common metrics
 
@@ -38,7 +43,9 @@ If both Precision and Recall are equally important than F1 score should be used.
 
     b. AUC (Area Under the ROC Curve)
 
-Both above metrics requires predicted labels & predicted probabilities in order to plot curve.
+    c. Confusion matrix
+
+Both metrics 5a & 5b requires predicted labels & predicted probabilities in order to plot curve.
 
 # In-depth metrics
 This section covers some of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
