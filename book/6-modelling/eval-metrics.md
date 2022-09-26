@@ -38,7 +38,7 @@ If both Precision and Recall are equally important than F1 score should be used.
 
     b. AUC (Area Under the ROC Curve)
 
-Both above metrics requires predicted labels & predicted probabilities in order to plot curve
+Both above metrics requires predicted labels & predicted probabilities in order to plot curve.
 
 # In-depth metrics
 This section covers some of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
@@ -63,6 +63,8 @@ This section covers some of the depth metrics used in different AI domain. Do no
 
 
 # High level metrics (Regression)
+This section covers some of the most common metrics used for evaluating model for regression problem. 
+
 1. MAE
 2. MSE
 3. RMSE
