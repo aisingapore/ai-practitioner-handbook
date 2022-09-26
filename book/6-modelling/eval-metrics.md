@@ -7,9 +7,50 @@ developing the AI/ML project (understand the business value), and have a reasona
 understanding for the implementation difficulty of the evaluation for given the dataset
 
 
-# High level metrics (for shareholders)
+# High level metrics
+This section covers some of the most common metrics used for evaluating model. Do note that this is not exhaustive list by covers common high level metrics that are useful when communicating with stakeholders.
 
+1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
+   
+   Simple to explain but not suitable if the dataset is unbalanced
 
-# In-depth metrics (for internal project team)
+2. Precision = $\frac{TP}{TP+FP}$
 
+   Precision focus on finding positive cases
 
+3. Recall = $\frac{TP}{TP+FN}$
+
+   Recall focus on weeding out the negative cases
+
+4. F1 Score = 2 * $\frac{Precision * Recall}{Precision + Recall}$
+   
+   F1 score is the weighted mean of precision and recall
+
+Precision is more important than recall when you cannot afford to have any FP as compare to FN. Also, often assoicate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred.
+
+Recall is more important than precision whe you cannot afford to have any FN as compare to FP. Recall is important when the opportunity cost of passing up is high. 
+
+Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics). Finding as many spam email is desirable than missing out to detect spam email (use precision). 
+
+If both Precision and Recall are equally important than F1 score should be used.
+
+# In-depth metrics
+This section covers some of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
+
+1. Evaluation metrics for NER
+   - Message Understanding Conference (MUC)
+     - Corrrect (COR)
+     - Incorrect (INC)
+     - Partial (PAR)
+     - Missing (MIS)
+     - Spurius (SPU)
+   - International Workshop on Semantic Evaluation (SemEval)
+     - Strict
+     - Exact
+     - Partial
+     - Type
+
+2. Evaluation metrics for Object Detection
+   - Intersection over Union (IOU)
+   - Average Precision(AP)
+   - Mean Average Precision(mAP)
