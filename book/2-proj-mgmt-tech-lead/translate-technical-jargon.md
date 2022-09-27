@@ -31,5 +31,3 @@ With just a bit of thought and planning, you can make the discussion more engagi
 -	[Know your Audience](https://www.duarte.com/presenting-skills-know-your-presentation-audience/)
 -	[How to give a technical presentation]( https://homes.cs.washington.edu/~mernst/advice/giving-talk.html)
 -	[Cut Technical Jargon]( https://www.business.com/articles/cut-the-code-why-speaking-in-technical-jargon-is-not-making-you-look-smarter/)
-
-![image](https://user-images.githubusercontent.com/70988445/192487443-f234c44b-2680-469b-9af9-18ffcc1495ff.png)
