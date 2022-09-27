@@ -6,7 +6,7 @@ This guide assumes that you have a fair understanding of why the stakeholders is
 
 
 # High level metrics (classification)
-This section covers some of the most common metrics used for evaluating model for classification problem. Do note that this is not exhaustive list by covers common high level metrics that are useful when communicating with stakeholders.
+This section covers some of the most common metrics used for evaluating model for classification problem. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.
 
 1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
    
@@ -45,35 +45,60 @@ Use weighted f1 when data is unbalanced.
 
     c. Confusion matrix
 
-Both metrics 5a & 5b requires predicted labels & predicted probabilities in order to plot curve.
+Both metrics 5a & 5b requires predicted labels & predicted probabilities in order to plot curve, mostly used by internal development team. Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN. 
 
 # In-depth metrics
-This section covers some of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
+This section covers brief introdution of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
 
 1. Evaluation metrics for NER
+   
+   Involves classification of multiple words
    - Message Understanding Conference (MUC)
-     - Corrrect (COR)
-     - Incorrect (INC)
-     - Partial (PAR)
-     - Missing (MIS)
-     - Spurius (SPU)
+     
+     Used for measuring the prediction class against true label class 
+     - Corrrect (COR): Both prediction and true labels are the same
+     - Incorrect (INC): Prediction and true labels do not match
+     - Partial (PAR): Some of the text in the prediction matches the true labels
+     - Missing (MIS): No prediction from model when there is true labels
+     - Spurius (SPU): Wrong prediction when no true labels
+
    - International Workshop on Semantic Evaluation (SemEval)
-     - Strict
-     - Exact
-     - Partial
-     - Type
+
+     Used as different evaluation scheme (strict or lenient) for the length of the words and classification type  
+     - Strict: Same length of words, correct type
+     - Exact: Same length of words, correct/incorrect type
+     - Partial: Different length of words, correct/incorrect type
+     - Type: Different length of words, correct type
 
 2. Evaluation metrics for Object Detection
-   - Intersection over Union (IOU)
-   - Average Precision (AP)
-   - Mean Average Precision (mAP)
+
+   - Intersection over Union (IOU): evaluates the degree of overlap between the ground truth bounding box with the prediction bounding box
+
+     IoU = $\frac{Area of overlap}{Area of union}$
+   - Average Precision (AP): Area under the precision-recall curve evaluated at IOU threshold. eg. AP50 means IoU above 0.5 is TP while
+   AP75 mean IoU above 0.75 
+   - Mean Average Precision (mAP): AP is calculated individually for each class, then performed averaging of AP values over all classes
 
 
 # High level metrics (Regression)
 This section covers some of the most common metrics used for evaluating model for regression problem. 
 
-1. MAE
-2. MSE
-3. RMSE
-4. RMSE
-5. R2
+1. Mean Square Error (MSE)
+
+   Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most, not very useful when outliers is present.
+
+2. Root Mean Square Error (RMSE)
+   
+   Square root of MSE, used when MSE value is too big for comparsion
+
+3. MAE
+
+   Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.
+
+4. R2
+   
+   One of the popular metrics, express as percentage. Large R2 value indicates a better fit, the closer to 1, the better the regression model. Easier for comparsion as it ranges from 0 to 1.  
+
+5. Adjusted R Square
+
+   Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements
