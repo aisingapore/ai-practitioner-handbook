@@ -35,6 +35,7 @@ chapters:
   - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
   - file: book/5-data-mgmt-exp-proc/e2e-workflow 
   - file: book/5-data-mgmt-exp-proc/e2e-workflow-adv 
+  - file: book/5-data-mgmt-exp-proc/eda-generic
   # - file: 
   # - file: 
 # ===== 6. Modelling ========================================

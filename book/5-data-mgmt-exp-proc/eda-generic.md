@@ -2,13 +2,91 @@
 
 Contributor(s): Er YuYang
 
-The purpose of this guide is to have a more systematic approach for performing EDA.
-The guide is design for a generic EDA purpose, and sections be apply when it is applicable.
+The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is design for a generic EDA purpose, and sections should be applied when it is applicable.
+
+# Overview
+The organization for most EDA should contain these blocks in the notebook
+1. Structure investigation
+
+    This section should cover the understanding the size of the data and data type. Also, examining if the data contains non-PDPA compliance data or other sensitive data.
+
+2. Quality investigation
+
+    This section should cover the quality of the data such as duplicate, missing and erroneous values hence identifying the potential data to drop, repair or impute.
+
+3. Content investigation
+
+    This section should cover the more in-depth analysis such as the relationship for the features. The main aim is to find if there are any trends or patterns in the data.
 
 # Structure investigation
 
+General guideline:
+
+Write something here
+
+Expected ouput: 
+
+- raw version of data
+- gain some insight of the size and datatype of the data
+
+Sample python command (for reference):
+
+    a) df.shape
+    b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
+    c) df.describe()    
+
+Tips for large data:
+
+In the scenario if the data is too huge, explore using reading by sampling or chunking. Parallel processing like Dask or Ray can also help. For saving big data to disk, other file format (like Pickle, Feather, Parquest and HDF5) can help to compress to reduce the storage size.
 
 # Quality investigation
 
+General guideline:
+
+In the scenario if there are too few features in the data, feature engineering should be explored. Vice versa if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a complex method for imputing the missing value is to use the other avaiable features to predict the value of that particular column. 
+
+Summarizing, these are the common way of handling missing values
+- do nothing (let the model handle it)
+- impute using mean or median
+- impute using most frequent or constant (eg. zero) values
+- use machine learning model to impute
+
+Expected ouput:
+- cleaned version of data ready for plotting charts
+ 
+Tip on cleaning categorial features:
+
+Perform a unique check to see if there are similar categorial but is categorised differently due to spelling mistake. Determine if the categorial features should be later mapped as ordinal or nominal
+
+Sample python command (for reference):
+
+    a) df.nunique()
+    b) for column_name in df.columns:    
+        print(df[column_name].unique())
 
 # Content investigation
+
+General guideline:
+
+The analysis should cover the following
+- distribution of the features
+- features patterns
+- features relationship
+
+If there are district groups of data in the data, try grouping these data and performed individual analysis for each group, in additional to these entire data analysis
+
+Expected ouput:
+- Conclusion of the EDA investagation
+
+Tips on the type of plot to use:
+- histogram chart (great for viewing distribution of features)
+- stacked chart (avoid using if possible)
+- line chart (commonly use in time-series data)
+- pie chart (not recommend, use only if need to compare the size of each feature)
+- box plot (useful for identify 25%-50%-75% mark if the outlier is not extreme)
+- scatter plot (useful for examining up to 3 features together)
+- tsne plot (useful for examining beyond 3 features)
+- coorelation plot (useful if unsure which features to examine)
+
+Side note: 
+tsne and coorelation plot often consume long duration when generating plot
