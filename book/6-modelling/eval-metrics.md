@@ -5,20 +5,20 @@ Contributor(s): Er YuYang
 This guide assumes that you have a fair understanding of why the stakeholders is developing the AI/ML project (understand the business value), and have a reasonable understanding for the implementation difficulty of the evaluation for given the dataset.
 
 
-# High level metrics (classification)
+# High level metrics (for classification problems)
 This section covers some of the most common metrics used for evaluating model for classification problem. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.
 
 1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
    
-   Simple to explain but not suitable if the dataset is unbalanced
+   Simple for explaining to stakeholders but not suitable if the dataset is unbalanced.
 
 2. Precision = $\frac{TP}{TP+FP}$
 
-   Definition: Out of the <u>positive predictions</u>, how many are correct. It focuses on finding positive cases
+   Simplified explaination: Out of the <u>positive predictions</u>, how many are correct. It focuses on finding positive cases.
 
 3. Recall = $\frac{TP}{TP+FN}$
 
-   Definition: Out of the <u>actual positive</u>, how many are correct. It focuses on weeding out the negative cases
+   Simplified explaination: Out of the <u>actual positive</u>, how many are correct. It focuses on weeding out the negative cases.
 
 4. F1 Score = 2 * $\frac{Precision * Recall}{Precision + Recall}$
    
@@ -26,7 +26,7 @@ This section covers some of the most common metrics used for evaluating model fo
 
 Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred.
 
-Recall is more important than precision whe you cannot afford to have any FN as compare to FP. Recall is important when the opportunity cost of passing up is high. 
+Recall is more important than precision whe you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high. 
 
 Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics for the latter). Finding as many spam email is desirable than missing out to detect spam email (use precision). 
 
@@ -80,20 +80,22 @@ This section covers brief introdution of the depth metrics used in different AI 
    - Mean Average Precision (mAP): AP is calculated individually for each class, then performed averaging of AP values over all classes
 
 
-# High level metrics (Regression)
+# High level metrics (for regression problems)
 This section covers some of the most common metrics used for evaluating model for regression problem. 
 
 1. Mean Square Error (MSE)
 
-   Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most, not very useful when outliers is present.
+   Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most.
 
 2. Root Mean Square Error (RMSE)
    
    Square root of MSE, used when MSE value is too big for comparsion
 
-3. MAE
+3. Mean Absolute Error (MAE)
 
    Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.
+
+MSE, RMSE, MAE are  not very useful when outliers is present.
 
 4. R2
    
