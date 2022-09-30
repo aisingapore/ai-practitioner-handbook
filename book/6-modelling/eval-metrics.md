@@ -47,6 +47,32 @@ Use weighted f1 when data is unbalanced.
 
 Both metrics 5a & 5b requires predicted labels & predicted probabilities in order to plot curve, mostly used by internal development team. Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN. 
 
+
+# High level metrics (for regression problems)
+This section covers some of the most common metrics used for evaluating model for regression problem. 
+
+1. Mean Square Error (MSE)
+
+   Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most.
+
+2. Root Mean Square Error (RMSE)
+   
+   Square root of MSE, used when MSE value is too big for comparsion
+
+3. Mean Absolute Error (MAE)
+
+   Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.
+
+MSE, RMSE, MAE are  not very useful when outliers is present.
+
+4. R2
+   
+   One of the popular metrics, express as percentage. Large R2 value indicates a better fit, the closer to 1, the better the regression model. Easier for comparsion as it ranges from 0 to 1.  
+
+5. Adjusted R Square
+
+   Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements
+
 # In-depth metrics
 This section covers brief introdution of the depth metrics used in different AI domain. Do note that this is not exhaustive list.
 
@@ -78,29 +104,3 @@ This section covers brief introdution of the depth metrics used in different AI 
    - Average Precision (AP): Area under the precision-recall curve evaluated at IOU threshold. eg. AP50 means IoU above 0.5 is TP while
    AP75 mean IoU above 0.75 
    - Mean Average Precision (mAP): AP is calculated individually for each class, then performed averaging of AP values over all classes
-
-
-# High level metrics (for regression problems)
-This section covers some of the most common metrics used for evaluating model for regression problem. 
-
-1. Mean Square Error (MSE)
-
-   Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most.
-
-2. Root Mean Square Error (RMSE)
-   
-   Square root of MSE, used when MSE value is too big for comparsion
-
-3. Mean Absolute Error (MAE)
-
-   Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.
-
-MSE, RMSE, MAE are  not very useful when outliers is present.
-
-4. R2
-   
-   One of the popular metrics, express as percentage. Large R2 value indicates a better fit, the closer to 1, the better the regression model. Easier for comparsion as it ranges from 0 to 1.  
-
-5. Adjusted R Square
-
-   Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements
