@@ -6,7 +6,7 @@ This guide assumes that you have a fair understanding of why the stakeholders is
 
 
 # High level metrics (for classification problems)
-This section covers some of the most common metrics used for evaluating model for classification problem. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.
+This section covers some of the most common metrics used for evaluating model for classification problems. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.
 
 1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
    
@@ -45,11 +45,14 @@ Use weighted f1 when data is unbalanced.
 
     c. Confusion matrix
 
-Both metrics 5a & 5b requires predicted labels & predicted probabilities in order to plot curve, mostly used by internal development team. Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN. 
+    d. Loss functions
 
+Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN, sometimes uses for more technical-inclined stakeholders. 
+
+Both metrics 5a & 5b requires predicted labels & predicted probabilities in order to plot curve. For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These are often used by internal development team.
 
 # High level metrics (for regression problems)
-This section covers some of the most common metrics used for evaluating model for regression problem. 
+This section covers some of the most common metrics used for evaluating model for regression problems. 
 
 1. Mean Square Error (MSE)
 
@@ -63,7 +66,7 @@ This section covers some of the most common metrics used for evaluating model fo
 
    Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.
 
-MSE, RMSE, MAE are  not very useful when outliers is present.
+MSE, RMSE, MAE are not very useful when outliers that is presented very extreme.
 
 4. R2
    
