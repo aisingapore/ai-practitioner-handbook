@@ -1,7 +1,7 @@
 # What are the platforms and their respective considerations required for collaborative ML development?
 
 Contributor(s): Dylan Poh Guan Kiong, AI Engineer <br>
-[Github.](https://unicorndy.github.io/Dylan_Poh/)
+[GitHub.](https://unicorndy.github.io/Dylan_Poh/)
 
 With the increasing complexity of Machine Learning projects, highly likely a team will be formed to complete the task. Being able to collaborate efficiently may be more critical than ever before. 
 
@@ -22,7 +22,8 @@ The following tools by no means exhaustive proved to be useful for remote, offic
 - [Miro](https://miro.com/) is an easy to use, intuitive, collobration tool that uses little effort to setup quickly. Other option includes [Coggle](https://coggle.it/).
 
 ## Code versioning
-Jupyter notebook(.ipynb) although powerful has many limitations. For example, it is impractical to use pure git for versioning Jupyter notebook, and it is certainly not the best format to be deployed or go into production. Naming and renaming files or folders with comments are also undesirable and difficult to keep track of. Instead, using [git](https://git-scm.com/) for distributed version control and tracking changes helps coordinate work among team members. Developing code in Python script (.py) is highly preferred and using [Gitlab](https://about.gitlab.com/) or [Github](https://github.com/) to manage your code online with an advanced interface to resolve merged conflict that occurs frequently for asynchronous work. 
+Jupyter notebook(.ipynb) although powerful has many limitations. For example, it is impractical to use pure git for versioning Jupyter notebook, and it is certainly not the best format to be deployed or go into production. Naming and renaming files or folders with comments are also undesirable and difficult to keep track of. Instead, using [git](https://git-scm.com/) for distributed version control and tracking changes helps coordinate work among team members. Developing code in Python script (.py) is highly preferred and using [GitLab](https://about.gitlab.com/) or [GitHub](https://github.com/) to manage your code online with an advanced interface to resolve merged conflict that occurs frequently for asynchronous work. Merge conflicts occur when the source and target branches of a merge request (Term used by GitLab) or pull request (Term used by GitHub) contain different changes or commits. As mentioned, this is especially common during collaboration when more than two engineers are contributing to the code. In this case, engineer must choose which change to accept. Once the changes are made, you can assign reviewer to inspect the changes which ensure the correctness of the merge and prevent breaking the code. Examples of the occurrence and the tools to handle conflicts are listed here - [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github) and [GitLab](https://docs.gitlab.com/ee/user/project/merge_requests/conflicts.html#:~:text=Merge%20conflicts%20happen%20when%20the,GitLab%20can%20merge%20changes%20together.)
+
 
 Keeping a standardized environment for development keeps Python package dependencies consistent, and together with Git, allows different members to easily switch between different machines such as local machines or machines in the cloud. One popular option that manages the environment is [Conda](https://docs.conda.io/en/latest/) (environment.yml) 
 
