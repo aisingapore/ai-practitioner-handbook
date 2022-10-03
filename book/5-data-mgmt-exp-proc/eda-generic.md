@@ -22,18 +22,19 @@ The organization for most EDA should contain these blocks in the notebook
 
 General guideline:
 
-Write something here
-
-Expected ouput: 
-
-- raw version of data
-- gain some insight of the size and datatype of the data
+This section should be short (about less than 5 cells), it only aims the gain some insight of the size and datatype of the data.
 
 Sample python command (for reference):
 
     a) df.shape
     b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
-    c) df.describe()    
+    c) df.describe()
+    d) df.head() or df.tail()
+
+Expected ouput: 
+
+- raw version of data
+- gain some insight of the size and datatype of the data
 
 Tips for large data:
 
@@ -43,20 +44,22 @@ In the scenario if the data is too huge, explore using reading by sampling or ch
 
 General guideline:
 
-In the scenario if there are too few features in the data, feature engineering should be explored. Vice versa if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a complex method for imputing the missing value is to use the other avaiable features to predict the value of that particular column. 
+This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Vice versa if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a complex method for imputing the missing value is to use the other avaiable features to predict the value of that particular column. 
 
-Summarizing, these are the common way of handling missing values
+Expected ouput:
+- cleaned version of data ready for plotting charts
+
+Tips on handling missing values:
+
+Common techniques
 - do nothing (let the model handle it)
 - impute using mean or median
 - impute using most frequent or constant (eg. zero) values
 - use machine learning model to impute
 
-Expected ouput:
-- cleaned version of data ready for plotting charts
- 
-Tip on cleaning categorial features:
+Tips on cleaning categorial features:
 
-Perform a unique check to see if there are similar categorial but is categorised differently due to spelling mistake. Determine if the categorial features should be later mapped as ordinal or nominal
+Perform a unique check to see if there are similar category but is categorised differently due to spelling mistake. Determine if the categorial features should be later mapped as ordinal or nominal
 
 Sample python command (for reference):
 
