@@ -1,6 +1,6 @@
 [comment]: <> (Use question as section title)
 # How should I write a section using Markdown?
-Contributor: Kenny WJ Chua  
+Contributor: Kenny WJ Chua, Senior AI Engineer
 
 ---
 
