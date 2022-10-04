@@ -96,7 +96,9 @@ This section covers brief introdution of the in-depth metrics used in different 
      - Exact: Same length of words, correct/incorrect type
      - Partial: Different length of words, correct/incorrect type
      - Type: Different length of words, correct type
+
    ![image](../assets/images/charts/MUC_SemEval.PNG)
+   
 
 2. Evaluation metrics for Object Detection
    
