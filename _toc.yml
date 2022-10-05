@@ -39,9 +39,9 @@ chapters:
   # - file: 
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
-  # sections:
-  # - file: 
-  # - file: 
+  sections:
+  - file: book/6-modelling/ml-risks-and-robustness
+  # - file:
 # ===== 7. Solution Delivery ========================================
 - file: book/7-solution-delivery/overview
   sections:
