@@ -75,7 +75,7 @@ The drawback of the nested cross-validation approach is that the training time w
 **Tip**: In cases of extremely small datasets, you could consider _nested cross-validation_ to maximise the usage of the whole dataset for training, validation and testing.
 
 
-## 3. Stratified Split
+## 4. Stratified Split
 For datasets with unbalanced distribution of targets and/or features, you may want to consider stratified splitting. Stratified splitting aims to split your dataset, while maintaining similar proportions of any desired features/targets across your train, validation and test sets. 
 
 An example of a dataset with features that are skewed in their distribution will be a credit worthiness classification problem, where you may have fewer individuals in the dataset with ages of less than 20 years old.  A random split could result in insufficient numbers of them getting assigned to the validation and test sets. If it is critical to model the behaviour of this age group, you can stratify the dataset based on age buckets. Doing so would fix the proportion of each age group getting assigned to each set.
@@ -85,7 +85,7 @@ An example of a dataset with imbalanced targets will be a fraud detection datase
 In general, the larger the dataset, the less likely features and targets will be unevenly distributed across the sets. You should still check your dataset for any uneven distribution in features and targets.
 
 
-## 4. Temporal Split
+## 5. Temporal Split
 When you are dealing with problems related to forecasting future values, you may want to consider temporal splitting. As an example, assume you have data from January to April. You may want to set aside data from January to February for your training dataset, March for your validation dataset, and April for your test dataset.
 
 In fast moving environments such as fraud detection and cyber attack classification, bad actors might develop new fraud and cyber attacks techniques. It may be necessary to continuously train the model on the latest data to predict future frauds and cyber attacks, even though the task does not involve forecasting. Evaluating the model on historical frauds and attacks may be insufficient. Hence, you may choose to consider temporal splitting in this scenario.
@@ -97,6 +97,6 @@ For seasonal data, you may want to take seasonality into account when performing
 
 ## References
 
-- Building Machine Learning Powered Applications: Going from Idea to Product
-- Machine Learning Design Patterns: Solutions to Common Challenges in Data Preparation, Model Building, and MLOps
-- Machine Leaning Yearning: Technical Strategy for AI Engineers, In the Era of Deep Learning
+- [Building Machine Learning Powered Applications: Going from Idea to Product](https://www.oreilly.com/library/view/building-machine-learning/9781492045106/)
+- [Machine Learning Design Patterns: Solutions to Common Challenges in Data Preparation, Model Building, and MLOps](https://www.oreilly.com/library/view/machine-learning-design/9781098115777/)
+- [Machine Learning Yearning: Technical Strategy for AI Engineers, In the Era of Deep Learning](https://www.deeplearning.ai/courses/)
