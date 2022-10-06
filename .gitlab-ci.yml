@@ -14,6 +14,12 @@ jupyter-build:
   rules:
     - if: $CI_COMMIT_BRANCH == 'develop'
     - if: $CI_PIPELINE_SOURCE == "schedule"
+      changes:
+      - ${CI_PROJECT_DIR}/*.md
+      - book/*
+      - book/**/*
+      - notebooks/*
+      - notebooks/**/*
 
 pages:
   stage: deploy
@@ -26,3 +32,9 @@ pages:
   rules:
     - if: $CI_COMMIT_BRANCH == 'develop'
     - if: $CI_PIPELINE_SOURCE == "schedule"
+      changes:
+      - ${CI_PROJECT_DIR}/*.md
+      - book/*
+      - book/**/*
+      - notebooks/*
+      - notebooks/**/*
