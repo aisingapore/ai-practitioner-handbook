@@ -11,6 +11,8 @@ jupyter-build:
   artifacts:
     paths:
       - _build/
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop'
 
 pages:
   stage: deploy
