@@ -35,8 +35,8 @@ chapters:
   - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
   - file: book/5-data-mgmt-exp-proc/e2e-workflow 
   - file: book/5-data-mgmt-exp-proc/e2e-workflow-adv 
-  # - file: 
-  # - file: 
+  - file: book/5-data-mgmt-exp-proc/data-poisoning-data-extraction.md
+  # - file:
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
   sections:
