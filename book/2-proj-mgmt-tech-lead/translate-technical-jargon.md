@@ -9,7 +9,7 @@ Here are some tips you can use to reach an understanding between yourself and no
 
 ## 1. Know your audience
 
-Learn about your audience. Find out what their knowledge is on the subject matter beforehand so that you can tailor the information to their needs. During early engagements, it is better to communicate at a level below what you reasonably expect them to know, while being careful not to dumb it down too much such as to cause offence. When in doubt, you could always let them know “If this is something you already know, let us know and we can skip to the next section.” Additionally, if the level of understanding is different between participants, it would be helpful to target the "least technical person" and while  pre-empting the rest of the audience to "bear with me if you already know some of this information". Do continually observe the stakeholder’s gestures, facial expressions and body language to ensure everyone is on the same page. 
+Learn about your audience. Find out what their knowledge is on the subject matter beforehand so that you can tailor the information to their needs. During early engagements, it is better to communicate at a level below what you reasonably expect them to know, while being careful not to dumb it down too much such as to cause offence. When in doubt, you could always let them know “If this is something you already know, let us know and we can skip to the next section.” Additionally, if the level of understanding is different between participants, it would be helpful to target the "least technical person" and while  pre-empting the rest of the audience to "bear with me if you already know some of this information". Do continually observe the stakeholder’s gestures, facial expressions and body language to ensure everyone is following along. 
 
 ## 2. Reduce or Eliminate Tech Jargon
 
@@ -27,7 +27,7 @@ Consider the use of metaphors, analogies and storytelling techniques that will h
 
 ## 3. Provide background information, context and education
 
-Do not assume that the stakeholder understands the context, or knows or does not know certain concepts or terms. However, do assume that they are intelligent and will be able to understand if given an adequate explanation. Do translate key jargon and acronyms that are important to the discussion in a way that makes it simple for the stakeholder to understand. Metaphors and analogies are a good way to translate a technical concept into a more familiar context. It could be useful to give a glossary and definitions of some necessary terms.
+Do not assume that the stakeholder knows or does not know certain concepts or terms, or that they understand the context. However, do assume that they are intelligent and will be able to understand if given an adequate explanation. Do translate key jargon and acronyms that are important to the discussion in a way that makes it simple for the stakeholder to understand. Metaphors and analogies are a good way to translate a technical concept into a more familiar context. It could be useful to give a glossary and definitions of some necessary terms.
 
 ## 4. Use visuals to illustrate technical concepts
 
