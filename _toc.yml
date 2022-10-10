@@ -13,8 +13,8 @@ chapters:
   - file: book/1-pre-project-phase/technical_debt
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon.md
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
 - file: book/3-collab-dev-platforms/overview
