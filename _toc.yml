@@ -40,6 +40,7 @@ chapters:
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
   # sections:
+  - file: book/6-modelling/eval-metrics
   # - file: 
   # - file: 
 # ===== 7. Solution Delivery ========================================
