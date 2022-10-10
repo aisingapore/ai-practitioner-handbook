@@ -27,7 +27,7 @@ Consider the use of metaphors, analogies and storytelling techniques that will h
 
 ## 3. Provide background information, context and education
 
-Do not assume that the stakeholder knows or does not know certain concepts or terms. However, do assume that they are intelligent and will be able to understand if given an adequate explanation. Do translate key jargon and acronyms that are important to the discussion in a way that makes it simple for the stakeholder to understand. Metaphors and analogies are a good way to translate a technical concept into a more familiar context. It could be useful to give a glossary and definitions of some necessary terms.
+Do not assume that the stakeholder understands the context, or knows or does not know certain concepts or terms. However, do assume that they are intelligent and will be able to understand if given an adequate explanation. Do translate key jargon and acronyms that are important to the discussion in a way that makes it simple for the stakeholder to understand. Metaphors and analogies are a good way to translate a technical concept into a more familiar context. It could be useful to give a glossary and definitions of some necessary terms.
 
 ## 4. Use visuals to illustrate technical concepts
 
