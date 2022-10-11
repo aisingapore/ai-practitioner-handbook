@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>How does the AI engineer translate the business challenge into an AI problem? &#8212; AI Practitioner Handbook</title>
+    <title>What are the platforms and their respective considerations required for collaborative ML development? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What are the key areas to look out for in the data when framing the AI project?" href="key_areas_in_data.html" />
-    <link rel="prev" title="1. Pre-project Phase" href="overview.html" />
+    <link rel="next" title="What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?" href="repo-structure-setup.html" />
+    <link rel="prev" title="3. Collaborative Development Platforms" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -124,28 +124,28 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/business_challenge_2_ai_problem.html">
      How does the AI engineer translate the business challenge into an AI problem?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="key_areas_in_data.html">
+    <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html">
      What are the key areas to look out for in the data when framing the AI project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="technical_debt.html">
+    <a class="reference internal" href="../1-pre-project-phase/technical_debt.html">
      What are the factors/considerations/criteria to consider that will reduce potential technical debt?
     </a>
    </li>
@@ -168,23 +168,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    3. Collaborative Development Platforms
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      What are the platforms and their respective considerations required for collaborative ML development?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
+    <a class="reference internal" href="repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
     </a>
    </li>
@@ -403,7 +403,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/1-pre-project-phase/business_challenge_2_ai_problem.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/3-collab-dev-platforms/collaborative_ml.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -431,7 +431,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/1-pre-project-phase/business_challenge_2_ai_problem.md"
+        <a href="../../_sources/book/3-collab-dev-platforms/collaborative_ml.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -491,32 +491,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#framing-problem-statement-from-the-business-challenge">
-   Framing Problem Statement from the Business Challenge
+  <a class="reference internal nav-link" href="#communication-tools">
+   Communication tools
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-map-diagram">
-     Example - Map Diagram
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#translation-of-problem-statement-into-ai-problem">
-   Translation of Problem Statement into AI Problem
+  <a class="reference internal nav-link" href="#code-versioning">
+   Code versioning
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-translation-from-problem-statement-to-technical-requirements">
-     Example - Translation from Problem Statement to Technical Requirements
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+  <a class="reference internal nav-link" href="#model-weight-data-versioning">
+   Model/weight/data versioning
   </a>
  </li>
 </ul>
@@ -528,7 +514,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>How does the AI engineer translate the business challenge into an AI problem?</h1>
+                <h1>What are the platforms and their respective considerations required for collaborative ML development?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -539,32 +525,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#framing-problem-statement-from-the-business-challenge">
-   Framing Problem Statement from the Business Challenge
+  <a class="reference internal nav-link" href="#communication-tools">
+   Communication tools
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-map-diagram">
-     Example - Map Diagram
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#translation-of-problem-statement-into-ai-problem">
-   Translation of Problem Statement into AI Problem
+  <a class="reference internal nav-link" href="#code-versioning">
+   Code versioning
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-translation-from-problem-statement-to-technical-requirements">
-     Example - Translation from Problem Statement to Technical Requirements
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+  <a class="reference internal nav-link" href="#model-weight-data-versioning">
+   Model/weight/data versioning
   </a>
  </li>
 </ul>
@@ -577,72 +549,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="how-does-the-ai-engineer-translate-the-business-challenge-into-an-ai-problem">
-<h1>How does the AI engineer translate the business challenge into an AI problem?<a class="headerlink" href="#how-does-the-ai-engineer-translate-the-business-challenge-into-an-ai-problem" title="Permalink to this headline">#</a></h1>
-<p>Contributor: Tan Kwan Chet, Lead AI Technical Consultant</p>
-<hr class="docutils" />
-<section id="framing-problem-statement-from-the-business-challenge">
-<h2>Framing Problem Statement from the Business Challenge<a class="headerlink" href="#framing-problem-statement-from-the-business-challenge" title="Permalink to this headline">#</a></h2>
-<p>Most AI projects begin when a sponsor has 1 or a few business challenges to solve. During early stages of an AI project, the AI engineer needs to explore the data and methologies that can best tackle the AI problem present in business challenges. Understanding business context and process is a great starting point to frame the AI problem. It allows you to understand the sponsor’s long term goal and identify the problem statement that affects the sponsor’s business or represents a pain point that the sponsor wants to solve.</p>
-<p>It takes a lot of creativity to formulate the problem statement. Sponsor tends to speak about their business problems at a high level. So your job is to filter the high level information shared by sponsor to a low level where the problem may relate to their employees who face the pain point on a day-to-day basis. This is important since your AI solution will likely be replacing a repetitive task that their employees may be facing. To form the problem statement, AI Singapore uses concepts from Design Thinking methodology and Design Sprint to help in this could use the following steps (illustrated as a map diagram below):</p>
-<ol class="simple">
-<li><p>Identify the target audience (e.g. employee)</p></li>
-<li><p>Define the problem from target audience’s perspective (i.e. understand their pain point)</p></li>
-<li><p>Understand when and where the problem is ocurring</p></li>
-<li><p>Discover the benefit for the target audience and value for the business</p></li>
-<li><p>Convert the information into a HMW (How Might We) problem statement</p></li>
-</ol>
-<section id="example-map-diagram">
-<h3>Example - Map Diagram<a class="headerlink" href="#example-map-diagram" title="Permalink to this headline">#</a></h3>
-<p><img alt="Map Diagram" src="../../_images/map_diagram.jpg" /></p>
-</section>
-</section>
-<section id="translation-of-problem-statement-into-ai-problem">
-<h2>Translation of Problem Statement into AI Problem<a class="headerlink" href="#translation-of-problem-statement-into-ai-problem" title="Permalink to this headline">#</a></h2>
-<p>Next, it is wise to decompose the problem statement into different technical requirements of an AI problem. This can be done by asking a series of questions to prompt the sponsor to better describe their technical requirements.</p>
-<section id="example-translation-from-problem-statement-to-technical-requirements">
-<h3>Example - Translation from Problem Statement to Technical Requirements<a class="headerlink" href="#example-translation-from-problem-statement-to-technical-requirements" title="Permalink to this headline">#</a></h3>
-<p>Sponsor’s Problem Statement: “How might we build an AI model to count cells on microscopy images?”</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Question</p></th>
-<th class="head"><p>Rationale</p></th>
-<th class="head"><p>Technical Requirement</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>What is the main task that you are keen to replace?</p></td>
-<td><p>This gives you an idea on what is the main task that AI needs to automate</p></td>
-<td><p>AI model to detect cells by size</p></td>
-</tr>
-<tr class="row-odd"><td><p>What is the type of the data involved?</p></td>
-<td><p>By knowing if the data is image/video, text, tabular or multimodal, it will help you narrow down to the appropriate AI domain/models to focus on</p></td>
-<td><p>Images of cells taken under microscope</p></td>
-</tr>
-<tr class="row-even"><td><p>What is the output required?</p></td>
-<td><p>By knowing specifically how the business needs the outputs returned to them, it will help you select the correct algorithm and design the appropriate annotation format</p></td>
-<td><p>Masks drawn around detected cells and size estimated -&gt; Computer Vision instance segmentation model</p></td>
-</tr>
-<tr class="row-odd"><td><p>Is the main task achievable by AI model alone?</p></td>
-<td><p>You can check if there is a need to use heuristic method or rule-based methods in conjunction with the AI model in order to reach the required outcome</p></td>
-<td><p>Apply pixel:nm size conversion to estimate actual sizes of detected objects and group them into classes</p></td>
-</tr>
-<tr class="row-even"><td><p>How will the AI model fit into your business processes?</p></td>
-<td><p>This helps you to understand how the sponsor will use the AI model, in terms of what applications it will connect to, how often inference will be run, and how much human involvement there will be</p></td>
-<td><p>Description of high level application architecture diagram and infrastructure requirements</p></td>
-</tr>
-</tbody>
-</table>
-<p>With these, you would have gained a better understanding of the business challenge and how it translates into the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model.</p>
-</section>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-platforms-and-their-respective-considerations-required-for-collaborative-ml-development">
+<h1>What are the platforms and their respective considerations required for collaborative ML development?<a class="headerlink" href="#what-are-the-platforms-and-their-respective-considerations-required-for-collaborative-ml-development" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Dylan Poh Guan Kiong, AI Engineer <a class="reference external" href="https://unicorndy.github.io/Dylan_Poh/">(GitHub)</a></p>
+<p>With the increasing complexity of machine learning projects, it is highly likely that a team of developers is required to complete the task. As a result, it is critical to have the ability to collaborate efficiently.</p>
+<p>Fundamentally, there are two ways that teams collaborate.</p>
+<p><em>Luke Marsden: When you boil it down to basics, there are really two fundamental modes of collaborating between different people doing work: synchronous and asynchronous.</em></p>
+<p><em>Synchronous</em>: Communications are scheduled, real-time interactions by phone, video, or in-person, sometimes interrupting one another for urgent tasks or simply asking a question. In terms of development, the upstream have to complete their tasks before the downstream team can continue with their work (Dependencies issues)</p>
+<p><em>Asynchronous</em>: Communication happens on your own time, with a different team or people concurrently working on a different task. An efficient mechanism is required to resolve merge conflicts.</p>
+<p>With this in mind, we seek to introduce some tools and practices for a team to get started in the hope that stumbling blocks will be reduced to the minimum. The practices introduced here assume development using Python as the primary language.</p>
+<section id="communication-tools">
+<h2>Communication tools<a class="headerlink" href="#communication-tools" title="Permalink to this headline">#</a></h2>
+<p>Establishing effective communication right from the beginning of any project will allow all team members to align toward the same goal and reduce any possible friction. A quintessential example of miscommunication is an unclear problem statement leading to team members having different views on the outcome of the project.</p>
+<p>The following tools (by no means exhaustive) may be useful for remote, office, and hybrid working arrangements:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.thesprintbook.com/the-design-sprint">Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</a></p></li>
-<li><p><a class="reference external" href="https://www.thoughtworks.com/insights/blog/experience-design/design--together">Design, Together</a></p></li>
-<li><p><a class="reference external" href="https://www.oreilly.com/library/view/data-science-for/9781449374273/">Data Science for Business</a></p></li>
+<li><p>A big whiteboard often produces the most efficient channel to share ideas. (Physical Meetup)</p></li>
+<li><p><a class="reference external" href="https://workspace.google.com/">Google Workspace</a>, a full suite of communication tools such as Google meet, shared Google calendar, and Gmail to see the complete list of participants and scheduled meetings. Other option includes the <a class="reference external" href="https://www.microsoft.com/en-us/microsoft-teams/log-in">Microsoft Team</a>.</p></li>
+<li><p><a class="reference external" href="https://miro.com/">Miro</a> is an easy to use, intuitive, collobration tool that uses little effort to setup quickly. Other option includes <a class="reference external" href="https://coggle.it/">Coggle</a>.</p></li>
 </ul>
+</section>
+<section id="code-versioning">
+<h2>Code versioning<a class="headerlink" href="#code-versioning" title="Permalink to this headline">#</a></h2>
+<p>Jupyter notebooks (.ipynb) are powerful, but also have many limitations. For example, it is impractical to use pure git for versioning Jupyter notebooks (because of large amounts of embedded and frequently changing HTML). Jupyter notebooks are also unsuitable for deployment or production. Naming and renaming files or folders with comments are also undesirable and difficult to keep track of.</p>
+<p>Instead, using <a class="reference external" href="https://git-scm.com/">git</a> for distributed version control and tracking changes helps coordinate work among team members. Developing code in Python script (.py) is highly preferred and using <a class="reference external" href="https://about.gitlab.com/">GitLab</a> or <a class="reference external" href="https://github.com/">GitHub</a> to manage your code online with an advanced interface to resolve merged conflict that occurs frequently for asynchronous work.</p>
+<p>Merge conflicts occur when the source and target branches of a merge request (as termed by GitLab) or pull request (as termed  by GitHub) contain different changes or commits. As mentioned, this is especially common during collaboration when more than two engineers are contributing to the code. In this case, engineers must choose which change to accept. Once the changes are made, you can assign reviewer to inspect the changes which ensure the correctness of the merge and prevent breaking the code. Examples of the occurrence of and tools to handle conflicts are linked here for both <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">GitHub</a> and <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/conflicts.html#:~:text=Merge%20conflicts%20happen%20when%20the,GitLab%20can%20merge%20changes%20together.">GitLab</a>.</p>
+<p>Keeping a standardised environment for development keeps Python package dependencies consistent, and together with git, allows different members to easily switch between different machines such as local machines or machines in the cloud. One popular option that manages the environment is <a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a> (environment.yml)</p>
+<p>More in-depth information on setting up a machine learning project repository can be found <a class="reference external" href="https://aisingapore.github.io/handbook-staging/book/3-collab-dev-platforms/repo-structure-setup.html">here</a>.</p>
+</section>
+<section id="model-weight-data-versioning">
+<h2>Model/weight/data versioning<a class="headerlink" href="#model-weight-data-versioning" title="Permalink to this headline">#</a></h2>
+<p>Shared storage such as cloud storage ensures the team is assessing the correct dataset and having access to a shared transformed dataset cuts down data preprocessing/transformation time allowing the engineer to focus on modeling. Also, weights and datasets should not be pushed to the version control system, as the repository size might become too large for the local machine.</p>
+<p>Having a system to keep track of the trained model and the corresponding dataset early on will prove to be fruitful, as more experiments will make it difficult to trace back. One good practice will be to save the checkpoints and the models together and keep track of the corresponding dataset used for the training. Recommended tools include <a class="reference external" href="https://mlflow.org/">MLflow</a> and <a class="reference external" href="https://wandb.ai/site">Weights &amp; Biases</a> for tracking experiments and versioning models. <a class="reference external" href="https://dvc.org/">DVC</a> and <a class="reference external" href="https://neptune.ai/">neptune.ai</a> are tools to consider for data version control. Even a simple shared spreadsheet keeping track of model/weights/dataset versioning will pay off eventually.</p>
+<p>It is also possible to set up a cloud-based compute/development environment where all collaborators can share the same environment and tools (VScode, Jupyter Lab) and shared storage. Some of the examples are Amazon EC2 Instance Types, Data Science Virtual Machine and Google Compute Engine.</p>
 </section>
 </section>
 
@@ -659,7 +597,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/1-pre-project-phase"
+            path: "./book/3-collab-dev-platforms"
         },
         predefinedOutput: true
     }
@@ -677,13 +615,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">1. Pre-project Phase</p>
+            <p class="prev-next-title">3. Collaborative Development Platforms</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="key_areas_in_data.html" title="next page">
+    <a class='right-next' id="next-link" href="repo-structure-setup.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
+        <p class="prev-next-title">What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

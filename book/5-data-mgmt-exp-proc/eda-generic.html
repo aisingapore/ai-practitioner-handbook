@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>How does the AI engineer translate the business challenge into an AI problem? &#8212; AI Practitioner Handbook</title>
+    <title>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What are the key areas to look out for in the data when framing the AI project?" href="key_areas_in_data.html" />
-    <link rel="prev" title="1. Pre-project Phase" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,29 +121,29 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/business_challenge_2_ai_problem.html">
      How does the AI engineer translate the business challenge into an AI problem?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="key_areas_in_data.html">
+    <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html">
      What are the key areas to look out for in the data when framing the AI project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="technical_debt.html">
+    <a class="reference internal" href="../1-pre-project-phase/technical_debt.html">
      What are the factors/considerations/criteria to consider that will reduce potential technical debt?
     </a>
    </li>
@@ -196,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+  <a class="reference internal" href="overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -206,27 +204,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+    <a class="reference internal" href="data-mgmt.html">
      Which data storage options are suitable for the project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits.html">
+    <a class="reference internal" href="data-splits.html">
      What are the various data split strategies?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
+    <a class="reference internal" href="data-splits-bias-fairness-leakage.html">
      What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+    <a class="reference internal" href="e2e-workflow.html">
      What are the Processes Involved in Building a Basic End-to-End Workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+    <a class="reference internal" href="e2e-workflow-adv.html">
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
@@ -403,7 +401,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/1-pre-project-phase/business_challenge_2_ai_problem.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/eda-generic.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -431,7 +429,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/1-pre-project-phase/business_challenge_2_ai_problem.md"
+        <a href="../../_sources/book/5-data-mgmt-exp-proc/eda-generic.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -490,31 +488,32 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#framing-problem-statement-from-the-business-challenge">
-   Framing Problem Statement from the Business Challenge
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-map-diagram">
-     Example - Map Diagram
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#translation-of-problem-statement-into-ai-problem">
-   Translation of Problem Statement into AI Problem
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-translation-from-problem-statement-to-technical-requirements">
-     Example - Translation from Problem Statement to Technical Requirements
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-investigation">
+   Structure investigation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quality-investigation">
+   Quality investigation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-investigation">
+   Content investigation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
@@ -528,7 +527,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>How does the AI engineer translate the business challenge into an AI problem?</h1>
+                <h1>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -538,31 +537,32 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#framing-problem-statement-from-the-business-challenge">
-   Framing Problem Statement from the Business Challenge
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-map-diagram">
-     Example - Map Diagram
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#translation-of-problem-statement-into-ai-problem">
-   Translation of Problem Statement into AI Problem
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-translation-from-problem-statement-to-technical-requirements">
-     Example - Translation from Problem Statement to Technical Requirements
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-investigation">
+   Structure investigation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quality-investigation">
+   Quality investigation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-investigation">
+   Content investigation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
@@ -577,73 +577,102 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="how-does-the-ai-engineer-translate-the-business-challenge-into-an-ai-problem">
-<h1>How does the AI engineer translate the business challenge into an AI problem?<a class="headerlink" href="#how-does-the-ai-engineer-translate-the-business-challenge-into-an-ai-problem" title="Permalink to this headline">#</a></h1>
-<p>Contributor: Tan Kwan Chet, Lead AI Technical Consultant</p>
-<hr class="docutils" />
-<section id="framing-problem-statement-from-the-business-challenge">
-<h2>Framing Problem Statement from the Business Challenge<a class="headerlink" href="#framing-problem-statement-from-the-business-challenge" title="Permalink to this headline">#</a></h2>
-<p>Most AI projects begin when a sponsor has 1 or a few business challenges to solve. During early stages of an AI project, the AI engineer needs to explore the data and methologies that can best tackle the AI problem present in business challenges. Understanding business context and process is a great starting point to frame the AI problem. It allows you to understand the sponsor’s long term goal and identify the problem statement that affects the sponsor’s business or represents a pain point that the sponsor wants to solve.</p>
-<p>It takes a lot of creativity to formulate the problem statement. Sponsor tends to speak about their business problems at a high level. So your job is to filter the high level information shared by sponsor to a low level where the problem may relate to their employees who face the pain point on a day-to-day basis. This is important since your AI solution will likely be replacing a repetitive task that their employees may be facing. To form the problem statement, AI Singapore uses concepts from Design Thinking methodology and Design Sprint to help in this could use the following steps (illustrated as a map diagram below):</p>
-<ol class="simple">
-<li><p>Identify the target audience (e.g. employee)</p></li>
-<li><p>Define the problem from target audience’s perspective (i.e. understand their pain point)</p></li>
-<li><p>Understand when and where the problem is ocurring</p></li>
-<li><p>Discover the benefit for the target audience and value for the business</p></li>
-<li><p>Convert the information into a HMW (How Might We) problem statement</p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-basic-core-structure-for-performing-eda-and-optional-blocks-for-specific-ai-domain-or-specific-use-case">
+<h1>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?<a class="headerlink" href="#what-are-the-basic-core-structure-for-performing-eda-and-optional-blocks-for-specific-ai-domain-or-specific-use-case" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Er YuYang</p>
+<p>The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is design for a generic EDA purpose, and sections should be applied when it is applicable.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
+<p>The organization for most EDA should contain these blocks in the notebook</p>
+<ol>
+<li><p>Structure investigation</p>
+<p>This section should cover the understanding the size of the data and data type. Also, examining if the data contains non-PDPA compliance data or other sensitive data.</p>
+</li>
+<li><p>Quality investigation</p>
+<p>This section should cover the quality of the data such as duplicate, missing and erroneous values hence identifying the potential data to drop, repair or impute.</p>
+</li>
+<li><p>Content investigation</p>
+<p>This section should cover the more in-depth analysis such as the relationship for the features. The main aim is to find if there are any trends or patterns in the data.</p>
+</li>
 </ol>
-<section id="example-map-diagram">
-<h3>Example - Map Diagram<a class="headerlink" href="#example-map-diagram" title="Permalink to this headline">#</a></h3>
-<p><img alt="Map Diagram" src="../../_images/map_diagram.jpg" /></p>
 </section>
-</section>
-<section id="translation-of-problem-statement-into-ai-problem">
-<h2>Translation of Problem Statement into AI Problem<a class="headerlink" href="#translation-of-problem-statement-into-ai-problem" title="Permalink to this headline">#</a></h2>
-<p>Next, it is wise to decompose the problem statement into different technical requirements of an AI problem. This can be done by asking a series of questions to prompt the sponsor to better describe their technical requirements.</p>
-<section id="example-translation-from-problem-statement-to-technical-requirements">
-<h3>Example - Translation from Problem Statement to Technical Requirements<a class="headerlink" href="#example-translation-from-problem-statement-to-technical-requirements" title="Permalink to this headline">#</a></h3>
-<p>Sponsor’s Problem Statement: “How might we build an AI model to count cells on microscopy images?”</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Question</p></th>
-<th class="head"><p>Rationale</p></th>
-<th class="head"><p>Technical Requirement</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>What is the main task that you are keen to replace?</p></td>
-<td><p>This gives you an idea on what is the main task that AI needs to automate</p></td>
-<td><p>AI model to detect cells by size</p></td>
-</tr>
-<tr class="row-odd"><td><p>What is the type of the data involved?</p></td>
-<td><p>By knowing if the data is image/video, text, tabular or multimodal, it will help you narrow down to the appropriate AI domain/models to focus on</p></td>
-<td><p>Images of cells taken under microscope</p></td>
-</tr>
-<tr class="row-even"><td><p>What is the output required?</p></td>
-<td><p>By knowing specifically how the business needs the outputs returned to them, it will help you select the correct algorithm and design the appropriate annotation format</p></td>
-<td><p>Masks drawn around detected cells and size estimated -&gt; Computer Vision instance segmentation model</p></td>
-</tr>
-<tr class="row-odd"><td><p>Is the main task achievable by AI model alone?</p></td>
-<td><p>You can check if there is a need to use heuristic method or rule-based methods in conjunction with the AI model in order to reach the required outcome</p></td>
-<td><p>Apply pixel:nm size conversion to estimate actual sizes of detected objects and group them into classes</p></td>
-</tr>
-<tr class="row-even"><td><p>How will the AI model fit into your business processes?</p></td>
-<td><p>This helps you to understand how the sponsor will use the AI model, in terms of what applications it will connect to, how often inference will be run, and how much human involvement there will be</p></td>
-<td><p>Description of high level application architecture diagram and infrastructure requirements</p></td>
-</tr>
-</tbody>
-</table>
-<p>With these, you would have gained a better understanding of the business challenge and how it translates into the AI problem. This will give you a coverage of what the sponsor hopes to achieve from its envisioned AI model.</p>
-</section>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="structure-investigation">
+<h1>Structure investigation<a class="headerlink" href="#structure-investigation" title="Permalink to this headline">#</a></h1>
+<p>General guideline:</p>
+<p>This section should be short (about less than 5 cells), it only aims the gain some insight of the size and datatype of the data.</p>
+<p>Sample python command (for reference):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.shape
+b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
+c) df.describe()
+d) df.head() or df.tail()
+</pre></div>
+</div>
+<p>Expected ouput:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.thesprintbook.com/the-design-sprint">Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</a></p></li>
-<li><p><a class="reference external" href="https://www.thoughtworks.com/insights/blog/experience-design/design--together">Design, Together</a></p></li>
-<li><p><a class="reference external" href="https://www.oreilly.com/library/view/data-science-for/9781449374273/">Data Science for Business</a></p></li>
+<li><p>raw version of data</p></li>
+<li><p>gain some insight of the size and datatype of the data</p></li>
 </ul>
+<p>Tips for large data:</p>
+<p>In the scenario if the data is too huge, explore using reading by sampling or chunking. Parallel processing like Dask or Ray can also help. For saving big data to disk, other file format (like Pickle, Feather, Parquest and HDF5) can help to compress to reduce the storage size.</p>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="quality-investigation">
+<h1>Quality investigation<a class="headerlink" href="#quality-investigation" title="Permalink to this headline">#</a></h1>
+<p>General guideline:</p>
+<p>This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Vice versa if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a complex method for imputing the missing value is to use the other avaiable features to predict the value of that particular column.</p>
+<p>Expected ouput:</p>
+<ul class="simple">
+<li><p>cleaned version of data ready for plotting charts</p></li>
+</ul>
+<p>Tips on handling missing values (common techniques):</p>
+<ul class="simple">
+<li><p>do nothing (let the model handle it)</p></li>
+<li><p>impute using mean or median</p></li>
+<li><p>impute using most frequent or constant (eg. zero) values</p></li>
+<li><p>use machine learning model to impute</p></li>
+</ul>
+<p>Tips on cleaning categorial features:</p>
+<p>Perform a unique check to see if there are similar category but is categorised differently due to spelling mistake. Determine if the categorial features should be later mapped as ordinal or nominal.</p>
+<p>Sample python command (for reference):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.nunique()
+b) for column_name in df.columns:    
+    print(df[column_name].unique())
+</pre></div>
+</div>
+<p>Tips on currency features:</p>
+<p>If multiple currencies are involved as a feature, make sure to convert them into the same currency, otherwise the scale of the different currency will confused the model or EDA findings.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="content-investigation">
+<h1>Content investigation<a class="headerlink" href="#content-investigation" title="Permalink to this headline">#</a></h1>
+<p>General guideline:</p>
+<p>The analysis should cover the following</p>
+<ul class="simple">
+<li><p>distribution of the features</p></li>
+<li><p>features patterns (trend)</p></li>
+<li><p>features relationship (correlation)</p></li>
+</ul>
+<p>If there are district groups of data in the data, try grouping these data and performed individual analysis for each group, in additional to these entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. Highlight the findings (whether there are useful finding or not) on the notebook as well, this allows the reader to understand the purpose of the charts.</p>
+<p>Expected ouput:</p>
+<ul class="simple">
+<li><p>Conclusion of the findings of EDA investigation</p></li>
+</ul>
+<p>Tips on the type of plot to use:</p>
+<ul class="simple">
+<li><p>histogram chart (great for viewing distribution of features, and comparing btw different group of data)</p></li>
+<li><p>stacked chart (avoid using if possible)</p></li>
+<li><p>line chart (commonly use in time-series data, mainly use to observed trend)</p></li>
+<li><p>pie chart (not recommended, use only if need to compare the size of each feature)</p></li>
+<li><p>box plot (useful for identify 25%-50%-75% mark only if the outlier is not extreme)</p></li>
+<li><p>scatter plot (useful for examining up to 3 features together, hue as the 3rd feature)</p></li>
+<li><p>tsne plot (useful for examining features above 3 and more)</p></li>
+<li><p>coorelation plot (useful if unsure which features to examine)</p></li>
+</ul>
+<p>Side note:
+tsne and coorelation plot often time consuming when generating chart.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">https://miykael.github.io/blog/2022/advanced_eda/</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -659,7 +688,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/1-pre-project-phase"
+            path: "./book/5-data-mgmt-exp-proc"
         },
         predefinedOutput: true
     }
@@ -673,20 +702,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">1. Pre-project Phase</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="key_areas_in_data.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What are the key areas to look out for in the data when framing the AI project?</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

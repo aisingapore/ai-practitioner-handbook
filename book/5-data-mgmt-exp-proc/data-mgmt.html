@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What are the Processes Involved in Building a Basic End-to-End Workflow?" href="e2e-workflow.html" />
+    <link rel="next" title="What are the various data split strategies?" href="data-splits.html" />
     <link rel="prev" title="5. Data Management, Exploration &amp; Processing" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -144,16 +144,16 @@ const thebe_selector_output = ".output, .cell_output"
      What are the key areas to look out for in the data when framing the AI project?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/technical_debt.html">
+     What are the factors/considerations/criteria to consider that will reduce potential technical debt?
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
-   3. Collaborative Development Platforms
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -161,6 +161,28 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/translate-technical-jargon.html">
+     How might we simplify and translate technical jargon for a non-technical audience?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
+     What are the platforms and their respective considerations required for collaborative ML development?
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
@@ -177,8 +199,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -186,6 +208,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-splits.html">
+     What are the various data split strategies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-splits-bias-fairness-leakage.html">
+     What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?
     </a>
    </li>
    <li class="toctree-l2">
@@ -209,8 +241,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -231,8 +263,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -248,8 +280,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -662,10 +694,10 @@ more insights <a class="reference external" href="https://docs.microsoft.com/en-
             <p class="prev-next-title">5. Data Management, Exploration &amp; Processing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="e2e-workflow.html" title="next page">
+    <a class='right-next' id="next-link" href="data-splits.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What are the Processes Involved in Building a Basic End-to-End Workflow?</p>
+        <p class="prev-next-title">What are the various data split strategies?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

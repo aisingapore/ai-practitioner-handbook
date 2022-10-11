@@ -144,16 +144,16 @@ const thebe_selector_output = ".output, .cell_output"
      What are the key areas to look out for in the data when framing the AI project?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1-pre-project-phase/technical_debt.html">
+     What are the factors/considerations/criteria to consider that will reduce potential technical debt?
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="3-collab-dev-platforms/overview.html">
-   3. Collaborative Development Platforms
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -161,6 +161,28 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-proj-mgmt-tech-lead/translate-technical-jargon.html">
+     How might we simplify and translate technical jargon for a non-technical audience?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-collab-dev-platforms/collaborative_ml.html">
+     What are the platforms and their respective considerations required for collaborative ML development?
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
@@ -177,8 +199,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -186,6 +208,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="5-data-mgmt-exp-proc/data-mgmt.html">
      Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-data-mgmt-exp-proc/data-splits.html">
+     What are the various data split strategies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
+     What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?
     </a>
    </li>
    <li class="toctree-l2">
@@ -209,8 +241,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -231,8 +263,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -248,8 +280,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="current reference internal" href="#">
    How To Contribute
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -489,8 +521,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#submit-pull-request-to-develop-branch">
-     5. Submit pull request to develop branch
+    <a class="reference internal nav-link" href="#submit-pull-request-to-main-branch">
+     5. Submit pull request to main branch
     </a>
    </li>
   </ul>
@@ -663,8 +695,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#submit-pull-request-to-develop-branch">
-     5. Submit pull request to develop branch
+    <a class="reference internal nav-link" href="#submit-pull-request-to-main-branch">
+     5. Submit pull request to main branch
     </a>
    </li>
   </ul>
@@ -799,7 +831,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="contributing-to-ai-singapore-s-ai-practitioner-handbook">
 <h1>Contributing to AI Singapore’s AI Practitioner Handbook<a class="headerlink" href="#contributing-to-ai-singapore-s-ai-practitioner-handbook" title="Permalink to this headline">#</a></h1>
-<p>Contributors: Ryzal Kamis and Kenny WJ Chua</p>
+<p>Contributors: Ryzal Kamis, Assistant Head (MLOps) &amp; Kenny WJ Chua, Senior AI Engineer</p>
 <hr class="docutils" />
 <p>This miscellaneous chapter covers two main aspects of contributing to the handbook–
 workflow conventions for writing a new sections, and conventions for the content in
@@ -813,7 +845,7 @@ In summary, the 5 steps are as follows:</p>
 <li><p>Fill in issue details</p></li>
 <li><p>Open new feature branch with name <code class="docutils literal notranslate"><span class="pre">chX-issueNum</span></code></p></li>
 <li><p>Add issue to board (i.e., GitHub Projects); move to review section when completed</p></li>
-<li><p>Submit pull request to develop branch</p></li>
+<li><p>Submit pull request to main branch</p></li>
 </ol>
 <section id="create-a-new-issue">
 <h3>1. Create a new issue<a class="headerlink" href="#create-a-new-issue" title="Permalink to this headline">#</a></h3>
@@ -832,8 +864,8 @@ In summary, the 5 steps are as follows:</p>
 <h3>4. Add issue to board (i.e., GitHub Projects); move to review section when completed<a class="headerlink" href="#add-issue-to-board-i-e-github-projects-move-to-review-section-when-completed" title="Permalink to this headline">#</a></h3>
 <p><img alt="image info" src="../_images/workflow4.png" /></p>
 </section>
-<section id="submit-pull-request-to-develop-branch">
-<h3>5. Submit pull request to develop branch<a class="headerlink" href="#submit-pull-request-to-develop-branch" title="Permalink to this headline">#</a></h3>
+<section id="submit-pull-request-to-main-branch">
+<h3>5. Submit pull request to main branch<a class="headerlink" href="#submit-pull-request-to-main-branch" title="Permalink to this headline">#</a></h3>
 <p>Before submitting the pull request, please ensure that all items in the definition
 of done are completed. Please build the site locally, and visually verify that
 your contributions are displayed as intended. You may build the site from the base

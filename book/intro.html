@@ -143,16 +143,16 @@ const thebe_selector_output = ".output, .cell_output"
      What are the key areas to look out for in the data when framing the AI project?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1-pre-project-phase/technical_debt.html">
+     What are the factors/considerations/criteria to consider that will reduce potential technical debt?
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="2-proj-mgmt-tech-lead/overview.html">
    2. Project Management &amp; Technical Leadership
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="3-collab-dev-platforms/overview.html">
-   3. Collaborative Development Platforms
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -160,6 +160,28 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-proj-mgmt-tech-lead/translate-technical-jargon.html">
+     How might we simplify and translate technical jargon for a non-technical audience?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-collab-dev-platforms/collaborative_ml.html">
+     What are the platforms and their respective considerations required for collaborative ML development?
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
@@ -176,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -185,6 +207,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="5-data-mgmt-exp-proc/data-mgmt.html">
      Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-data-mgmt-exp-proc/data-splits.html">
+     What are the various data split strategies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
+     What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?
     </a>
    </li>
    <li class="toctree-l2">
@@ -208,8 +240,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -230,8 +262,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -247,8 +279,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -435,12 +467,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identifying-ai-ready-projects">
+   Identifying AI Ready Projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-ai-ready-projects">
+   Delivering AI Ready Projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -452,6 +523,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identifying-ai-ready-projects">
+   Identifying AI Ready Projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-ai-ready-projects">
+   Delivering AI Ready Projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -459,24 +558,49 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-ai-singapore-s-ai-practitioner-handbook">
+  <img alt="AISG AI Practitioner Handbook Banner" class="bg-primary mb-1 align-center" src="../_images/aisg-ai-practitioner-handbook-banner.png" />
+<section class="tex2jax_ignore mathjax_ignore" id="welcome-to-ai-singapore-s-ai-practitioner-handbook">
 <h1>Welcome to AI Singapore’s AI Practitioner Handbook<a class="headerlink" href="#welcome-to-ai-singapore-s-ai-practitioner-handbook" title="Permalink to this headline">#</a></h1>
-<img alt="AISG AI Practitioner Handbook Banner" class="bg-primary mb-1 align-center" src="../_images/aisg-ai-practitioner-handbook-banner.png" />
-<p>Overview of the book here.</p>
+<p>Contributor: Laurence Liew, Director (AI Innovation)</p>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>This handbook is an accumulation of AI Singapore’s Innovation and Platforms Engineering team’s experience in delivering more than 40 AI Minimum Viable products (MVP) under the <a class="reference external" href="https://www.aisingapore.org/innovation/100e">100E</a> programme over the last 5 years.</p>
+<p>We envisioned this handbook as a useful guide for new AI Engineers joining AI Singapore and to quickly come up to speed on how we execute AI projects. However, the information contained here would also appeal to new any AI Engineers and Managers deploying their first AI project into production.</p>
+<p>Delivering production AI models goes beyond building AI models in Jupyter notebooks. It includes preliminary data identification, cleaning and curation, followed by building, training and testing the models and finally deploying the model. Throughout the process, AI and ML Ops play a fundamental role to enable the whole end-to-end process.</p>
+<p>There are many excellent books and resources on various AI algorithms, and we will not replicate them here. Instead, we will focus on the best practices and knowledge required to deliver an AI project from end to end.</p>
+</section>
+<section id="identifying-ai-ready-projects">
+<h2>Identifying AI Ready Projects<a class="headerlink" href="#identifying-ai-ready-projects" title="Permalink to this headline">#</a></h2>
+<p>AI projects executed by AI Singapore in the 100E programme are real-world problem statements from the industry and go through a rigorous review process before it gets approved and onboarded before any engineering work is done.</p>
+<p>Leveraging the <a class="reference external" href="https://www.aisingapore.org/innovation/airi">AI Readiness Index (AIRI)</a> developed by AI Singapore, we are able to quickly identify organizations that are AI Unaware, AI Aware, AI Ready or AI Competent.</p>
+<p>In the 100E programme, team’s work focuses on AI Ready companies only<a class="footnote-reference brackets" href="#id3" id="id1">1</a>.</p>
+<p><img alt="AI Readiness Index measures multiple dimensions" src="../_images/airi.png" /></p>
+</section>
+<section id="delivering-ai-ready-projects">
+<h2>Delivering AI Ready Projects<a class="headerlink" href="#delivering-ai-ready-projects" title="Permalink to this headline">#</a></h2>
+<p>Projects approved under the 100E programme are delivered in 7 months following an Agile methodology, typically over 10-15 sprints.</p>
+<p><img alt="100E and AI Apprenticeship Programme combined structure" src="../_images/100e_aiap.png" /></p>
+<p>The project team will consist of AI Singapore’s AI Researchers, Engineers, and AI Apprentices<a class="footnote-reference brackets" href="#id4" id="id2">2</a> (from the AI Apprenticeship Programme) working on the project full-time for the duration of the project. They are supported by Project Managers and the AI and ML Ops teams to deliver the project on time, and with the right infrastructure and architecture powered by established CI/CD pipelines.</p>
+<p>Our AI Engineers come from diverse academic disciplines and industry experience. In fact, many of our AI Engineers are hired from AI Apprentice cohorts. This handbook will provide new AI Engineers with a quick guide on our best practices to help them quickly become productive.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>Since 2017, we have engaged more than 600 companies, approved more than 100 projects and completed more than 50 of these AI projects under the 100E programme, and trained more than 200 AI Apprentices.</p>
+<p><img alt="Diverse AI projects approved and delivered" src="../_images/diverse_ai_projects.png" /></p>
+<p>The Handbook is a live project and will continue to evolve and be updated as we do more projects and learn more.</p>
+<p>Let us get started on your first AI project!</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>AI Singapore and other Singapore agencies have other programmes which assist companies that are AI Unaware and AI Aware.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Who are the AI Apprentices? See <a class="reference external" href="https://aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/">How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?</a></p>
+</dd>
+</dl>
+</section>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1-pre-project-phase/overview.html">1. Pre-project Phase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2-proj-mgmt-tech-lead/overview.html">2. Project Management &amp; Technical Leadership</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-collab-dev-platforms/overview.html">3. Collaborative Development Platforms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4-lit-review/overview.html">4. Literature Review</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5-data-mgmt-exp-proc/overview.html">5. Data Management, Exploration &amp; Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6-modelling/overview.html">6. Modelling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-solution-delivery/overview.html">7. Solution Delivery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8-documentation-handover/overview.html">8. Documentation &amp; Handover</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_contributing.html">How To Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cite.html">Cite This Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_changelog.html">Change Log</a></li>
-</ul>
 </div>
 </section>
 

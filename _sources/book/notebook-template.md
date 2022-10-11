@@ -16,7 +16,7 @@ kernelspec:
 # How should I write a section using Jupyter notebooks?
 
 
-Contributors: Ryzal Kamis and Kenny WJ Chua
+Contributors: Ryzal Kamis, Assistant Head (MLOps) & Kenny WJ Chua, Senior AI Engineer
 
 ---
 
