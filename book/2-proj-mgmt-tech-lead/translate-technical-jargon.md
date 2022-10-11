@@ -35,7 +35,9 @@ While written words and verbal speech are effective ways of communication, worki
 
 ## Conclusion
 
-With just a bit of thought and planning, you can make the discussion more engaging and understandable for the participants. You may need to arrange for additional meetings to provide the participants with the level of depth of understanding they require. 
+Pro Tip: An excellent way to practice is to try explaining some of your work to your spouse or friend. As the saying goes, “If you can't explain it simply, you don't understand it well enough.”
+
+With just a bit of thought and planning, you can make the discussion more engaging and understandable for the participants. You may need to arrange for additional meetings to provide the participants with the level of depth of understanding they require.
 
 ## References
 
