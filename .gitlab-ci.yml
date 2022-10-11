@@ -1,0 +1,40 @@
+stages:
+  - build
+  - deploy
+
+jupyter-build:
+  stage: build
+  image: python:3.8.13
+  script:
+    - pip install -r requirements.txt
+    - jupyter-book build .
+  artifacts:
+    paths:
+      - _build/
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop'
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      changes:
+      - ${CI_PROJECT_DIR}/*.md
+      - book/*
+      - book/**/*
+      - notebooks/*
+      - notebooks/**/*
+
+pages:
+  stage: deploy
+  image: busybox:latest
+  script:
+    - mv _build/html public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop'
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      changes:
+      - ${CI_PROJECT_DIR}/*.md
+      - book/*
+      - book/**/*
+      - notebooks/*
+      - notebooks/**/*
