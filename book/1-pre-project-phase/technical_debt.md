@@ -1,6 +1,6 @@
 # What are the factors/considerations/criteria to consider that will reduce potential technical debt?
 
-Contributor(s): Dylan Poh Guan Kiong
+Contributor(s): Dylan Poh Guan Kiong, AI Engineer
 
 ## What is technical debt?
 In software development, technical debt is the accumulation of continuous expenses. It occurs when software engineers prioritise speed of deployment over all other development factors. Fast builds can cause problems that can be very difficult to resolve in the future.
