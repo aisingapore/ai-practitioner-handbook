@@ -5,7 +5,7 @@ Contributor(s): Dylan Poh Guan Kiong
 ## What is technical debt?
 In software development, technical debt is the accumulation of continuous expenses and it occurs when software engineers prioritize speed of deployment over all other development factors. Fast builds can cause problems that can be very difficult to resolve in the future.
 
-Similar to financial debt, technical debt that is not repaid can accrue "interest," which makes it more expensive to make modifications in future. However, it might not always be a bad thing as developer might intentionally cut corners to produce proof of concept to advance initiatives.
+Similar to financial debt, technical debt that is not repaid can accrue "interest," which makes it more expensive to make modifications in future. However, it might not always be a bad thing as developers might intentionally cut corners to produce a proof of concept to advance initiatives.
 
 Martin Fowler offers a more detailed analyses of technical debt quadrant:
 
@@ -18,13 +18,13 @@ Martin Fowler offers a more detailed analyses of technical debt quadrant:
 
 Deliberate vs inadvertent:
 AI engineers may deliberately choose to cut corners, knowing that it would cost them in the long run. For instance, the developer may choose to build and deploy a model without investing in a framework or pipeline, choosing quick release over maintainability. In other words, they consciously trade off now gains for future expenses.
-Junior AI engineers might not fully appreciate the benefit of using version control system and inadvertently decide to develop without the relevant tools.Only finding it impossible to roll back the code when the pipelines are broken.
+Junior AI engineers might not fully appreciate the benefit of using version control system and inadvertently decide to develop without the relevant tools. Only finding it impossible to roll back the code when the pipelines are broken.
 
 Prudent vs reckless:
-Some engineering choices, like rapidly prototyping a large number of models to choose the best algo, hence overlooking a maintainable pipeline could be a prudent decision. Knowing sound software development principles but writing spaghetti code because of tight schedule could result in reckless debt.
+Some engineering choices, like rapidly prototyping a large number of models to choose the best algorithm, hence overlooking a maintainable pipeline could be a prudent decision since they are aware that they are incurring debt and consider the pros and drawbacks of using the best algorithm versus paying it off sooner. However, knowing sound software development principles but writing spaghetti code because of a tight schedule could result in reckless debt.
 
 
-## Technical Debt in Machine Learning.
+## Technical Debt in Machine Learning
 The maintenance/infrastructure expenses associated with machine learning project go well beyond those technical debt associated with standard software projects. Jumping onto the hype train and using machine learning to tackle problems that already have a solution or that can be solved quickly using heuristics may be costly and reckless, but using machine learning to replace repetitious work with labor shortage (such as object detection on defects) will be a deliberate choice with long-term benefits.
 
 
@@ -62,8 +62,8 @@ Given that technical debt has already been the subject of extensive research in 
 - Make a habit of checking and comparing runtimes for machine learning models
 - Set aside regular, non-negotiable time for dealing with technical debt (whatever form it might take)
   
-## Measuring technical debt.
-Before getting into specifics, this [article](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) included a list of questions to think about while looking at technical debt.
+## Measuring technical debt
+Before delving into specifics, this [article](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) article included a list of pertinent questions to consider, allowing the reader to get a general idea of the amount of technical debt present in a system.
 
 - How easily can an entirely new algorithmic approach be tested at full scale?
 - What is the transitive closure of all data dependencies?
