@@ -13,7 +13,7 @@ There are 2 sources of such bias and unfairness:
 
 This article discusses point ii).
 
-*Point i) is related to ensuring a representative dataset is curated at the start of the project, and this is partly discussed in [What are the key areas to look out for in the data when framing the AI project?](../1-pre-project-phase/key_areas_in_data.md).*
+*Point i) is pertains to curating a representative dataset at the start of the project. This is partly discussed in the section [What are the key areas to look out for in the data when framing the AI project?](../1-pre-project-phase/key_areas_in_data.md).*
 
 Certain problems are inherently imbalanced. For example, fraud detection datasets usually have fewer fraudulent examples than normal examples. In such a scenario, you should favour a stratified data split over a random split to ensure that there are equal proportions of fraudulent to normal examples in each data split. You will want to avoid a situation where your train set is predominantly normal, and your development set has a higher proportion of fraudulent data than in reality.
 
