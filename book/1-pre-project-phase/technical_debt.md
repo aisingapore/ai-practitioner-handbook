@@ -63,7 +63,7 @@ Given that technical debt has already been the subject of extensive research in 
 - Set aside regular, non-negotiable time for dealing with technical debt (whatever form it might take)
   
 ## Measuring technical debt
-Before delving into specifics, this [article](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) article included a list of pertinent questions to consider, allowing the reader to get a general idea of the amount of technical debt present in a system.
+Before delving into specifics, this [article](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) included a list of pertinent questions to consider, allowing the reader to get a general idea of the amount of technical debt present in a system.
 
 - How easily can an entirely new algorithmic approach be tested at full scale?
 - What is the transitive closure of all data dependencies?
