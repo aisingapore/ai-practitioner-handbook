@@ -1,6 +1,6 @@
 # Contributing to AI Singapore's AI Practitioner Handbook
 
-Contributors: Ryzal Kamis and Kenny WJ Chua
+Contributors: Ryzal Kamis, Assistant Head (MLOps) & Kenny WJ Chua, Senior AI Engineer
 
 ---
 
@@ -15,7 +15,7 @@ In summary, the 5 steps are as follows:
 2. Fill in issue details
 3. Open new feature branch with name `chX-issueNum`
 4. Add issue to board (i.e., GitHub Projects); move to review section when completed
-5. Submit pull request to develop branch
+5. Submit pull request to main branch
 
 ### 1. Create a new issue
 ![image info](./book/assets/images/screenshots/workflow1.png)
@@ -30,7 +30,7 @@ E.g., branch `ch1-issue5` denotes the feature branch for issue 5, which is a sec
 ### 4. Add issue to board (i.e., GitHub Projects); move to review section when completed
 ![image info](./book/assets/images/screenshots/workflow4.png)
 
-### 5. Submit pull request to develop branch
+### 5. Submit pull request to main branch
 Before submitting the pull request, please ensure that all items in the definition
 of done are completed. Please build the site locally, and visually verify that
 your contributions are displayed as intended. You may build the site from the base
