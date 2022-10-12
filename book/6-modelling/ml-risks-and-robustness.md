@@ -42,7 +42,7 @@ it might appear in production. For example, images from a different camera of
 the same brand.
 
 This risk can be reduced if data representativeness was considered in the data
-collection phase, as mentioned in [Chapter 1](https://oss.gitlab.aisingapore.\net/aisg-handbook/ai-practitioner-handbook/book/1-pre-project-phase/key_areas_in_data.html#is-the-training-data-representative-of-the-production-data).
+collection phase, as mentioned in [Chapter 1](../1-pre-project-phase/key_areas_in_data.html#is-the-training-data-representative-of-the-production-data).
 
 ## Robustness Testing
 
