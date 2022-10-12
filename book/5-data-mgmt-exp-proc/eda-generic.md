@@ -1,6 +1,6 @@
 # What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
 
-Contributor(s): Er YuYang
+Contributor: Er YuYang
 
 The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is design for a generic EDA purpose, and sections should be applied when it is applicable.
 
