@@ -13,8 +13,8 @@ chapters:
   - file: book/1-pre-project-phase/technical_debt
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
-  # sections:
-  # - file: 
+  sections:
+  - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
 - file: book/3-collab-dev-platforms/overview
@@ -31,17 +31,20 @@ chapters:
 - file: book/5-data-mgmt-exp-proc/overview
   sections:
   - file: book/5-data-mgmt-exp-proc/data-mgmt
+  - file: book/5-data-mgmt-exp-proc/eda-generic
   - file: book/5-data-mgmt-exp-proc/data-splits
   - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
   - file: book/5-data-mgmt-exp-proc/e2e-workflow 
   - file: book/5-data-mgmt-exp-proc/e2e-workflow-adv 
-  # - file: 
-  # - file: 
+  - file: book/5-data-mgmt-exp-proc/data-poisoning-data-extraction
+  # - file:
 # ===== 6. Modelling ========================================
 - file: book/6-modelling/overview
   sections:
+  - file: book/6-modelling/eval-metrics
+  - file: book/6-modelling/model-reproducibility
   - file: book/6-modelling/ml-risks-and-robustness
-  # - file:
+  # - file: 
 # ===== 7. Solution Delivery ========================================
 - file: book/7-solution-delivery/overview
   sections:
