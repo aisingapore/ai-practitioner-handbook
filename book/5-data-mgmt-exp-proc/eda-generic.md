@@ -1,6 +1,6 @@
 # What are the basic core structure for performing EDA?
 
-Contributor(s): Er YuYang
+Contributor: Er YuYang
 
 The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is designed for a generic EDA purpose and primarly focus on tabular data, however do note that certain parts of the workflow is still applicable for unstructured data types.
 
