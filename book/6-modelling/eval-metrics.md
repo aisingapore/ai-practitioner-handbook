@@ -133,4 +133,4 @@ https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/m
 
 https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/
 
-https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1
+https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1 
