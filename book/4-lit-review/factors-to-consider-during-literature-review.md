@@ -1,6 +1,6 @@
 # What are some of the factors/questions that an AI Engineer should consider during literature review?
 
-Contributor(s): Andy Ong
+Contributor(s): Andy Ong, AI Engineer
 
 Literature reviews are necessary at the start of every AI project to understand and explore available solutions in the market. Different business problems require different solutions, and below are some factors that you can consider while performing your literature review. 
 
@@ -15,11 +15,11 @@ Literature reviews are necessary at the start of every AI project to understand 
 
 Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medically related project requires model explainability and this will require a search for solutions that has model explainability. 
 
-The literature should cover a use case that is in a similar domain to your project. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can then understand the various approaches and their benefits, and how should you integrate them into your MVM.
+The literature should cover a use case that is in a similar domain to your project. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can understand the various approaches and their benefits, and how should you integrate them into your MVM.
 
 ## Development time
 
-All projects have a set of timelines to adhere to, and development time may not sufficient to build pipelines from scratch. You can research and identify potential libraries to aid in your pipeline to avoid building it from scratch. 
+All projects have a set of timelines to adhere to, and development time may not sufficient to build pipelines from scratch. You will have to allocate time for integration tests, project handover and other ad-hoc tasks such as troubleshooting. You can research and identify potential libraries to aid in your pipeline to avoid building it from scratch. You can also attempt to inherit certain classes from suitable libraries to customise them to your project with minimal code.
 
 ## Code Existence & Readability
 
