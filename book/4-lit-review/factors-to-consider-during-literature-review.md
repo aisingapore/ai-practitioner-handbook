@@ -23,7 +23,7 @@ All projects have a set of timelines to adhere to, and development time may not 
 
 ## Code Existence & Readability
 
-You should be reading up on literature that has training or inference scripts in their code repository. These solutions can be incorporated into your MVM with ease as compared to solutions without any scripts. This website (pwc here) contains papers with open-sourced code repositories. 
+You should be reading up on literature that has training or inference scripts in their code repository. These solutions can be incorporated into your MVM with ease as compared to solutions without any scripts. [Papers with code](https://paperswithcode.com/) contains papers with open-sourced code repositories. 
 
 If code repositories are supporting the literature, you should consider the readability of the code provided and assess the ease of integration. More often than not, provided code repositories can be challenging to understand, and integration might take more time than supposed.
 
