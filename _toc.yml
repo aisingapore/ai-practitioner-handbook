@@ -24,8 +24,8 @@ chapters:
   # - file: 
 # ===== 4. Literature Review ========================================
 - file: book/4-lit-review/overview
-# sections:
-# - file: 
+  sections:
+  - file: 4-lit-review/factors-to-consider-during-literature-review
 # - file: 
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
