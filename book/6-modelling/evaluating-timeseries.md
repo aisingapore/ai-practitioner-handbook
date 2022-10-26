@@ -40,16 +40,17 @@ The ground truth and model prediction values for Company A’s newly built Time-
 |--------------|------ |------ |------ |------ |------ |------ |------ |------ |
 | Ground Truth |   0   |   0   |   1   |   1   |   0   |   0   |   0   |   1   | 
 | Detected     |   0   |   0   |   0   |   1   |   0   |   1   |   0   |   1   |
+
+
+The confusion matrix are calculated using Time Segment and Overlapping Segment approach.
+
 |--------------|---------------------------------------|---------------------- |
 | Time Segment | TP = 2, FP = 1, TN = 3, FN = 1        | Recall = 2 / 3 (0.66) |
 | Overlapping Segment | TP = 2, FP = 1, TN = 3, FN = 0 | Recall = 2 / 2 (1.00) |
 |--------------|---------------------------------------|---------------------- |
 
-From the table above, we can see that the overlapping approach resulted in a recall of 1.0, being more lenient as compared to the weighted segment. 
-
+From the table above, we can see that the overlapping approach resulted in a recall of 1.0, being more lenient as compared to the weighted segment. As Company A is planning to use the model for machinery failure detection, it is not wise to use such a lenient approach like overlapping segment. Instead, the time segment approach will be more appropriate. 
 
 # Conclusion
 
 While the approaches mentioned in this guide has their advantages, business needs must be taken into consideration while deciding which approach is suitable for your project. 
-
-In one case, the overlapping segments approach could be too lenient, causing models that predicts an anomaly late while still having a “good” performance to punish the model for having a late detection.
