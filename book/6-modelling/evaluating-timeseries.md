@@ -44,6 +44,7 @@ The ground truth and model prediction values for Company A’s newly built Time-
 
 The confusion matrix are calculated using Time Segment and Overlapping Segment approach.
 
+| Approach     | Confusion Matrix                      | Recall                |
 |--------------|---------------------------------------|---------------------- |
 | Time Segment | TP = 2, FP = 1, TN = 3, FN = 1        | Recall = 2 / 3 (0.66) |
 | Overlapping Segment | TP = 2, FP = 1, TN = 3, FN = 0 | Recall = 2 / 2 (1.00) |
