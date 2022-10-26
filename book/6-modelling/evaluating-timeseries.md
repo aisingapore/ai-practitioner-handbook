@@ -40,7 +40,6 @@ The ground truth and model prediction values for Company A’s newly built Time-
 |--------------|------ |------ |------ |------ |------ |------ |------ |------ |
 | Ground Truth |   0   |   0   |   1   |   1   |   0   |   0   |   0   |   1   | 
 | Detected     |   0   |   0   |   0   |   1   |   0   |   1   |   0   |   1   |
-
 *1's are denoted as Anomaly for this case study*
 
 The confusion matrix are calculated using Time Segment and Overlapping Segment approach.
@@ -55,3 +54,7 @@ From the table above, we can see that the overlapping approach resulted in a rec
 # Conclusion
 
 While the approaches mentioned in this guide has their advantages, business needs must be taken into consideration while deciding which approach is suitable for your project. 
+
+# References
+
+https://medium.com/mit-data-to-ai-lab/time-series-anomaly-detection-in-the-era-of-deep-learning-64b9d2cff6eb
