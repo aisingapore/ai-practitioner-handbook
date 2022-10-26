@@ -41,6 +41,7 @@ The ground truth and model prediction values for Company A’s newly built Time-
 | Ground Truth |   0   |   0   |   1   |   1   |   0   |   0   |   0   |   1   | 
 | Detected     |   0   |   0   |   0   |   1   |   0   |   1   |   0   |   1   |
 
+*1's are denoted as Anomaly for this case study*
 
 The confusion matrix are calculated using Time Segment and Overlapping Segment approach.
 
