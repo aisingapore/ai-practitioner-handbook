@@ -30,8 +30,12 @@ If code repositories are supporting the literature, you should consider the read
 
 ## Open-Sourcing of a pre-trained model
 
-For projects that involve NLP or CV, it could be beneficial to look for solutions that have its pre-trained model open-sourced. This is to ensure that you can apply transfer learning in such projects, to reduce training time. Training time for language or computer vision models take very long, and it could be costly (both time and financially) in a project.
+For projects that involve NLP or CV, it could be beneficial to look for solutions that have its pre-trained model open-sourced. This is to ensure that you can apply transfer learning in such projects, to reduce training time. Language or computer vision models requires extremely long training time, and it could be costly (both time and financially) in a project.
 
 ## Key takeaways from the literature
 
-You must never take into account the results published in the paper. They are often inflated, and more importantly, the data is different. Data is usually the biggest factor contributing to the high accuracy of every model, and since the data between the paper and your project is different, do expect to have a difference in accuracy as well. You should focus on the algorithms and methods of evaluation used in the literature instead.
+You must never take into account the results published in the paper. They are often inflated, and more importantly, the data used is different. Data is usually the biggest factor contributing to the performance of every model, and since the data between the paper and your project is different, do expect to have a difference in accuracy. You should focus on the algorithms and methods of evaluation used in the literature instead.
+
+# Conclusion
+
+While these factors are non-exhaustive, they can ensure that you are doing a informative yet meaningful literature review.
