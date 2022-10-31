@@ -68,7 +68,7 @@ value across all the libraries in the code base in order to reduce
 non-deterministic behaviours eg. weight initialization, regularization, and
 optimization in neural networks, split points in random forest algorithm.
 
-Seeding the RNG from pPython (i.e. `random.seed()`) is not enough as some
+Seeding the RNG from Python (i.e. `random.seed()`) is not enough as some
 packages have their own implementation of a pseudo-random number generator
 (e.g. NumPy). Do check their documentation on how they generate the random numbers.
 
