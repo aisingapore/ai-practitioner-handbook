@@ -1,19 +1,18 @@
-# What are the checklist of items to look out for to ensure reproducibility of the model pipeline as much as possible?
+# How can I maximise model reproducibility?
 
 Contributor(s): Kew Wai Marn, AI Engineer
 
 ## Model reproducibilty
 
+Reproducible models are important because they allow independent practitioners to
+achieve the same results, which improves communication and collaboration. Furthermore,
+reproducible models are less error-prone and more reliable.
+
 Apart from ensuring reproducibilty in the data and the code of the ML system,
-you would need to check your model as well. Assuming you have the same training
+you would need to check your model logic as well. Assuming you have the same training
 code, and the same training data, you should be able to produce the same model.
 
-Reproducible models are important because it allows independent researchers to
-be able to achieve the same results, which improves communication and
-collaboration. Furthermore, reproducible models makes them less error-prone which
-increases its reliability.
-
-## What to check to ensure model reproducibility?
+## Model reproducibility checklist
 
 If you have the same training code, and the same training data, but you are
 not able to produce the same model, below are several things you should check to
@@ -32,9 +31,9 @@ libraries are constantly getting upgraded, you need to make sure the API calls
 are working as expected. Write unit tests with random input data running
 through the API call (ie. a single step of gradient descent).
 
-To reduce the risk of API calls breaking, you can version the libraries used eg.
+To reduce the risk of API calls breaking, you can version the libraries used; eg.
 create a software enviroment with specific and static dependency versions
-recorded down in a requirements file.
+recorded in a requirements file.
 
 #### b. Algorithmic correctness
 
@@ -48,18 +47,18 @@ To check for algorithmic correctness you can:
 - Verify that without regularization, the training loss is low enough. If your
 model is complex enough, it will capture information from the training data.
 
-- Test specific subcomputations of your algorithm. (ie. test that neural network
+- Test specific subcomputations of your algorithm. (e.g. test that neural network
 weights are updated with every pass).
 
 #### c. Test that model is stable
 
-A stable model would be reproducible as it produces consistent results. During
-model training for nerual networks, your weights and layer outputs should not be
+A stable model would be reproducible as it produces consistent results. When training
+a neural network, your weights and layer outputs should not be
 `NaN` or `Inf`. A given layer should also not return zeroes for more than half
 of its outputs. Write tests to check for `NaN` and `Inf` values in your weights
 and layer outputs.
 
-Furthermore, do sensitivity analysis on the hyperparameters of your ML system
+Furthermore, perform sensitivity analysis on the hyperparameters of your ML system
 to ensure system hyperparameter stability.
 
 ### 2. Deterministically seed the random number generator (RNG)
@@ -69,13 +68,13 @@ value across all the libraries in the code base in order to reduce
 non-deterministic behaviours eg. weight initialization, regularization, and
 optimization in neural networks, split points in random forest algorithm.
 
-Seeding the RNG from python ie. `random.seed()` is not enough as certain
-packages have their own implementation of a pseudorandom number generator
-eg. NumPy. Do check their documentation on how they generate the random numbers.
+Seeding the RNG from pPython (i.e. `random.seed()`) is not enough as some
+packages have their own implementation of a pseudo-random number generator
+(e.g. NumPy). Do check their documentation on how they generate the random numbers.
 
 However, there will still be areas of randomness that are irreducible, such as
-randomness in third party libraries and in configurations of GPUs. Refer to this
-[section](#inherent-stochasticity).
+randomness in third party libraries and in GPUs configurations. Please refer to this
+[section](#inherent-stochasticity) for more information.
 
 ### 3. Model version control
 
@@ -89,22 +88,21 @@ model versions.
 ### 4. Integration tests
 
 As a ML pipeline consiste of several components, tests that runs the entire
-pipeline end-to-end should be written. To run integration tests faster, train on
+pipeline end-to-end should be written. To run integration tests more quickly, train on
 a subset of the data or with a simpler model.
 
 ### 5. Logging
 
-It is important to log everything used in ML modelling (ie. model parameters,
+It is important to log everything used in ML modelling (e.g. model parameters,
 hyperparameters, feature transformations, order of features, method to select
-them, structure of the ensemble (if ensembles were used), specifications of
-the hardware used to run the model). This would help to recreate the environment
-the model was created in. Furthermore, there should be reporting of any
-dependency changes, eg. changes in API calls should be notified.
+them, structure of the ensemble (if applicable), hardware specifications). This 
+would help to recreate the environment the model was created in. Furthermore, 
+dependency changes (e.g. changes in API calls) should be recorded.
 
 ## Inherent stochasticity
 
-As mentioned earlier, the entire ML pipeline is not always reproducible. There
-exist inherent stochasticity, such as when using GPUs, randomness in backend
+As mentioned earlier, the ML pipeline is not always entirely reproducible. Inherent 
+stochasticity exists in some components, such as when using GPUs, randomness in backend
 libraries, and stochastic ML algorithms. In order to improve reproducibility,
 you can report the average performance of your model using multiple runs or even
 build an ensemble of models, each trained with a different random number seed.
