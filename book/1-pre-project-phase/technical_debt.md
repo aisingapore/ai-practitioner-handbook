@@ -1,11 +1,11 @@
 # What are the factors/considerations/criteria to consider that will reduce potential technical debt?
 
-Contributor(s): Dylan Poh Guan Kiong
+Contributor(s): Dylan Poh Guan Kiong, AI Engineer [(GitHub)](https://unicorndy.github.io/Dylan_Poh/)
 
 ## What is technical debt?
-In software development, technical debt is the accumulation of continuous expenses and it occurs when software engineers prioritize speed of deployment over all other development factors. Fast builds can cause problems that can be very difficult to resolve in the future.
+In software development, technical debt is the accumulation of continuous expenses. It occurs when software engineers prioritise speed of deployment over all other development factors. Fast builds can cause problems that can be very difficult to resolve in the future.
 
-Similar to financial debt, technical debt that is not repaid can accrue "interest," which makes it more expensive to make modifications in future. However, it might not always be a bad thing as developer might intentionally cut corners to produce proof of concept to advance initiatives.
+Similar to financial debt, technical debt that is not repaid can accrue "interest," which makes it more expensive to make modifications in future. However, it might not always be a bad thing as developers might intentionally cut corners to produce a proof of concept to advance initiatives.
 
 Martin Fowler offers a more detailed analyses of technical debt quadrant:
 
@@ -16,15 +16,18 @@ Martin Fowler offers a more detailed analyses of technical debt quadrant:
 
 ## Deliberate and prudent technical debt
 
-Deliberate vs inadvertent:
-AI engineers may deliberately choose to cut corners, knowing that it would cost them in the long run. For instance, the developer may choose to build and deploy a model without investing in a framework or pipeline, choosing quick release over maintainability. In other words, they consciously trade off now gains for future expenses.
-Junior AI engineers might not fully appreciate the benefit of using version control system and inadvertently decide to develop without the relevant tools.Only finding it impossible to roll back the code when the pipelines are broken.
+### Deliberate vs inadvertent
+AI engineers may deliberately choose to cut corners, knowing that it would cost them in the long run. For instance, the developer may choose to build and deploy a model without investing in a framework or pipeline, choosing quick release over maintainability. In other words, they consciously trade short-term gains for future expenses.
 
-Prudent vs reckless:
-Some engineering choices, like rapidly prototyping a large number of models to choose the best algo, hence overlooking a maintainable pipeline could be a prudent decision. Knowing sound software development principles but writing spaghetti code because of tight schedule could result in reckless debt.
+Junior AI engineers might not fully appreciate the benefit of using version control system and inadvertently decide to develop without the relevant tools. They may later find it impossible to roll back the code when the pipelines are broken.
+
+### Prudent vs reckless
+Some engineering choices, like rapidly prototyping a large number of models to choose the best algorithm, hence overlooking a maintainable pipeline could be a prudent decision since they are aware that they are incurring debt and consider the pros and drawbacks of using the best algorithm versus paying it off sooner.  
+
+However, knowing sound software development principles but writing spaghetti code because of a tight schedule could result in reckless debt.
 
 
-## Technical Debt in Machine Learning.
+## Technical Debt in Machine Learning
 The maintenance/infrastructure expenses associated with machine learning project go well beyond those technical debt associated with standard software projects. Jumping onto the hype train and using machine learning to tackle problems that already have a solution or that can be solved quickly using heuristics may be costly and reckless, but using machine learning to replace repetitious work with labor shortage (such as object detection on defects) will be a deliberate choice with long-term benefits.
 
 
@@ -34,7 +37,7 @@ The maintenance/infrastructure expenses associated with machine learning project
 
 ## The 25 Best Practices 
 
-Given that technical debt has already been the subject of extensive research in this [publication](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf); as a result, a list of best practices as recommended by [Matthew McAteer](https://matthewmcateer.me/blog/machine-learning-technical-debt/) are listed here.
+Technical debt has already been the subject of [extensive research](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf). A list of best practices as recommended by [Matthew McAteer](https://matthewmcateer.me/blog/machine-learning-technical-debt/) is provided here:
 
 - Use interpretability tools like SHAP values
 - Use explainable model types if possible
@@ -46,11 +49,11 @@ Given that technical debt has already been the subject of extensive research in 
 - Check independence assumptions behind models (and work closely with security engineers.
 - Use regular code-reviews (and/or use automatic code-sniffing tools).
 - Repackage general-purpose dependencies into specific APIs.
-- Get rid of Pipeline jungles with top-down redesign/reimplementation.
+- Get rid of pipeline jungles with top-down redesign/reimplementation.
 - Set regular checks and criteria for removing code, or put the code in a directory or on a disk far-removed from the business-critical stuff.
 - Stay up-to-date on abstractions that are becoming more solidified with time
 - Use packages like Typing and Decimal, and don’t use ‘float32’ for all data objects
-- Don’t leave all works-in-progress in the same directory. Clean it up or toss it out.
+- Do not leave all works-in-progress in the same directory. Clean it up or toss it out.
 - Make sure endpoints are accounted, and use frameworks that have similar abstractions between languages
 - Make it so you can set your file paths, hyperparameters, layer type and layer order, and other settings from one location
 - Monitor the models’ real-world performance and decision boundaries constantly
@@ -62,8 +65,8 @@ Given that technical debt has already been the subject of extensive research in 
 - Make a habit of checking and comparing runtimes for machine learning models
 - Set aside regular, non-negotiable time for dealing with technical debt (whatever form it might take)
   
-## Measuring technical debt.
-Before getting into specifics, this [article](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) included a list of questions to think about while looking at technical debt.
+## Measuring technical debt
+Before delving into specifics, this [article](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) includes a list of pertinent questions to consider, allowing the reader to get a general idea of the amount of technical debt present in a system:
 
 - How easily can an entirely new algorithmic approach be tested at full scale?
 - What is the transitive closure of all data dependencies?
