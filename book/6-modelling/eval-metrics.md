@@ -1,13 +1,46 @@
-# What are the considerations (internally by the team), and externally (by the shareholders) when selecting evaluation metrics?
+# What are the considerations (internally by the team), and externally (by the stakeholders) when selecting evaluation metrics?
 
 Contributor(s): Er YuYang
 
 This guide assumes that you have a fair understanding of why the stakeholders is developing the AI/ML project (understand the business value), and have a reasonable understanding for the implementation difficulty of the evaluation for given the dataset.
 
+# Overview
 
-# High level metrics (for classification problems)
+1. Understanding stakeholder's problem and environment 
+
+2. Optimizing metrics
+
+   a. Selecting metrics for classification problems
+
+   b. Selecting metrics for regression problems
+
+3. Satisficing metrics
+
+# 1. Understanding the problem and environment 
+
+a. Problem statement
+
+   Understanding how the AI/ML solves the problem statement help to identify the correct optimizing metrics (explained in section 2) to determine the preformance of the model.
+
+b. Technical competence of the different stakeholders
+   
+   Understanding the level of competence of the stakeholder help to identify which optimizing metrics (explained in section 2) to use when communicating with them.
+
+c. Deployment environment
+
+   Understanding the deployment enviornment will helps in choosing the satisficing metrics explained in section 3.
+
+# 2. Optimizing metrics
+
+The goal is to establish a single-number evaluation metric, as having multiple evaluation metrics make it hard to compare against different algorithms.
+
+For instance, Classifier A has precision of 95% with recall of 90% and Classifier B has precision of 98% with recall of 85%, Neither classifier is obviously superior and does not immediately guide you towards picking one.
+
+When comparing with different model in classification problem with multiple class, combined metrics of each class into single metric using average on weighted average. However, keep the metrics separated if you are evaluating the class performance instead of the model performance.
+
+
+## a.) Selecting metrics for classification problems
 This section covers some of the most common metrics used for evaluating model for classification problems. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.
-
 
 1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
    
@@ -48,7 +81,7 @@ Use weighted f1 when data is unbalanced.
 
 Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN, sometimes uses for more technical-inclined stakeholders. Both metrics in 5a & 5b requires predicted labels & predicted probabilities in order to plot curve, avoid using when extracting proabilities is not possible or difficult. For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These metrics are often used by internal development team.
 
-# High level metrics (for regression problems)
+## b.) Selecting metrics for regression problems
 This section covers some of the most common metrics used for evaluating model for regression problems. 
 
 1. Mean Square Error (MSE)
@@ -73,49 +106,31 @@ MSE, RMSE, MAE are not very useful when comparing against different models when 
 
    Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements
 
-# In-depth metrics
-This section covers brief introdution of the in-depth metrics used in different AI domain. Do note that this is not exhaustive list.
+# 3. Satisficing metrics
 
-1. Evaluation metrics for NER
-   
-   Involves classification of phrases in sentence (phrase level classification). Both MUC and SemEval are used together as phrase level classification as NER's evaluation metrics.
+Satisficing is a decision making strategy that aims for a satisfactory or adequate results rather than the optimal solution. Sometimes, it is hard to get a single number evaluation metric due to the non-ML metrics.
 
-   - Message Understanding Conference (MUC)
-     
-     Used for measuring the prediction class against true label class 
-     - Corrrect (COR): Both prediction and true labels are the same
-     - Incorrect (INC): Prediction and true labels do not match
-     - Partial (PAR): Some of the text in the prediction matches the true labels
-     - Missing (MIS): No prediction from model when there is true labels
-     - Spurius (SPU): Wrong prediction when no true labels
+Example of some non-ML metrics
+- runtime (inference time)
+- training time
+- memory usage
+- size of model (more applicable for deployment on edge device)
 
-   - International Workshop on Semantic Evaluation (SemEval)
+It is not practical or cost efficient to increase the optimizing metrics by a minuscule percentage, using longer training time which results in higher cost. Deployment consideration (eg. size of model, runtime) may also affect the usablity of the model.
 
-     Used as different evaluation scheme (strict or lenient) for the length of the words (correctness of the phrase) and classification type (correctness of the phrase classification)
-     - Strict: Same length of words, correct type
-     - Exact: Same length of words, correct/incorrect type
-     - Partial: Different length of words, correct/incorrect type
-     - Type: Different length of words, correct type
+a) One approach is to derive a single metrics by forumla
 
-   ![image](../assets/images/charts/MUC_SemEval.PNG)
+For instance:
 
+      metrics = accuracy of model - 0.5 * runtime
 
-2. Evaluation metrics for Object Detection
-   
-   - Intersection over Union (IOU): evaluates the degree of overlap between the ground truth bounding box with the prediction bounding box
+b) Another approach is to define what is an "acceptable" threshold for the satisficing metrics, then maximize the optimizing metrics.
 
-     IoU = $\frac{Area of overlap}{Area of union}$
-
-     ![image](../assets/images/charts/IoU_comparsion.png)
-
-   - Average Precision (AP): Area under the precision-recall curve evaluated at IOU threshold. eg. AP50 means IoU above 0.5 is TP while
-   AP75 mean IoU above 0.75 
-   
-      ![image](../assets/images/charts/AP-comparsion.PNG)
-
-   - Mean Average Precision (mAP): AP is calculated individually for each class, then performed averaging of AP values over all classes
+Once your team is aligned on the evaluation metric to optimize, they will be able to make faster progress.
 
 # Reference
+https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf
+
 https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/
 
 https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1 

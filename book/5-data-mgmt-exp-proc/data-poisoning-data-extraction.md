@@ -6,11 +6,12 @@ Contributor(s): Kew Wai Marn, AI Engineer
 
 Ideally, data should be collected and labeled in a controlled and safe
 environment. Practically, this is time-consuming, and thus expensive, which not
-everyone can afford. Therefore, data is sometimes collected from the
-Internet or other untrusted sources. This pose a huge risk as an adversary can
+everyone can afford. Therefore, data is sometimes collected from the Internet or
+other untrusted sources. This poses a huge risk as an adversary can
 intentionally manipulate the data, which causes the ML system to be compromised
-(ie. inject data with specific features that causes the model to fail during
-inference; model "backdoors").
+(ie. inject training data with specific features that causes the model to fail
+during inference when inference data with such features are used; model
+"backdoors").
 
 ## Data extraction (Inference/ Inversion attacks)
 
@@ -23,7 +24,7 @@ training dataset.
 ## What to check in your data sources, and how it relates to your project?
 
 In order to reduce the risk of data poisoning and extraction, you should check
-the following in you ML system.
+the following in your ML system.
 
 ### 1. Proper access control to protect the raw and processed data from unauthorized users.
 
@@ -51,13 +52,18 @@ and/or redundant streams with multiple correlated and overlapping sensors)
 - How do you assure the quality of your labeling process, and validate the
 resulting labels?
 
+The main idea is to not use data blindly, do take time to understand the data
+source. You can also analyse the data to look for inconsistencies ie. look at
+feature value range, statistics ie. mean for numerical data, data frequencies
+for categorical data.
+
 ### 3. Ensure that the model output is not part of the input
 
 This is important for models using data crawled from the internet. For example,
 when translations of pages done by the model were used as training data for the
 model.
 
-### 4. Model only output what the user requires (e.g. no confidence score unless necessary)
+### 4. Model only outputs what the user requires (e.g. no confidence score unless necessary)
 
 This is to prevent an adversary in trying to extract information from your model.
 For example, for a image classifier, knowing confidence score can allow the
