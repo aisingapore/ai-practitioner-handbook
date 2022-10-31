@@ -1,4 +1,4 @@
-# What can I reduce the risks of data poisoning and data extraction?
+# How can I reduce the risks of data poisoning and data extraction?
 
 Contributor(s): Kew Wai Marn, AI Engineer
 
@@ -89,4 +89,4 @@ __Reference(s):__
 - [Machine Learning Security against Data Poisoning: Are We There Yet?](https://arxiv.org/pdf/2204.05986.pdf)
 - [Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and Data Poisoning Attacks](https://arxiv.org/pdf/2006.12557.pdf)
 - [Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures](https://rist.tech.cornell.edu/papers/mi-ccs.pdf)
-- [PDPA Overview](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 
+- [PDPA Overview](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)
