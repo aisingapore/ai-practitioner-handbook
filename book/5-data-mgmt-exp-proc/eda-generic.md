@@ -40,7 +40,6 @@ When dealing with private or sensitive data, discuss with stakeholder whether ma
 When performing granularity/cardinality checks, it is important to understand how fine or coarse each row and column is and verify whether the table is of the correct granularity per the database schema
 
 Expected ouput: 
-
 - raw version of data loaded in the notebook
 - size of data, whether parallel processing is needed
 - datatype of features, which features are numeric/continuous, or categorical
@@ -54,7 +53,7 @@ General guideline:
 
 This sub-section should cover mostly on data cleaning and imputing. If there are too many missing values consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other available features to predict the value of that particular column (model-based imputation/multiple imputation). 
 
-The choice of approach for handling missing data is also influence by the type of "missingness". There are mainly three kinds of "missingness": MCAR, MAR, MNAR (see article link at reference section). Before performing any imputation, it is highly recommended to first consult the stakeholder and understand possible reasons behind the missingness. 
+The choice of approach for handling missing data is also influence by the type of "missingness". There are mainly three kinds of "missingness": MCAR, MAR, MNAR (see article link at reference section). Before performing any imputation, it is highly recommended to first consult the stakeholder and understand possible reasons behind the "missingness". 
 
 Generally, there are 4 ways to impute
 - assign a fixed value(s) based on domain knowledge
