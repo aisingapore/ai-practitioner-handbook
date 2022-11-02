@@ -1,125 +1,118 @@
-# What are the basic core structure for performing EDA?
+# Is there a core structure for performing exploratory data analysis in a systematic way?
 
-Contributor: Er YuYang
+Contributor: Er YuYang, Senior AI Engineer
 
-The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is designed for a generic EDA purpose and primarly focus on tabular data, however do note that certain parts of the workflow is still applicable for unstructured data types.
+The purpose of this article is to have a guide to performing exploratory analysis (EDA) in a more systematic manner. This guide is designed for a generic EDA purpose and primarily focuses on tabular data. However, parts of this workflow are still applicable for unstructured data types.
 
-# Overview
-The organization for most EDA should contain these blocks in the notebook
-1. Structure investigation
+## Overview
+Most EDA activities should contain these blocks:
 
-    This section should investigate the data size and type. It should also examine if the data contains any private data or sensitive data.
+### 1. Structure investigation
 
-2. Quality investigation
+This section should contains the most basic checks on the overall completeness of and level of information in the dataset. These include checking the data size and type, as well as granularity/cardinality of each table. It should also examine if the data contains any private or sensitive data.  
 
-    This section should cover the quality of the data such as duplicate, missing and erroneous values hence identifying the potential data to drop, repair or impute.
+### 2. Content investigation
 
-3. Content investigation
+This section looks into the quality, distribution and relationships in the dataset, and need not be in this particular order.
 
-    This section should cover the more in-depth analyses such as relationship between features. The main aim is to find if there are any trends or patterns in the data.
+#### 2a. Quality checks
 
-# Structure investigation
+This sub-section should cover aspects of data quality such as missing and erroneous values. The main aim is to identify potential data to drop, repair or impute.
 
-General guideline:
+#### 2b. Distribution checks
 
-This section should be short (about less than 5 cells), it only aims to gain some insights on the size and datatype of the data. 
+This sub-section should cover the understanding of each individual feature. The main aim is to find out the chracteristics of each feature, and also to uncover trends or patterns in the data.
 
-Sample Python command (for reference):
+#### 2c. Relationship checks
 
-    a) df.shape
-    b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
-    c) df.describe()
-    d) df.head() or df.tail()
+This sub-section should cover more in-depth analyses such as bivariate relationships between features, and between features and target. The main aim is to generate ideas for feature engineering and selection based on observed relationships.
 
-Expected ouput: 
+## 1. Structure investigation
 
-- raw version of data
-- gain some insight of the size and datatype of the data
+This section should be short (about less than 10 notebook cells), as it only aims to gain some insights on the size and datatype of the data. This sections does not go into the content of each variable/feature. 
 
-a.) Tips for large data:
+When checking the datatype, organise features according to whether they are numeric/continuous or categorical. This will help to decide on suitable visualisations when performing content investigation later.
 
-In the scenario if the data is too huge, explore using reading by sampling or chunking. Parallel processing like Dask or Ray can also help. For saving big data to disk, other file format (like Pickle, Feather, Parquest and HDF5) can help to compress to reduce the storage size.
+When dealing with private or sensitive data, discuss with stakeholder whether masking or removing them is a better option. When duplicate rows are present, highlight them and discuss with stakeholders on how to deal with them. Inappropriate handling of duplicate rows can results in data leakage when performing data split for model training/evaluation.
 
-# Quality investigation
+When performing granularity/cardinality checks, it is important to understand how fine or coarse each row and column is and verify whether the table is of the correct granularity per the database schema
 
-General guideline:
+Expected ouputs of structure investigation: 
+- Raw version of data loaded in the notebook
+- Size of data, whether parallel processing is needed
+- Datatype of features, which features are numeric/continuous, or categorical
+- (Optional) Further discussion with stakeholders on handling private/sensitive data and duplicate rows
 
-This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Conversely if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column. 
+## 2. Content investigation
 
-Expected ouput:
-- cleaned version of data ready for plotting charts
+### 2a. Quality checks
 
-a.) Tips on handling missing values:
+This sub-section should cover matters relating to data cleaning and imputation. If there are too many missing values, consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column (model-based imputation/multiple imputation). 
 
-Non-ML techniques
-- try to obtain the missing data from source
-- try to estimate the missing data from the other data (based on similarity)
-- do nothing (let the model handle it)
+The choice of approach for handling missing data is also influenced by the type of "missingness". There are mainly three kinds of "missingness": MCAR, MAR, MNAR (see article link at reference section). Before performing any imputation, it is highly recommended to first consult the stakeholder and understand possible reasons behind the "missingness". 
 
-ML techniques
-- impute using mean or median
-- impute using most frequent or constant (eg. zero) values
-- use machine learning model to impute
+Generally, there are 4 ways to impute:
+- Assign a fixed value(s) based on domain knowledge
+- Simple imputation based on statistical summaries
+- Model-based imputation
+- Multiple imputation (see video link at reference section)
 
-The choice of approach for handling missing data is also influence by the type of "missingness". There are three kinds of missing data.
+Expected ouputs:
+- Cleaned version of data ready for plotting charts
+- Identify data/column(s) that requires preprocessing in the datapipeline
 
-- missing completely at random (MCAR)
-  
-  There is no relationship between the missingness of the data and any values observed or missing. There is nothing systemic going on that makes some data more likely to be missing than others.
+### 2b. Distribution checks
 
-- missing at random (MAR)
+This sub-section should cover the generation of distribution and summary statistics. Understanding properties like central tendency (mean), spread (variance) and skewness help you to spot erroneous values and potential outliers easily.
 
-  An observation is missing has nothing to do with the missing values, but it does have to do with the values of the an individual's observed variable(s). Eg. Men are more likely to tell you their weight than women, hence weight feature is considered as MAR.
+If there are district groups in the data, try grouping them and perform individual analysis for each group, in addition to the analysis for the entire dataset. Try to use looping to cover the entire possible combinations when plotting charts instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. 
 
-- missing not at random (MNAR)
-  
-  There is relationship between the inclination or natural tendency of the value to be missing and its values. Eg. Individual with the lowest eduation may have their missing value on the education feature.
+Perform cardinality checks on categorical features, as there could be similar category due to spelling mistake or variations. Cleaning these erroneous categories will help to reduce unnecessary noise in the analysis. It also helps to assess whether some categories are too sparse and may need to be merged for greater statistical power.
 
-b.) Tips on cleaning categorial features:
+Try to link insights from the analysis to feature engineering. For example, in a parcel delivery context, if you find that number of deliveries (the target) is much higher on Mondays compared to the rest of the week, you could engineer a separate feature `is_monday` to boost the model’s performance. 
 
-Perform a check for unique values to see if there are similar category due to spelling mistake or variations. Determine if the categorial features should be later mapped as ordinal or nominal.
+Highlight the findings on the notebook regardless of whether they are useful. This allows the reader to understand the purpose of the charts.
 
-Sample Python command (for reference):
+The analysis should cover the following:
+- Summary statistics of the features
+- Distribution of the features
+- Feature patterns (trend)
 
-    a) df.nunique()
-    b) for column_name in df.columns:    
-        print(df[column_name].unique())
+Expected ouputs:
+- Characteristics of each feature
+- Spotting potential outliers and erroneous values
+- Summary of the findings
+- Potential feature characteristics that can be used for feature transformation in the data pipeline
 
-c.) Tips on currency features:
+### 2c. Relationship checks
 
-If multiple currencies are involved as a feature, make sure to convert them into the same currency, otherwise the scale of the different currency will confuse the model or EDA findings.
+This section aims to find out the relationship between feature and target so as to generate ideas for feature engineering and selection (feature importance). The goal is to identify correlated features or categories. Correlated features distort interpretability and feature importance. As such, it is worth exploring dropping or merging collinear features based on domain knowledge. 
 
-# Content investigation
+In the scenario if there are too few features in the data, feature engineering should be explored. Conversely if there are too many features, feature importance should be explored and then dropping less important features.
 
-General guideline:
+If certain features have a very similar relationship to the target and are sparse, you could merge them during feature engineering to create a stronger feature. For instance, `capital_gains` and `capital_loss` can be merged into `is_investor` since if there are not many individuals who invest.
 
-The analysis should cover the following
-- distribution of the features
-- feature patterns (trend)
-- feature relationships (correlation)
+The analysis should cover the following:
+- Relationships between each feature and the target
+- Relationships between features
 
-If there are district groups in the data, try grouping them and perform individual analysis for each group, in additional to the entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. Highlight the findings on the notebook, regardless of whether they are useful or not, this allows the reader to understand the purpose of the charts.
+Expected ouputs:
+- Identify features that are positively/negatively correlated to each other
+- Identify features that are positively/negatively correlated to the target label
+- Summary of the findings
+- Ideas on feature engineering/selection
 
-Expected ouput:
-- Conclusion of the findings of EDA investigation
+## Automated EDA tools
+Pandas Profiling and Google Facets are two excellent tools for performing EDA. They are useful to provide initial insights before drilling down into areas of interest through manual EDA.
 
-a.) Tips on the type of plot to use:
-- histogram chart (great for viewing distribution of features, and comparing between different group of data)
-- stacked chart (avoid using if possible)
-- line chart (commonly use in time-series data, mainly use to observed trend)
-- pie chart (not recommended, use only if need to compare the size of each feature)
-- box plot (useful for identify 25%-50%-75% mark only if the outlier is not extreme)
-- scatter plot (useful for examining up to 3 features together, hue as the 3rd feature)
-- t-SNE plot (useful for examining features above 3 and more)
-- numerical correlation plot (useful if unsure which features to examine)
-  - spearman's correlation
-  - pearson's correlation
-- categorical correlation plot (no negative correlation due the categorical features)
-  - phik's correlation matrix
-
-Side note: 
-t-SNE and correlation plots are often time-consuming when generating chart. 
-
-# References
-https://miykael.github.io/blog/2022/advanced_eda/
-https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm
+## References
+- [EDA structure](https://miykael.github.io/blog/2022/advanced_eda/  )
+- [Types of missingness](https://www-users.york.ac.uk/~mb55/intro/typemiss4.html)
+- [MissForest](https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3)
+- [Visualising distributions in seaborn](https://seaborn.pydata.org/tutorial/distributions.html)
+- [Bivariate analysis in Python](https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/)
+- [Phi K correlation coefficient](https://towardsdatascience.com/phik-k-get-familiar-with-the-latest-correlation-coefficient-9ba0032b37e7)
+- [Multiple imputation (video)](https://www.youtube.com/watch?v=LMsULWGtP2c)
+- [Pandas Profiling](https://pypi.org/project/pandas-profiling/)
+- [Generate reports using Pandas Profiling](https://www.analyticsvidhya.com/blog/2021/06/generate-reports-using-pandas-profiling-deploy-using-streamlit/)
+- [Visualising ML datasets using Google Facets](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3)
