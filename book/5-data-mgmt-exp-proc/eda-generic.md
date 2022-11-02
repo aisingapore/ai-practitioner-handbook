@@ -105,22 +105,14 @@ Expected ouputs:
 ## Automated EDA tools
 Pandas Profiling and Google Facets are two excellent tools for performing EDA. They are useful to provide initial insights before drilling down into areas of interest through manual EDA.
 
-Pandas profiling: 
-- https://www.analyticsvidhya.com/blog/2021/06/generate-reports-using-pandas-profiling-deploy-using-streamlit/
-- https://pypi.org/project/pandas-profiling/
-
-Google Facets: 
-- https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3
-- https://github.com/PAIR-code/facets
-
 ## References
-### Articles
+- [Types of missingness](https://www-users.york.ac.uk/~mb55/intro/typemiss4.html)
+- [MissForest](https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3)
+- [Visualising distributions in seaborn](https://seaborn.pydata.org/tutorial/distributions.html)
+- [Bivariate analysis in Python](https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/)
+- [Phi K correlation coefficient](https://towardsdatascience.com/phik-k-get-familiar-with-the-latest-correlation-coefficient-9ba0032b37e7)
+- [Multiple imputation (video)](https://www.youtube.com/watch?v=LMsULWGtP2c)
+- [Pandas Profiling](https://pypi.org/project/pandas-profiling/)
+- [Generate reports using Pandas Profiling]()https://www.analyticsvidhya.com/blog/2021/06/generate-reports-using-pandas-profiling-deploy-using-streamlit/
+- [Visualising ML datasets using Google Facets](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3)
 https://miykael.github.io/blog/2022/advanced_eda/  
-https://www-users.york.ac.uk/~mb55/intro/typemiss4.html  
-https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3  
-https://seaborn.pydata.org/tutorial/distributions.html  
-https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/  
-https://towardsdatascience.com/phik-k-get-familiar-with-the-latest-correlation-coefficient-9ba0032b37e7  
-
-### Video
-https://www.youtube.com/watch?v=LMsULWGtP2c  
