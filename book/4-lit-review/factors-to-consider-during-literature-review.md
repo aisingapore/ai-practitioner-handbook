@@ -13,7 +13,7 @@ Literature reviews are necessary at the start of every AI project to understand 
 
 ## Business Needs
 
-Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medically related project requires model explainability and this will require a search for solutions that has model explainability. 
+Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medically related project requires model explainability and this will require a search for solutions that has model explainability.
 
 The literature should cover a use case that is in a similar domain to your project. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can understand the various approaches and their benefits, and how should you integrate them into your MVM.
 
