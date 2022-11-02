@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What to look out for in my data sources to reduce the risks of data poisoning and data extraction? &#8212; AI Practitioner Handbook</title>
+    <title>How can I reduce the risks of data poisoning and data extraction? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Modelling" href="../6-modelling/overview.html" />
+    <link rel="prev" title="How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?" href="e2e-workflow-adv.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -188,14 +190,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../4-lit-review/overview.html">
    4. Literature Review
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="overview.html">
-   5. Data Management, Exploration &amp; Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -204,8 +201,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors/questions that an AI Engineer should consider during literature review?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   5. Data Management, Exploration &amp; Processing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
     <a class="reference internal" href="data-mgmt.html">
      Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="eda-generic.html">
+     Is there a core structure for performing exploratory data analysis in a systematic way?
     </a>
    </li>
    <li class="toctree-l2">
@@ -228,19 +247,46 @@ const thebe_selector_output = ".output, .cell_output"
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How can I reduce the risks of data poisoning and data extraction?
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../6-modelling/overview.html">
    6. Modelling
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/model-reproducibility.html">
+     How can I maximise model reproducibility?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/ml-risks-and-robustness.html">
+     What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/evaluating-timeseries.html">
+     How can we better evaluate Time-Series models?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +307,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -278,8 +324,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -495,12 +541,12 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-extraction-inference-inversion-attacks">
-   Data extraction (Inference/ Inversion attacks)
+   Data extraction (inference/inversion attacks)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-check-in-your-data-sources-and-how-it-relates-to-your-project">
-   What to check in your data sources, and how it relates to your project?
+  <a class="reference internal nav-link" href="#how-to-check-your-data-sources">
+   How to check your data sources
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -519,8 +565,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-only-output-what-the-user-requires-e-g-no-confidence-score-unless-necessary">
-     4. Model only output what the user requires (e.g. no confidence score unless necessary)
+    <a class="reference internal nav-link" href="#model-only-outputs-what-the-user-requires-e-g-no-confidence-score-unless-necessary">
+     4. Model only outputs what the user requires (e.g. no confidence score unless necessary)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -544,7 +590,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What to look out for in my data sources to reduce the risks of data poisoning and data extraction?</h1>
+                <h1>How can I reduce the risks of data poisoning and data extraction?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -561,12 +607,12 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-extraction-inference-inversion-attacks">
-   Data extraction (Inference/ Inversion attacks)
+   Data extraction (inference/inversion attacks)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-check-in-your-data-sources-and-how-it-relates-to-your-project">
-   What to check in your data sources, and how it relates to your project?
+  <a class="reference internal nav-link" href="#how-to-check-your-data-sources">
+   How to check your data sources
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -585,8 +631,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-only-output-what-the-user-requires-e-g-no-confidence-score-unless-necessary">
-     4. Model only output what the user requires (e.g. no confidence score unless necessary)
+    <a class="reference internal nav-link" href="#model-only-outputs-what-the-user-requires-e-g-no-confidence-score-unless-necessary">
+     4. Model only outputs what the user requires (e.g. no confidence score unless necessary)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -611,31 +657,32 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-to-look-out-for-in-my-data-sources-to-reduce-the-risks-of-data-poisoning-and-data-extraction">
-<h1>What to look out for in my data sources to reduce the risks of data poisoning and data extraction?<a class="headerlink" href="#what-to-look-out-for-in-my-data-sources-to-reduce-the-risks-of-data-poisoning-and-data-extraction" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-can-i-reduce-the-risks-of-data-poisoning-and-data-extraction">
+<h1>How can I reduce the risks of data poisoning and data extraction?<a class="headerlink" href="#how-can-i-reduce-the-risks-of-data-poisoning-and-data-extraction" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Kew Wai Marn, AI Engineer</p>
 <section id="data-poisoning">
 <h2>Data poisoning<a class="headerlink" href="#data-poisoning" title="Permalink to this headline">#</a></h2>
 <p>Ideally, data should be collected and labeled in a controlled and safe
 environment. Practically, this is time-consuming, and thus expensive, which not
-everyone can afford. Therefore, data is sometimes collected from the
-Internet or other untrusted sources. This pose a huge risk as an adversary can
-intentionally manipulate the data, which causes the ML system to be compromised
-(ie. inject data with specific features that causes the model to fail during
-inference; model “backdoors”).</p>
+everyone can afford. Therefore, data is sometimes collected from the Internet or
+other untrusted sources. This poses a huge risk as an adversary can
+intentionally manipulate the data, which causes the ML system to be compromised.
+For example, training data can be injected with specific features that causes the model to fail
+during inference when inference data with such features are used; i.e. model
+“backdoors”.</p>
 </section>
 <section id="data-extraction-inference-inversion-attacks">
-<h2>Data extraction (Inference/ Inversion attacks)<a class="headerlink" href="#data-extraction-inference-inversion-attacks" title="Permalink to this headline">#</a></h2>
+<h2>Data extraction (inference/inversion attacks)<a class="headerlink" href="#data-extraction-inference-inversion-attacks" title="Permalink to this headline">#</a></h2>
 <p>Other than manipulating the data, an adversary may extract details of the
 training data by querying the model or inspecting it directly. When
 the adversary has unlimited query access to the model, they can use that to
 predict whether or not a particular example was contained in the model’s
 training dataset.</p>
 </section>
-<section id="what-to-check-in-your-data-sources-and-how-it-relates-to-your-project">
-<h2>What to check in your data sources, and how it relates to your project?<a class="headerlink" href="#what-to-check-in-your-data-sources-and-how-it-relates-to-your-project" title="Permalink to this headline">#</a></h2>
+<section id="how-to-check-your-data-sources">
+<h2>How to check your data sources<a class="headerlink" href="#how-to-check-your-data-sources" title="Permalink to this headline">#</a></h2>
 <p>In order to reduce the risk of data poisoning and extraction, you should check
-the following in you ML system.</p>
+the following in your ML system:</p>
 <section id="proper-access-control-to-protect-the-raw-and-processed-data-from-unauthorized-users">
 <h3>1. Proper access control to protect the raw and processed data from unauthorized users.<a class="headerlink" href="#proper-access-control-to-protect-the-raw-and-processed-data-from-unauthorized-users" title="Permalink to this headline">#</a></h3>
 <p>To prevent data manipulation, the first thing to do is to secure it (e.g. only
@@ -645,20 +692,24 @@ authorized personnel are allowed to access within a specified time frame).</p>
 <h3>2. Ensure the integrity of the data sources for your ML system<a class="headerlink" href="#ensure-the-integrity-of-the-data-sources-for-your-ml-system" title="Permalink to this headline">#</a></h3>
 <p>Other than securing your data, it is important to know about the data’s history
 ie. data generation, collection, and assembly process, especially if the source
-is public. Furthermore, list down any potential considerations for data quality
+is public. In addition, list down any potential considerations for data quality
 (e.g. trustworthiness, reliability, etc), so that it is easy to backtrack when
 necessary.</p>
 <p>Examples of considerations and measures:</p>
 <ul class="simple">
-<li><p>How do you ensure that the raw data was not manipulated or poisoned (even by
-authorized personnel)?</p></li>
+<li><p>How do you ensure that the raw data was not manipulated or poisoned, even by
+authorized personnel?</p></li>
 <li><p>Have you implemented measures in the data collection process to ensure the
 reliability of the data collected? (e.g. if your raw data is collected from
-sensors, possible measures to ensure reliability are regular re-calibration,
+sensors, possible measures to ensure reliability include regular re-calibration,
 and/or redundant streams with multiple correlated and overlapping sensors)</p></li>
 <li><p>How do you assure the quality of your labeling process, and validate the
 resulting labels?</p></li>
 </ul>
+<p>The main idea is to not use data blindly. Take time to understand the data
+source,. You can also analyse the data to look for inconsistencies i.e. look at
+feature value range, statistics ie. mean for numerical data, data frequencies
+for categorical data.</p>
 </section>
 <section id="ensure-that-the-model-output-is-not-part-of-the-input">
 <h3>3. Ensure that the model output is not part of the input<a class="headerlink" href="#ensure-that-the-model-output-is-not-part-of-the-input" title="Permalink to this headline">#</a></h3>
@@ -666,8 +717,8 @@ resulting labels?</p></li>
 when translations of pages done by the model were used as training data for the
 model.</p>
 </section>
-<section id="model-only-output-what-the-user-requires-e-g-no-confidence-score-unless-necessary">
-<h3>4. Model only output what the user requires (e.g. no confidence score unless necessary)<a class="headerlink" href="#model-only-output-what-the-user-requires-e-g-no-confidence-score-unless-necessary" title="Permalink to this headline">#</a></h3>
+<section id="model-only-outputs-what-the-user-requires-e-g-no-confidence-score-unless-necessary">
+<h3>4. Model only outputs what the user requires (e.g. no confidence score unless necessary)<a class="headerlink" href="#model-only-outputs-what-the-user-requires-e-g-no-confidence-score-unless-necessary" title="Permalink to this headline">#</a></h3>
 <p>This is to prevent an adversary in trying to extract information from your model.
 For example, for a image classifier, knowing confidence score can allow the
 adversary to predict whether or not a particular image was contained in the
@@ -724,6 +775,20 @@ protect the proprietary data.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="e2e-workflow-adv.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../6-modelling/overview.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. Modelling</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case? &#8212; AI Practitioner Handbook</title>
+    <title>Is there a core structure for performing exploratory data analysis in a systematic way? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What are the various data split strategies?" href="data-splits.html" />
+    <link rel="prev" title="Which data storage options are suitable for the project?" href="data-mgmt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -188,14 +190,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../4-lit-review/overview.html">
    4. Literature Review
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="overview.html">
-   5. Data Management, Exploration &amp; Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -204,8 +201,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors/questions that an AI Engineer should consider during literature review?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   5. Data Management, Exploration &amp; Processing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
     <a class="reference internal" href="data-mgmt.html">
      Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Is there a core structure for performing exploratory data analysis in a systematic way?
     </a>
    </li>
    <li class="toctree-l2">
@@ -228,19 +247,46 @@ const thebe_selector_output = ".output, .cell_output"
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-poisoning-data-extraction.html">
+     How can I reduce the risks of data poisoning and data extraction?
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../6-modelling/overview.html">
    6. Modelling
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/model-reproducibility.html">
+     How can I maximise model reproducibility?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/ml-risks-and-robustness.html">
+     What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/evaluating-timeseries.html">
+     How can we better evaluate Time-Series models?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +307,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -278,8 +324,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -488,32 +534,73 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
    Overview
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structure-investigation">
+     1. Structure investigation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content-investigation">
+     2. Content investigation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-quality-checks">
+       2a. Quality checks
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#b-distribution-checks">
+       2b. Distribution checks
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c-relationship-checks">
+       2c. Relationship checks
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structure-investigation">
-   Structure investigation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   1. Structure investigation
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quality-investigation">
-   Quality investigation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2. Content investigation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2a. Quality checks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     2b. Distribution checks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     2c. Relationship checks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automated-eda-tools">
+   Automated EDA tools
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content-investigation">
-   Content investigation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
@@ -527,7 +614,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?</h1>
+                <h1>Is there a core structure for performing exploratory data analysis in a systematic way?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -537,32 +624,73 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
    Overview
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structure-investigation">
+     1. Structure investigation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content-investigation">
+     2. Content investigation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-quality-checks">
+       2a. Quality checks
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#b-distribution-checks">
+       2b. Distribution checks
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#c-relationship-checks">
+       2c. Relationship checks
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structure-investigation">
-   Structure investigation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   1. Structure investigation
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quality-investigation">
-   Quality investigation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2. Content investigation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2a. Quality checks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     2b. Distribution checks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     2c. Relationship checks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automated-eda-tools">
+   Automated EDA tools
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content-investigation">
-   Content investigation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
    References
   </a>
@@ -577,102 +705,126 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-basic-core-structure-for-performing-eda-and-optional-blocks-for-specific-ai-domain-or-specific-use-case">
-<h1>What are the basic core structure for performing EDA and optional blocks for specific AI domain or specific use case?<a class="headerlink" href="#what-are-the-basic-core-structure-for-performing-eda-and-optional-blocks-for-specific-ai-domain-or-specific-use-case" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Er YuYang</p>
-<p>The purpose of this guide is to have a more systematic approach for performing EDA and some guideline or tips when performing EDA. The guide is design for a generic EDA purpose, and sections should be applied when it is applicable.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="is-there-a-core-structure-for-performing-exploratory-data-analysis-in-a-systematic-way">
+<h1>Is there a core structure for performing exploratory data analysis in a systematic way?<a class="headerlink" href="#is-there-a-core-structure-for-performing-exploratory-data-analysis-in-a-systematic-way" title="Permalink to this headline">#</a></h1>
+<p>Contributor: Er YuYang, Senior AI Engineer</p>
+<p>The purpose of this article is to have a guide to performing exploratory analysis (EDA) in a more systematic manner. This guide is designed for a generic EDA purpose and primarily focuses on tabular data. However, parts of this workflow are still applicable for unstructured data types.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>Most EDA activities should contain these blocks:</p>
+<section id="structure-investigation">
+<h3>1. Structure investigation<a class="headerlink" href="#structure-investigation" title="Permalink to this headline">#</a></h3>
+<p>This section should contains the most basic checks on the overall completeness of and level of information in the dataset. These include checking the data size and type, as well as granularity/cardinality of each table. It should also examine if the data contains any private or sensitive data.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
-<p>The organization for most EDA should contain these blocks in the notebook</p>
-<ol>
-<li><p>Structure investigation</p>
-<p>This section should cover the understanding the size of the data and data type. Also, examining if the data contains non-PDPA compliance data or other sensitive data.</p>
-</li>
-<li><p>Quality investigation</p>
-<p>This section should cover the quality of the data such as duplicate, missing and erroneous values hence identifying the potential data to drop, repair or impute.</p>
-</li>
-<li><p>Content investigation</p>
-<p>This section should cover the more in-depth analysis such as the relationship for the features. The main aim is to find if there are any trends or patterns in the data.</p>
-</li>
-</ol>
+<section id="content-investigation">
+<h3>2. Content investigation<a class="headerlink" href="#content-investigation" title="Permalink to this headline">#</a></h3>
+<p>This section looks into the quality, distribution and relationships in the dataset, and need not be in this particular order.</p>
+<section id="a-quality-checks">
+<h4>2a. Quality checks<a class="headerlink" href="#a-quality-checks" title="Permalink to this headline">#</a></h4>
+<p>This sub-section should cover aspects of data quality such as missing and erroneous values. The main aim is to identify potential data to drop, repair or impute.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="structure-investigation">
-<h1>Structure investigation<a class="headerlink" href="#structure-investigation" title="Permalink to this headline">#</a></h1>
-<p>General guideline:</p>
-<p>This section should be short (about less than 5 cells), it only aims the gain some insight of the size and datatype of the data.</p>
-<p>Sample python command (for reference):</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.shape
-b) df.info() or df.dtypes or pd.value_counts(df.dtypes)
-c) df.describe()
-d) df.head() or df.tail()
-</pre></div>
-</div>
-<p>Expected ouput:</p>
-<ul class="simple">
-<li><p>raw version of data</p></li>
-<li><p>gain some insight of the size and datatype of the data</p></li>
-</ul>
-<p>Tips for large data:</p>
-<p>In the scenario if the data is too huge, explore using reading by sampling or chunking. Parallel processing like Dask or Ray can also help. For saving big data to disk, other file format (like Pickle, Feather, Parquest and HDF5) can help to compress to reduce the storage size.</p>
+<section id="b-distribution-checks">
+<h4>2b. Distribution checks<a class="headerlink" href="#b-distribution-checks" title="Permalink to this headline">#</a></h4>
+<p>This sub-section should cover the understanding of each individual feature. The main aim is to find out the chracteristics of each feature, and also to uncover trends or patterns in the data.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="quality-investigation">
-<h1>Quality investigation<a class="headerlink" href="#quality-investigation" title="Permalink to this headline">#</a></h1>
-<p>General guideline:</p>
-<p>This section should cover mostly on data cleaning, imputing and feature engineering/feature importance. In the scenario if there are too few features in the data, feature engineering should be explored. Vice versa if there are too many features, feature importance should be explored and then dropping less important features. If there are too many missing values consider dropping the column. However if dropping is not an option, a complex method for imputing the missing value is to use the other avaiable features to predict the value of that particular column.</p>
-<p>Expected ouput:</p>
-<ul class="simple">
-<li><p>cleaned version of data ready for plotting charts</p></li>
-</ul>
-<p>Tips on handling missing values (common techniques):</p>
-<ul class="simple">
-<li><p>do nothing (let the model handle it)</p></li>
-<li><p>impute using mean or median</p></li>
-<li><p>impute using most frequent or constant (eg. zero) values</p></li>
-<li><p>use machine learning model to impute</p></li>
-</ul>
-<p>Tips on cleaning categorial features:</p>
-<p>Perform a unique check to see if there are similar category but is categorised differently due to spelling mistake. Determine if the categorial features should be later mapped as ordinal or nominal.</p>
-<p>Sample python command (for reference):</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) df.nunique()
-b) for column_name in df.columns:    
-    print(df[column_name].unique())
-</pre></div>
-</div>
-<p>Tips on currency features:</p>
-<p>If multiple currencies are involved as a feature, make sure to convert them into the same currency, otherwise the scale of the different currency will confused the model or EDA findings.</p>
+<section id="c-relationship-checks">
+<h4>2c. Relationship checks<a class="headerlink" href="#c-relationship-checks" title="Permalink to this headline">#</a></h4>
+<p>This sub-section should cover more in-depth analyses such as bivariate relationships between features, and between features and target. The main aim is to generate ideas for feature engineering and selection based on observed relationships.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="content-investigation">
-<h1>Content investigation<a class="headerlink" href="#content-investigation" title="Permalink to this headline">#</a></h1>
-<p>General guideline:</p>
-<p>The analysis should cover the following</p>
-<ul class="simple">
-<li><p>distribution of the features</p></li>
-<li><p>features patterns (trend)</p></li>
-<li><p>features relationship (correlation)</p></li>
-</ul>
-<p>If there are district groups of data in the data, try grouping these data and performed individual analysis for each group, in additional to these entire data analysis. Try to use looping to cover the entire possible combinations when plotting charts that compare two features instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results. Highlight the findings (whether there are useful finding or not) on the notebook as well, this allows the reader to understand the purpose of the charts.</p>
-<p>Expected ouput:</p>
-<ul class="simple">
-<li><p>Conclusion of the findings of EDA investigation</p></li>
-</ul>
-<p>Tips on the type of plot to use:</p>
-<ul class="simple">
-<li><p>histogram chart (great for viewing distribution of features, and comparing btw different group of data)</p></li>
-<li><p>stacked chart (avoid using if possible)</p></li>
-<li><p>line chart (commonly use in time-series data, mainly use to observed trend)</p></li>
-<li><p>pie chart (not recommended, use only if need to compare the size of each feature)</p></li>
-<li><p>box plot (useful for identify 25%-50%-75% mark only if the outlier is not extreme)</p></li>
-<li><p>scatter plot (useful for examining up to 3 features together, hue as the 3rd feature)</p></li>
-<li><p>tsne plot (useful for examining features above 3 and more)</p></li>
-<li><p>coorelation plot (useful if unsure which features to examine)</p></li>
-</ul>
-<p>Side note:
-tsne and coorelation plot often time consuming when generating chart.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">https://miykael.github.io/blog/2022/advanced_eda/</a></p>
+</section>
+<section id="id1">
+<h2>1. Structure investigation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>This section should be short (about less than 10 notebook cells), as it only aims to gain some insights on the size and datatype of the data. This sections does not go into the content of each variable/feature.</p>
+<p>When checking the datatype, organise features according to whether they are numeric/continuous or categorical. This will help to decide on suitable visualisations when performing content investigation later.</p>
+<p>When dealing with private or sensitive data, discuss with stakeholder whether masking or removing them is a better option. When duplicate rows are present, highlight them and discuss with stakeholders on how to deal with them. Inappropriate handling of duplicate rows can results in data leakage when performing data split for model training/evaluation.</p>
+<p>When performing granularity/cardinality checks, it is important to understand how fine or coarse each row and column is and verify whether the table is of the correct granularity per the database schema</p>
+<p>Expected ouputs of structure investigation:</p>
+<ul class="simple">
+<li><p>Raw version of data loaded in the notebook</p></li>
+<li><p>Size of data, whether parallel processing is needed</p></li>
+<li><p>Datatype of features, which features are numeric/continuous, or categorical</p></li>
+<li><p>(Optional) Further discussion with stakeholders on handling private/sensitive data and duplicate rows</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>2. Content investigation<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<section id="id3">
+<h3>2a. Quality checks<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>This sub-section should cover matters relating to data cleaning and imputation. If there are too many missing values, consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column (model-based imputation/multiple imputation).</p>
+<p>The choice of approach for handling missing data is also influenced by the type of “missingness”. There are mainly three kinds of “missingness”: MCAR, MAR, MNAR (see article link at reference section). Before performing any imputation, it is highly recommended to first consult the stakeholder and understand possible reasons behind the “missingness”.</p>
+<p>Generally, there are 4 ways to impute:</p>
+<ul class="simple">
+<li><p>Assign a fixed value(s) based on domain knowledge</p></li>
+<li><p>Simple imputation based on statistical summaries</p></li>
+<li><p>Model-based imputation</p></li>
+<li><p>Multiple imputation (see video link at reference section)</p></li>
+</ul>
+<p>Expected ouputs:</p>
+<ul class="simple">
+<li><p>Cleaned version of data ready for plotting charts</p></li>
+<li><p>Identify data/column(s) that requires preprocessing in the datapipeline</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>2b. Distribution checks<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>This sub-section should cover the generation of distribution and summary statistics. Understanding properties like central tendency (mean), spread (variance) and skewness help you to spot erroneous values and potential outliers easily.</p>
+<p>If there are district groups in the data, try grouping them and perform individual analysis for each group, in addition to the analysis for the entire dataset. Try to use looping to cover the entire possible combinations when plotting charts instead of selecting particular features combination that you preceive is useful. Investigate further if certain combination of features have interesting results.</p>
+<p>Perform cardinality checks on categorical features, as there could be similar category due to spelling mistake or variations. Cleaning these erroneous categories will help to reduce unnecessary noise in the analysis. It also helps to assess whether some categories are too sparse and may need to be merged for greater statistical power.</p>
+<p>Try to link insights from the analysis to feature engineering. For example, in a parcel delivery context, if you find that number of deliveries (the target) is much higher on Mondays compared to the rest of the week, you could engineer a separate feature <code class="docutils literal notranslate"><span class="pre">is_monday</span></code> to boost the model’s performance.</p>
+<p>Highlight the findings on the notebook regardless of whether they are useful. This allows the reader to understand the purpose of the charts.</p>
+<p>The analysis should cover the following:</p>
+<ul class="simple">
+<li><p>Summary statistics of the features</p></li>
+<li><p>Distribution of the features</p></li>
+<li><p>Feature patterns (trend)</p></li>
+</ul>
+<p>Expected ouputs:</p>
+<ul class="simple">
+<li><p>Characteristics of each feature</p></li>
+<li><p>Spotting potential outliers and erroneous values</p></li>
+<li><p>Summary of the findings</p></li>
+<li><p>Potential feature characteristics that can be used for feature transformation in the data pipeline</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>2c. Relationship checks<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<p>This section aims to find out the relationship between feature and target so as to generate ideas for feature engineering and selection (feature importance). The goal is to identify correlated features or categories. Correlated features distort interpretability and feature importance. As such, it is worth exploring dropping or merging collinear features based on domain knowledge.</p>
+<p>In the scenario if there are too few features in the data, feature engineering should be explored. Conversely if there are too many features, feature importance should be explored and then dropping less important features.</p>
+<p>If certain features have a very similar relationship to the target and are sparse, you could merge them during feature engineering to create a stronger feature. For instance, <code class="docutils literal notranslate"><span class="pre">capital_gains</span></code> and <code class="docutils literal notranslate"><span class="pre">capital_loss</span></code> can be merged into <code class="docutils literal notranslate"><span class="pre">is_investor</span></code> since if there are not many individuals who invest.</p>
+<p>The analysis should cover the following:</p>
+<ul class="simple">
+<li><p>Relationships between each feature and the target</p></li>
+<li><p>Relationships between features</p></li>
+</ul>
+<p>Expected ouputs:</p>
+<ul class="simple">
+<li><p>Identify features that are positively/negatively correlated to each other</p></li>
+<li><p>Identify features that are positively/negatively correlated to the target label</p></li>
+<li><p>Summary of the findings</p></li>
+<li><p>Ideas on feature engineering/selection</p></li>
+</ul>
+</section>
+</section>
+<section id="automated-eda-tools">
+<h2>Automated EDA tools<a class="headerlink" href="#automated-eda-tools" title="Permalink to this headline">#</a></h2>
+<p>Pandas Profiling and Google Facets are two excellent tools for performing EDA. They are useful to provide initial insights before drilling down into areas of interest through manual EDA.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://miykael.github.io/blog/2022/advanced_eda/">EDA structure</a></p></li>
+<li><p><a class="reference external" href="https://www-users.york.ac.uk/~mb55/intro/typemiss4.html">Types of missingness</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3">MissForest</a></p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/tutorial/distributions.html">Visualising distributions in seaborn</a></p></li>
+<li><p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/">Bivariate analysis in Python</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/phik-k-get-familiar-with-the-latest-correlation-coefficient-9ba0032b37e7">Phi K correlation coefficient</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=LMsULWGtP2c">Multiple imputation (video)</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/pandas-profiling/">Pandas Profiling</a></p></li>
+<li><p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2021/06/generate-reports-using-pandas-profiling-deploy-using-streamlit/">Generate reports using Pandas Profiling</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3">Visualising ML datasets using Google Facets</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -702,6 +854,20 @@ tsne and coorelation plot often time consuming when generating chart.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="data-mgmt.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Which data storage options are suitable for the project?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data-splits.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What are the various data split strategies?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

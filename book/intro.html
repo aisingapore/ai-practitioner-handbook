@@ -189,14 +189,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="4-lit-review/overview.html">
    4. Literature Review
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="5-data-mgmt-exp-proc/overview.html">
-   5. Data Management, Exploration &amp; Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -205,8 +200,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors/questions that an AI Engineer should consider during literature review?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="5-data-mgmt-exp-proc/overview.html">
+   5. Data Management, Exploration &amp; Processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
     <a class="reference internal" href="5-data-mgmt-exp-proc/data-mgmt.html">
      Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-data-mgmt-exp-proc/eda-generic.html">
+     Is there a core structure for performing exploratory data analysis in a systematic way?
     </a>
    </li>
    <li class="toctree-l2">
@@ -229,19 +246,46 @@ const thebe_selector_output = ".output, .cell_output"
      How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-data-mgmt-exp-proc/data-poisoning-data-extraction.html">
+     How can I reduce the risks of data poisoning and data extraction?
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="6-modelling/overview.html">
    6. Modelling
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6-modelling/model-reproducibility.html">
+     How can I maximise model reproducibility?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6-modelling/ml-risks-and-robustness.html">
+     What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6-modelling/evaluating-timeseries.html">
+     How can we better evaluate Time-Series models?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -262,8 +306,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -279,8 +323,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -561,8 +605,6 @@ title="Print to PDF"
   <img alt="AISG AI Practitioner Handbook Banner" class="bg-primary mb-1 align-center" src="../_images/aisg-ai-practitioner-handbook-banner.png" />
 <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-ai-singapore-s-ai-practitioner-handbook">
 <h1>Welcome to AI Singapore’s AI Practitioner Handbook<a class="headerlink" href="#welcome-to-ai-singapore-s-ai-practitioner-handbook" title="Permalink to this headline">#</a></h1>
-<p>Contributor: Laurence Liew, Director (AI Innovation)</p>
-<hr class="docutils" />
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This handbook is an accumulation of AI Singapore’s Innovation and Platforms Engineering team’s experience in delivering more than 40 AI Minimum Viable products (MVP) under the <a class="reference external" href="https://www.aisingapore.org/innovation/100e">100E</a> programme over the last 5 years.</p>
@@ -590,6 +632,9 @@ title="Print to PDF"
 <p><img alt="Diverse AI projects approved and delivered" src="../_images/diverse_ai_projects.png" /></p>
 <p>The Handbook is a live project and will continue to evolve and be updated as we do more projects and learn more.</p>
 <p>Let us get started on your first AI project!</p>
+<p>–</p>
+<p>Laurence Liew, Director (AI Innovation)</p>
+<hr class="docutils" />
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
