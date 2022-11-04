@@ -16,21 +16,23 @@ This guide assumes that you have a fair understanding of why the stakeholders is
 
 3. Satisficing metrics
 
-# 1. Understanding the problem and environment 
+## 1. Understanding the problem and environment 
 
-a. Problem statement
+<u>Problem statement & deployment environment</u>
 
-   Understanding how the AI/ML solves the problem statement help to identify the correct optimizing metrics (explained in section 2) to determine the preformance of the model.
+   Understanding how the AI/ML solves the problem statement help to identify the correct optimizing metrics (explained in section 2) to determine the performance of the model. At the same time, understanding the deployment environment will helps in choosing the satisficing metrics explained in section 3. In most case, optimizing metrics tend to be the ML metrics, while satisficing metrics tend to be the non-ML metrics.
 
-b. Technical competence of the different stakeholders
+<u>Technical competence of the different stakeholders</u>
    
-   Understanding the level of competence of the stakeholder help to identify which optimizing metrics (explained in section 2) to use when communicating with them.
+   Understanding the level of competence of the end-users or technical team maintaining the AI/ML model help to identify a <b>comfortable</b> metrics (explained in section 2) to use 
+   - for ease of communicating with end-users during project phase
+   - allows the technical team to easily understand the metric that was used, hence able to improve the AI/ML model after the project handover
+   
+<u>Summary</u>
 
-c. Deployment environment
+The main purpose is to understand the problem and stakeholders, as there is often a trade-off between ML and non-ML metrics on the whole. For instance, a more complex model tends to come with larger training and inference time. Hence, sponsors are faced with a choice as to which metrics to prioritise based on the business value of the AI solution.
 
-   Understanding the deployment enviornment will helps in choosing the satisficing metrics explained in section 3.
-
-# 2. Optimizing metrics
+## 2. Optimizing metrics
 
 The goal is to establish a single-number evaluation metric, as having multiple evaluation metrics make it hard to compare against different algorithms.
 
@@ -41,6 +43,8 @@ When comparing with different model in classification problem with multiple clas
 
 ## a.) Selecting metrics for classification problems
 This section covers some of the most common metrics used for evaluating model for classification problems. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.
+
+<u>Most commonly used metrics</u>
 
 1. Accuracy = $\frac{TP + TN}{TP + FP + TN + FN}$
    
@@ -58,7 +62,9 @@ This section covers some of the most common metrics used for evaluating model fo
    
    F1 score is the weighted mean of precision and recall
 
-Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision whe you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high. 
+<u>Considerations</u>
+
+Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision when you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high. 
 
 Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics for the latter). Finding as many spam email is desirable than missing out to detect spam email (use precision). 
 
@@ -69,17 +75,31 @@ If both Precision and Recall are equally important than F1 score should be used.
 
 Use weighted f1 when data is unbalanced.
 
-5. Others common metrics
+<u>Others common metrics</u>
 
-    a. ROC curve (receiver operating characteristic curve) 
+   1. ROC curve (receiver operating characteristic curve)
 
-    b. AUC (Area Under the ROC Curve)
+      Using the shape of curve to determine the better model when comparing with ROC curve of different models.
 
-    c. Confusion matrix
+   2. AUC (Area Under the ROC Curve)
 
-    d. Loss functions
+      Measures the entire two-dimensional area underneath the entire ROC curve (degree or measure of separability).
 
-Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN, sometimes uses for more technical-inclined stakeholders. Both metrics in 5a & 5b requires predicted labels & predicted probabilities in order to plot curve, avoid using when extracting proabilities is not possible or difficult. For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These metrics are often used by internal development team.
+   3. Confusion matrix
+
+      For viewing the exact number of TP, TN, FP, FN. It is usually used for performance measurement of the different classes.
+      
+   4. Loss functions
+
+      Can customized loss functions to fit the business problem.
+
+<u>Considerations</u>
+
+Both ROC curve & AUC are often used together, it is also known as AUROC (Area Under the Receiver Operating Characteristics). They requires predicted labels & predicted probabilities in order to plot curve, avoid using when extracting probabilities is not possible or difficult.
+
+Confusion matrix usually used for finding out the absolute the values in the non-diagonal cells (wrong predictions), also known as False Positive: (Type 1 Error), False Negative: (Type 2 Error). This metrics is used for more technical-inclined stakeholders and the purpose is to improve the wrong predictions.
+
+For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These losses can be further optizimed by implementing cost function to increase the loss of undesirable outcome (function similar to class weight). The result of the cost function can be viewed by comparing the confusion matrix of different cost. However, implementing the cost function requires more domain expertise of the problem. This metrics is used usually by internal development team or more technical-inclined stakeholders.
 
 ## b.) Selecting metrics for regression problems
 This section covers some of the most common metrics used for evaluating model for regression problems. 
@@ -90,13 +110,15 @@ This section covers some of the most common metrics used for evaluating model fo
 
 2. Root Mean Square Error (RMSE)
    
-   Square root of MSE, used when MSE value is too big for comparsion
+   Square root of MSE, recommends to use when MSE value is too big for comparsion
 
 3. Mean Absolute Error (MAE)
 
    Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.
 
-MSE, RMSE, MAE are not very useful when comparing against different models when outliers that is presented very extreme.
+<u>Considerations</u>
+
+MSE, RMSE, MAE are not very useful when comparing against different models when outliers that is presented are very extreme.
 
 4. R2
    
@@ -104,9 +126,9 @@ MSE, RMSE, MAE are not very useful when comparing against different models when 
 
 5. Adjusted R Square
 
-   Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements
+   Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements.
 
-# 3. Satisficing metrics
+## 3. Satisficing metrics
 
 Satisficing is a decision making strategy that aims for a satisfactory or adequate results rather than the optimal solution. Sometimes, it is hard to get a single number evaluation metric due to the non-ML metrics.
 
@@ -116,7 +138,7 @@ Example of some non-ML metrics
 - memory usage
 - size of model (more applicable for deployment on edge device)
 
-It is not practical or cost efficient to increase the optimizing metrics by a minuscule percentage, using longer training time which results in higher cost. Deployment consideration (eg. size of model, runtime) may also affect the usablity of the model.
+It is not practical or cost efficient to increase the optimizing metrics by a minuscule percentage, using longer training time which results in higher cost.  Deployment consideration (eg. size of model, runtime) may also affect the usablity of the model.
 
 a) One approach is to derive a single metrics by forumla
 
@@ -129,8 +151,12 @@ b) Another approach is to define what is an "acceptable" threshold for the satis
 Once your team is aligned on the evaluation metric to optimize, they will be able to make faster progress.
 
 # Reference
-https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf
+<a href="https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf">Chapter 8 and 9 of Andrew's Ng</a>
 
-https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/
+<a href="https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5">AUC-ROC curve</a> 
 
-https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1 
+<a href="https://www.analyticsvidhya.com/blog/2021/02/cost-function-is-no-rocket-science/">Cost function</a>
+
+<a href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">NER evaluation metric</a> 
+
+<a href="https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1">IoU evaluation metric</a> 
