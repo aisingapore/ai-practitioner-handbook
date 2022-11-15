@@ -1,5 +1,7 @@
 # Setting Team Principles
 
+Contributor(s): Siavash Sakhavi, Senior AI Engineer, Co-written with https://rytr.me/
+
 Principles and Values are two important concepts that should be set for any software team. All teams should set certain principles and values for themselves in order to be productive, successful, and happy. These two concepts are what will help guide your projects and keep everyone on the same page.
 
 ## What are the differences between principles and values?
@@ -24,3 +26,6 @@ Values on the other hand are more personal to each individual and reflect what t
 -   **Company (i.e. Client) over team over individual**: The software development team should prioritize the client's requirements over the team's ambitions and individual's professional progress. It's easy to get distracted with new "shiny" software and frameworks. However, when the client's needs are not a priority, this can lead to poor code quality and even missed deadlines. 
 -   **Outcome over effort (Don’t reinvent the wheel)**:  Most of the code required to process data, define a model and  the given model is available online. There is no need to write everything from scratch. 
 
+Reference(s):
+
+- You can find more engineering values and principles in [this GitHub Repo](https://github.com/mgreiler/awesome-engineering-values)
