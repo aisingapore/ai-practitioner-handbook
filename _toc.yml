@@ -24,9 +24,9 @@ chapters:
   # - file: 
 # ===== 4. Literature Review ========================================
 - file: book/4-lit-review/overview
-  sections:
-  - file: book/4-lit-review/factors-to-consider-during-literature-review
-# - file: 
+  # sections:
+  # - file: book/4-lit-review/factors-to-consider-during-literature-review
+  # - file: 
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
   sections:
@@ -44,7 +44,7 @@ chapters:
   - file: book/6-modelling/eval-metrics
   - file: book/6-modelling/model-reproducibility
   - file: book/6-modelling/ml-risks-and-robustness
-  # - file: 
+  # - file: book/6-modelling/evaluating-timeseries
 # ===== 7. Solution Delivery ========================================
 - file: book/7-solution-delivery/overview
   sections:

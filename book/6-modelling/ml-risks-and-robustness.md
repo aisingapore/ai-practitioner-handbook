@@ -1,41 +1,46 @@
-# What are some ML risks I should be aware of and how it relates to model robustness. What are some tools I can use to assess model robustness?
+# What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
 
 Contributor(s): Kew Wai Marn, AI Engineer
 
-## Brief overview of Machine Learning (ML) risks
+## Overview of Machine Learning Risks
 
-Risks of ML systems can come from data, model, and/or infrastructure.
-According to the Architectural Risk Analysis by Berryville Institute of
+Risks of machine learning (ML) systems can come from data, model, and/or infrastructure.
+According to the architectural risk analysis by the Berryville Institute of
 Machine Learning, the top risk is adversarial examples. This is when an attacker
-tries to fool the system by giving malicious input (small perturbations that
-cause mispredictions). These perturbations are derived from model’s
-vulnerabilities. However this is just one side of the story, risk can also come
-from intrinsic design flaw of the system which are different from intentional
-attacks. The intrinsic design flaw of the system can include areas which the
-model does not perform as it should be.
+tries to fool the system by giving malicious input in the form of small perturbations that
+cause mispredictions. These perturbations are derived from a model’s
+vulnerabilities, which are areas where the model fails to perform; ie. predict
+incorrectly.
+
+Apart from intentional attacks, risks can also come from intrinsic design flaws which 
+can similarly lead to incorrect predictions.
 
 ## What is ML Robustness?
 
-According to Singapore's Model AI Governance Framework, ML Robustness is defined
+According to Singapore's Model AI Governance Framework, ML robustness is defined
 as whether the system can function with unexpected inputs. The ability of the
 model to perform with unexpected inputs affects the reliability of the ML system.
 Unexpected inputs can be from adversarial or non-adversarial origin.
 
+It is important to consider ML robustness, because non-robust models can fail unexpectedly. 
+For example, consider a road sign detection model deployed in an autonomous vehicle. 
+Misclassify a stop sign as a speed limit sign could result in life-threatening consequences.
+
 ### Adversarial Robustness
 
-Because of adversarial examples as the top risk of ML systems as mentioned
-earlier, there is a need to look at adversarial robustness where it is defined
-as the minimal perturbation value that the attacker must introduce for a
-successful attack (model fails to predict correctly with adversarial input). If
+It is important to consider adversarial robustness, because adversarial examples are 
+the top risk to ML systems (as mentioned earlier). Adverserial robustness is defined
+in terms of the minimal perturbation value that the attacker must introduce for a
+successful attack (ie. model fails to infer correctly with adversarial input). If
 a model is adversarially robust, it will require more pertubations for a
-sucessful attack. It is to note that there are many other metrics that can be
-used to measure adversarial robustness ie. CLEVER, loss sensitivity, etc.
+sucessful attack. It is important to note that there are many other metrics that can be
+used to measure adversarial robustness (CLEVER, loss sensitivity, etc.).
 
 ### Non-adversarial Robustness
 
-On the other hand, apart from attacks, the ML model itself could have it flaws
-(not able to perform as it should be). Unexpected inputs, mentioned in the
-definition above, can be quite ambiguous. One type of unexpected inputs can be
+On the other hand, apart from attacks, the ML model itself could be flawed (not
+able to perform as it should be). Unexpected inputs, mentioned in the definition
+above, can be quite ambiguous. One type of unexpected inputs can be
 out-of-distribution (OOD) data. OOD data are data that has a different
 distribution from your training data but is still within the problem scope where
 it might appear in production. For example, images from a different camera of
@@ -51,21 +56,27 @@ anticipate the robustness of the models using adversarial examples and
 OOD data.
 
 For adversarial robustness testing, the goal is to test how resilient the model
-is to adversarial examples; how easily adversarial examples can be created.
+is to adversarial examples, or how easily adversarial examples can be created
+from the model.
 
 For non-adversarial robustness testing, the goal is to test where the model fails
 using OOD data.
 
-There are two ways to obtain OOD data. Either collect from another source, or to
+There are two ways to obtain OOD data: either collect from another source, or to
 generate it by applying metamorphic mutation. Metamorphic mutation comes from
-software testing, where we mutate data that was predicted correctly by the model
-in a way that does not change the label (label-preserving mutations)
-ie. Horizontally flip an image.
+software testing, where we mutate data that was inferred correctly by the model
+in a way that does not change the label (label-preserving mutations); eg.
+horizontally flip an image.
+
+For text, it is slightly trickier as valid mutations depend on your model's objective. 
+For example, adding typos would be a valid mutation if your model is supposed to be 
+invariant on typos ie. not a spell checker.
+
+For tabular data, mutation strategies are currently still under active research.
 
 ### Robustness Testing Tools
 
-Below are some tools you can try with according to the data, model and task type
-for your project.
+Here are some tools you can try for specific types of data, model and task:
 
 |                                         Tool                                        |                                                     Data Type                                                     |                                   Model Type                                  |           Task Type (Nature of model output)           |
 |-------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|:------------------------------------------------------:|
@@ -73,23 +84,23 @@ for your project.
 |            [TextAttack, Adversarial](https://github.com/QData/TextAttack)           |                                                        Text                                                       | Any for black box attacks. specific model type for specific white box attacks |          Classification, Sequence-to-sequence          |
 |       [Microsoft CheckList. Non-adversarial](https://github.com/marcotcr/checklist) | Any arbitrary format (as the mutation functions can be user-defined). Only some text mutations supported in tool. |                                      Any                                      | Any (as the expectation functions can be user-defined) |
 
-### When to do it?
+### When To Perform Robustness Testing?
 
 Using the robustness testing tools, you can test your model in the CI/CD pipeline,
-at the same level as model evaluation, to get a good evalutation of your model.
+at the same level as model evaluation, to get a good evaluation of your model.
 Just like unit testing or integration testing, you only need to set it up once.
-With every new retraining, you can compare the robustness between the model
+With every new retraining, you can compare the robustness between model
 versions.
 
-## Words of caution
+## Words of Caution
 
-However, you might get lost in trying to figure out whether your model is robust
-or not. But that is not the focus of robustness testing, it is more to find
-areas where your model does not perform, and improve on them. There is always a
-need for comparison between models versions (especially for adversarial
-robustness testing). Testing robustness of one model does not tell you anything
-other than where it fails. Lastly, standard accuracy might have a trade off with
-robustness, however this is still (as of writing) an area under research.
+The goal of robustness testing is to find areas where your model does not
+perform, and improve on them, rather than deciding whether the model is robust
+or not robust. There is always a need for comparison between models versions
+(especially for adversarial robustness testing). Testing the robustness of one
+model does not tell you anything other than where it fails. Lastly, you might
+find that standard accuracy might have a trade off with robustness, this is
+still (as of writing) an area under research.
 
 __Reference(s):__
 
