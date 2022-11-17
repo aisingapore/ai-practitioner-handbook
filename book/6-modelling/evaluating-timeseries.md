@@ -1,18 +1,16 @@
-# How can we better evaluate Time-Series models?
+# How can we better evaluate Time-Series classification models?
 
 Contributor(s): Andy Ong, AI Engineer
 
 
-This guide assumes that you have a fair understanding of the typical classification evaluation metrics.
+This guide assumes that you have a fair understanding of the typical classification evaluation metrics. This [article](eval-metrics.md) provides a high-level discussion of the various evaluation metrics used in most projects.
 
 # Time-Series Classification
 
 
-Time-Series models can be evaluated using conventional regression and classification evaluation metrics. For regression problems, we can use Mean Squared Error(MSE) or Root Mean Square Error(RMSE) to evaluate. Recall, precision or F1 Score can be used to evaluate classification models, depending on the business needs. 
+Time-series models can be evaluated using conventional regression and classification evaluation metrics. For regression problems, we can use Mean Squared Error(MSE) or Root Mean Square Error(RMSE) to evaluate. This article focuses on time-series classification problems, where the outcome to be predicted/forecasted is categorical. Recall, precision or F1 Score can be used to evaluate classification models, depending on the business needs. 
 
-For a time-series classification project, the typical approach is to view every timepoints individually. We will then evaluate the model by looking at its F1 Score or precision and recall (similar to a normal classification problem). However, this can be too sensitive for a time-series dataset.
-
-Thus, these evaluation metrics might not be sufficient to properly evaluate Time-Series models. In this guide, I will talk about different approaches that can be taken to evaluate Time-Series models.
+For a time-series classification project, a simple approach is to view every timepoints individually, and evaluate the model by looking at its F1 Score or precision and recall (similar to a non-time-series classification problem). These evaluation metrics might not be adequate to assess time-series models fairly. It is susceptible to noise. It also ignores the autocorrelated nature of time-series data, which tends to result in sequences of points falling into the same class, rather than one-off occurrences.
 
 ## Time Segments
 
@@ -20,7 +18,7 @@ Thus, these evaluation metrics might not be sufficient to properly evaluate Time
 
 Taking the above time-series ground truth and detection as an example, we have three ground truth anomalies, and 2 predicted anomalies.
 
-In this approach, we will view every timepoints in segments. In the graph below, there are 7 segments, which consist of 2 True Positives, 1 False Positive, 1 False Negatives and 3 True negatives. By viewing our timepoints as segments, we can have a less sensitive yet strict approach.
+In this approach, we will view every timepoints in segments. In the graph below, there are 7 segments, which consist of 2 True Positives (TP), 1 False Positive(FP), 1 False Negatives(FN) and 3 True negatives(TN). By viewing our timepoints as segments, we can have a less sensitive yet strict approach.
 
 ![Time Segment graph](../assets/images/diagrams/time-segmented-graph.png)
     
@@ -34,7 +32,7 @@ Taking the above graph as an example, We can see that there are 2 True positives
 
 ## Case Study
 
-The ground truth and model prediction values for Company A’s newly built Time-Series Anomaly Detection model are as follows:
+Company A is attempting to build an Anomaly Detection model to predict any machinery failures. The ground truth and model prediction values for their model are as follows:
 
 |              | T = 0 | T = 1 | T = 2 | T = 3 | T = 4 | T = 5 | T = 6 | T = 7 |
 |--------------|------ |------ |------ |------ |------ |------ |------ |------ |
