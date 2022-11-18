@@ -42,10 +42,7 @@ Company A is attempting to build an Anomaly Detection model to predict any machi
 
 The confusion matrix are calculated using Time Segment and Overlapping Segment approach.
 
-| Approach     | Confusion Matrix                      | Recall                |
-|--------------|---------------------------------------|---------------------- |
-| Time Segment | TP = 2, FP = 1, TN = 3, FN = 1        | Recall = 2 / 3 (0.66) |
-| Overlapping Segment | TP = 2, FP = 1, TN = 3, FN = 0 | Recall = 2 / 2 (1.00) |
+![Case Study Confusion Matrix](../assets/images/charts/case_study_timeseries.png)
 
 From the table above, we can see that the overlapping approach resulted in a recall of 1.0, being more lenient as compared to the weighted segment. As Company A is planning to use the model for machinery failure detection, it is not wise to use such a lenient approach like overlapping segment. Instead, the time segment approach will be more appropriate.
 
