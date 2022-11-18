@@ -66,7 +66,7 @@ This section covers some of the most common metrics used for evaluating model fo
 
 Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision when you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high. 
 
-Example: The opportunity cost is low when there is certain recommendation were missing out but more costly when there is a wrong recommendation as it translates to not buying the recommended item, then precision is preferred. The opportunity cost of missing out of detecting fraud or disease would be high as compare to cost of acting to perform routine check on non-fraud/non-disease case.
+Example: The opportunity cost is low when there is certain recommendation were missing out but more costly when there is a wrong recommendation as it translates to not buying the recommended item, then precision is preferred. The opportunity cost of missing out of detecting fraud or disease would be high as compare to cost of acting to perform routine check on non-fraud/non-disease case, then recall is preferred.
 
 |  |           Recommender System              |                Fraud/Disease Detection               |
 |--| ----------------------------------------- | ---------------------------------------------------- |
