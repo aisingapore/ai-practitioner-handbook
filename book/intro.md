@@ -5,10 +5,6 @@
 ```
 # Welcome to AI Singapore's AI Practitioner Handbook
 
-Contributor: Laurence Liew, Director (AI Innovation)
-
----
-
 ## Introduction
 
 This handbook is an accumulation of AI Singapore’s Innovation and Platforms Engineering team's experience in delivering more than 40 AI Minimum Viable products (MVP) under the [100E](https://www.aisingapore.org/innovation/100e) programme over the last 5 years. 
@@ -50,6 +46,12 @@ Since 2017, we have engaged more than 600 companies, approved more than 100 proj
 The Handbook is a live project and will continue to evolve and be updated as we do more projects and learn more.
 
 Let us get started on your first AI project!
+
+--
+
+Laurence Liew, Director (AI Innovation)
+
+---
 
 [^1]: AI Singapore and other Singapore agencies have other programmes which assist companies that are AI Unaware and AI Aware.  
 [^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)
