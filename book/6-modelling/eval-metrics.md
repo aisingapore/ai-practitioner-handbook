@@ -80,11 +80,11 @@ If both Precision and Recall are equally important than F1 score should be used.
 - macro (calculate f1 for each label then perform unweighted mean)
 - weighted (calculate f1 for each label then perform weighted mean)
 
-When using weighted/micro f1 for imbalanced data means we are assessing the model while prioritising the majority class (as minority class have less influence over the final f1 score). When using macro f1 for imbalanced data, it means that we give equal importance to the minority class (minority class have same weightage as majority, hence greater influence over the final f1 score).
+When using weighted/micro f1 for imbalanced data means we are assessing the model while prioritising the majority class (as minority class have lesser influence over the final f1 score). When using macro f1 for imbalanced data, it means that we give equal importance to the minority class (minority class have same weightage as majority, hence greater influence over the final f1 score).
 
 Hence if the data is unbalanced, the choice between weighted and unweighted is dependent on the business objective. If the minority class is the 'costly', then weighted/micro f1 is not suitable since it does not give the same influence/weightage for minority class, then it would be better to assess based on macro f1.
 
-To summarize, there are often few tradeoffs in choosing one metrics over another. Below is some common questions to ask the stakeholders in order to recommend a suitable metrics for the problem that AI/ML is trying to solved.
+To summarize, there are often few tradeoffs in choosing one metrics over another. Below is some common questions to ask the stakeholders in order to recommend a suitable metrics for the problem that AI/ML is trying to solve.
 - Is precision or recall more important? or are they all equally important?
 - Which class is more important, or are they all equally important?
 
@@ -140,8 +140,6 @@ Once your team is aligned on the evaluation metric to optimize, they will be abl
 # Reference
 <a href="https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf">Chapter 8 and 9 of Andrew's Ng</a>
 
+<a href="https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9">Accuracy, Precision, Recall or F1</a> 
+
 <a href="https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f">Micro, Macro & Weighted Averages of F1</a>
-
-<a href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">NER evaluation metric</a> 
-
-<a href="https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1">IoU evaluation metric</a> 
