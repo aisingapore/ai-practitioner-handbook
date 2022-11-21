@@ -11,6 +11,7 @@ chapters:
   - file: book/1-pre-project-phase/business_challenge_2_ai_problem
   - file: book/1-pre-project-phase/key_areas_in_data
   - file: book/1-pre-project-phase/technical_debt
+  - file: book/1-pre-project-phase/ai_readiness_assessment
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   sections:
