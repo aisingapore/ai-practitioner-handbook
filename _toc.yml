@@ -11,11 +11,11 @@ chapters:
   - file: book/1-pre-project-phase/business_challenge_2_ai_problem
   - file: book/1-pre-project-phase/key_areas_in_data
   - file: book/1-pre-project-phase/technical_debt
-  - file: book/1-pre-project-phase/ai_readiness_assessment
+  # - file: book/1-pre-project-phase/ai_readiness_assessment
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   sections:
-  - file: book/2-proj-mgmt-tech-lead/principles.md
+  # - file: book/2-proj-mgmt-tech-lead/principles.md
   - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
@@ -47,7 +47,7 @@ chapters:
   - file: book/6-modelling/model-reproducibility
   - file: book/6-modelling/ml-risks-and-robustness
   - file: book/6-modelling/evaluating-timeseries
-  - file: book/6-modelling/post-hoc-explanation.md
+  # - file: book/6-modelling/post-hoc-explanation.md
 # ===== 7. Solution Delivery ========================================
 - file: book/7-solution-delivery/overview
   sections:
