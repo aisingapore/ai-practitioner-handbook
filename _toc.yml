@@ -15,6 +15,7 @@ chapters:
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   sections:
+  - file: book/2-proj-mgmt-tech-lead/principles.md
   - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
@@ -27,7 +28,7 @@ chapters:
 - file: book/4-lit-review/overview
   sections:
   - file: book/4-lit-review/factors-to-consider-during-literature-review
-# - file: 
+  # - file: 
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
   sections:
