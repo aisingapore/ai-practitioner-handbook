@@ -11,9 +11,11 @@ chapters:
   - file: book/1-pre-project-phase/business_challenge_2_ai_problem
   - file: book/1-pre-project-phase/key_areas_in_data
   - file: book/1-pre-project-phase/technical_debt
+  - file: book/1-pre-project-phase/ai_readiness_assessment
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   sections:
+  - file: book/2-proj-mgmt-tech-lead/principles.md
   - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon
   # - file: 
 # ===== 3. Collaborative Development Platforms ========================================
@@ -24,8 +26,8 @@ chapters:
   # - file: 
 # ===== 4. Literature Review ========================================
 - file: book/4-lit-review/overview
-  # sections:
-  # - file: book/4-lit-review/factors-to-consider-during-literature-review
+  sections:
+  - file: book/4-lit-review/factors-to-consider-during-literature-review
   # - file: 
 # ===== 5. Data Management Exploration & Processing ========================================
 - file: book/5-data-mgmt-exp-proc/overview
