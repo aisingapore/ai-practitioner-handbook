@@ -44,9 +44,9 @@ Company A is attempting to build an anomaly detection model to predict machinery
 
 |              | T = 0 | T = 1 | T = 2 | T = 3 | T = 4 | T = 5 | T = 6 | T = 7 |
 |--------------|------ |------ |------ |------ |------ |------ |------ |------ |
-| Ground Truth |   0   |   0   |   1   |   1   |   0   |   0   |   0   |   1   | 
+| Ground truth |   0   |   0   |   1   |   1   |   0   |   0   |   0   |   1   | 
 | Detected     |   0   |   0   |   0   |   1   |   0   |   1   |   0   |   1   |
-*1's are denoted as Anomaly for this case study*
+*1's denote anomalies*
 
 The confusion matrices below are calculated using the time segment and overlapping segment approaches.
 
@@ -58,4 +58,4 @@ This case study demonstrates how business needs must be taken into consideration
 
 # References
 
-https://medium.com/mit-data-to-ai-lab/time-series-anomaly-detection-in-the-era-of-deep-learning-64b9d2cff6eb
+[Time series anomaly detection—-in the era of deep learning](https://medium.com/mit-data-to-ai-lab/time-series-anomaly-detection-in-the-era-of-deep-learning-64b9d2cff6eb)
