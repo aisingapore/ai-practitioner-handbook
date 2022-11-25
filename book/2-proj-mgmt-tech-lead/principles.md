@@ -29,3 +29,4 @@ Values on the other hand are more personal to each individual and reflect what t
 Reference(s):
 
 - You can find more engineering values and principles in [this GitHub Repo](https://github.com/mgreiler/awesome-engineering-values)
+
