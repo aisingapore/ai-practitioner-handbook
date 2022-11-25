@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the considerations (internally by the team), and externally (by the stakeholders) when selecting evaluation metrics? &#8212; AI Practitioner Handbook</title>
+    <title>What are some internal and external considerations when selecting evaluation metrics? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How can I maximise model reproducibility?" href="model-reproducibility.html" />
+    <link rel="prev" title="6. Modelling" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -190,17 +190,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../4-lit-review/overview.html">
    4. Literature Review
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors that an AI Engineer should consider during literature review?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -242,16 +254,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="overview.html">
    6. Modelling
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What are some internal and external considerations when selecting evaluation metrics?
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="model-reproducibility.html">
      How can I maximise model reproducibility?
@@ -262,14 +279,19 @@ const thebe_selector_output = ".output, .cell_output"
      What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="evaluating-timeseries.html">
+     How can we better evaluate time-series classification models?
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -290,8 +312,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -307,8 +329,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -430,7 +452,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/eval-metrics.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/optimising-and-satisficing.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -458,7 +480,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/6-modelling/eval-metrics.md"
+        <a href="../../_sources/book/6-modelling/optimising-and-satisficing.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -517,46 +539,41 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   What are the considerations (internally by the team), and externally (by the stakeholders) when selecting evaluation metrics?
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understanding-the-problem-space">
+   1. Understanding the problem space
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-the-problem-and-environment">
-   1. Understanding the problem and environment
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optimizing-metrics">
-   2. Optimizing metrics
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-selecting-metrics-for-classification-problems">
-     a.) Selecting metrics for classification problems
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-statement">
+     Problem statement
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#b-selecting-metrics-for-regression-problems">
-     b.) Selecting metrics for regression problems
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#technical-ability-of-stakeholders">
+     Technical ability of stakeholders
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimising-metrics">
+   2. Optimising metrics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#satisficing-metrics">
    3. Satisficing metrics
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combining-optimising-and-satisficing-metrics">
+   4. Combining optimising and satisficing metrics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -568,7 +585,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the considerations (internally by the team), and externally (by the stakeholders) when selecting evaluation metrics?</h1>
+                <h1>What are some internal and external considerations when selecting evaluation metrics?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -578,46 +595,41 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   What are the considerations (internally by the team), and externally (by the stakeholders) when selecting evaluation metrics?
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understanding-the-problem-space">
+   1. Understanding the problem space
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understanding-the-problem-and-environment">
-   1. Understanding the problem and environment
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optimizing-metrics">
-   2. Optimizing metrics
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-selecting-metrics-for-classification-problems">
-     a.) Selecting metrics for classification problems
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-statement">
+     Problem statement
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#b-selecting-metrics-for-regression-problems">
-     b.) Selecting metrics for regression problems
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#technical-ability-of-stakeholders">
+     Technical ability of stakeholders
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimising-metrics">
+   2. Optimising metrics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#satisficing-metrics">
    3. Satisficing metrics
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combining-optimising-and-satisficing-metrics">
+   4. Combining optimising and satisficing metrics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -630,121 +642,53 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-considerations-internally-by-the-team-and-externally-by-the-stakeholders-when-selecting-evaluation-metrics">
-<h1>What are the considerations (internally by the team), and externally (by the stakeholders) when selecting evaluation metrics?<a class="headerlink" href="#what-are-the-considerations-internally-by-the-team-and-externally-by-the-stakeholders-when-selecting-evaluation-metrics" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Er YuYang</p>
-<p>This guide assumes that you have a fair understanding of why the stakeholders is developing the AI/ML project (understand the business value), and have a reasonable understanding for the implementation difficulty of the evaluation for given the dataset.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-internal-and-external-considerations-when-selecting-evaluation-metrics">
+<h1>What are some internal and external considerations when selecting evaluation metrics?<a class="headerlink" href="#what-are-some-internal-and-external-considerations-when-selecting-evaluation-metrics" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Er YuYang, Senior AI Engineer</p>
+<p>This guide assumes that you have a fair understanding of the business value of the AI/ML project, and have an appreciation of the implementation difficulty of the evaluation metrics. Internal considerations refer to those concerning the development team, while external considerations refer to those concerning business users/stakeholders.</p>
+<section id="understanding-the-problem-space">
+<h2>1. Understanding the problem space<a class="headerlink" href="#understanding-the-problem-space" title="Permalink to this headline">#</a></h2>
+<section id="problem-statement">
+<h3>Problem statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">#</a></h3>
+<p>Understanding how the AI/ML solves the problem statement helps to identify the correct optimising metrics (explained in section 2) for assessing the performance of the model. Complementarily, understanding the deployment environment helps in choosing the satisficing metrics (explained in section 3). In most cases, optimising metrics tend to be ML metrics, while satisficing metrics tend to be non-ML metrics.</p>
+<p>There is often a trade-off between ML and non-ML metrics. For instance, a more complex model can return better ML metrics, but can also come with longer training and inference times (non-ML metrics). As such, developers and business users are faced with a choice as to which metrics to prioritise based on the business value of the AI solution.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h1>
-<ol>
-<li><p>Understanding stakeholder’s problem and environment</p></li>
-<li><p>Optimizing metrics</p>
-<p>a. Selecting metrics for classification problems</p>
-<p>b. Selecting metrics for regression problems</p>
-</li>
-<li><p>Satisficing metrics</p></li>
-</ol>
+<section id="technical-ability-of-stakeholders">
+<h3>Technical ability of stakeholders<a class="headerlink" href="#technical-ability-of-stakeholders" title="Permalink to this headline">#</a></h3>
+<p>It is important to understand the level of technical ability possessed by eventual end-users and/or maintainers of the AI/ML solution. This understanding can help identify metrics that these stakeholders are <em>comfortable</em> with.</p>
+<p>Comfortable metrics are important for for ease of communicating with the stakeholders. Importantly, they allow future technical teams to understand and improve the AI/ML model in later stages of its life cycle.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="understanding-the-problem-and-environment">
-<h1>1. Understanding the problem and environment<a class="headerlink" href="#understanding-the-problem-and-environment" title="Permalink to this headline">#</a></h1>
-<p>a. Problem statement</p>
-<p>Understanding how the AI/ML solves the problem statement help to identify the correct optimizing metrics (explained in section 2) to determine the preformance of the model.</p>
-<p>b. Technical competence of the different stakeholders</p>
-<p>Understanding the level of competence of the stakeholder help to identify which optimizing metrics (explained in section 2) to use when communicating with them.</p>
-<p>c. Deployment environment</p>
-<p>Understanding the deployment enviornment will helps in choosing the satisficing metrics explained in section 3.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="optimizing-metrics">
-<h1>2. Optimizing metrics<a class="headerlink" href="#optimizing-metrics" title="Permalink to this headline">#</a></h1>
-<p>The goal is to establish a single-number evaluation metric, as having multiple evaluation metrics make it hard to compare against different algorithms.</p>
-<p>For instance, Classifier A has precision of 95% with recall of 90% and Classifier B has precision of 98% with recall of 85%, Neither classifier is obviously superior and does not immediately guide you towards picking one.</p>
-<p>When comparing with different model in classification problem with multiple class, combined metrics of each class into single metric using average on weighted average. However, keep the metrics separated if you are evaluating the class performance instead of the model performance.</p>
-<section id="a-selecting-metrics-for-classification-problems">
-<h2>a.) Selecting metrics for classification problems<a class="headerlink" href="#a-selecting-metrics-for-classification-problems" title="Permalink to this headline">#</a></h2>
-<p>This section covers some of the most common metrics used for evaluating model for classification problems. Do note that this is not exhaustive list but covers the some of common high level metrics that are useful when communicating with stakeholders.</p>
-<ol>
-<li><p>Accuracy = <span class="math notranslate nohighlight">\(\frac{TP + TN}{TP + FP + TN + FN}\)</span></p>
-<p>Simple for explaining to stakeholders but not suitable if the dataset is unbalanced.</p>
-</li>
-<li><p>Precision = <span class="math notranslate nohighlight">\(\frac{TP}{TP+FP}\)</span></p>
-<p>Simplified explaination: Out of the <u>positive predictions</u>, how many are correct. It focuses on finding positive cases.</p>
-</li>
-<li><p>Recall = <span class="math notranslate nohighlight">\(\frac{TP}{TP+FN}\)</span></p>
-<p>Simplified explaination: Out of the <u>actual positive</u>, how many are correct. It focuses on weeding out the negative cases.</p>
-</li>
-<li><p>F1 Score = 2 * <span class="math notranslate nohighlight">\(\frac{Precision * Recall}{Precision + Recall}\)</span></p>
-<p>F1 score is the weighted mean of precision and recall</p>
-</li>
-</ol>
-<p>Precision is more important than recall when you cannot afford to have any FP as compare to FN. Often associate with cost, when cost of acting is high but the cost of not acting is low, then precision is preferred. Recall is more important than precision whe you cannot afford to have any FN as compare to FP. It is more important when the opportunity cost of passing up is high.</p>
-<p>Example: Missing out to detect spam email is okay but missing out of detecting fraud or disease is high (use recall metrics for the latter). Finding as many spam email is desirable than missing out to detect spam email (use precision).</p>
-<p>If both Precision and Recall are equally important than F1 score should be used. There are variation of F1 score:</p>
+<section id="optimising-metrics">
+<h2>2. Optimising metrics<a class="headerlink" href="#optimising-metrics" title="Permalink to this headline">#</a></h2>
+<p>The goal here is to establish a single-number evaluation metric, as multiple evaluation metrics make it hard to compare between different models.</p>
+<p>For instance, Classifier A has precision of 95% with recall of 90% and Classifier B has precision of 98% with recall of 85%. Neither classifier is obviously superior and does not immediately guide you towards picking one. In this case, you may consider taking the F1 score, which is the harmonic mean of precision and recall.</p>
+<p>To obtain a single-number metric for multi-class classification problems, you can combine metrics of each class into single metric using average or weighted average. However, keep the metrics separated if you are evaluating intraclass performance instead of overall model performance.</p>
+</section>
+<section id="satisficing-metrics">
+<h2>3. Satisficing metrics<a class="headerlink" href="#satisficing-metrics" title="Permalink to this headline">#</a></h2>
+<p>In theory, optimising metrics should be maximised as much as possible. In practice, however, practical tradeoffs/compromises have to be made. These take the form of satisficing metrics, which are often non-ML related. Examples of satisficing metrics include:</p>
 <ul class="simple">
-<li><p>micro (globally by counting total positive)</p></li>
-<li><p>macro (calculate f1 for each label then complete <u>unweighted</u> mean)</p></li>
-<li><p>weighted (calculate f1 for each label then complete <u>weighted</u> mean)</p></li>
+<li><p>Running/inference time</p></li>
+<li><p>Training time</p></li>
+<li><p>Memory/storage usage (particularly applicable for edge deployment)</p></li>
 </ul>
-<p>Use weighted f1 when data is unbalanced.</p>
-<ol>
-<li><p>Others common metrics</p>
-<p>a. ROC curve (receiver operating characteristic curve)</p>
-<p>b. AUC (Area Under the ROC Curve)</p>
-<p>c. Confusion matrix</p>
-<p>d. Loss functions</p>
-</li>
-</ol>
-<p>Confusion matrix may be required in there is a need to see the exact number of TP, TN, FP, FN, sometimes uses for more technical-inclined stakeholders. Both metrics in 5a &amp; 5b requires predicted labels &amp; predicted probabilities in order to plot curve, avoid using when extracting proabilities is not possible or difficult. For loss functions, there is binary cross-entropy and multi-class entropy for binary/multi-class classification problems. These metrics are often used by internal development team.</p>
+<p>It is not practical or cost-efficient to increase optimising metrics by a minuscule percentage while making disproportionate trade-offs on satisficing metrics. For example, increasing model accuracy by 0.0001 may required significantly longer and more expensive computation time. Deployment considerations (eg. size of model, runtime) may also come into play here.</p>
 </section>
-<section id="b-selecting-metrics-for-regression-problems">
-<h2>b.) Selecting metrics for regression problems<a class="headerlink" href="#b-selecting-metrics-for-regression-problems" title="Permalink to this headline">#</a></h2>
-<p>This section covers some of the most common metrics used for evaluating model for regression problems.</p>
-<ol>
-<li><p>Mean Square Error (MSE)</p>
-<p>Average of the squared differences between the actual and the predicted values. The lower the value, the better the regression model. It penalizes the outliers most.</p>
-</li>
-<li><p>Root Mean Square Error (RMSE)</p>
-<p>Square root of MSE, used when MSE value is too big for comparsion</p>
-</li>
-<li><p>Mean Absolute Error (MAE)</p>
-<p>Similar to Mean Square Error (MSE) but taking sum of absolute value of error. MSE gives larger penalization to big prediction error as compare to MAE.</p>
-</li>
-</ol>
-<p>MSE, RMSE, MAE are not very useful when comparing against different models when outliers that is presented very extreme.</p>
-<ol>
-<li><p>R2</p>
-<p>One of the popular metrics, express as percentage. Large R2 value indicates a better fit, the closer to 1, the better the regression model. Easier for comparsion against different models as it ranges from 0 to 1.</p>
-</li>
-<li><p>Adjusted R Square</p>
-<p>Similar to R2 but adds precision and reliabilty by considering additional independent variables that tend to skew the results of R-squared measurements</p>
-</li>
-</ol>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="satisficing-metrics">
-<h1>3. Satisficing metrics<a class="headerlink" href="#satisficing-metrics" title="Permalink to this headline">#</a></h1>
-<p>Satisficing is a decision making strategy that aims for a satisfactory or adequate results rather than the optimal solution. Sometimes, it is hard to get a single number evaluation metric due to the non-ML metrics.</p>
-<p>Example of some non-ML metrics</p>
-<ul class="simple">
-<li><p>runtime (inference time)</p></li>
-<li><p>training time</p></li>
-<li><p>memory usage</p></li>
-<li><p>size of model (more applicable for deployment on edge device)</p></li>
-</ul>
-<p>It is not practical or cost efficient to increase the optimizing metrics by a minuscule percentage, using longer training time which results in higher cost. Deployment consideration (eg. size of model, runtime) may also affect the usablity of the model.</p>
-<p>a) One approach is to derive a single metrics by forumla</p>
-<p>For instance:</p>
+<section id="combining-optimising-and-satisficing-metrics">
+<h2>4. Combining optimising and satisficing metrics<a class="headerlink" href="#combining-optimising-and-satisficing-metrics" title="Permalink to this headline">#</a></h2>
+<p>Consideration of both optimising and satisficing metrics means that there are at least two sets of numbers to optimise. How can we adhere more closely to the more elegant single-number metric approach?</p>
+<p>One approach is to derive a single metric through a forumla. For instance:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  metrics = accuracy of model - 0.5 * runtime
 </pre></div>
 </div>
-<p>b) Another approach is to define what is an “acceptable” threshold for the satisficing metrics, then maximize the optimizing metrics.</p>
-<p>Once your team is aligned on the evaluation metric to optimize, they will be able to make faster progress.</p>
+<p>Another approach is to first define an “acceptable” threshold for the satisficing metric through consultation with stakeholders. The development team can then work to maximise the optimising metrics within acceptable bounds of the satisficing metric.</p>
+<p>Once your team is aligned on the evaluation metric to optimise, they will be able to make faster progress.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="reference">
-<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf">https://github.com/ajaymache/machine-learning-yearning/blob/master/full book/machine-learning-yearning.pdf</a></p>
-<p><a class="reference external" href="https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/">https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/</a></p>
-<p><a class="reference external" href="https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1">https://towardsdatascience.com/iou-a-better-detection-evaluation-metric-45a511185be1</a></p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf"><em>Machine Learning Yearning</em>, Chapers 8 and 9</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -774,6 +718,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">6. Modelling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="model-reproducibility.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How can I maximise model reproducibility?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

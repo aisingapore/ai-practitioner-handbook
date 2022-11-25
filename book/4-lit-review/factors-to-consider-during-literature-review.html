@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are some of the factors/questions that an AI Engineer should consider during literature review? &#8212; AI Practitioner Handbook</title>
+    <title>What are some of the factors that an AI Engineer should consider during literature review? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5. Data Management, Exploration &amp; Processing" href="../5-data-mgmt-exp-proc/overview.html" />
+    <link rel="prev" title="4. Literature Review" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../1-pre-project-phase/overview.html">
    1. Pre-project Phase
@@ -188,17 +190,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="overview.html">
    4. Literature Review
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What are some of the factors that an AI Engineer should consider during literature review?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -244,12 +258,17 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../6-modelling/overview.html">
    6. Modelling
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/optimising-and-satisficing.html">
+     What are some internal and external considerations when selecting evaluation metrics?
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../6-modelling/model-reproducibility.html">
      How can I maximise model reproducibility?
@@ -260,14 +279,19 @@ const thebe_selector_output = ".output, .cell_output"
      What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/evaluating-timeseries.html">
+     How can we better evaluate time-series classification models?
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../7-solution-delivery/overview.html">
    7. Solution Delivery
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -288,8 +312,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../8-documentation-handover/overview.html">
    8. Documentation &amp; Handover
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -305,8 +329,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../_contributing.html">
    How To Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -515,41 +539,29 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   What are some of the factors/questions that an AI Engineer should consider during literature review?
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#business-needs">
+   Business needs
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#business-needs">
-     Business Needs
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#development-time">
-     Development time
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-existence-readability">
-     Code Existence &amp; Readability
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#open-sourcing-of-a-pre-trained-model">
-     Open-Sourcing of a pre-trained model
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#key-takeaways-from-the-literature">
-     Key takeaways from the literature
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-time">
+   Development time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#existing-code-repositories">
+   Existing code repositories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-trained-models">
+   Pre-trained models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reported-results">
+   Reported results
   </a>
  </li>
 </ul>
@@ -561,7 +573,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are some of the factors/questions that an AI Engineer should consider during literature review?</h1>
+                <h1>What are some of the factors that an AI Engineer should consider during literature review?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -571,41 +583,29 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   What are some of the factors/questions that an AI Engineer should consider during literature review?
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#business-needs">
+   Business needs
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#business-needs">
-     Business Needs
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#development-time">
-     Development time
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-existence-readability">
-     Code Existence &amp; Readability
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#open-sourcing-of-a-pre-trained-model">
-     Open-Sourcing of a pre-trained model
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#key-takeaways-from-the-literature">
-     Key takeaways from the literature
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-time">
+   Development time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#existing-code-repositories">
+   Existing code repositories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-trained-models">
+   Pre-trained models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reported-results">
+   Reported results
   </a>
  </li>
 </ul>
@@ -618,43 +618,40 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-of-the-factors-questions-that-an-ai-engineer-should-consider-during-literature-review">
-<h1>What are some of the factors/questions that an AI Engineer should consider during literature review?<a class="headerlink" href="#what-are-some-of-the-factors-questions-that-an-ai-engineer-should-consider-during-literature-review" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-of-the-factors-that-an-ai-engineer-should-consider-during-literature-review">
+<h1>What are some of the factors that an AI Engineer should consider during literature review?<a class="headerlink" href="#what-are-some-of-the-factors-that-an-ai-engineer-should-consider-during-literature-review" title="Permalink to this headline">#</a></h1>
 <p>Contributor(s): Andy Ong, AI Engineer</p>
-<p>Literature reviews are necessary at the start of every AI project to understand and explore available solutions in the market. Different business problems require different solutions, and below are some factors that you can consider while performing your literature review.</p>
+<p>Literature reviews are necessary at the start of every AI project to understand and explore available solutions in the market. Business problems require different solutions, and below are some factors that you can consider while performing your literature review.</p>
 <ul class="simple">
 <li><p>Business needs</p></li>
 <li><p>Development time</p></li>
-<li><p>Code Existence &amp; Readability</p></li>
-<li><p>Open-Sourcing of a pre-trained model</p></li>
-<li><p>Key takeaways from the literature</p></li>
+<li><p>Existing code respositories</p></li>
+<li><p>Pre-trained models</p></li>
+<li><p>Reported results</p></li>
 </ul>
 <section id="business-needs">
-<h2>Business Needs<a class="headerlink" href="#business-needs" title="Permalink to this headline">#</a></h2>
-<p>Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medically related project requires model explainability and this will require a search for solutions that has model explainability.</p>
-<p>The literature should cover a use case that is in a similar domain to your project. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can understand the various approaches and their benefits, and how should you integrate them into your MVM.</p>
+<h2>Business needs<a class="headerlink" href="#business-needs" title="Permalink to this headline">#</a></h2>
+<p>Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medical AI project requires model explainability, and this will require a search for solutions involving explainable models. Alternatively, if the use case requires edge deployment in mobile devices, this would instead direct the selection of literature toward those that support smaller and quicker models.</p>
+<p>The literature search should not be limited to your project’s domain. An example is using autoencoders for anomaly detection even though they are typically used for computer vision. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can understand the various approaches and their benefits, and how you can integrate them into your solution.</p>
 </section>
 <section id="development-time">
 <h2>Development time<a class="headerlink" href="#development-time" title="Permalink to this headline">#</a></h2>
-<p>All projects have a set of timelines to adhere to, and development time may not sufficient to build pipelines from scratch. You will have to allocate time for integration tests, project handover and other ad-hoc tasks such as troubleshooting. You can research and identify potential libraries to aid in your pipeline to avoid building it from scratch. You can also attempt to inherit certain classes from suitable libraries to customise them to your project with minimal code.</p>
+<p>All projects have a set of timelines to adhere to, and development time may not be sufficient to build pipelines from scratch. You will have to allocate time for integration tests, project handover and other ad-hoc tasks such as troubleshooting. You can research and identify potential libraries to aid in your pipeline to avoid building it from scratch. You can also attempt to inherit certain classes from suitable libraries to customise them to your project with minimal code. The following sections are specific examples of strategies that can aid in shortening development time.</p>
 </section>
-<section id="code-existence-readability">
-<h2>Code Existence &amp; Readability<a class="headerlink" href="#code-existence-readability" title="Permalink to this headline">#</a></h2>
-<p>You should be reading up on literature that has training or inference scripts in their code repository. These solutions can be incorporated into your MVM with ease as compared to solutions without any scripts. <a class="reference external" href="https://paperswithcode.com/">Papers with code</a> contains papers with open-sourced code repositories.</p>
-<p>If code repositories are supporting the literature, you should consider the readability of the code provided and assess the ease of integration. More often than not, provided code repositories can be challenging to understand, and integration might take more time than supposed.</p>
+<section id="existing-code-repositories">
+<h2>Existing code repositories<a class="headerlink" href="#existing-code-repositories" title="Permalink to this headline">#</a></h2>
+<p>You should be reading up on literature that include training or inference scripts in their code repository. These solutions can be incorporated into your codebase with ease as compared to solutions without any scripts. <a class="reference external" href="https://paperswithcode.com/">Papers with Code</a> contains papers with open-sourced code repositories.</p>
+<p>If the literature is supported by code repositories, you should evaluate the readability of the code and complexity of integration. Supplied code repositories can often be difficult to understand, and integration may take longer than anticipated. Additionally, some repositories/implementations may be more comprehensive than others, such as those that contain class weights as configurable hyperparameters or include an evaluation function.</p>
+<p>Consider the copyright agreements and licenses for the papers and codes in light of this. It’s possible that your project will not be able to use commercial IP software or certain licenses (like the GPL). Examples of permissive licenses with few limitations on use include the MIT and BSD licenses.</p>
 </section>
-<section id="open-sourcing-of-a-pre-trained-model">
-<h2>Open-Sourcing of a pre-trained model<a class="headerlink" href="#open-sourcing-of-a-pre-trained-model" title="Permalink to this headline">#</a></h2>
-<p>For projects that involve NLP or CV, it could be beneficial to look for solutions that have its pre-trained model open-sourced. This is to ensure that you can apply transfer learning in such projects, to reduce training time. Language or computer vision models requires extremely long training time, and it could be costly (both time and financially) in a project.</p>
+<section id="pre-trained-models">
+<h2>Pre-trained models<a class="headerlink" href="#pre-trained-models" title="Permalink to this headline">#</a></h2>
+<p>For NLP or CV projects, it may be advantageous to search for solutions with pre-trained, open-sourced models. This will cut down on training time by ensuring that you can use transfer learning to such tasks. Long training times are needed for language or computer vision models, which can add time and cost to a project. It is advantageous if the pre-trained model was developed using datasets from a field related to your use case. For instance, if your use case involves evaluating financial accounts, FinBERT, a pre-trained NLP model, may be more immediately applicable than BERT-base.</p>
 </section>
-<section id="key-takeaways-from-the-literature">
-<h2>Key takeaways from the literature<a class="headerlink" href="#key-takeaways-from-the-literature" title="Permalink to this headline">#</a></h2>
-<p>You must never take into account the results published in the paper. They are often inflated, and more importantly, the data used is different. Data is usually the biggest factor contributing to the performance of every model, and since the data between the paper and your project is different, do expect to have a difference in accuracy. You should focus on the algorithms and methods of evaluation used in the literature instead.</p>
+<section id="reported-results">
+<h2>Reported results<a class="headerlink" href="#reported-results" title="Permalink to this headline">#</a></h2>
+<p>The results reported in the study should be interpreted in a discerning manner. Reported results may entail some cherry-picking. More crucially, the data used is likely different from your project’s use-case. Consequently, expect to see a difference in accuracy, since data is typically the main element affecting how well any model performs. Rather than focusing on the reported results, you should instead concentrate on the evaluation techniques and algorithms employed in the literature.</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="conclusion">
-<h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h1>
-<p>While these factors are non-exhaustive, they can ensure that you are doing a informative yet meaningful literature review.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -684,6 +681,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">4. Literature Review</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../5-data-mgmt-exp-proc/overview.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5. Data Management, Exploration &amp; Processing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
