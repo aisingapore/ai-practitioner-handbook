@@ -34,7 +34,7 @@ In theory, optimising metrics should be maximised as much as possible. In practi
 - Training time
 - Memory/storage usage (particularly applicable for edge deployment)
 
-It is not practical or cost-efficient to increase optimising metrics by a minuscule percentage while make disproportionate trade-offs on satisficing metrics. For example, increasing model accuracy by 0.0001 may required significantly longer and more expensive computation time. Deployment considerations (eg. size of model, runtime) may also come into play here.
+It is not practical or cost-efficient to increase optimising metrics by a minuscule percentage while making disproportionate trade-offs on satisficing metrics. For example, increasing model accuracy by 0.0001 may required significantly longer and more expensive computation time. Deployment considerations (eg. size of model, runtime) may also come into play here.
 
 ### 4. Combining optimising and satisficing metrics
 
