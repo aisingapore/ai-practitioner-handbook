@@ -1,6 +1,6 @@
 # How can we provide a simple post-hoc explanation for black-box model performance to ensure reliability?
 Contributor: Joy Lin, Senior AI Technical Consultant
-
+ 
 ---
 
 ## Introduction
