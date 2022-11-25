@@ -1,6 +1,6 @@
 # What are some questions that an AI engineer can ask the project sponsor to assess their AI capabilities?
 Contributor: Joy Lin, Senior AI Technical Consultant
-
+ 
 ---
 
 ## Who is this for?
