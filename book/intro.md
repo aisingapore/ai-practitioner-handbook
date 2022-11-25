@@ -9,7 +9,7 @@
 
 This handbook is an accumulation of AI Singapore’s Innovation and Platforms Engineering team's experience in delivering more than 40 AI Minimum Viable products (MVP) under the [100E](https://www.aisingapore.org/innovation/100e) programme over the last 5 years. 
 
-We envisioned this handbook as a useful guide for new AI Engineers joining AI Singapore and to quickly come up to speed on how we execute AI projects. However, the information contained here would also appeal to new any AI Engineers and Managers deploying their first AI project into production.
+We envisioned this handbook as a useful guide for new AI Engineers joining AI Singapore and to quickly come up to speed on how we execute AI projects. However, the information contained here would also appeal to any new AI Engineers and Managers deploying their first AI project into production.
 
 Delivering production AI models goes beyond building AI models in Jupyter notebooks. It includes preliminary data identification, cleaning and curation, followed by building, training and testing the models and finally deploying the model. Throughout the process, AI and ML Ops play a fundamental role to enable the whole end-to-end process. 
 
