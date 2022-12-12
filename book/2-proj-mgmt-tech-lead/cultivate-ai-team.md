@@ -1,4 +1,7 @@
 # How can I cultivate an effective and cohesive AI development team?  
+Contributor: Kenny WI Chua, Senior AI Engineer
+
+---
 
 ## Introduction  
 Engineers in charge of a development team take on the role of a technical lead. This entails a set of responsibilities that are distinct from those of an individual contributor. Engineers, especially those who are inexperienced with leadership responsibilities, may face challenges in rallying their team.
@@ -35,7 +38,7 @@ The primary responsiblity of the technical lead is to be an enabler rather than 
 
 Technical enablements include boilerplate code and abstract classes, which can help developers onboard more quickly and with greater consistency. Additionally, a robust [MLOps workflow](../5-data-mgmt-exp-proc/e2e-workflow.md) provides automation that enables to developers to concentrate of feature development and modelling activities rather than infrastructural work.
 
-Pay particular attention during stand-up meetings and sprint retrospective. These are platforms during which developers are likely to raise their concerns regarding technical blockers. The technical lead can triage the list in order to identify and resolve the most urgent and important blockers. Relatedly, regular one-on-one meetings with developers can also help encounter personal/interpersonal blockers that may not surface during meetings with the whole team.
+Pay particular attention during stand-up meetings and sprint retrospectives. These are platforms during which developers are likely to raise their concerns regarding technical blockers. The technical lead can triage the list in order to identify and resolve the most urgent and important blockers. Relatedly, regular one-on-one meetings with developers can also help encounter personal/interpersonal blockers that may not surface during meetings with the whole team.
 
 ## Encourage the heart  
 Morale is a key driver of an effective and cohesive development team. Developing under tight deadlines and high expectations is stressful, so take time to celebrate small project milestones. Beyond providing words of affirmation, demonstrate your appreciation for the team in tangible ways that will actually help/be appreciated by the developers.
