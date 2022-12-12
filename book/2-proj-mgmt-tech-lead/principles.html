@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are the platforms and their respective considerations required for collaborative ML development? &#8212; AI Practitioner Handbook</title>
+    <title>What kind of engineering principles can I set for my development team? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?" href="repo-structure-setup.html" />
-    <link rel="prev" title="3. Collaborative Development Platforms" href="overview.html" />
+    <link rel="next" title="How might we simplify and translate technical jargon for a non-technical audience?" href="translate-technical-jargon.html" />
+    <link rel="prev" title="2. Project Management &amp; Technical Leadership" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -156,45 +156,45 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
-   2. Project Management &amp; Technical Leadership
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2-proj-mgmt-tech-lead/principles.html">
-     What kind of engineering principles can I set for my development team?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2-proj-mgmt-tech-lead/translate-technical-jargon.html">
-     How might we simplify and translate technical jargon for a non-technical audience?
-    </a>
-   </li>
-  </ul>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="overview.html">
-   3. Collaborative Development Platforms
+   2. Project Management &amp; Technical Leadership
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     What kind of engineering principles can I set for my development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="translate-technical-jargon.html">
+     How might we simplify and translate technical jargon for a non-technical audience?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
      What are the platforms and their respective considerations required for collaborative ML development?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="repo-structure-setup.html">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
     </a>
    </li>
@@ -462,7 +462,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/3-collab-dev-platforms/collaborative_ml.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/principles.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -490,7 +490,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/3-collab-dev-platforms/collaborative_ml.md"
+        <a href="../../_sources/book/2-proj-mgmt-tech-lead/principles.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -550,18 +550,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#communication-tools">
-   Communication tools
+  <a class="reference internal nav-link" href="#what-are-the-differences-between-principles-and-values">
+   What are the differences between principles and values?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-versioning">
-   Code versioning
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-weight-data-versioning">
-   Model/weight/data versioning
+  <a class="reference internal nav-link" href="#examples-of-engineering-principles">
+   Examples of Engineering Principles
   </a>
  </li>
 </ul>
@@ -573,7 +568,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are the platforms and their respective considerations required for collaborative ML development?</h1>
+                <h1>What kind of engineering principles can I set for my development team?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -584,18 +579,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#communication-tools">
-   Communication tools
+  <a class="reference internal nav-link" href="#what-are-the-differences-between-principles-and-values">
+   What are the differences between principles and values?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-versioning">
-   Code versioning
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-weight-data-versioning">
-   Model/weight/data versioning
+  <a class="reference internal nav-link" href="#examples-of-engineering-principles">
+   Examples of Engineering Principles
   </a>
  </li>
 </ul>
@@ -608,38 +598,34 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-the-platforms-and-their-respective-considerations-required-for-collaborative-ml-development">
-<h1>What are the platforms and their respective considerations required for collaborative ML development?<a class="headerlink" href="#what-are-the-platforms-and-their-respective-considerations-required-for-collaborative-ml-development" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Dylan Poh Guan Kiong, AI Engineer <a class="reference external" href="https://unicorndy.github.io/Dylan_Poh/">(GitHub)</a></p>
-<p>With the increasing complexity of machine learning projects, it is highly likely that a team of developers is required to complete the task. As a result, it is critical to have the ability to collaborate efficiently.</p>
-<p>Fundamentally, there are two ways that teams collaborate.</p>
-<p><em>Luke Marsden: When you boil it down to basics, there are really two fundamental modes of collaborating between different people doing work: synchronous and asynchronous.</em></p>
-<p><em>Synchronous</em>: Communications are scheduled, real-time interactions by phone, video, or in-person, sometimes interrupting one another for urgent tasks or simply asking a question. In terms of development, the upstream have to complete their tasks before the downstream team can continue with their work (Dependencies issues)</p>
-<p><em>Asynchronous</em>: Communication happens on your own time, with a different team or people concurrently working on a different task. An efficient mechanism is required to resolve merge conflicts.</p>
-<p>With this in mind, we seek to introduce some tools and practices for a team to get started in the hope that stumbling blocks will be reduced to the minimum. The practices introduced here assume development using Python as the primary language.</p>
-<section id="communication-tools">
-<h2>Communication tools<a class="headerlink" href="#communication-tools" title="Permalink to this headline">#</a></h2>
-<p>Establishing effective communication right from the beginning of any project will allow all team members to align toward the same goal and reduce any possible friction. A quintessential example of miscommunication is an unclear problem statement leading to team members having different views on the outcome of the project.</p>
-<p>The following tools (by no means exhaustive) may be useful for remote, office, and hybrid working arrangements:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-kind-of-engineering-principles-can-i-set-for-my-development-team">
+<h1>What kind of engineering principles can I set for my development team?<a class="headerlink" href="#what-kind-of-engineering-principles-can-i-set-for-my-development-team" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Siavash Sakhavi, Senior AI Engineer, Co-written with <a class="reference external" href="https://rytr.me/">https://rytr.me/</a></p>
+<p>Principles and values are two important concepts that should be set for any software team. All teams should set certain principles and values for themselves in order to be productive, successful, and happy. These two concepts are what will help guide your projects and keep everyone on the same page.</p>
+<section id="what-are-the-differences-between-principles-and-values">
+<h2>What are the differences between principles and values?<a class="headerlink" href="#what-are-the-differences-between-principles-and-values" title="Permalink to this headline">#</a></h2>
+<p>The first step in setting the values of a team is to identify the principles that will guide their behavior. These principles are the underlying beliefs that drive their behavior and decisions.</p>
+<p>A principle is something that is true for all members of a team, no matter what. These principles are typically agreed upon by the team members at the start of their project or business.</p>
+<p>Values on the other hand are more personal to each individual and reflect what they believe in. In order to set your values, you need to first identify your principles and then list what those principles mean for you and how they will affect your actions as an individual on the team.</p>
+</section>
+<section id="examples-of-engineering-principles">
+<h2>Examples of Engineering Principles<a class="headerlink" href="#examples-of-engineering-principles" title="Permalink to this headline">#</a></h2>
+<p>The following are some engineering values that you can consider for your team:</p>
 <ul class="simple">
-<li><p>A big whiteboard often produces the most efficient channel to share ideas. (Physical Meetup)</p></li>
-<li><p><a class="reference external" href="https://workspace.google.com/">Google Workspace</a>, a full suite of communication tools such as Google meet, shared Google calendar, and Gmail to see the complete list of participants and scheduled meetings. Other option includes the <a class="reference external" href="https://www.microsoft.com/en-us/microsoft-teams/log-in">Microsoft Team</a>.</p></li>
-<li><p><a class="reference external" href="https://miro.com/">Miro</a> is an easy to use, intuitive, collobration tool that uses little effort to setup quickly. Other option includes <a class="reference external" href="https://coggle.it/">Coggle</a>.</p></li>
+<li><p><strong>Learn with curiosity</strong>: Learning is often about following the rules, but this can limit your mind. When you are curious, you have a spirit of exploration that can lead to creative solutions. Curiosity leads to questions, which lead to experiments and discovery.</p></li>
+<li><p><strong>Strive for simplicity</strong>: This includes the use of simple software design to ensure the user is able to understand it with ease. The engineer should also create documentation that is clear and concise. Simplicity is key in developing software that has a low bug rate as well as being easy to update.</p></li>
+<li><p><strong>Articulate your mental model</strong>: A software engineer’s mental model is their internal representation of the system being developed. It is the most important part of their job. They should be able to articulate this mental model to other developers in order for them to be able to understand what needs to be done, as well as what has been done and why it was done that way.</p></li>
+<li><p><strong>Teach with compassion</strong>: It is essential that software engineers are willing to teach their team members who may not know as much about the given task. Not only will this ensure the success of the project, but it will also provide a better work environment for all.</p></li>
+<li><p><strong>Ship fast, sustainably</strong>: Software developers often focus on the idea of “shipping” a product. But that’s not the end goal. The goal is to have sustainable software engineering practices. This means shipping software in small iterations, and ensuring that the team has a good work-life balance because nobody can be productive if they’re exhausted or burnt out.</p></li>
+<li><p><strong>Fix problems, even when they’re not yours</strong>: Ther is an epidemic of engineers who feel the responsibility for their own code but not the code that they don’t touch. This leads to uncoordinated, confusing and unmaintainable code. It is important for developers to take responsibility for the whole codebase and not just their own piece of it.</p></li>
+<li><p><strong>Communicate early and often</strong>: Communication is one of the most important skills in any team, and software development teams are no exception. From simple voice conversations to a more complicated Google chat discussion, it is essential that all members understand what is going on at any given moment. Without good communication, chaos can ensue and deadlines can be missed.</p></li>
+<li><p><strong>Company (i.e. Client) over team over individual</strong>: The software development team should prioritize the client’s requirements over the team’s ambitions and individual’s professional progress. It is easy to get distracted with new “shiny” software and frameworks. However, when the client’s needs are not a priority, this can lead to poor code quality and even missed deadlines.</p></li>
+<li><p><strong>Outcome over effort (Don’t reinvent the wheel)</strong>:  Most of the code required to process data, define a model and  the given model is available online. There is no need to write everything from scratch.</p></li>
 </ul>
-</section>
-<section id="code-versioning">
-<h2>Code versioning<a class="headerlink" href="#code-versioning" title="Permalink to this headline">#</a></h2>
-<p>Jupyter notebooks (.ipynb) are powerful, but also have many limitations. For example, it is impractical to use pure git for versioning Jupyter notebooks (because of large amounts of embedded and frequently changing HTML). Jupyter notebooks are also unsuitable for deployment or production. Naming and renaming files or folders with comments are also undesirable and difficult to keep track of.</p>
-<p>Instead, using <a class="reference external" href="https://git-scm.com/">git</a> for distributed version control and tracking changes helps coordinate work among team members. Developing code in Python script (.py) is highly preferred and using <a class="reference external" href="https://about.gitlab.com/">GitLab</a> or <a class="reference external" href="https://github.com/">GitHub</a> to manage your code online with an advanced interface to resolve merged conflict that occurs frequently for asynchronous work.</p>
-<p>Merge conflicts occur when the source and target branches of a merge request (as termed by GitLab) or pull request (as termed  by GitHub) contain different changes or commits. As mentioned, this is especially common during collaboration when more than two engineers are contributing to the code. In this case, engineers must choose which change to accept. Once the changes are made, you can assign reviewer to inspect the changes which ensure the correctness of the merge and prevent breaking the code. Examples of the occurrence of and tools to handle conflicts are linked here for both <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">GitHub</a> and <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/conflicts.html#:~:text=Merge%20conflicts%20happen%20when%20the,GitLab%20can%20merge%20changes%20together.">GitLab</a>.</p>
-<p>Keeping a standardised environment for development keeps Python package dependencies consistent, and together with git, allows different members to easily switch between different machines such as local machines or machines in the cloud. One popular option that manages the environment is <a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a> (environment.yml)</p>
-<p>More in-depth information on setting up a machine learning project repository can be found <a class="reference external" href="https://aisingapore.github.io/handbook-staging/book/3-collab-dev-platforms/repo-structure-setup.html">here</a>.</p>
-</section>
-<section id="model-weight-data-versioning">
-<h2>Model/weight/data versioning<a class="headerlink" href="#model-weight-data-versioning" title="Permalink to this headline">#</a></h2>
-<p>Shared storage such as cloud storage ensures the team is assessing the correct dataset and having access to a shared transformed dataset cuts down data preprocessing/transformation time allowing the engineer to focus on modeling. Also, weights and datasets should not be pushed to the version control system, as the repository size might become too large for the local machine.</p>
-<p>Having a system to keep track of the trained model and the corresponding dataset early on will prove to be fruitful, as more experiments will make it difficult to trace back. One good practice will be to save the checkpoints and the models together and keep track of the corresponding dataset used for the training. Recommended tools include <a class="reference external" href="https://mlflow.org/">MLflow</a> and <a class="reference external" href="https://wandb.ai/site">Weights &amp; Biases</a> for tracking experiments and versioning models. <a class="reference external" href="https://dvc.org/">DVC</a> and <a class="reference external" href="https://neptune.ai/">neptune.ai</a> are tools to consider for data version control. Even a simple shared spreadsheet keeping track of model/weights/dataset versioning will pay off eventually.</p>
-<p>It is also possible to set up a cloud-based compute/development environment where all collaborators can share the same environment and tools (VScode, Jupyter Lab) and shared storage. Some of the examples are Amazon EC2 Instance Types, Data Science Virtual Machine and Google Compute Engine.</p>
+<p>Reference(s):</p>
+<ul class="simple">
+<li><p>You can find more engineering values and principles in <a class="reference external" href="https://github.com/mgreiler/awesome-engineering-values">this GitHub Repo</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -656,7 +642,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/3-collab-dev-platforms"
+            path: "./book/2-proj-mgmt-tech-lead"
         },
         predefinedOutput: true
     }
@@ -674,13 +660,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">3. Collaborative Development Platforms</p>
+            <p class="prev-next-title">2. Project Management &amp; Technical Leadership</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="repo-structure-setup.html" title="next page">
+    <a class='right-next' id="next-link" href="translate-technical-jargon.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?</p>
+        <p class="prev-next-title">How might we simplify and translate technical jargon for a non-technical audience?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

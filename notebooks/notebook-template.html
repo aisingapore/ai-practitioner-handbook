@@ -147,6 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
      What are the factors/considerations/criteria to consider that will reduce potential technical debt?
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../book/1-pre-project-phase/ai_readiness_assessment.html">
+     What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness?
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -159,6 +164,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../book/2-proj-mgmt-tech-lead/principles.html">
+     What kind of engineering principles can I set for my development team?
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../book/2-proj-mgmt-tech-lead/translate-technical-jargon.html">
      How might we simplify and translate technical jargon for a non-technical audience?
@@ -237,12 +247,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../book/5-data-mgmt-exp-proc/e2e-workflow.html">
-     What are the Processes Involved in Building a Basic End-to-End Workflow?
+     What are the processes involved in building a basic end-to-end workflow?
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../book/5-data-mgmt-exp-proc/e2e-workflow-adv.html">
-     How do I Enhance the Workflow with Quality-of-Life Improvements for My End-to-End Workflow?
+     How do I enhance the workflow with quality-of-life improvements for my end-to-end workflow?
     </a>
    </li>
    <li class="toctree-l2">
@@ -301,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../book/7-solution-delivery/min-viable-code.html">
-     How Can We Build a Minimum Viable Code/Configuration for CI/CD Automation Into an Existing Codebase?
+     How can we build a minimum viable code/configuration for CI/CD automation into an existing codebase?
     </a>
    </li>
   </ul>
@@ -658,29 +668,29 @@ title="Print to PDF"
 <p>Code blocks, figures and tables do not need to be numbered or captioned. These appear after first mention in main text. For example, refer to the code and plot below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+import numpy as np
+plt.ion()
 
-<span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
+# Fixing random state for reproducibility
+np.random.seed(19680801)
 
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
+N = 10
+data = [np.logspace(0, 1, 100) + np.random.randn(100) + ii for ii in range(N)]
+data = np.array(data).T
+cmap = plt.cm.coolwarm
+rcParams[&#39;axes.prop_cycle&#39;] = cycler(color=cmap(np.linspace(0, 1, N)))
 
 
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
+from matplotlib.lines import Line2D
+custom_lines = [Line2D([0], [0], color=cmap(0.), lw=4),
+                Line2D([0], [0], color=cmap(.5), lw=4),
+                Line2D([0], [0], color=cmap(1.), lw=4)]
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
+fig, ax = plt.subplots(figsize=(10, 5))
+lines = ax.plot(data)
+ax.legend(custom_lines, [&#39;Cold&#39;, &#39;Medium&#39;, &#39;Hot&#39;]);
 </pre></div>
 </div>
 </div>
