@@ -1,4 +1,4 @@
-# How can we better evaluate Time-Series classification models?
+# How can we better evaluate time-series classification models?
 
 Contributor(s): Andy Ong, AI Engineer
 
