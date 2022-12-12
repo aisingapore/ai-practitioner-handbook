@@ -2,6 +2,8 @@
 
 Contributor(s): Siavash Sakhavi, Senior AI Engineer, Co-written with https://rytr.me/
 
+---
+
 Principles and values are two important concepts that should be set for any software team. All teams should set certain principles and values for themselves in order to be productive, successful, and happy. These two concepts are what will help guide your projects and keep everyone on the same page.
 
 ## What are the differences between principles and values?

@@ -2,6 +2,8 @@
 
 Contributor(s): Er YuYang, Senior AI Engineer
 
+---
+
 This guide assumes that you have a fair understanding of the business value of the AI/ML project, and have an appreciation of the implementation difficulty of the evaluation metrics. Internal considerations refer to those concerning the development team, while external considerations refer to those concerning business users/stakeholders.
 
 ### 1. Understanding the problem space
