@@ -2,6 +2,8 @@
 
 Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 
+---
+
 ## Use of existing project templates
 
 Prior to setting up a repository, you would want to plan the structure of your code base. If your organisation provides an existing template for machine learning projects, that would be a good place to start. Otherwise, you may want to consider using one of the many open-source frameworks available, which come with boilerplate code for the various components in a typical ML project. The scaffolding provided by such frameworks would not only save you some effort in setting up the project, but also help to establish a standard for developers to create modular and maintainable code.

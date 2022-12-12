@@ -2,6 +2,8 @@
 
 Contributor(s): Syakyr Surani, Platforms Engineer & Ryzal Kamis, Assistant Head (MLOps)
 
+---
+
 This guide assumes that you know basic data engineering and ML/DL 
 modelling, and you want to start to build a workflow so that you have
 a working AI-powered product at the end of the project. 

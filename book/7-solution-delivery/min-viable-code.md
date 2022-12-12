@@ -2,6 +2,8 @@
 
 Contributor(s): Syakyr Surani, Platforms Engineer
 
+---
+
 This guide assumes that you have some basic knowledge of [CI/CD][CICD] 
 and an existing codebase. The codebase is in a working state and while 
 currently you find it manageable, you anticipate that you need to move
