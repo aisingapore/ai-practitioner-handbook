@@ -2,6 +2,8 @@
 
 Contributor: Er YuYang, Senior AI Engineer
 
+---
+
 The purpose of this article is to have a guide to performing exploratory analysis (EDA) in a more systematic manner. This guide is designed for a generic EDA purpose and primarily focuses on tabular data. However, parts of this workflow are still applicable for unstructured data types.
 
 ## Overview

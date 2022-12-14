@@ -2,6 +2,8 @@
 
 Contributor(s): Dylan Poh Guan Kiong, AI Engineer [(GitHub)](https://unicorndy.github.io/Dylan_Poh/)
 
+---
+
 With the increasing complexity of machine learning projects, it is highly likely that a team of developers is required to complete the task. As a result, it is critical to have the ability to collaborate efficiently. 
 
 Fundamentally, there are two ways that teams collaborate.  

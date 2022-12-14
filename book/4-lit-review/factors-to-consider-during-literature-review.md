@@ -2,6 +2,8 @@
 
 Contributor(s): Andy Ong, AI Engineer
 
+---
+
 Literature reviews are necessary at the start of every AI project to understand and explore available solutions in the market. Business problems require different solutions, and below are some factors that you can consider while performing your literature review. 
 
 -	Business needs

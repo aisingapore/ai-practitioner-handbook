@@ -2,6 +2,8 @@
 
 Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 
+---
+
 ## General
 1. Where would the final solution be deployed? 
     - Options may include a cloud service, an on-premise server, or an edge device. If the specifications are fixed, the client should provide them as soon as possible in order for the team to assess whether they are sufficient for the AI solution to operate on.

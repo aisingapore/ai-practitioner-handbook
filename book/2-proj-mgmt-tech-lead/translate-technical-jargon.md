@@ -1,6 +1,8 @@
 # How might we simplify and translate technical jargon for a non-technical audience?
 Contributor: Shafir Ahmad, Senior AI Technical Consultant
 
+---
+
 Communicating with people who are not actively involved in your project can present a challenge. Technical staff such as engineers and developers find it difficult to communicate complex technical concepts to clients, senior management and customers alike. It might even look like you are speaking different languages.
 
 The fact is that many of these stakeholders you communicate with will understand the big picture and high level concepts, but not the intricate engineering details. It is better to keep these details for a more technically inclined audience. 

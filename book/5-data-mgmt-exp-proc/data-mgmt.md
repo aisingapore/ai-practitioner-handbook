@@ -2,6 +2,8 @@
 
 Contributor(s): Syakyr Surani, Platforms Engineer
 
+---
+
 There are many data storage options that one can implement for their
 project, but to choose one (or several) of these options can be 
 confusing to some. This guide hopes to give you some guidance in 
