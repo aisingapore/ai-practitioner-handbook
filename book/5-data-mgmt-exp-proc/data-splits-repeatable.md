@@ -47,3 +47,6 @@ Examples of applicable data splits are:
 1. Select cutoff datetimes for data split, e.g. data before 2022-12-15 00:00:00.000000 to be in the training set, data after 2022-12-15 00:00:00.000000 to be in the validation set, etc.
 2. Selecting the first 10 months of every year to be in the training set, 11th month to be in the validation set, and the 12th month to be in the test set.
 3. Selecting the first 20 days of every month to be in the training set, the next 5 days to be in the validation set, and the last 5 days to be in the test set.
+
+## References
+- [Machine Learning Design Patterns: Solutions to Common Challenges in Data Preparation, Model Building, and MLOps](https://www.oreilly.com/library/view/machine-learning-design/9781098115777/)
