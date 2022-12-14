@@ -88,4 +88,4 @@ d1) $\frac{1}{1 + 3 + 0 + 1} = \frac{1}{5}$
 d2) $\frac{1}{1 + 3 + 0 + 1} = \frac{1}{5}$
 
 ## References
-[blog](https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/)
+[Named-Entity evaluation metrics based on entity-level](https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/)
