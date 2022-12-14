@@ -1,49 +1,43 @@
-# What are some questions that an AI engineer can ask the project sponsor to assess their AI capabilities?
+# What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness?
 Contributor: Joy Lin, Senior AI Technical Consultant
-
+ 
 ---
 
 ## Who is this for?
-Are you:
-- an AI engineer in a solution provider organisation building a solution for another organisation?
-- or an in-house AI engineer in an organisation building a solution for another business unit?
+This article is aimed at AI engineers in an organisation like AI Singapore, who are building a solution for another company (henceforth referred to as the client) to take over and implement. In AI Singapore, the business development/presales team, together with the AI engineer, scope for feasible AI projects. In doing so, they assess whether the client has the capability to take over the final solution, integrate and maintain it, as the goal is to enable companies to build their own AI capabilities in the long run. Assuming that the client's proposed AI solution has an established business value and is ethical, this article narrows the focus to the technical aspects of AI readiness.
 
-If you answer "Yes" above, read on to find out how you can assess the AI readiness level of the organisation or unit, henceforth referred to as "PS" (i.e. project sponsor).
-
-In an organisation, the business development/presales team usually scope for feasible AI projects, while assessing the PS's capabilities to ensure smooth handover of the final AI solution.
-
-## Why does AI engineer need to assess project sponsor's AI capabilities?
-Although prior to the development work by the AI engineer, it is best for you to gauge if the PS is capable of taking over your solution for deployment. Most AI projects end up in failures during deployment phase due to three main reasons:
+## Why does AI engineer need to assess client's AI capabilities?
+When participating in pre-project scoping, it is beneficial for you to gauge if the client is capable of taking over your solution for deployment. Most AI projects end up in failures during deployment phase due to three main reasons:
 
 1. Technical hurdles in implementing/integrating model into existing operations
 2. Decision makers unwilling to approve change to existing operations
 3. Model performance not considered strong enough by decision makers
 
 ## What can the AI engineer look out for?
-To ensure a successful project, let us focus on three broad areas to help you assess the PS's AI readiness level. 
+To ensure a successful project, let us focus on three broad areas to help you assess the client's AI readiness level. 
 
 ### 1. Organisational readiness
-> Are there competent AI engineers to develop, integrate, and maintain the AI models? 
+> Is there an existing technical team who is able to integrate and maintain the AI models? If not, what are the client's plans to hire the necessary resources?
 
-> Is the management supportive of AI projects and team expansion if necessary?
+> Is the client's management supportive of AI projects and team expansion if necessary?
 
-> Do the management and key stakeholders allow room for experimentation and development?
+> Do the client's management and key stakeholders allow room for experimentation and development?
 
-As an organisation looking to use AI solutions, PS's management should understand that model building and maintenance requires iterative experimentation and continuous re-training, in turn supporting the investment of right talents.
+As an organisation looking to use AI solutions, the client's management should understand that model building and maintenance requires iterative experimentation and continuous re-training, in turn supporting the investment of right resources.
 
 ### 2. Infrastructure readiness
-> Is there appropriate infrastructure to hold data in a centralised place (e.g. data lake)?
+> Is there appropriate infrastructure to hold data in a centralised and standardised manner (e.g. data warehouse), or is the client relying on disparate file systems?
 
-> Are there sufficient computational resources (e.g. CPUs/GPUs, memory) to support model development, deployment, maintenance for this project? If no, are there plans to acquire more / re-allocate resources?
+> Are there sufficient computational resources (e.g. CPUs, GPUs, memory) to support model deployment and maintenance for this project? If not, are there plans to acquire more or re-allocate resources?
 
-Preparing for such changes strengthens the PS's infrastructure capabilities, easing their transition into the deployment/integration stages with minimal disruption to their existing activities.
+Preparing for the above strengthens the client's infrastructure capabilities, easing their transition from deployment to integration with minimal disruption to their existing activities.
 
 ### 3. Data readiness
 > Does the centralised data warehouse provide consistent data format, up-to-date metadata and a single source of truth?
 
 > Is there accurate and complete data to be used in this project?
 
-It is important for PS to provide high quality and consistent data that can be used for re-training when model drifts over time.
+It is important for the client to maintain high quality and consistent data that can be used for re-training when model drifts over time.
 
 Note: Click [here](key_areas_in_data.md) to read about data readiness on a *project* level.
 
