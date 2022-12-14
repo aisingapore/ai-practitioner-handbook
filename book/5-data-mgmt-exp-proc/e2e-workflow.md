@@ -1,6 +1,8 @@
-# What are the processes involved in building a basic end-to-end Workflow?
+# What are the processes involved in building a basic end-to-end workflow?
 
 Contributor(s): Syakyr Surani, Platforms Engineer & Ryzal Kamis, Assistant Head (MLOps)
+
+---
 
 This guide assumes that you know basic data engineering and ML/DL 
 modelling, and you want to start to build a workflow so that you have

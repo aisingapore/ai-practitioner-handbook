@@ -2,6 +2,8 @@
 
 Contributor(s): Er YuYang, Senior AI Engineer
 
+---
+
 This guide assumes that you have a fair understanding of the business value of the AI/ML project, and have an appreciation of the implementation difficulty of the evaluation metrics. Internal considerations refer to those concerning the development team, while external considerations refer to those concerning business users/stakeholders.
 
 ### 1. Understanding the problem space
@@ -13,7 +15,7 @@ Understanding how the AI/ML solves the problem statement helps to identify the c
 There is often a trade-off between ML and non-ML metrics. For instance, a more complex model can return better ML metrics, but can also come with longer training and inference times (non-ML metrics). As such, developers and business users are faced with a choice as to which metrics to prioritise based on the business value of the AI solution.
 
 #### Technical ability of stakeholders
-
+   
 It is important to understand the level of technical ability possessed by eventual end-users and/or maintainers of the AI/ML solution. This understanding can help identify metrics that these stakeholders are *comfortable* with.
 
 Comfortable metrics are important for for ease of communicating with the stakeholders. Importantly, they allow future technical teams to understand and improve the AI/ML model in later stages of its life cycle.
@@ -34,7 +36,7 @@ In theory, optimising metrics should be maximised as much as possible. In practi
 - Training time
 - Memory/storage usage (particularly applicable for edge deployment)
 
-It is not practical or cost-efficient to increase optimising metrics by a minuscule percentage while make disproportionate trade-offs on satisficing metrics. For example, increasing model accuracy by 0.0001 may required significantly longer and more expensive computation time. Deployment considerations (eg. size of model, runtime) may also come into play here.
+It is not practical or cost-efficient to increase optimising metrics by a minuscule percentage while making disproportionate trade-offs on satisficing metrics. For example, increasing model accuracy by 0.0001 may required significantly longer and more expensive computation time. Deployment considerations (eg. size of model, runtime) may also come into play here.
 
 ### 4. Combining optimising and satisficing metrics
 

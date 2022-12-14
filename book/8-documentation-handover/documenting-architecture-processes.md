@@ -2,6 +2,8 @@
 
 Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 
+---
+
 In machine learning projects, documentation should be treated like a growing entity that is maintained the way we maintain code. At the same time, we do not want to spend excessive effort documenting details that may rapidly change over the course of the project. In the systems and software engineering fields, modelling languages such as UML are used to document system architecture and processes. Although they will not be discussed here, the concepts from these modelling languages can be adopted to suit the documentation requirements of your project. 
 
 ## Use simple visuals 

@@ -45,6 +45,3 @@ Note: Click [here](key_areas_in_data.md) to read about data readiness on a *proj
 More details available below to help in your assessment:
 1. [AI Readiness Index (AIRI)](https://aisingapore.org/innovation/airi/) developed by AI Singapore and increasingly used by organisations in Singapore
 2. [Oxford’s Government AI readiness index](https://www.oxfordinsights.com/government-ai-readiness-index2021)
-
-## References
-- [Models Are Rarely Deployed: An Industry-wide Failure in Machine Learning Leadership](https://www.kdnuggets.com/2022/01/models-rarely-deployed-industrywide-failure-machine-learning-leadership.html)
