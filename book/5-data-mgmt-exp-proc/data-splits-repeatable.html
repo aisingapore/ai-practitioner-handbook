@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers? &#8212; AI Practitioner Handbook</title>
+    <title>How do we make data splits repeatable? &#8212; AI Practitioner Handbook</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Literature Review" href="../4-lit-review/overview.html" />
-    <link rel="prev" title="What are the platforms and their respective considerations required for collaborative ML development?" href="collaborative_ml.html" />
+    <link rel="next" title="What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?" href="data-splits-bias-fairness-leakage.html" />
+    <link rel="prev" title="What are the various data split strategies?" href="data-splits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -183,23 +183,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
    3. Collaborative Development Platforms
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="collaborative_ml.html">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
      What are the platforms and their respective considerations required for collaborative ML development?
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
      What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?
     </a>
    </li>
@@ -222,53 +222,53 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    5. Data Management, Exploration &amp; Processing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+    <a class="reference internal" href="data-mgmt.html">
      Which data storage options are suitable for the project?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/eda-generic.html">
+    <a class="reference internal" href="eda-generic.html">
      Is there a core structure for performing exploratory data analysis in a systematic way?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits.html">
+    <a class="reference internal" href="data-splits.html">
      What are the various data split strategies?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-repeatable.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      How do we make data splits repeatable?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
+    <a class="reference internal" href="data-splits-bias-fairness-leakage.html">
      What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+    <a class="reference internal" href="e2e-workflow.html">
      What are the processes involved in building a basic end-to-end workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+    <a class="reference internal" href="e2e-workflow-adv.html">
      How do I enhance the workflow with quality-of-life improvements for my end-to-end workflow?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-poisoning-data-extraction.html">
+    <a class="reference internal" href="data-poisoning-data-extraction.html">
      How can I reduce the risks of data poisoning and data extraction?
     </a>
    </li>
@@ -482,7 +482,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/3-collab-dev-platforms/repo-structure-setup.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/data-splits-repeatable.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -510,7 +510,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/3-collab-dev-platforms/repo-structure-setup.md"
+        <a href="../../_sources/book/5-data-mgmt-exp-proc/data-splits-repeatable.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -570,28 +570,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-of-existing-project-templates">
-   Use of existing project templates
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuration-management">
-   Configuration management
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-file-management">
-   General file management
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dependency-management">
-   Dependency management
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#developer-productivity-tools">
-   Developer productivity tools
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -603,7 +583,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?</h1>
+                <h1>How do we make data splits repeatable?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -614,28 +594,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-of-existing-project-templates">
-   Use of existing project templates
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configuration-management">
-   Configuration management
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-file-management">
-   General file management
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dependency-management">
-   Dependency management
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#developer-productivity-tools">
-   Developer productivity tools
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -648,36 +608,73 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-considerations-in-setting-up-a-project-repository-to-facilitate-collaboration-and-establish-good-coding-practices-among-developers">
-<h1>What are some considerations in setting up a project repository to facilitate collaboration and establish good coding practices among developers?<a class="headerlink" href="#what-are-some-considerations-in-setting-up-a-project-repository-to-facilitate-collaboration-and-establish-good-coding-practices-among-developers" title="Permalink to this headline">#</a></h1>
-<p>Contributor(s): Siti Nuruljannah Baharudin, AI Engineer</p>
-<hr class="docutils" />
-<section id="use-of-existing-project-templates">
-<h2>Use of existing project templates<a class="headerlink" href="#use-of-existing-project-templates" title="Permalink to this headline">#</a></h2>
-<p>Prior to setting up a repository, you would want to plan the structure of your code base. If your organisation provides an existing template for machine learning projects, that would be a good place to start. Otherwise, you may want to consider using one of the many open-source frameworks available, which come with boilerplate code for the various components in a typical ML project. The scaffolding provided by such frameworks would not only save you some effort in setting up the project, but also help to establish a standard for developers to create modular and maintainable code.</p>
-</section>
-<section id="configuration-management">
-<h2>Configuration management<a class="headerlink" href="#configuration-management" title="Permalink to this headline">#</a></h2>
-<p>Regardless of the framework or template used, management of configuration files is an important area of consideration in any ML project, since ML pipelines designed to be flexible and extensible would rely heavily on configuration files as inputs. You are recommended to keep all configuration files in a single directory, separate from the source code files. It is also good practice to maintain separate configuration files for each environment developers work in. For instance, configuration files for the local development environment could be placed in a subdirectory <code class="docutils literal notranslate"><span class="pre">/config/local</span></code>, files for the test server environment in <code class="docutils literal notranslate"><span class="pre">/config/test</span></code>, and so on.</p>
-</section>
-<section id="general-file-management">
-<h2>General file management<a class="headerlink" href="#general-file-management" title="Permalink to this headline">#</a></h2>
-<p>In a Git repository, a <a class="reference external" href="https://git-scm.com/docs/gitignore">.gitignore</a> file is crucial in helping you filter out files and directories that should not be pushed to the repository, such as configuration files for a developer’s local environment, which would likely contain settings unique to the individual’s workspace. Other examples of files that should not end up in the repository are authentication keys, data files, log files and trained model weights.</p>
-<p>Typically, individual developers would create their own notebooks containing EDA-related code or prototype code for the models being explored. Although these may end up as throwaway code, they serve the useful purpose of knowledge sharing at the beginning of a project. It is recommended that these files are placed in a <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> subdirectory and pushed to the repository within each developer’s personal branch, which do not need to be merged to the main branch.</p>
-</section>
-<section id="dependency-management">
-<h2>Dependency management<a class="headerlink" href="#dependency-management" title="Permalink to this headline">#</a></h2>
-<p>Another area to consider is the management of code dependencies. At the start of a new project, initialising a single set of initial dependencies would suffice. In a Python project, this could mean maintaining a single <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file. As the code increases in complexity, or if separate components of the application are to be deployed in different environments, it is common for conflicting dependencies to occur. In this case, developers would need to maintain multiple sets of dependencies. These dependency files could be named with suffixes indicating the environment or module it is for, e.g. <code class="docutils literal notranslate"><span class="pre">requirements-train.txt</span></code>.</p>
-</section>
-<section id="developer-productivity-tools">
-<h2>Developer productivity tools<a class="headerlink" href="#developer-productivity-tools" title="Permalink to this headline">#</a></h2>
-<p>Besides software-related components, your repository may contain other files such as issue templates and hook scripts. Issue templates are used to pre-fill issue descriptions with custom fields or sections, which guides developers to include all necessary information when creating an issue. For instance, an issue template for a bug could include sections like “Steps to reproduce”, “Expected result” and “Actual result”.</p>
-<p>In a Git repository, <a class="reference external" href="https://githooks.com/">hooks</a> are scripts that Git executes locally before or after events such as commit and push. For example, you could set up a pre-commit script to run code through a linter, ensuring it meets the standards before it is allowed to be committed. With the numerous hook scripts and frameworks available, hooks do not require a lot of effort to set up, yet can greatly increase developer productivity when used appropriately.</p>
-<p><strong>Reference(s):</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-do-we-make-data-splits-repeatable">
+<h1>How do we make data splits repeatable?<a class="headerlink" href="#how-do-we-make-data-splits-repeatable" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)</p>
+<p>It is common for ML beginners to adopt naive random data splitting. In this approach, you may randomly select 80%, 10%, 10% of the data for your training, validation and testing data each time you run the algorithm. However, naive random data splitting is often not repeatable. While you may be able to fix random seeds to ensure some repeatability in data splitting on your machine, this repeatability is not guaranteed when the dataset has changed, or when your colleagues run the same data split algorithm on a different machine.</p>
+<p>Having a repeatable train test split ensures that your experiments are reproducible not just by yourself, but by others.</p>
+<p><em>Model reproducibility is discussed in detail later in the section <a class="reference internal" href="../6-modelling/model-reproducibility.html"><span class="doc std std-doc">How can I maximise model reproducibility</span></a>.</em></p>
+<p>One approach to ensure the data splits are repeatable is to hash a selected set of column/columns and hash it. You can then make use of the hash to split your data. This hash value will always be the same every time you run the algorithm.</p>
+<p><em>Hashing is a one way transformation of any given string or key into a hash value, which is often an output of a fixed length. A hash function is always deterministic, and the same input will always generate the same output. Since it is a one way transformation, you are not able to retrieve the original string or key from the hash value.</em></p>
+<p>Columns that are candidates for hashing should:</p>
+<ol class="simple">
+<li><p>Not be features or labels that are used for training</p></li>
+<li><p>Not be correlated to label</p></li>
+<li><p>Be granular enough</p></li>
+</ol>
+<p>Features and labels should not be used for hashing, as doing so may inadvertently introduce bias into the data splits. This is because data with certain features or labels may appear more in some data splits, and less in the other data splits. Columns selected for hashing should also be granular enough, hence columns such as year should not be selected.</p>
+<p>Examples of columns that could be used are ID columns. Alternatively, you can concatenate all columns as a string and hash on that.</p>
+<p>Once the column/columns are hashed, a simple approach for performing train-test split will be as follows. As an example, if you want 80% of your dataset to be allocated into the training set, 10% to the validation set and 10% to the test set, you can apply the modulo operator to the hashed value. Data points with remainders of less than 8 can be assigned to the training set. Those with remainders of 8 can be assigned to the validation set and those with remainders of 9 can be assigned to the test set.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Store</p></th>
+<th class="head"><p>Hash(Date,Store) % 10</p></th>
+<th class="head"><p>Data Split</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10 November 2022</p></td>
+<td><p>ABC</p></td>
+<td><p>6</p></td>
+<td><p>Train</p></td>
+</tr>
+<tr class="row-odd"><td><p>10 November 2022</p></td>
+<td><p>XYZ</p></td>
+<td><p>8</p></td>
+<td><p>Validation</p></td>
+</tr>
+<tr class="row-even"><td><p>11 November 2022</p></td>
+<td><p>ABC</p></td>
+<td><p>3</p></td>
+<td><p>Train</p></td>
+</tr>
+<tr class="row-odd"><td><p>12 November 2022</p></td>
+<td><p>DEF</p></td>
+<td><p>1</p></td>
+<td><p>Train</p></td>
+</tr>
+</tbody>
+</table>
+<p>To do this in python, an example will be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;10november2022abc&quot;</span>
+<span class="n">hashed_value</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">remainder</span> <span class="o">=</span> <span class="n">hashed_value</span> <span class="o">%</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>If there is a combination of columns that determine if 2 data points are correlated, and you want these data points to be grouped together in the same split, you can concatenate these columns together in a string and hash it.</p>
+<p>Repeatable data splitting is not just limited to the above mentioned method. The key thing is to ensure the repeatability of the splitting process by any users on any machines.</p>
+<p>For time series problems, you may want to adopt temporal data splits. You can adopt various data splitting approaches as long as you version control the data split logic to ensure its reproducibility.</p>
+<p>Examples of applicable data splits are:</p>
+<ol class="simple">
+<li><p>Select cutoff datetimes for data split, e.g. data before 2022-12-15 00:00:00.000000 to be in the training set, data after 2022-12-15 00:00:00.000000 to be in the validation set, etc.</p></li>
+<li><p>Selecting the first 10 months of every year to be in the training set, 11th month to be in the validation set, and the 12th month to be in the test set.</p></li>
+<li><p>Selecting the first 20 days of every month to be in the training set, the next 5 days to be in the validation set, and the last 5 days to be in the test set.</p></li>
+</ol>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/aisingapore/ml-project-cookiecutter-gcp">AI Singapore’s Cookiecutter Template for End-to-end ML Projects</a></p></li>
-<li><p><a class="reference external" href="https://github.com/kedro-org/kedro">Kedro</a> - A Python framework for creating reproducible, maintainable and modular data science code</p></li>
-<li><p><a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches">Git Branch tutorial</a></p></li>
+<li><p><a class="reference external" href="https://www.oreilly.com/library/view/machine-learning-design/9781098115777/">Machine Learning Design Patterns: Solutions to Common Challenges in Data Preparation, Model Building, and MLOps</a></p></li>
 </ul>
 </section>
 </section>
@@ -695,7 +692,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/3-collab-dev-platforms"
+            path: "./book/5-data-mgmt-exp-proc"
         },
         predefinedOutput: true
     }
@@ -709,17 +706,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="collaborative_ml.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="data-splits.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">What are the platforms and their respective considerations required for collaborative ML development?</p>
+            <p class="prev-next-title">What are the various data split strategies?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../4-lit-review/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="data-splits-bias-fairness-leakage.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. Literature Review</p>
+        <p class="prev-next-title">What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
