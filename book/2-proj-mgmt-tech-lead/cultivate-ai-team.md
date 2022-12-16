@@ -1,7 +1,7 @@
 # How can I cultivate an effective and cohesive AI development team?  
 Contributor: Kenny WI Chua, Senior AI Engineer
 
----
+---  
 
 ## Introduction  
 Engineers in charge of a development team take on the role of a technical lead. This entails a set of responsibilities that are distinct from those of an individual contributor. Engineers, especially those who are inexperienced with leadership responsibilities, may face challenges in rallying their team.
