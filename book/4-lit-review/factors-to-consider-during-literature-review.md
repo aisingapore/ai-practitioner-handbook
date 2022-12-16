@@ -1,41 +1,41 @@
-# What are some of the factors/questions that an AI Engineer should consider during literature review?
+# What are some of the factors that an AI Engineer should consider during literature review?
 
 Contributor(s): Andy Ong, AI Engineer
 
-Literature reviews are necessary at the start of every AI project to understand and explore available solutions in the market. Different business problems require different solutions, and below are some factors that you can consider while performing your literature review. 
+---
+
+Literature reviews are necessary at the start of every AI project to understand and explore available solutions in the market. Business problems require different solutions, and below are some factors that you can consider while performing your literature review. 
 
 -	Business needs
 -	Development time
--	Code Existence & Readability
--	Open-Sourcing of a pre-trained model
--	Key takeaways from the literature
+-	Existing code respositories
+-	Pre-trained models
+-	Reported results
 
 
-## Business Needs
+## Business needs
 
-Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medically related project requires model explainability and this will require a search for solutions that has model explainability.
+Business considerations must be taken into account during any literature review. These considerations tend to set restrictions on the project. Understanding these considerations can ensure that you are researching relevant solutions. For example, a medical AI project requires model explainability, and this will require a search for solutions involving explainable models. Alternatively, if the use case requires edge deployment in mobile devices, this would instead direct the selection of literature toward those that support smaller and quicker models.
 
-The literature should cover a use case that is in a similar domain to your project. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can understand the various approaches and their benefits, and how should you integrate them into your MVM.
+The literature search should not be limited to your project's domain. An example is using autoencoders for anomaly detection even though they are typically used for computer vision. Such literature can introduce different approaches and highlight possible challenges that you might face in your project. You can understand the various approaches and their benefits, and how you can integrate them into your solution.
 
 ## Development time
 
-All projects have a set of timelines to adhere to, and development time may not sufficient to build pipelines from scratch. You will have to allocate time for integration tests, project handover and other ad-hoc tasks such as troubleshooting. You can research and identify potential libraries to aid in your pipeline to avoid building it from scratch. You can also attempt to inherit certain classes from suitable libraries to customise them to your project with minimal code.
+All projects have a set of timelines to adhere to, and development time may not be sufficient to build pipelines from scratch. You will have to allocate time for integration tests, project handover and other ad-hoc tasks such as troubleshooting. You can research and identify potential libraries to aid in your pipeline to avoid building it from scratch. You can also attempt to inherit certain classes from suitable libraries to customise them to your project with minimal code. The following sections are specific examples of strategies that can aid in shortening development time.
 
-## Code Existence & Readability
+## Existing code repositories
 
-You should be reading up on literature that has training or inference scripts in their code repository. These solutions can be incorporated into your MVM with ease as compared to solutions without any scripts. [Papers with code](https://paperswithcode.com/) contains papers with open-sourced code repositories. 
+You should be reading up on literature that include training or inference scripts in their code repository. These solutions can be incorporated into your codebase with ease as compared to solutions without any scripts. [Papers with Code](https://paperswithcode.com/) contains papers with open-sourced code repositories. 
 
-If code repositories are supporting the literature, you should consider the readability of the code provided and assess the ease of integration. More often than not, provided code repositories can be challenging to understand, and integration might take more time than supposed.
+If the literature is supported by code repositories, you should evaluate the readability of the code and complexity of integration. Supplied code repositories can often be difficult to understand, and integration may take longer than anticipated. Additionally, some repositories/implementations may be more comprehensive than others, such as those that contain class weights as configurable hyperparameters or include an evaluation function.
+
+Consider the copyright agreements and licenses for the papers and codes in light of this. It's possible that your project will not be able to use commercial IP software or certain licenses (like the GPL). Examples of permissive licenses with few limitations on use include the MIT and BSD licenses.
+
+## Pre-trained models
+
+For NLP or CV projects, it may be advantageous to search for solutions with pre-trained, open-sourced models. This will cut down on training time by ensuring that you can use transfer learning to such tasks. Long training times are needed for language or computer vision models, which can add time and cost to a project. It is advantageous if the pre-trained model was developed using datasets from a field related to your use case. For instance, if your use case involves evaluating financial accounts, FinBERT, a pre-trained NLP model, may be more immediately applicable than BERT-base.
 
 
-## Open-Sourcing of a pre-trained model
+## Reported results
 
-For projects that involve NLP or CV, it could be beneficial to look for solutions that have its pre-trained model open-sourced. This is to ensure that you can apply transfer learning in such projects, to reduce training time. Language or computer vision models requires extremely long training time, and it could be costly (both time and financially) in a project.
-
-## Key takeaways from the literature
-
-You must never take into account the results published in the paper. They are often inflated, and more importantly, the data used is different. Data is usually the biggest factor contributing to the performance of every model, and since the data between the paper and your project is different, do expect to have a difference in accuracy. You should focus on the algorithms and methods of evaluation used in the literature instead.
-
-# Conclusion
-
-While these factors are non-exhaustive, they can ensure that you are doing a informative yet meaningful literature review.
+The results reported in the study should be interpreted in a discerning manner. Reported results may entail some cherry-picking. More crucially, the data used is likely different from your project's use-case. Consequently, expect to see a difference in accuracy, since data is typically the main element affecting how well any model performs. Rather than focusing on the reported results, you should instead concentrate on the evaluation techniques and algorithms employed in the literature.
