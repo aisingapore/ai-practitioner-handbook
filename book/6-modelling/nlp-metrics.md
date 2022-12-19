@@ -2,6 +2,8 @@
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)
 
+*Currently, this article only covers the NER task, which is an extension of classification in NLP. The evaluation metrics for more NLP tasks will be added in future.*
+
 ## NER
 NER can be thought of as a token level classification problem. Hence, NER models are often tuned using metrics such as F1, precision, recall at a token level during model training. When it comes to evaluating NER models on their downstream tasks’ performance, it may be more beneficial to evaluate NER models at a full named-entity level. There are multiple evaluation schemes for evaluating NER models at a full named-entity level. 
 
