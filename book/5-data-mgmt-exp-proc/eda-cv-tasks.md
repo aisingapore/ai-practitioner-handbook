@@ -19,7 +19,11 @@ The guiding questions are as such:
 
 ### Colour Intensity of Image
 
-The colour intensity of images can be explored by either averaging or  the channel values of each image 
+The colour intensity of images can be explored by either mean or mode of the channel values of each image.  
+
+### Brightness
+
+### Contrast
 
 ### Image Similarity
 1. PCA or ISOMAP per channel can be performed on the images to see how the images are related to each other.
@@ -56,7 +60,7 @@ Masks may also come in the form of PNG files, where the PNG's image size would c
 
 Guiding Questions - 
 1. How many instances of each classes are there?
-1. Bounding Box - what is Width and Height Distribution overall and per class?
+1. Bounding Box - what is width and height distribution overall and per class?
 1. Bounding Box - what is the overall size (W*H) overall and per class?
 1. Bounding Box - What are the top few Width/Height combination? This can be found using clustering methods.
 1. Segmentation - what is distribution of the mask pixel counts overall and per class?
@@ -71,9 +75,9 @@ counts of each annotation with the average values of the red channels separated 
 
 ![title](../assets/images/screenshots/red_channel_average_counts.png)
 
-#### Dominant Intensity per channel    
+#### Mode Intensity per channel    
 
-Besides averaging the intensity per annotation, the highest occurring value of the intensity of the annotation can 
+Besides averaging the intensity per annotation, the highest occurring value (mode) of the intensity of the annotation can 
 also be used to analyse the colour of the annotation.  
 
 ![title](../assets/images/screenshots/red_channel_dominant_counts.png)
