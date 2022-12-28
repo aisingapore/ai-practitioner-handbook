@@ -6,54 +6,42 @@ Contributor(s): Calvin Neo, AI Engineer
 
 This guide assumes a fair understanding of the computer vision-related tasks specifically image classification, object detection, and instance segmentation and their accompanying terms such as bounding boxes (bboxes) and masks. Additionally, it assumes an understanding of classification metrics such as F1 score, precision and recall. 
 
-# Image Classification
+The purpose of this article is to guide AI engineers on key considerations when evaluating metrics for object detection and instance segmentation tasks. For the most part, conventional classification metrics can be used to evaluate image classification tasks. Hence, an understanding of image classification would be useful hre. In this case, refer to the article on Classification metrics.
 
-Conventional classification metrics can be used to evaluate image classification tasks. 
+## Mean Average Precision (mAP)
 
-# Object Detection and Instance Segmentation
+There are many articles on how to calculate mAP available. It is thus instructive to instead discuss considerations when reading mAP.
 
-Generally, object detection and instance segmentation tasks employ the same metrics. 
+In discussing considerations on evaluating mAP, consider the mAP output below:
 
-## Intersection over Union (IOU)
+![mAP example](../assets/images/screenshots/metrics_map.png)
 
-IOU is not a metric. It is a threshold set to be used by other metrics to evaluate the model's performance.  
-When a model makes an inference on an image to identify objects of interest within the image, it would draw a bbox/mask over the object.  
-At the same time, there is also a ground truth (GT) bbox/mask to be compared against the inferred bbox/mask. Usually, these bboxes/masks do overlap but not completely. IOUs are thresholds for whether to accept the level of overlap. For example, if the overlap is 40% (0.4), this would fail the threshold.
+Firstly, it is useful to evaluate the Intersection over Union (IOU) threshold value to understand how "tight" a bbox/mask. A higher IOU threshold value indicates that the model's inference closely overlaps with the ground truth. Generally, the mAP suffers as the IOU threshold value increases. Thus, evaluating how much these values fall would be valuable clues on how much the model can produce good bboxes/masks.
 
-IOU is calculated as such: 
+Using the outputs above, the second row shows that at IOU threshold of 0.50, the mAP is given by 0.743. Similarly, the third row showing IOU=0.75 threshold shows 0.213, a 0.53 fall in value. This shows that the bboxes/masks are not tight enough, and more training may be required. 
 
-$IOU = \frac{\text{Area of Overlap}}{\text{Area of Union}}$  
+Secondly, the objects being detected can be broadly separated to small/medium/large objects based on the bbox/mask size. Here, it is assumed the small/medium/large are area of the bbox/mask, and that area threshold for these sizes are clearly defined (see CV EDA article to guide the size of these annotations). 
 
-![IOU](../assets/images/screenshots/IOU_illustration.png)
+A model generally performs the worst on small objects and gets better as the size increases. Thus, evaluating this is also instructive. Considering the above outputs, the mAP is 0.127/0.349/0.406 on small/medium/large objects. Thus, it would be good to have the model be trained on more small objects in order to potentially improve its performance. 
 
-### Obtaining Positive and Negative from IOU
+## Frames Per Second (FPS)
 
-With the IOU obtained from the model and the GT, the predictions would then be labelled either True/False Positive or False Negative. Note here that True Negative is not considered. The simplest to understand this is that True Negative is saying that the model infer that a particular spot if background and confirmed by the GT, which is not a useful measure of a model's performance. 
+FPS are generally measured by running multiple images through the pipeline and obtaining the amount of time taken to process each image, before converting it to frames per second. The way to do it is: 
 
-The below table illustrates, based on IOU and the class prediction, which each inference falls under.
+$FPS = \frac{1}{\text{Average Time Taken Per Image}}$
 
-| IOU   | Positive                                                                   | Negative                                              |
-|-------|----------------------------------------------------------------------------|-------------------------------------------------------|
-| True  | 1. IOU $\geq$ IOU Threshold  <br>2. Correct Class   <br>3. Not duplicate   | Not applicable                                        |
-| False | 1. IOU < IOU Threshold  <br>2. Duplicate                                   | 1. IOU $\geq$ IOU Threshold  <br>2. Incorrect Class   |
+Here, the AI Engineer would need to consider the following:
 
+Firstly, FPS could calculate only models' inference speed and or the architecture's speed. This is obvious but often overlooked. When delivering the model, the onus is on the AI Engineer to communicate how the FPS was measured. 
 
-## Mean Average Precision and Recall
+Secondly, it is important to consider what affects FPS. The first factor would be model size. A model that is deep, and hence tend to be larger in size, requires a longer processing time. Another factor is image size. Larger image size will take longer for inference. For example, a 416x416 image will be faster than 1080x960 image. While this is obvious, it is also often overlooked by AI Engineers when reading papers that purport higher inference speeds, but downplays the role that smaller images have on inference speed.  
 
-Mean Average Precision (mAP) assumes knowledge in Precision and Recall. mAP averages the average of the Precision of the model at each class.
+# Error Analysis 
 
-To illustrate this point, consider the case where IOU threshold is set at 0.5. This means all bboxes with IOU less than 0.5 will be False Positive. Suppose there is an image which has ten instances of a class "A". The model was able to correctly identify 5 of the "A"s while inferring the rest as "B"s (in this case, class does not matter, as long as it is not "A"). 
-
-
-
-## Thresholds - IOU, Confidence and Non-max Suppression (NMS)
-
-
-
-## Frames Per Second
-
+## Thresholds - Confidence and Non-max Suppression (NMS)
 
 ## Choosing Precision or Recall
 
 Choose Precision if the priority of the model is to identify objects. 
 Choose Recall if the priority of the model is to identify objects and their class correctly.
+
