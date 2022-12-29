@@ -12,7 +12,7 @@ The purpose of this article is to guide AI engineers on key considerations when 
 
 There are many articles on how to calculate mAP available. It is thus instructive to instead discuss considerations when reading mAP.
 
-In discussing considerations on evaluating mAP, consider the mAP output below:
+In discussing mAP evaluation, consider the output below:
 
 ![mAP example](../assets/images/screenshots/metrics_map.png)
 
@@ -32,13 +32,19 @@ $FPS = \frac{1}{\text{Average Time Taken Per Image}}$
 
 Here, the AI Engineer would need to consider the following:
 
-Firstly, FPS could calculate only models' inference speed and or the architecture's speed. This is obvious but often overlooked. When delivering the model, the onus is on the AI Engineer to communicate how the FPS was measured. 
+FPS could calculate only models' inference speed and or the architecture's speed. This is obvious but often overlooked. When delivering the model, the onus is on the AI Engineer to communicate how the FPS was measured. 
 
-Secondly, it is important to consider what affects FPS. The first factor would be model size. A model that is deep, and hence tend to be larger in size, requires a longer processing time. Another factor is image size. Larger image size will take longer for inference. For example, a 416x416 image will be faster than 1080x960 image. While this is obvious, it is also often overlooked by AI Engineers when reading papers that purport higher inference speeds, but downplays the role that smaller images have on inference speed.  
+It is also important to consider what affects FPS. The first factor would be model size. A model that is deep, and hence tend to be larger in size, requires a longer processing time. Another factor is image size. Larger image size will take longer for inference. For example, a 416x416 image will be faster than 1080x960 image. While this is obvious, it is also often overlooked by AI Engineers when reading papers that purport higher inference speeds, but downplays the role that smaller images have on inference speed.  
 
-# Error Analysis 
+## Adjusting Thresholds for Inference - Confidence and Non-max Suppression (NMS)
 
-## Thresholds - Confidence and Non-max Suppression (NMS)
+When a model makes an inference, it will give a confidence level of the object's class. If the confidence does not meet or exceed the threshold, then it will not be included. 
+
+Similarly, when a model makes duplicative inference on the same object, meaning it has two or more bounding boxes on the same object, there has to be a mechanism to suppress these duplicative boxes.
+
+Thus, the engineer may use the Confidence and/or NMS threshold to ensure to adjust the precision and recall of the model. 
+
+
 
 ## Choosing Precision or Recall
 
