@@ -62,9 +62,13 @@ Masks may also come in the form of PNG files, where the PNG's image size would c
 
 ### Basic Annotations Analysis
 
-The basic annotations analysis attempts to find characteristics of the annotation such as number (and proportion) of classes as well as the values of the bounding boxes/ masks. This is useful because it helps determine what type of metrics should be used, how the data (images) should be split and how much training needs to be done.  
+The basic annotations analysis attempts to find characteristics of the annotation such as number (and proportion) of classes as well as the values of the bounding boxes/ masks. 
 
-Guiding Questions - 
+This is useful because it helps determine what type of metrics should be used, how the data (images) should be split. For metrics, the usual case for this is error analysis of model performance on bounding box sizes. For example, if the bboxes/masks are mostly large objects among all the images, it is clear that the model will do well. However, if the annotations are small, then the model will inevitably struggle. Hence, the AI Engineer will pay attention to certain metrics more, such as mAP with Area=Large.
+
+The data split refers to how one might partition the data for training/validating/testing the model. Generally, all sets will need equal proportions of the bbox size (small/medium/large) and class distribution. In the ideal scenario, these proportions are easy to split by random, but it is extremely rare. Thus, by performing EDA on the annotations, the Engineer will have a better idea on how the data split can be done. 
+
+With these considerations in mind, these are some guiding questions when performing EDA on annotations: 
 1. How many instances of each classes are there?
 1. Bounding Box - what is width and height distribution overall and per class?
 1. Bounding Box - what is the overall size (W*H) overall and per class?
