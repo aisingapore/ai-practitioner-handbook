@@ -4,12 +4,12 @@ Contributor: Calvin Neo, AI Engineer
 
 ---
 
-The purpose of this article is to guide new AI Engineers on performing Exploratory Data Analysis of Computer Vision tasks in a systematic manner. 
+The purpose of this article is to guide new AI Engineers on performing Exploratory Data Analysis of Computer Vision tasks in a systematic manner. It assumes a basic understanding of image format, and how bounding boxes and masks are drawn.
 
 ## Image EDA  
 
 ### Basic Image Analysis  
-The basic image analysis considers the broad characteristics of the images that have been obtained.  
+The basic image analysis considers the broad characteristics of the images that have been obtained.
 
 The guiding questions are as such:   
 1. What is the number of images provided? Is this the number of images promised to be delivered for experiments?
@@ -64,9 +64,9 @@ Masks may also come in the form of PNG files, where the PNG's image size would c
 
 The basic annotations analysis attempts to find characteristics of the annotation such as number (and proportion) of classes as well as the values of the bounding boxes/ masks. 
 
-This is useful because it helps determine what type of metrics should be used, how the data (images) should be split. For metrics, the usual case for this is error analysis of model performance on bounding box sizes. For example, if the bboxes/masks are mostly large objects among all the images, it is clear that the model will do well. However, if the annotations are small, then the model will inevitably struggle. Hence, the AI Engineer will pay attention to certain metrics more, such as mAP with Area=Large.
+This is useful because it helps determine what type of metrics should be used, how the data (images) should be split. For metrics, the usual case for this is error analysis of model performance on bounding box sizes. For example, if the bboxes/masks are mostly large objects among all the images, assuming images are sufficiently clear, it is clear that the model will do well. However, if the annotations are small, then the model will inevitably struggle. Hence, the AI Engineer will pay attention to certain metrics more, such as mAP with Area=Large.
 
-The data split refers to how one might partition the data for training/validating/testing the model. Generally, all sets will need equal proportions of the bbox size (small/medium/large) and class distribution. In the ideal scenario, these proportions are easy to split by random, but it is extremely rare. Thus, by performing EDA on the annotations, the Engineer will have a better idea on how the data split can be done. 
+The data split refers to how one might partition the data for training/validating/testing the model. Generally, all sets will need equal proportions of the bbox size (small/medium/large) and class distribution. In the ideal scenario, these proportions are easy to split at random, but it is extremely rare. Thus, by performing EDA on the annotations, the Engineer will have a better idea on how the data split can be done. 
 
 With these considerations in mind, these are some guiding questions when performing EDA on annotations: 
 1. How many instances of each classes are there?
@@ -97,11 +97,12 @@ There are many other ways to visualise this. The main goal is to check on the co
 
 ### Bounding Box and Mask Random Sample Checks
 
-Bounding Boxes Random Sample Check refers to performing a check by sampling images and analysing their annotations. 
+Bounding Boxes Random Sample Check refers to performing a check by sampling images and analysing their annotations. These try to account to account for human error that very often occurs. 
 
-1. Are the masks/boxes drawn tight enough? 
+1. Are the bboxes/masks drawn tight enough? 
+1. Were the bboxes/masks drawn accurately?
 1. Are the objects being occluded? In other words, were parts of the object blocked by another object?
-1. Are the objects truncated? In other words, were parts of the objects being spilling out of the image?
+1. Are the objects truncated? In other words, were parts of the objects "spilling" out of the image?
 
 For occlusion and truncation, it is recommended to include "occlusion" and "truncation" in the metadata of the annotation. 
 
