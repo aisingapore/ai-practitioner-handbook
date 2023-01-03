@@ -23,9 +23,9 @@ In discussing mAP evaluation, consider the output below:
 | Average Precision 	| 0.50:0.95 	| medium 	| 1000           	| 0.349 	|
 | Average Precision 	| 0.50:0.95 	| large  	| 1000           	| 0.406 	|
 
-Firstly, it is useful to evaluate the Intersection over Union (IOU) threshold value to understand how "tight" a bbox/mask. A higher IOU threshold value indicates that the model's inference closely overlaps with the ground truth. Generally, the mAP suffers as the IOU threshold value increases. Thus, evaluating how much these values fall would be valuable clues on how much the model can produce good bboxes/masks.
+Firstly, it is useful to evaluate the Intersection over Union (IOU) threshold value to understand how "tight" a bbox/mask. A higher IOU threshold value indicates that the model's inference closely overlaps with the ground truth. Generally, the mAP suffers as the IOU threshold value increases. Thus, evaluating how much these values fall would be valuable clues on how well the model may produce tight bboxes/masks.
 
-Using the outputs above, the second row shows that at IOU threshold of 0.50, the mAP is given by 0.743. Similarly, the third row showing IOU=0.75 threshold shows 0.213, a 0.53 fall in value. This shows that the bboxes/masks are not tight enough, and more training may be required. 
+Using the outputs above, the second row shows that at IOU threshold of 0.50, the mAP is given by 0.743. Similarly, the third row showing IOU=0.75 threshold shows 0.213, a 0.53 fall in value. This indicates that the bboxes/masks produced by the model were not tight enough, and more training may be required. 
 
 Secondly, the objects being detected can be broadly separated to small/medium/large objects based on the bbox/mask size. Here, it is assumed the small/medium/large are area of the bbox/mask, and that area threshold for these sizes are clearly defined (see CV EDA article to guide the size of these annotations). 
 
@@ -39,9 +39,9 @@ $FPS = \frac{1}{\text{Average Time Taken Per Image}}$
 
 Here, the AI Engineer would need to consider the following:
 
-FPS could calculate only models' inference speed and or the architecture's speed. This is obvious but often overlooked. When delivering the model, the onus is on the AI Engineer to communicate how the FPS was measured. 
+FPS should be calculated based off either model's or the software architecture's inference speed. This is obvious but often overlooked. When delivering the model, the onus is on the AI Engineer to communicate how the FPS was measured to manage expectations.
 
-It is also important to consider what affects FPS. The first factor would be model size. A model that is deep, and hence tend to be larger in size, requires a longer processing time. Another factor is image size. Larger image size will take longer for inference. For example, a 416x416 image will be faster than 1080x960 image. While this is obvious, it is also often overlooked by AI Engineers when reading papers that purport higher inference speeds, but downplays the role that smaller images have on inference speed.  
+It is also important to consider what affects FPS. The first factor would be model size. A model that is deep, and hence tend to be larger in size, requires a longer processing time. Another factor is image size. Larger image size will take longer for inference. For example, a 416x416 image will be faster than 1080x960 image. While again this is obvious, it is also often overlooked by AI Engineers when reading papers that purport higher inference speeds, but downplays the role that smaller images have on inference speed.  
 
 ## Adjusting Thresholds for Inference - Confidence and Non-max Suppression (NMS)
 
