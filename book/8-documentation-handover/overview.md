@@ -2,5 +2,4 @@
 
 ## Overview
 
-This chapter provides an overview for the documentation and handover
-process.
+This chapter focuses on the process of knowledge transfer to technical or non-technical teams who are taking over an AI solution.
