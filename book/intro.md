@@ -54,4 +54,4 @@ Laurence Liew, Director (AI Innovation)
 ---
 
 [^1]: AI Singapore and other Singapore agencies have other programmes which assist companies that are AI Unaware and AI Aware.  
-[^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)
+[^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://epoch.aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)
