@@ -15,7 +15,8 @@ chapters:
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   sections:
-  - file: book/2-proj-mgmt-tech-lead/cultivate-ai-team
+  - file: book/2-proj-mgmt-tech-lead/effective-ai-team
+  - file: book/2-proj-mgmt-tech-lead/cohesive-ai-team
   - file: book/2-proj-mgmt-tech-lead/principles.md
   - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon
   # - file: 
