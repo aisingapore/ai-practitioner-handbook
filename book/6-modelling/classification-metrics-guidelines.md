@@ -1,4 +1,4 @@
-# Guidelines for Classification Metrics
+# Guidelines for Choosing Classification Evaluation Metrics
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E), Er YuYang, Senior AI Engineer (100E)
 
