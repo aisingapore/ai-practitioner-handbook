@@ -2,6 +2,4 @@
 
 ## Overview
 
-This is an overview for the process of conducting literature
-review in hopes of garnering better understanding of the problem
-statement's domain.
+This chapter contains sections that aim to systematise the process of reviewing literature relating to a problem domain, as well as go-to references that provide a starting point for typical AI problems.

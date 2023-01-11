@@ -2,15 +2,19 @@
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)
 
+---
+
 It is common for ML beginners to adopt naive random data splitting. In this approach, you may randomly select 80%, 10%, 10% of the data for your training, validation and testing data each time you run the algorithm. However, naive random data splitting is often not repeatable. While you may be able to fix random seeds to ensure some repeatability in data splitting on your machine, this repeatability is not guaranteed when the dataset has changed, or when your colleagues run the same data split algorithm on a different machine.
 
 Having a repeatable train test split ensures that your experiments are reproducible not just by yourself, but by others. 
 
 _Model reproducibility is discussed in detail later in the section [How can I maximise model reproducibility](../6-modelling/model-reproducibility.md)._
 
-One approach to ensure the data splits are repeatable is to hash a selected set of column/columns and hash it. You can then make use of the hash to split your data. This hash value will always be the same every time you run the algorithm.
+Firstly, let’s introduce the concept of hashing.
 
-_Hashing is a one way transformation of any given string or key into a hash value, which is often an output of a fixed length. A hash function is always deterministic, and the same input will always generate the same output. Since it is a one way transformation, you are not able to retrieve the original string or key from the hash value._
+Hashing is a one way transformation of any given string or key into a hash value, which is often an output of a fixed length. A hash function is always deterministic, and the same input will always generate the same output. Since it is a one way transformation, you are not able to retrieve the original string or key from the hash value.
+
+One approach to ensure the data splits are repeatable is to take a selected set of column/columns and hash it. You can then make use of the hash to split your data. This hash value will always be the same every time you run the algorithm.
 
 Columns that are candidates for hashing should:
 1. Not be features or labels that are used for training
