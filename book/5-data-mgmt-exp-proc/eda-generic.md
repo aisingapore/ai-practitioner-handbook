@@ -109,7 +109,7 @@ Pandas Profiling and Google Facets are two excellent tools for performing EDA. T
 
 ## References
 - [EDA structure](https://miykael.github.io/blog/2022/advanced_eda/  )
-- [Types of missingness](https://www-users.york.ac.uk/~mb55/intro/typemiss4.html)
+- [Types of missingness](https://www-users.york.ac.uk/~mb55/intro/typemiss4.htm)
 - [MissForest](https://towardsdatascience.com/missforest-the-best-missing-data-imputation-algorithm-4d01182aed3)
 - [Visualising distributions in seaborn](https://seaborn.pydata.org/tutorial/distributions.html)
 - [Bivariate analysis in Python](https://www.analyticsvidhya.com/blog/2022/02/a-quick-guide-to-bivariate-analysis-in-python/)
