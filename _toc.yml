@@ -49,7 +49,7 @@ chapters:
   - file: book/6-modelling/optimising-and-satisficing
   - file: book/6-modelling/model-reproducibility
   - file: book/6-modelling/ml-risks-and-robustness
-  # - file: book/6-modelling/nlp-metrics
+  - file: book/6-modelling/nlp-metrics
   - file: book/6-modelling/evaluating-timeseries
   - file: book/6-modelling/post-hoc-explanation
 # ===== 7. Solution Delivery ========================================
