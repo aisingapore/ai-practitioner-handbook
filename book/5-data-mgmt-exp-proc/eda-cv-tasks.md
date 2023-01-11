@@ -112,6 +112,6 @@ This was a short survey of some of the areas in which the AI Engineer can begin 
 
 ## References
 
-Perceptual Hashing - https://www.phash.org/
-VOC annotation guide - http://host.robots.ox.ac.uk/pascal/VOC/voc2011/guidelines.html
-The Scientist and Engineer's Guide to Digital Signal Processing - https://www.dspguide.com/ch23/5.htm
+Perceptual Hashing - https://www.phash.org/  
+VOC annotation guide - http://host.robots.ox.ac.uk/pascal/VOC/voc2011/guidelines.html  
+The Scientist and Engineer's Guide to Digital Signal Processing - https://www.dspguide.com/ch23/5.htm  
