@@ -36,6 +36,7 @@ chapters:
   sections:
   - file: book/5-data-mgmt-exp-proc/data-mgmt
   - file: book/5-data-mgmt-exp-proc/eda-generic
+  - file: book/5-data-mgmt-exp-proc/eda-cv-tasks
   - file: book/5-data-mgmt-exp-proc/data-splits
   - file: book/5-data-mgmt-exp-proc/data-splits-repeatable
   - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
@@ -49,6 +50,7 @@ chapters:
   - file: book/6-modelling/optimising-and-satisficing
   - file: book/6-modelling/model-reproducibility
   - file: book/6-modelling/ml-risks-and-robustness
+  - file: book/6-modelling/cv-metrics
   - file: book/6-modelling/nlp-metrics
   - file: book/6-modelling/evaluating-timeseries
   - file: book/6-modelling/post-hoc-explanation
