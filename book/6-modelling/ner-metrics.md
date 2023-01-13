@@ -40,7 +40,7 @@ To illustrate the SemEval scheme with an example, consider the same example as b
 | is | Other |
 | here | Other |
 
-![SemEval example](../assets/images/diagrams/semeval_example.png)
+![SemEval example](../assets/images/diagrams/semeval-example.png)
 
 Next, we compute the total number of gold annotations with the formula:
 
