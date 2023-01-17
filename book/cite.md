@@ -9,7 +9,7 @@ content, you may do so with the following snippet for BibTeX:
 @book{aisg_aiprac_hbook,
     author       = {AI Singapore},
     title        = {AI Practitioner Handbook},
-    howpublished = {\url{https://github.com/aimakerspace/ai-practitioner-handbook}},
-    year         = {2022}
+    howpublished = {\url{https://aisingapore.github.io/ai-practitioner-handbook/}},
+    year         = {2023}
 }
 ```
