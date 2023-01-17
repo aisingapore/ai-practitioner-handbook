@@ -1,4 +1,4 @@
-# What are some of the common metrics in Named Entity Recognition
+# What are some metrics for Named Entity Recognition?
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)
 
