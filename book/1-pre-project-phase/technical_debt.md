@@ -1,4 +1,4 @@
-# What are the the considerations for reducing technical debt?
+# What are the considerations for reducing technical debt?
 
 Contributor(s): Dylan Poh Guan Kiong, AI Engineer [(GitHub)](https://unicorndy.github.io/Dylan_Poh/)
 
