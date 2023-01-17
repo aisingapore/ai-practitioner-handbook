@@ -3,13 +3,15 @@
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)
 
 ## Named Entity Recognition
-Named Entity Recognition refers to the task for locating and classifying named entities in text documents. This article assumes prior knowledge of the IOB (also known as BIO) format for entity tagging. You may refer to this [article](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging)) for more information on the IOB format.
+Named Entity Recognition refers to the task for locating and classifying named entities in text documents. 
+
+This article assumes prior knowledge of the IOB (also known as BIO) format for entity tagging. IOB stands for inside, outside and beginning, where outside (O) indicates a token not belonging to an entity, beginning (B) indicates a token is the start of an entity and inside (I) indicates a token is inside an entity. You may refer to this [article](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging)) for more information on the IOB format.
 
 NER can be thought of as a token level classification problem. Hence, NER models are often tuned using metrics such as F1, precision, recall at a token level during model training. When it comes to evaluating NER models on their downstream tasks’ performance, it may be more beneficial to aggregate the individual tokens into full named-entities, and evaluate NER models at a full named-entity level against golden standard annotations. This also makes the evaluation more relatable for the client.
 
 There are multiple evaluation schemes for evaluating NER models at a full named-entity level. This article will focus on the SemEval (International Workshop on Semantic Evaluation) scheme, which is one of the most popular schemes. The SemEval scheme is built off the Message Understanding Conferene (MUC) scheme.
 
-Before we dive deeper into the SemEval scheme, ley us take a brief look into the MUC scheme. The MUC scheme introduces 5 categories to reflect the correctness of the full named-entities, and the classes are as follows.
+Before we dive deeper into the SemEval scheme, ley us take a brief look into the MUC scheme. The MUC scheme introduces 5 categories to reflect the correctness of the full named-entities, and the classes are as follows. For a further read up on the MUC scheme, refer to this [link](https://aclanthology.org/M93-1007/)
 
 | Evaluation Scheme | Explanation |
 |-------------------|-------------|
@@ -95,7 +97,7 @@ d2) $\frac{1}{1 + 3 + 0 + 1} = \frac{1}{5}$
 
 In general, partial will be the most lenient evaluation, while strict will be the most stringent evaluation. The scores for type and exact will usually fall in between partial and strict. 
 
-If getting both the boundaries and the classes of the full named-entities are important, then strict will be the measure you should prioritise. If it is only critical to get the boundaries correct, then exact will be the more appropriate measure to optimise for. Likewise, if it is only critical to get the class correct and it is acceptable to get partial boundary overlaps, then type will be the more appropriate measure. Lastly, if it is not important to get both the classes correct and the exact boundary matches, then partial can be the preferred measure. Generally, it is more common for type and exact to be preferred. You should check what the client's requirements are before making a decision as to which to prioritise.
+If getting both the boundaries and the classes of the full named-entities are important, then strict will be the measure that you should prioritise. If it is only critical to get the boundaries correct, then exact will be the more appropriate measure to optimise for. Likewise, if it is only critical to get the classes correct and it is acceptable to get partial boundary overlaps, then type will be the more appropriate measure. Lastly, if only partial boundary overlaps are required and it is not important to get the classes correct, then partial can be the preferred measure. Generally, it is more common for type and exact to be preferred. You should check what the client's requirements are before making a decision as to which to prioritise.
 
 ## References
 - [Named-Entity evaluation metrics based on entity-level](https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/)
