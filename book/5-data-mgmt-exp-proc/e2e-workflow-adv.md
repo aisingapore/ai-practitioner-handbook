@@ -1,4 +1,4 @@
-# How do I enhance the workflow with quality-of-life improvements for my end-to-end workflow?
+# How do I enhance my end-to-end workflow?
 
 Contributor(s): Syakyr Surani, Platforms Engineer & Ryzal Kamis, Assistant Head (MLOps)
 

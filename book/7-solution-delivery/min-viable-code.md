@@ -1,4 +1,4 @@
-# How can we build a minimum viable code/configuration for CI/CD automation into an existing codebase?
+# How can we build a minimum viable configuration for CI/CD automation?
 
 Contributor(s): Syakyr Surani, Platforms Engineer
 

@@ -1,4 +1,4 @@
-# What are some of the ways to do EDA for CV tasks?
+# What are some ways to do EDA for CV tasks?
 
 Contributor: Calvin Neo, AI Engineer
 

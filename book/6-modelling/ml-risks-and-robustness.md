@@ -1,4 +1,4 @@
-# What are some ML risks I should be aware of? How do ML risks relate to model robustness? What are some tools I can use to assess model robustness?
+# How do I assess model robustness?
 
 Contributor(s): Kew Wai Marn, AI Engineer
 

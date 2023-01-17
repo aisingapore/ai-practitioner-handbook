@@ -1,4 +1,4 @@
-# What are some of the common NLP metrics
+# What are some common NLP metrics?
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)
 

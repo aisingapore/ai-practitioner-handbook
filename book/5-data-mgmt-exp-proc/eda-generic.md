@@ -1,4 +1,4 @@
-# Is there a core structure for performing exploratory data analysis in a systematic way?
+# Is there a systematic structure for performing exploratory data analysis?
 
 Contributor: Er YuYang, Senior AI Engineer
 

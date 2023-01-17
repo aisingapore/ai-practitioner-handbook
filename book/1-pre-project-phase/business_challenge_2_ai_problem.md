@@ -1,4 +1,4 @@
-# How does the AI engineer translate the business challenge into an AI problem?
+# How can business challenges be translated into AI problems?
 Contributor: Tan Kwan Chet, Lead AI Technical Consultant
 
 ---

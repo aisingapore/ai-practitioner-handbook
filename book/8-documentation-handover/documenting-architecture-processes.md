@@ -1,4 +1,4 @@
-# What are some good practices in documenting high-level system architecture and processes of an AI solution?
+# What are some good practices in documenting system architecture and processes?
 
 Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 

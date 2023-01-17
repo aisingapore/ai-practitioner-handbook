@@ -1,4 +1,4 @@
-# Guidelines for Choosing Classification Evaluation Metrics
+# How do I select classification metrics?
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E), Er YuYang, Senior AI Engineer (100E)
 

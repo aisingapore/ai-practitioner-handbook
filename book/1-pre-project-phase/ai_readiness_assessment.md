@@ -1,4 +1,4 @@
-# What are some questions that an AI engineer can ask the client during pre-project scoping to assess their AI readiness?
+# How can an engineer assess a client's AI readiness?
 Contributor: Joy Lin, Senior AI Technical Consultant
  
 ---

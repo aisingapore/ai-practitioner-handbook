@@ -1,4 +1,4 @@
-# What are some questions to be asked to the project sponsor to understand their deployment requirements?
+# How can I better understand the client's deployment requirements?
 
 Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
 
@@ -11,7 +11,7 @@ Contributor(s): Siti Nuruljannah Baharudin, AI Engineer
     - Although containerising the application is a common solution, some organisations may have restrictions on the containerisation technology allowed on their servers, or even disallow containerisation altogether. If so, it is recommended that you assess the impact on the deployment effort. For instance, the team may lack expertise in the containerisation technology used, or when containerisation is not used, more system integration testing may be required. These would result in additional effort to prepare the deployment package, which may impact the project schedule.
 3. Are there any restrictions or preferences regarding the operating system on which the solution should be deployed? 
 4. Are there any restrictions on software licenses to be used?
-    - Many open source libraries used in machine learning projects are licensed under Apache 2.0, MIT and BSD licenses. If your solution requires the use of libraries with less permissive licenses, it would be best to check with the project sponsor. 
+    - Many open source libraries used in machine learning projects are licensed under Apache 2.0, MIT and BSD licenses. If your solution requires the use of libraries with less permissive licenses, it would be best to check with the client. 
 5. Would a staging environment or test device be provided for developers to test with prior to initial deployment? 
     - If not provided, you would need to commission an internal environment that closely mirrors the specifications of the environment on which the solution would eventually be deployed.
 

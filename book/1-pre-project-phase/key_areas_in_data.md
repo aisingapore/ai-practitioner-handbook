@@ -1,4 +1,4 @@
-# What are the key areas to look out for in the data when framing the AI project?
+# What are some data considerations when framing an AI project?
 Contributor: Tan Kwan Chet, Lead AI Technical Consultant
 
 ---
