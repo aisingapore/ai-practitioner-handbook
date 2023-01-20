@@ -42,7 +42,7 @@ To obtain the final evaluation result, you can take the average of all splits’
 ## 3. Nested cross-validation
 While cross-validation reduces the amount of overfitting as compared to the use of a static train test split, it does not reduce it completely. This is because the same score is used to select the best model and to evaluate the model.
 
-To overcome it, you may choose to use nested cross-validation, which will seperate the score used to select the best model and to evalute the model. In this approach, the outer loop is used mainly for model evaluation, while the inner loop is used for hyperparameter tuning. 
+To overcome it, you may choose to use nested cross-validation, which will separate the score used to select the best model and to evaluate the model. In this approach, the outer loop is used mainly for model evaluation, while the inner loop is used for hyperparameter tuning. 
 
 To illustrate this, let us assume you are using an outer fold of 3, and an inner fold of 3, and you are tuning and evaluating for the parameter *n* for a model. For the outer loop, you will split the dataset into 3 folds, and rotate the test fold for each set.
 
@@ -52,7 +52,7 @@ Taking the first training set, you will further split it into 3 folds with 1 fol
 
 ![Inner Split](../assets/images/diagrams/nested-inner-fold.png)
 
-You will train a model with a value of *n*, say *n=1*, on the training folds, and evaluate the model on the validation fold. You repeat the model training with the same *n=1* value each time you rotate the validation fold. The mean of the scores across all validation folds will be the validation score for the paramater *n=1*. You will repeat this procedure for all other *n* values, and then select the best *n* value. 
+You will train a model with a value of *n*, say *n=1*, on the training folds, and evaluate the model on the validation fold. You repeat the model training with the same *n=1* value each time you rotate the validation fold. The mean of the scores across all validation folds will be the validation score for the parameter *n=1*. You will repeat this procedure for all other *n* values, and then select the best *n* value. 
 
 | Train | Test | n | Val Acc | 
 |-----------|--------|--------|-----|
@@ -68,7 +68,7 @@ You will train a model with a value of *n*, say *n=1*, on the training folds, an
 | 1 | 90 |
 | 2 | 80 |
 
-Finally, you will train on the full training and validation set with this best *n* parameter, and evaluate on the test set that was set aside intially in the outer fold.
+Finally, you will train on the full training and validation set with this best *n* parameter, and evaluate on the test set that was set aside initially in the outer fold.
 
 You repeat the same procedure for all iterations of the outer loop, to obtain the final evaluation of the model.
 
