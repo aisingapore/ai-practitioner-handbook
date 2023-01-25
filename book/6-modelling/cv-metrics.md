@@ -1,4 +1,4 @@
-# What are the common CV evaluation metrics?
+# What are some common CV evaluation metrics?
 
 Contributor(s): Calvin Neo, AI Engineer
 

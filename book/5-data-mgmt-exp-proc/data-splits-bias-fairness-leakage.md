@@ -1,4 +1,4 @@
-# What are some potential scenarios of bias, unfairness, data leakage in data splits? How can these be remedied?
+# What are some scenarios of bias, unfairness, data leakage in data splits?
 
 Contributor(s): Lee Xin Jie, Senior AI Engineer (100E)
 
