@@ -7,7 +7,9 @@
 
 ## Introduction
 
-This handbook is an accumulation of AI Singapore’s Innovation and Platforms Engineering team's experience in delivering more than 40 AI Minimum Viable products (MVP) under the [100E](https://www.aisingapore.org/innovation/100e) programme over the last 5 years. 
+This handbook is an accumulation of AI Singapore’s Innovation and Platforms Engineering team's experience in delivering more than 40 AI Minimum Viable products (MVP) under the [100E](https://www.aisingapore.org/innovation/100e) programme over the last 5 years.  It is an edited volume containing individual original articles written by our AI Engineers, themed around common topics encountered over a typical AI development lifecycle.
+
+![Handbook chapters mapped onto AI development lifecycle](assets/images/diagrams/chapters_ml_lifecycle.png)
 
 We envisioned this handbook as a useful guide for new AI Engineers joining AI Singapore and to quickly come up to speed on how we execute AI projects. However, the information contained here would also appeal to any new AI Engineers and Managers deploying their first AI project into production.
 
@@ -54,4 +56,4 @@ Laurence Liew, Director (AI Innovation)
 ---
 
 [^1]: AI Singapore and other Singapore agencies have other programmes which assist companies that are AI Unaware and AI Aware.  
-[^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)
+[^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://epoch.aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)

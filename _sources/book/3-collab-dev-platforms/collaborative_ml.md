@@ -1,4 +1,4 @@
-# What are the platforms and their respective considerations required for collaborative ML development?
+# What are the key platforms required for collaborative ML development?
 
 Contributor(s): Dylan Poh Guan Kiong, AI Engineer [(GitHub)](https://unicorndy.github.io/Dylan_Poh/)
 

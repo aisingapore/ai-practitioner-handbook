@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>How can I build an effective AI development team? &#8212; AI Practitioner Handbook</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How can I cultivate a cohesive AI development team?" href="cohesive-ai-team.html" />
+    <link rel="prev" title="2. Project Management &amp; Technical Leadership" href="overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HBHP8472S2"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HBHP8472S2');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/AISG(R) Horizontal Logo CMYK Full Colour.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">AI Practitioner Handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to AI Singapore’s AI Practitioner Handbook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1-pre-project-phase/overview.html">
+   1. Pre-project Phase
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/business_challenge_2_ai_problem.html">
+     How can business challenges be translated into AI problems?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html">
+     What are some data considerations when framing an AI project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/technical_debt.html">
+     What are the considerations for reducing technical debt?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/ai_readiness_assessment.html">
+     How can an engineer assess a client’s AI readiness?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   2. Project Management &amp; Technical Leadership
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How can I build an effective AI development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cohesive-ai-team.html">
+     How can I cultivate a cohesive AI development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="principles.html">
+     What kind of engineering principles can I set for my development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="translate-technical-jargon.html">
+     How might we simplify and translate technical jargon?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
+     What are the key platforms required for collaborative ML development?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
+     What are some considerations in setting up a project repository?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4-lit-review/overview.html">
+   4. Literature Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors to consider during literature review?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+   5. Data Management, Exploration &amp; Processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+     Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/eda-generic.html">
+     Is there a systematic structure for performing exploratory data analysis?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/eda-cv-tasks.html">
+     What are some ways to do EDA for CV tasks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits.html">
+     What are the various data split strategies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-repeatable.html">
+     How do we make data splits repeatable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
+     What are some scenarios of bias, unfairness, data leakage in data splits?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+     How do I build a basic end-to-end workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+     How do I enhance my end-to-end workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-poisoning-data-extraction.html">
+     How can I reduce the risks of data poisoning and data extraction?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../6-modelling/overview.html">
+   6. Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/optimising-and-satisficing.html">
+     What are some internal and external considerations when selecting evaluation metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/model-reproducibility.html">
+     How can I maximise model reproducibility?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/ml-risks-and-robustness.html">
+     How do I assess model robustness?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/classification-metrics-guidelines.html">
+     How do I select classification metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/cv-metrics.html">
+     What are some common CV evaluation metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/ner-metrics.html">
+     What are some metrics for Named Entity Recognition?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/evaluating-timeseries.html">
+     How can we evaluate time-series classification models?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/post-hoc-explanation.html">
+     How can we provide post-hoc explanations for black-box AI models?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../7-solution-delivery/overview.html">
+   7. Solution Delivery
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7-solution-delivery/deployment-requirements-gathering.html">
+     How can I better understand the client’s deployment requirements?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7-solution-delivery/min-viable-code.html">
+     How can we build a minimum viable configuration for CI/CD automation?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../8-documentation-handover/overview.html">
+   8. Documentation &amp; Handover
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../8-documentation-handover/documenting-architecture-processes.html">
+     What are some good practices in documenting system architecture and processes?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_contributing.html">
+   How To Contribute
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown-template.html">
+     How should I write a section using Markdown?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebook-template.html">
+     How should I write a section using Jupyter notebooks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../REVIEWING.html">
+     How do I review content?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../feedback.html">
+   How Was Your Experience?
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/2-proj-mgmt-tech-lead/effective-ai-team.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/book/2-proj-mgmt-tech-lead/effective-ai-team.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-the-way">
+   Model the way
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenge-the-process">
+   Challenge the process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enable-others-to-act">
+   Enable others to act
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>How can I build an effective AI development team?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-the-way">
+   Model the way
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenge-the-process">
+   Challenge the process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enable-others-to-act">
+   Enable others to act
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="how-can-i-build-an-effective-ai-development-team">
+<h1>How can I build an effective AI development team?<a class="headerlink" href="#how-can-i-build-an-effective-ai-development-team" title="Permalink to this headline">#</a></h1>
+<p>Contributor: Kenny WJ Chua, Senior AI Engineer</p>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>The responsbilities of a technical lead are different from those of an individual contributor. Engineers, especially those who are who are unfamiliar with leadership responsibilities, may face a learning curve in fulfilling these responsibilities.</p>
+<p>A technical lead indirectly delivers an AI project on time and on target by building an <strong>effective</strong> AI development team. This article provides suggestions on promoting effective teams by contextualising general leadership principles.</p>
+<p>In AISG, an engineer serves as technical lead for a small team of apprentices (i.e., ‘developers’). Therefore, the contents of this article would be useful to any AI practitioner who is in a similar leadership role.</p>
+<p>This article requires some basic knowledge of a <a class="reference external" href="https://www.datacamp.com/blog/machine-learning-lifecycle-explained">AI project life cycle</a> and typical activities that occur in each stage. The article on <a class="reference internal" href="cohesive-ai-team.html"><span class="doc std std-doc">building a <em>cohesive</em> AI development team</span></a> may also be useful for engineers in the role of technical lead.</p>
+</section>
+<section id="model-the-way">
+<h2>Model the way<a class="headerlink" href="#model-the-way" title="Permalink to this headline">#</a></h2>
+<p>A technical lead may have a specific mental picture of the deliverables and ideal approach for a given task, but the end result may differ when delegated to developers. One possible reason is imperfect communication, such that developers do not entirely understand the specifications that have been laid out (hence the need for architecture diagrams). Alternatively, less experienced developers may not understand the need to adhere strictly to certain best practices.</p>
+<p>In such a context, it is important for the technical lead to be able to <strong>demonstrate</strong> some of these values and practices that he/she espouses. For example, a technical lead can cultivate a team habit of writing well-structured and documented code by taking on a few of such tasks himself/herself. This may be particularly fruitful when onboarding a new team of junior developers who are not yet familiar with the required standards.</p>
+<p>A technical lead can cultivate an environment for innovation by enforcing a <strong>no-blame culture</strong> for failed experiments. This involves focusing on and rectifying the work process that led to the failure, rather than paying attention to the personnel involved. There is also a need to choose the <em>correct</em> measurement of success. For example, developers should not be judged in terms of model evaluation metrics, which are strongly dependent on data quality which is largely beyond the team’s control. It would perhaps be fairer and more fruitful to assess the developers’ adherence to best practices (e.g., judicious data splits, systematic model experimentation).</p>
+<p>As the technical lead, take responsibility for the team’s failures, while giving full credit to the team for success. While there is a need to balance practical considerations of the project, the aim of these activities is to build a safe space that encourages developers to experiment.</p>
+</section>
+<section id="challenge-the-process">
+<h2>Challenge the process<a class="headerlink" href="#challenge-the-process" title="Permalink to this headline">#</a></h2>
+<p>Developers within the team can come from different backgrounds, and can therefore contribute diverse, innovative ideas. Taken discerningly, this can present a significant advantage for the project.</p>
+<p>Complementing an innovative culture, an effective team also strives for <strong>iterative improvement</strong> that brings the project closer to established best practices. This requires the technical lead to keep up to date by spending a significant portion of his/her time <strong>reading broadly about and evaluating best practices</strong> for each stage of the AI project lifecycle. Such information can be obtained by discerningly following tech blogs and influential thought leaders on social media platforms. Reading/research need not be confined to the specific subdomain of the current project, as ideas in other areas may be transferrable or can provide inspiration.</p>
+<p>Iterative improvements come at the inter- and intra-project levels. At the inter-project level, an experienced technical lead can evaluate past projects to identify areas of workflow improvement. The technical lead can also network and share regularly with other technical leads in order to facilitate inter-project transfer of ideas. At an intra-project level, Agile philosophy stresses the importance of iterative development. When time allows, the project team can revisit previously written code in order to further improve it to more closely align with best practices.</p>
+</section>
+<section id="enable-others-to-act">
+<h2>Enable others to act<a class="headerlink" href="#enable-others-to-act" title="Permalink to this headline">#</a></h2>
+<p>The primary responsiblity of the technical lead is to be an <strong>enabler</strong> rather than a “super contributor”. While a technical lead can contribute directly to the codebase at times, he/she needs to be aware that this comes with a trade-off of spending less time on enablement activities. Enabling activities are those that amplify/multiply the effectiveness of the team. These include researching and evaluating potential approaches, planning and delegation, as well as removing technical blockers.</p>
+<p>Technical enablements include <strong>boilerplate code and abstract classes</strong>, which can help developers onboard more quickly and with greater consistency. Additionally, a robust <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html"><span class="doc std std-doc">MLOps workflow</span></a> provides automation that enables to developers to concentrate of feature development and modelling activities rather than infrastructural work.</p>
+<p>Pay particular attention during <strong>stand-up meetings</strong> and <strong>sprint retrospectives</strong>. These are platforms during which developers are likely to raise their concerns regarding <strong>technical blockers</strong>. The technical lead can triage the list in order to identify and resolve the most urgent and important blockers. Relatedly, regular <strong>one-on-one meetings</strong> with developers can also help encounter personal/interpersonal blockers that may not surface during meetings with the whole team.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wiley.com/en-us/The+Leadership+Challenge%3A+How+to+Make+Extraordinary+Things+Happen+in+Organizations%2C+6th+Edition-p-9781119278962">The Leadership Challenge: How to Make Extraordinary Things Happen in Organizations</a></p></li>
+<li><p><a class="reference external" href="https://www.datacamp.com/blog/machine-learning-lifecycle-explained">AI project life cycle</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LappleApple/awesome-leading-and-managing/blob/master/One-on-Ones.md">1-on-1s</a></p></li>
+<li><p><a class="reference external" href="https://zuehlke.github.io/machines-code-people/articles/tech-lead-needed.html">Your team needs a tech lead, not a lead techie</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book/2-proj-mgmt-tech-lead"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2. Project Management &amp; Technical Leadership</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cohesive-ai-team.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How can I cultivate a cohesive AI development team?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By AI Singapore<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

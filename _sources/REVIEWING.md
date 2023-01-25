@@ -49,4 +49,4 @@ Please review your own writing against the following criteria. If there are any 
 - [ ] Are there issues with language (grammer, tone, vocabulary, etc.)?
 
 __Reference:__
-- Bhatti et al. (2021) Docs for Developers: An Engineer’s Field Guide to Technical Writing. Ch 4. [[link](https://drive.google.com/file/d/1ifvdY_17Z_hKG-YokvDMojBdunTa2GNn/view)]
+- Bhatti et al. (2021) Docs for Developers: An Engineer’s Field Guide to Technical Writing. Ch 4. [[link](https://docsfordevelopers.com/)]

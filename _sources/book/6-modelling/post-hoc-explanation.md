@@ -1,4 +1,4 @@
-# How can we provide a simple post-hoc explanation for black-box AI models to increase trust and improve model validity?
+# How can we provide post-hoc explanations for black-box AI models?
 Contributor: Joy Lin, Senior AI Technical Consultant
  
 ---

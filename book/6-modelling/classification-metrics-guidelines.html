@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>How do I select classification metrics? &#8212; AI Practitioner Handbook</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What are some common CV evaluation metrics?" href="cv-metrics.html" />
+    <link rel="prev" title="How do I assess model robustness?" href="ml-risks-and-robustness.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HBHP8472S2"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HBHP8472S2');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/AISG(R) Horizontal Logo CMYK Full Colour.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">AI Practitioner Handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to AI Singapore’s AI Practitioner Handbook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1-pre-project-phase/overview.html">
+   1. Pre-project Phase
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/business_challenge_2_ai_problem.html">
+     How can business challenges be translated into AI problems?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html">
+     What are some data considerations when framing an AI project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/technical_debt.html">
+     What are the considerations for reducing technical debt?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/ai_readiness_assessment.html">
+     How can an engineer assess a client’s AI readiness?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
+   2. Project Management &amp; Technical Leadership
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/effective-ai-team.html">
+     How can I build an effective AI development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/cohesive-ai-team.html">
+     How can I cultivate a cohesive AI development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/principles.html">
+     What kind of engineering principles can I set for my development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/translate-technical-jargon.html">
+     How might we simplify and translate technical jargon?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
+     What are the key platforms required for collaborative ML development?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
+     What are some considerations in setting up a project repository?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4-lit-review/overview.html">
+   4. Literature Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors to consider during literature review?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5-data-mgmt-exp-proc/overview.html">
+   5. Data Management, Exploration &amp; Processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-mgmt.html">
+     Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/eda-generic.html">
+     Is there a systematic structure for performing exploratory data analysis?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/eda-cv-tasks.html">
+     What are some ways to do EDA for CV tasks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits.html">
+     What are the various data split strategies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-repeatable.html">
+     How do we make data splits repeatable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage.html">
+     What are some scenarios of bias, unfairness, data leakage in data splits?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow.html">
+     How do I build a basic end-to-end workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/e2e-workflow-adv.html">
+     How do I enhance my end-to-end workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5-data-mgmt-exp-proc/data-poisoning-data-extraction.html">
+     How can I reduce the risks of data poisoning and data extraction?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   6. Modelling
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="optimising-and-satisficing.html">
+     What are some internal and external considerations when selecting evaluation metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="model-reproducibility.html">
+     How can I maximise model reproducibility?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ml-risks-and-robustness.html">
+     How do I assess model robustness?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How do I select classification metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cv-metrics.html">
+     What are some common CV evaluation metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ner-metrics.html">
+     What are some metrics for Named Entity Recognition?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="evaluating-timeseries.html">
+     How can we evaluate time-series classification models?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="post-hoc-explanation.html">
+     How can we provide post-hoc explanations for black-box AI models?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../7-solution-delivery/overview.html">
+   7. Solution Delivery
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7-solution-delivery/deployment-requirements-gathering.html">
+     How can I better understand the client’s deployment requirements?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7-solution-delivery/min-viable-code.html">
+     How can we build a minimum viable configuration for CI/CD automation?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../8-documentation-handover/overview.html">
+   8. Documentation &amp; Handover
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../8-documentation-handover/documenting-architecture-processes.html">
+     What are some good practices in documenting system architecture and processes?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_contributing.html">
+   How To Contribute
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown-template.html">
+     How should I write a section using Markdown?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebook-template.html">
+     How should I write a section using Jupyter notebooks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../REVIEWING.html">
+     How do I review content?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../feedback.html">
+   How Was Your Experience?
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/6-modelling/classification-metrics-guidelines.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/book/6-modelling/classification-metrics-guidelines.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imbalanced-datasets">
+   Imbalanced datasets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-not-roc">
+     Why not ROC?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-class-datasets">
+   Multi-class datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-label-datasets">
+   Multi-label datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>How do I select classification metrics?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imbalanced-datasets">
+   Imbalanced datasets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-not-roc">
+     Why not ROC?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-class-datasets">
+   Multi-class datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-label-datasets">
+   Multi-label datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="how-do-i-select-classification-metrics">
+<h1>How do I select classification metrics?<a class="headerlink" href="#how-do-i-select-classification-metrics" title="Permalink to this headline">#</a></h1>
+<p>Contributor(s): Lee Xin Jie, Senior AI Engineer (100E), Er YuYang, Senior AI Engineer (100E)</p>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>The common classification evaluation metrics includes accuracy, confusion matrix, precision, recall, F1, ROC &amp; AUC, precision-recall curve.</p>
+<p>This chapter will not elaborate on the definitions of the above mentioned evaluation metrics, as there are numerous resources available for this topic. Instead, this chapter will introduce best practices regarding the selection of classification metrics. This will serve as an extension of the previous chapter <a class="reference internal" href="optimising-and-satisficing.html"><span class="doc std std-doc">What are some internal and external considerations when selecting evaluation metrics</span></a>, and the concepts discussed here can extend through various domains, be it Natural Language Processing, Computer Vision, etc.</p>
+</section>
+<section id="imbalanced-datasets">
+<h2>Imbalanced datasets<a class="headerlink" href="#imbalanced-datasets" title="Permalink to this headline">#</a></h2>
+<p><img alt="Imbalanced dataset metrics" src="../../_images/imbalanced-data-metrics.png" /></p>
+<p>While accuracy is the most common classification metrics, it can be misleading for imbalanced datasets. For example, consider a fraud detection problem where only 5% of the labels are fraudulent. If the model predicts every example to be non fraudulent, it will achieve an accuracy of 95%, which can be very misleading.</p>
+<p>In such situations, you may want to consider using precision, recall and F1. Precision measures of all your model’s positive predictions, how many of them are correct. Recall measures of all the actual positive examples, how many of them were identified correctly by the model.</p>
+<p>Precision is more important than recall when you cannot afford to have any False Positives as compared to False Negatives. Do take cost into consideration when deciding if precision or recall is more important. When the cost of acting is high and the cost of not acting is low, then precision is preferred. Recall is more important than precision when you cannot afford to have any False Negatives as compared to False Positives. It is more important when the opportunity cost of passing up is high.</p>
+<p>The F1 score, also known as F-score, is the harmonic mean of precision and recall. F1 can be computed with the formula. You should choose this metric if you want to balance both precision and recall.</p>
+<p><span class="math notranslate nohighlight">\(F_1 = 2 \cdot \frac{precision \dot recall}{precision + recall}\)</span></p>
+<p>Since there is often an inverse relationship between precision and recall, you might want to weigh one more over the other. This will likely depend on the client’s needs, hence do check with them on their needs before proceeding. You may also want to consider the <span class="math notranslate nohighlight">\(F_{\beta}\)</span> score:</p>
+<p><span class="math notranslate nohighlight">\(F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{ (\beta^2 \cdot precision) + recall }\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is chosen such that recall is considered <span class="math notranslate nohighlight">\(\beta\)</span> times as important as precision.</p>
+<section id="why-not-roc">
+<h3>Why not ROC?<a class="headerlink" href="#why-not-roc" title="Permalink to this headline">#</a></h3>
+<p>The ROC curve, also known as the receiver operating curve, plots the true positive rate (TPR) vs the false positive rate (FPR) over all classification thresholds from 0 to 1. The AUC, also known as the area under the curve, measures the aggregated performance of your model over all classification thresholds.</p>
+<p>The ROC curve, as well as the AUC score, can be misleading in imbalanced datasets. As an example, assume that the positive class is the minority class in an imbalanced dataset.  Because the negative class has a lot of examples for the model to learn, the True Negatives are typically very high, especially when compared to the number of false positives. This means that the FPR will likely be low even when there are alot of false positives. Hence this implies that it is possible for a low precision model to achieve a good ROC curve and a high AUC score.</p>
+<p>To illustrate this, assume there are 10 positive examples and 1000 negative examples. There are 9 True Positives, 1 False Negative, 100 False Positives and 900 True Negatives. The TPR is 0.9 while the FPR is 0.1. Since the TPR is high and the FPR is low, the AUC is likely high. This does not mean that the model is good, as the model’s precision is relatively low. In such a scenario, it is preferable to look at the precision recall curve which plots the precision and recall across all thresholds. Likewise, you are also able to compute the AUC of the precision-recall curve, which you can use to compare the performance of various models.</p>
+</section>
+</section>
+<section id="multi-class-datasets">
+<h2>Multi-class datasets<a class="headerlink" href="#multi-class-datasets" title="Permalink to this headline">#</a></h2>
+<p><img alt="Multi-class dataset metrics" src="../../_images/multi-class-metrics.png" /></p>
+<p>In multi-class classification, the first evaluation metric you may want to consider is an N <span class="math notranslate nohighlight">\(\times\)</span> N confusion matrix. An example of which is shown below.</p>
+<p><img alt="Confusion Matrix" src="../../_images/confusion-matrix.png" /></p>
+<p>Source: <a class="reference external" href="https://www.researchgate.net/profile/Tahmina-Zebin/publication/332526113/figure/fig4/AS:762078440747009&#64;1558705067842/Confusion-matrix-of-the-test-dataset.ppm">Artificial Intelligence Technique for Gene Expression by Tumor RNA-Seq Data: A Novel Optimized Deep Learning Approach</a></p>
+<p>With an N <span class="math notranslate nohighlight">\(\times\)</span> N confusion matrix, you can quickly identify which classes are performing well, or which classes are commonly misclassified as another class, etc.</p>
+<p>To extend precision, recall and F1 to the multi-class domains, we can first compute these scores on a per class basis by using the one-vs-rest approach. This is akin to treating the evaluation of multi-class problems as the evaluation of multiple binary classes.</p>
+<p>If you need a single score to compare models, you can compute the averages of precision, recall and F1 using three different averaging techniques.</p>
+<ol class="simple">
+<li><p>Micro: Computes metrics globally by counting the true positives, false positives and false negatives.</p></li>
+<li><p>Macro: Computes the unweighted mean of the metrics for all classes, disregarding class imbalance.</p></li>
+<li><p>Weighted: Computes the metrics for each class, then finds their average weighted by support (the number of true instances for each label).</p></li>
+</ol>
+<p>The choice of which averaging techniques to use depends on the business objective. If you prefer to treat all classes equally, regardless of their sample size, you can opt for macro-averaging. This could be for situations where the minority class performance is very important to the project sponsor.</p>
+<p>On the other hand, if it is acceptable to treat each class’s importance based on the class size, you can opt for weighted- or micro-averaging. Do note that for multi-class problems, the micro-averaged F1 score will be the same as the global accuracy.</p>
+</section>
+<section id="multi-label-datasets">
+<h2>Multi-label datasets<a class="headerlink" href="#multi-label-datasets" title="Permalink to this headline">#</a></h2>
+<p>For multi-label problems, you can extend the binary classification metrics by computing each metric per class. This is no different from a binary classification problem. For example, you can compute precision, recall, F1, confusion matrix for each of the classes in a one vs rest approach.  Once you have obtained each class’s metrics, you can compute the averages across all classes with the same averaging techniques as covered for multi-class problems: micro, macro, weighted averaging. Note that for multi-label problems, the micro-averaged F1 score is not the same as accuracy.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://towardsdatascience.com/comprehensive-guide-on-multiclass-classification-metrics-af94cfb83fbd">Comprehensive Guide to Multiclass Classification Metrics</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book/6-modelling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="ml-risks-and-robustness.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">How do I assess model robustness?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cv-metrics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What are some common CV evaluation metrics?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By AI Singapore<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

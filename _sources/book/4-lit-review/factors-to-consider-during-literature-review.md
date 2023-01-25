@@ -1,4 +1,4 @@
-# What are some of the factors that an AI Engineer should consider during literature review?
+# What are some of the factors to consider during literature review?
 
 Contributor(s): Andy Ong, AI Engineer
 

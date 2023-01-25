@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>What are some ways to do EDA for CV tasks? &#8212; AI Practitioner Handbook</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What are the various data split strategies?" href="data-splits.html" />
+    <link rel="prev" title="Is there a systematic structure for performing exploratory data analysis?" href="eda-generic.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HBHP8472S2"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HBHP8472S2');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/AISG(R) Horizontal Logo CMYK Full Colour.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">AI Practitioner Handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to AI Singapore’s AI Practitioner Handbook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1-pre-project-phase/overview.html">
+   1. Pre-project Phase
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/business_challenge_2_ai_problem.html">
+     How can business challenges be translated into AI problems?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/key_areas_in_data.html">
+     What are some data considerations when framing an AI project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/technical_debt.html">
+     What are the considerations for reducing technical debt?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-pre-project-phase/ai_readiness_assessment.html">
+     How can an engineer assess a client’s AI readiness?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2-proj-mgmt-tech-lead/overview.html">
+   2. Project Management &amp; Technical Leadership
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/effective-ai-team.html">
+     How can I build an effective AI development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/cohesive-ai-team.html">
+     How can I cultivate a cohesive AI development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/principles.html">
+     What kind of engineering principles can I set for my development team?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2-proj-mgmt-tech-lead/translate-technical-jargon.html">
+     How might we simplify and translate technical jargon?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3-collab-dev-platforms/overview.html">
+   3. Collaborative Development Platforms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/collaborative_ml.html">
+     What are the key platforms required for collaborative ML development?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3-collab-dev-platforms/repo-structure-setup.html">
+     What are some considerations in setting up a project repository?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4-lit-review/overview.html">
+   4. Literature Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4-lit-review/factors-to-consider-during-literature-review.html">
+     What are some of the factors to consider during literature review?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   5. Data Management, Exploration &amp; Processing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-mgmt.html">
+     Which data storage options are suitable for the project?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="eda-generic.html">
+     Is there a systematic structure for performing exploratory data analysis?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What are some ways to do EDA for CV tasks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-splits.html">
+     What are the various data split strategies?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-splits-repeatable.html">
+     How do we make data splits repeatable?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-splits-bias-fairness-leakage.html">
+     What are some scenarios of bias, unfairness, data leakage in data splits?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="e2e-workflow.html">
+     How do I build a basic end-to-end workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="e2e-workflow-adv.html">
+     How do I enhance my end-to-end workflow?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-poisoning-data-extraction.html">
+     How can I reduce the risks of data poisoning and data extraction?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../6-modelling/overview.html">
+   6. Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/optimising-and-satisficing.html">
+     What are some internal and external considerations when selecting evaluation metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/model-reproducibility.html">
+     How can I maximise model reproducibility?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/ml-risks-and-robustness.html">
+     How do I assess model robustness?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/classification-metrics-guidelines.html">
+     How do I select classification metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/cv-metrics.html">
+     What are some common CV evaluation metrics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/ner-metrics.html">
+     What are some metrics for Named Entity Recognition?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/evaluating-timeseries.html">
+     How can we evaluate time-series classification models?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6-modelling/post-hoc-explanation.html">
+     How can we provide post-hoc explanations for black-box AI models?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../7-solution-delivery/overview.html">
+   7. Solution Delivery
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7-solution-delivery/deployment-requirements-gathering.html">
+     How can I better understand the client’s deployment requirements?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7-solution-delivery/min-viable-code.html">
+     How can we build a minimum viable configuration for CI/CD automation?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../8-documentation-handover/overview.html">
+   8. Documentation &amp; Handover
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../8-documentation-handover/documenting-architecture-processes.html">
+     What are some good practices in documenting system architecture and processes?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_contributing.html">
+   How To Contribute
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../markdown-template.html">
+     How should I write a section using Markdown?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebook-template.html">
+     How should I write a section using Jupyter notebooks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../REVIEWING.html">
+     How do I review content?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../feedback.html">
+   How Was Your Experience?
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/aimakerspace/ai-practitioner-handbook/issues/new?title=Issue%20on%20page%20%2Fbook/5-data-mgmt-exp-proc/eda-cv-tasks.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/book/5-data-mgmt-exp-proc/eda-cv-tasks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-eda">
+   Image EDA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-image-analysis">
+     Basic Image Analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colour-intensity-of-images">
+     Colour Intensity of Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#brightness-of-images">
+     Brightness of Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contrast-of-images">
+     Contrast of Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-similarity">
+     Image Similarity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations-basic-overview">
+   Annotations (Basic Overview)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bounding-boxes-formats">
+     Bounding Boxes Formats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#masks-format">
+     Masks Format
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations-eda">
+   Annotations EDA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-annotations-analysis">
+     Basic Annotations Analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colours-of-annotations">
+     Colours of Annotations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#average-intensity-per-channel">
+     Average Intensity per channel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-intensity-per-channel">
+     Mode Intensity per channel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations-random-sample-checks">
+   Annotations Random Sample Checks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bounding-box-and-mask-random-sample-checks">
+     Bounding Box and Mask Random Sample Checks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-eda-readings">
+     Further EDA readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>What are some ways to do EDA for CV tasks?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-eda">
+   Image EDA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-image-analysis">
+     Basic Image Analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colour-intensity-of-images">
+     Colour Intensity of Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#brightness-of-images">
+     Brightness of Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contrast-of-images">
+     Contrast of Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-similarity">
+     Image Similarity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations-basic-overview">
+   Annotations (Basic Overview)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bounding-boxes-formats">
+     Bounding Boxes Formats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#masks-format">
+     Masks Format
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations-eda">
+   Annotations EDA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-annotations-analysis">
+     Basic Annotations Analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colours-of-annotations">
+     Colours of Annotations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#average-intensity-per-channel">
+     Average Intensity per channel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode-intensity-per-channel">
+     Mode Intensity per channel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations-random-sample-checks">
+   Annotations Random Sample Checks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bounding-box-and-mask-random-sample-checks">
+     Bounding Box and Mask Random Sample Checks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-eda-readings">
+     Further EDA readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-some-ways-to-do-eda-for-cv-tasks">
+<h1>What are some ways to do EDA for CV tasks?<a class="headerlink" href="#what-are-some-ways-to-do-eda-for-cv-tasks" title="Permalink to this headline">#</a></h1>
+<p>Contributor: Calvin Neo, AI Engineer</p>
+<hr class="docutils" />
+<p>The purpose of this article is to guide new AI Engineers on performing Exploratory Data Analysis of Computer Vision tasks in a systematic manner. It assumes a basic understanding of image format, and how bounding boxes and masks are drawn.</p>
+<section id="image-eda">
+<h2>Image EDA<a class="headerlink" href="#image-eda" title="Permalink to this headline">#</a></h2>
+<section id="basic-image-analysis">
+<h3>Basic Image Analysis<a class="headerlink" href="#basic-image-analysis" title="Permalink to this headline">#</a></h3>
+<p>The basic image analysis considers the broad characteristics of the images that have been obtained.</p>
+<p>The guiding questions are as such:</p>
+<ol class="simple">
+<li><p>What is the number of images provided? Is this the number of images promised to be delivered for experiments?</p></li>
+<li><p>What is the format of images eg JPG/PNG/JPEG? If there are multiple formats given, what are the counts for each image format?</p></li>
+<li><p>What are the image sizes/resolution (eg 1080x960)? If there are multiple dimensions, what are the counts for each dimension?</p></li>
+<li><p>How similar are the images to each other? You can do an EDA to check on this by performing image hashing to discover groups which are similar to each other. This also helps to uncover whether some of the images might have been curated from a continuous video stream of a scene that is changing very slowly - in such a case, these images may be near-duplicates.</p></li>
+</ol>
+</section>
+<section id="colour-intensity-of-images">
+<h3>Colour Intensity of Images<a class="headerlink" href="#colour-intensity-of-images" title="Permalink to this headline">#</a></h3>
+<p>The colour intensity of images can be explored by either mean or mode of the channel values of each image. The goal for analysing annotations’ colour channels is to understand what the dominant colours are. For example, images in forest settings may have more green, and images along water bodies are expected to be blue-dominated. This also ties in with annotations, where if the annotated objects are similar in colour values, the model would need to rely on feature other than colours such as edges.</p>
+</section>
+<section id="brightness-of-images">
+<h3>Brightness of Images<a class="headerlink" href="#brightness-of-images" title="Permalink to this headline">#</a></h3>
+<p>Brightness values are closely related to colour intensity. If the colour intensity for all channels are higher, then the images may appear to be brighter than normal and vice versa. It is thus the job of the AI Engineer to explore the data to ensure the brightness values of the images are of the normal range. Otherwise, they would need to scale up or down the brightness levels to ensure that the images for training are consistent.</p>
+</section>
+<section id="contrast-of-images">
+<h3>Contrast of Images<a class="headerlink" href="#contrast-of-images" title="Permalink to this headline">#</a></h3>
+<p>Contrast is the pixel to pixel difference in channel values. For example, a green frog in Bukit Timah Nature Reserve would be said to have low contrast. This makes edge detection more important for the model.The onus is thus on the AI Engineer to explore the images to ensure the contrast levels are of the normal range. Otherwise, they would need to employ contrast adjustment techniques to ensure contrast values are normalised.</p>
+</section>
+<section id="image-similarity">
+<h3>Image Similarity<a class="headerlink" href="#image-similarity" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>PCA or ISOMAP per channel can be performed on the images to see how the images are related to each other.</p></li>
+</ol>
+<p><img alt="title" src="../../_images/isomap_pca.png" /></p>
+</section>
+</section>
+<section id="annotations-basic-overview">
+<h2>Annotations (Basic Overview)<a class="headerlink" href="#annotations-basic-overview" title="Permalink to this headline">#</a></h2>
+<section id="bounding-boxes-formats">
+<h3>Bounding Boxes Formats<a class="headerlink" href="#bounding-boxes-formats" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>COCO - [x_min, y_min, width, height]</p></li>
+<li><p>YOLO - [x_center, y_center, width, height]</p></li>
+<li><p>Pascal VOC - [x_min, y_min, x_max, y_max]</p></li>
+</ol>
+<p>For example, if the given format is in Pascal VOC, and the model requires it in YOLO format, we would need to convert the annotations to YOLO format for training.</p>
+<p>An example for during inference: Read images using CV2, run YOLOv3 model, convert and return in the desired format according to what is required to be delivered.</p>
+</section>
+<section id="masks-format">
+<h3>Masks Format<a class="headerlink" href="#masks-format" title="Permalink to this headline">#</a></h3>
+<p>Masks annotations gives the pixel-wise positions of the mask.</p>
+<p>Masks are provided in an array of x-y pairs. It will typically be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">masks_per_instance</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_1</span><span class="p">,</span> <span class="n">y_1</span><span class="p">,</span> <span class="n">x_2</span><span class="p">,</span> <span class="n">y_2</span><span class="p">,</span> <span class="o">...</span> <span class="n">x_n</span><span class="p">,</span> <span class="n">y_n</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Masks may also come in the form of PNG files, where the PNG’s image size would correspond to the original image size.</p>
+</section>
+</section>
+<section id="annotations-eda">
+<h2>Annotations EDA<a class="headerlink" href="#annotations-eda" title="Permalink to this headline">#</a></h2>
+<section id="basic-annotations-analysis">
+<h3>Basic Annotations Analysis<a class="headerlink" href="#basic-annotations-analysis" title="Permalink to this headline">#</a></h3>
+<p>The basic annotations analysis attempts to find characteristics of the annotation such as number (and proportion) of classes as well as the values of the bounding boxes/ masks.</p>
+<p>This is useful because it helps determine what type of metrics should be used, how the data (images) should be split, and what parameters could be tuned. For metrics, the usual case for this is error analysis of model performance on bounding box sizes. For example, if the bboxes/masks are mostly large objects among all the images, assuming images are sufficiently clear, it is clear that the model will do well. However, if the annotations are small, then the model will inevitably struggle. Hence, the AI Engineer will pay attention to certain metrics more, such as mAP with Area=Large.</p>
+<p>The data split refers to how one might partition the data for training/validating/testing the model. Generally, all sets would need similar proportions of the bbox size (small/medium/large) and class distribution. In the ideal scenario, these proportions are easy to split at random, but it is extremely rare. Thus, by performing EDA on the annotations, the Engineer will have a better idea on how the data split can be done.</p>
+<p>Tuning parameters refers to configuring parts of model training/inference that could be useful for better performance. An example of this is anchor box size(s). By default, the anchor box sizes in the models were set to be tuned to the dataset that they were benchmarked against, for example MS COCO Dataset. However, the bbox/mask of real data that is received would not fit nicely to these anchor box sizes. Hence, by understanding a particular range of typical bbox/mark sizes, the anchor box sizes can be tuned to accomodate the range. This has been observed to be beneficial to model training and inference performance.</p>
+<p>With these considerations in mind, these are some guiding questions when performing EDA on annotations:</p>
+<ol class="simple">
+<li><p>How many instances of each classes are there?</p></li>
+<li><p>Bounding Box - what is width and height distribution overall and per class?</p></li>
+<li><p>Bounding Box - what is the overall size (W*H) overall and per class?</p></li>
+<li><p>Bounding Box - What are the top few Width/Height combination? This can be found using clustering methods.</p></li>
+<li><p>Segmentation - what is distribution of the mask pixel counts overall and per class?</p></li>
+</ol>
+<p><img alt="title" src="../../_images/red_channel_average_counts.png" /></p>
+</section>
+<section id="colours-of-annotations">
+<h3>Colours of Annotations<a class="headerlink" href="#colours-of-annotations" title="Permalink to this headline">#</a></h3>
+<p>As with images, the annotations have 1 or more channels per pixel, with the most popular format being Red, Green and Blue (RGB). The utility for this mainly lets the researchers know if the model would be better served trying to use certain channels when making inference.</p>
+</section>
+<section id="average-intensity-per-channel">
+<h3>Average Intensity per channel<a class="headerlink" href="#average-intensity-per-channel" title="Permalink to this headline">#</a></h3>
+<p>To explore this for all classes, we can firstly average the colour intensity of the annotation’s pixels per channel.</p>
+<p>Secondly, countplot of the average colour intensity values could be generated. The image below shows the counts of each annotation with the average values of the red channels separated by classes. In this case, there are three classes, with one of the class having very spread out red channel intensity, and the other two classes having colour intensity being normally distributed.</p>
+<p><img alt="title" src="../../_images/BBox_HW_by_class.png" /><br />
+Example of a Height-Width comparison among bboxes separated by class.</p>
+</section>
+<section id="mode-intensity-per-channel">
+<h3>Mode Intensity per channel<a class="headerlink" href="#mode-intensity-per-channel" title="Permalink to this headline">#</a></h3>
+<p>Besides averaging the intensity per annotation, the highest occurring value (mode) of the intensity of the annotation can also be used to analyse the colour of the annotation.</p>
+<p><img alt="title" src="../../_images/red_channel_dominant_counts.png" /></p>
+<p>There are many other ways to visualise this. The main goal is to check on the colour distribution among the annotations.</p>
+</section>
+</section>
+<section id="annotations-random-sample-checks">
+<h2>Annotations Random Sample Checks<a class="headerlink" href="#annotations-random-sample-checks" title="Permalink to this headline">#</a></h2>
+<section id="bounding-box-and-mask-random-sample-checks">
+<h3>Bounding Box and Mask Random Sample Checks<a class="headerlink" href="#bounding-box-and-mask-random-sample-checks" title="Permalink to this headline">#</a></h3>
+<p>Bounding Boxes Random Sample Check refers to performing a check by sampling images and analysing their annotations. These try to account to account for human error that very often occurs.</p>
+<ol class="simple">
+<li><p>Are the bboxes/masks drawn tight enough?</p></li>
+<li><p>Were the bboxes/masks drawn accurately?</p></li>
+<li><p>Are the objects being occluded? In other words, were parts of the object blocked by another object? In general, if the object of interest is being occluded, its annotation should still be drawn such that it includes the occluded portion.</p></li>
+<li><p>Are the objects truncated? In other words, were parts of the objects “spilling” out of the image?</p></li>
+</ol>
+<p>For occlusion and truncation, it is recommended to include “occlusion” and “truncation” in the metadata of the annotation.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>This was a short survey of some of the areas in which the AI Engineer can begin in exploratory data analysis for images as well as their annotations. This is by no means exhaustive, and the AI Engineer should explore further methods for EDA in this space.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>Perceptual Hashing - <a class="reference external" href="https://www.phash.org/">https://www.phash.org/</a><br />
+VOC annotation guide - <a class="reference external" href="http://host.robots.ox.ac.uk/pascal/VOC/voc2011/guidelines.html">http://host.robots.ox.ac.uk/pascal/VOC/voc2011/guidelines.html</a><br />
+The Scientist and Engineer’s Guide to Digital Signal Processing - <a class="reference external" href="https://www.dspguide.com/ch23/5.htm">https://www.dspguide.com/ch23/5.htm</a></p>
+<section id="further-eda-readings">
+<h3>Further EDA readings<a class="headerlink" href="#further-eda-readings" title="Permalink to this headline">#</a></h3>
+<p>Histogram -</p>
+<p><a class="reference external" href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/histgram.htm">https://homepages.inf.ed.ac.uk/rbf/HIPR2/histgram.htm</a>
+<a class="reference external" href="http://web.cs.wpi.edu/~emmanuel/courses/cs545/S14/slides/lecture02.pdf">http://web.cs.wpi.edu/~emmanuel/courses/cs545/S14/slides/lecture02.pdf</a>
+<a class="reference external" href="https://www.allaboutcircuits.com/technical-articles/image-histogram-characteristics-machine-learning-image-processing/">https://www.allaboutcircuits.com/technical-articles/image-histogram-characteristics-machine-learning-image-processing/</a></p>
+<p>Anchor Boxes -
+<a class="reference external" href="https://d2l.ai/chapter_computer-vision/anchor.html">https://d2l.ai/chapter_computer-vision/anchor.html</a></p>
+<p>Other Data Exploration Ideas -<br />
+<a class="reference external" href="https://neptune.ai/blog/data-exploration-for-image-segmentation-and-object-detection">https://neptune.ai/blog/data-exploration-for-image-segmentation-and-object-detection</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book/5-data-mgmt-exp-proc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="eda-generic.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Is there a systematic structure for performing exploratory data analysis?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data-splits.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What are the various data split strategies?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By AI Singapore<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
