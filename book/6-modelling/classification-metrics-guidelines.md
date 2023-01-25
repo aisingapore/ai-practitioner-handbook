@@ -12,6 +12,9 @@ This chapter will not elaborate on the definitions of the above mentioned evalua
 <br/>
 
 ## Imbalanced datasets
+
+![Imbalanced dataset metrics](../assets/images/diagrams/imbalanced-data-metrics.png)
+
 While accuracy is the most common classification metrics, it can be misleading for imbalanced datasets. For example, consider a fraud detection problem where only 5% of the labels are fraudulent. If the model predicts every example to be non fraudulent, it will achieve an accuracy of 95%, which can be very misleading.
 
 In such situations, you may want to consider using precision, recall and F1. Precision measures of all your model’s positive predictions, how many of them are correct. Recall measures of all the actual positive examples, how many of them were identified correctly by the model. 
@@ -28,15 +31,18 @@ $F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{ (\beta^2 \cdot p
 
 where $\beta$ is chosen such that recall is considered $\beta$ times as important as precision.
 
-The ROC curve, also known as the receiver operating curve, plots the true positive rate (TPR) vs the false positive rate (FPR) over all classification thresholds from 0 to 1. The AUC, also known as the area under the curve, measures the aggregated performance of your model over all classification thresholds.
+### Why not ROC?
+ The ROC curve, also known as the receiver operating curve, plots the true positive rate (TPR) vs the false positive rate (FPR) over all classification thresholds from 0 to 1. The AUC, also known as the area under the curve, measures the aggregated performance of your model over all classification thresholds.
 
-The ROC curve, as well as the AUC score, can be misleading in imbalanced datasets. As an example, assume that the positive class is the minority class in an imbalanced dataset.  Because the negative class has a lot of examples for the model to learn, the True Negatives are typically very high, especially when compared to the number of false positives. This means that the FPR will likely be low even when there are alot of false positives. Hence this implies that it is possible for a low precision model to achieve a good ROC curve and a high AUC score.  
+ The ROC curve, as well as the AUC score, can be misleading in imbalanced datasets. As an example, assume that the positive class is the minority class in an imbalanced dataset.  Because the negative class has a lot of examples for the model to learn, the True Negatives are typically very high, especially when compared to the number of false positives. This means that the FPR will likely be low even when there are alot of false positives. Hence this implies that it is possible for a low precision model to achieve a good ROC curve and a high AUC score.  
 
-To illustrate this, assume there are 10 positive examples and 1000 negative examples. There are 9 True Positives, 1 False Negative, 100 False Positives and 900 True Negatives. The TPR is 0.9 while the FPR is 0.1. Since the TPR is high and the FPR is low, the AUC is likely high. This does not mean that the model is good, as the model’s precision is relatively low. In such a scenario, it is preferable to look at the precision recall curve which plots the precision and recall across all thresholds. Likewise, you are also able to compute the AUC of the precision-recall curve, which you can use to compare the performance of various models.
+ To illustrate this, assume there are 10 positive examples and 1000 negative examples. There are 9 True Positives, 1 False Negative, 100 False Positives and 900 True Negatives. The TPR is 0.9 while the FPR is 0.1. Since the TPR is high and the FPR is low, the AUC is likely high. This does not mean that the model is good, as the model’s precision is relatively low. In such a scenario, it is preferable to look at the precision recall curve which plots the precision and recall across all thresholds. Likewise, you are also able to compute the AUC of the precision-recall curve, which you can use to compare the performance of various models.
 
 <br/>
 
 ## Multi-class datasets
+
+![Multi-class dataset metrics](../assets/images/diagrams/multi-class-metrics.png)
 
 In multi-class classification, the first evaluation metric you may want to consider is an N $\times$ N confusion matrix. An example of which is shown below.
 
@@ -59,8 +65,8 @@ On the other hand, if it is acceptable to treat each class’s importance based 
 
 <br/>
 
-## Multi-labels datasets
-For multi label problems, you can extend the binary classification metrics by computing each metric per class. This is no different from a binary classification problem. For example, you can compute precision, recall, F1, confusion matrix for each of the classes in a one vs rest approach.  Once you have obtained each class’s metrics, you can compute the averages across all classes with the same averaging techniques as covered for multi-class problems: micro, macro, weighted averaging. Note that for multi-label problems, the micro-averaged F1 score is not the same as accuracy.
+## Multi-label datasets
+For multi-label problems, you can extend the binary classification metrics by computing each metric per class. This is no different from a binary classification problem. For example, you can compute precision, recall, F1, confusion matrix for each of the classes in a one vs rest approach.  Once you have obtained each class’s metrics, you can compute the averages across all classes with the same averaging techniques as covered for multi-class problems: micro, macro, weighted averaging. Note that for multi-label problems, the micro-averaged F1 score is not the same as accuracy.
 
 <br/>
 
