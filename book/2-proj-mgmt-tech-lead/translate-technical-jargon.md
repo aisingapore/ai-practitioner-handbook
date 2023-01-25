@@ -1,4 +1,4 @@
-# How might we simplify and translate technical jargon for a non-technical audience?
+# How might we simplify and translate technical jargon?
 Contributor: Shafir Ahmad, Senior AI Technical Consultant
 
 ---

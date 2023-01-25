@@ -15,7 +15,8 @@ chapters:
 # ===== 2. Project Management & Technical Leadership ========================================
 - file: book/2-proj-mgmt-tech-lead/overview
   sections:
-  - file: book/2-proj-mgmt-tech-lead/cultivate-ai-team
+  - file: book/2-proj-mgmt-tech-lead/effective-ai-team
+  - file: book/2-proj-mgmt-tech-lead/cohesive-ai-team
   - file: book/2-proj-mgmt-tech-lead/principles.md
   - file: book/2-proj-mgmt-tech-lead/translate-technical-jargon
   # - file: 
@@ -35,6 +36,7 @@ chapters:
   sections:
   - file: book/5-data-mgmt-exp-proc/data-mgmt
   - file: book/5-data-mgmt-exp-proc/eda-generic
+  - file: book/5-data-mgmt-exp-proc/eda-cv-tasks
   - file: book/5-data-mgmt-exp-proc/data-splits
   - file: book/5-data-mgmt-exp-proc/data-splits-repeatable
   - file: book/5-data-mgmt-exp-proc/data-splits-bias-fairness-leakage
@@ -48,7 +50,9 @@ chapters:
   - file: book/6-modelling/optimising-and-satisficing
   - file: book/6-modelling/model-reproducibility
   - file: book/6-modelling/ml-risks-and-robustness
-  - file: book/6-modelling/nlp-metrics
+  - file: book/6-modelling/classification-metrics-guidelines
+  - file: book/6-modelling/cv-metrics
+  - file: book/6-modelling/ner-metrics
   - file: book/6-modelling/evaluating-timeseries
   - file: book/6-modelling/post-hoc-explanation
 # ===== 7. Solution Delivery ========================================
@@ -71,4 +75,4 @@ chapters:
   - file: REVIEWING
 - file: book/cite
   title: Cite This Book
-- file: book/_changelog
+- file: book/feedback

@@ -1,4 +1,4 @@
-# What are the processes involved in building a basic end-to-end workflow?
+# How do I build a basic end-to-end workflow?
 
 Contributor(s): Syakyr Surani, Platforms Engineer & Ryzal Kamis, Assistant Head (MLOps)
 
