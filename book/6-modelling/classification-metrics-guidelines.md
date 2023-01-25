@@ -9,8 +9,6 @@ The common classification evaluation metrics includes accuracy, confusion matrix
 
 This chapter will not elaborate on the definitions of the above mentioned evaluation metrics, as there are numerous resources available for this topic. Instead, this chapter will introduce best practices regarding the selection of classification metrics. This will serve as an extension of the previous chapter [What are some internal and external considerations when selecting evaluation metrics](optimising-and-satisficing.md), and the concepts discussed here can extend through various domains, be it Natural Language Processing, Computer Vision, etc.
 
-<br/>
-
 ## Imbalanced datasets
 While accuracy is the most common classification metrics, it can be misleading for imbalanced datasets. For example, consider a fraud detection problem where only 5% of the labels are fraudulent. If the model predicts every example to be non fraudulent, it will achieve an accuracy of 95%, which can be very misleading.
 
@@ -34,8 +32,6 @@ The ROC curve, as well as the AUC score, can be misleading in imbalanced dataset
 
 To illustrate this, assume there are 10 positive examples and 1000 negative examples. There are 9 True Positives, 1 False Negative, 100 False Positives and 900 True Negatives. The TPR is 0.9 while the FPR is 0.1. Since the TPR is high and the FPR is low, the AUC is likely high. This does not mean that the model is good, as the model’s precision is relatively low. In such a scenario, it is preferable to look at the precision recall curve which plots the precision and recall across all thresholds. Likewise, you are also able to compute the AUC of the precision-recall curve, which you can use to compare the performance of various models.
 
-<br/>
-
 ## Multi-class datasets
 
 In multi-class classification, the first evaluation metric you may want to consider is an N $\times$ N confusion matrix. An example of which is shown below.
@@ -57,12 +53,8 @@ The choice of which averaging techniques to use depends on the business objectiv
 
 On the other hand, if it is acceptable to treat each class’s importance based on the class size, you can opt for weighted- or micro-averaging. Do note that for multi-class problems, the micro-averaged F1 score will be the same as the global accuracy.
 
-<br/>
-
 ## Multi-labels datasets
 For multi label problems, you can extend the binary classification metrics by computing each metric per class. This is no different from a binary classification problem. For example, you can compute precision, recall, F1, confusion matrix for each of the classes in a one vs rest approach.  Once you have obtained each class’s metrics, you can compute the averages across all classes with the same averaging techniques as covered for multi-class problems: micro, macro, weighted averaging. Note that for multi-label problems, the micro-averaged F1 score is not the same as accuracy.
-
-<br/>
 
 ## References
 

@@ -23,8 +23,6 @@ There is no single ‘golden’ data splitting proportion. In general, the large
 
 One commonly used rule of thumb will be to adopt a 70-20-10 split for your train, validation and test sets respectively. Ultimately, you should prioritise selecting a ratio catered to your needs.
 
-<br/>
-
 ## 2. Cross-validation
 A single, static validation set could potentially present a biased assessment of model performance. This is particularly the case with smaller datasets where favourable validation performance may arise by chance. 
 
@@ -36,8 +34,6 @@ An illustration of this is as follows.
 Source: [Cross-validation (statistics)](2880px-K-fold_cross_validation_EN.svg.png)
 
 To obtain the final evaluation result, you can take the average of all splits’ test set results. If you are satisfied with this result, you can train the final “champion” model by fitting the model to the entire dataset. This will be the model used for inference.
-
-<br/>
 
 ## 3. Nested cross-validation
 While cross-validation reduces the amount of overfitting as compared to the use of a static train test split, it does not reduce it completely. This is because the same score is used to select the best model and to evaluate the model.
@@ -85,8 +81,6 @@ The drawback of the nested cross-validation approach is that the training time w
 
 **Tip**: In cases of extremely small datasets, you could consider _nested cross-validation_ to maximise the usage of the whole dataset for training, validation and testing.
 
-<br/>
-
 ## 4. Stratified Split
 For datasets with unbalanced distribution of targets and/or features, you may want to consider stratified splitting. Stratified splitting aims to split your dataset, while maintaining similar proportions of any desired features/targets across your train, validation and test sets. 
 
@@ -95,8 +89,6 @@ An example of a dataset with features that are skewed in their distribution will
 An example of a dataset with imbalanced targets will be a fraud detection dataset, where fraudulent examples are typically the minority. In this case, you will stratify the dataset based on the target.
 
 In general, the larger the dataset, the less likely features and targets will be unevenly distributed across the sets. You should still check your dataset for any uneven distribution in features and targets.
-
-<br/>
 
 ## 5. Temporal Split
 When you are dealing with problems related to forecasting future values, you may want to consider temporal splitting. As an example, assume you have data from January to April. You may want to set aside data from January to February for your training dataset, March for your validation dataset, and April for your test dataset.
@@ -119,8 +111,6 @@ Source: [Cross Validation in Time Series](https://miro.medium.com/max/1204/1*qvd
 The steps to obtain the final evaluation results are the same as cross validation. You will likewise obtain the final result by taking the average of all k splits’ tests results.
 
 Similarly, when you are satisfied with the results, you can train the final “champion” model by fitting the model to the entire dataset.
-
-<br/>
 
 ## References
 
