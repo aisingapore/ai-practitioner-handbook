@@ -9,27 +9,27 @@ The purpose of this article is to have a guide to performing exploratory analysi
 ## Overview
 Most EDA activities should contain these blocks:
 
-### 1. Structure investigation
+### Structure investigation
 
 This section should contains the most basic checks on the overall completeness of and level of information in the dataset. These include checking the data size and type, as well as granularity/cardinality of each table. It should also examine if the data contains any private or sensitive data.  
 
-### 2. Content investigation
+### Content investigation
 
 This section looks into the quality, distribution and relationships in the dataset, and need not be in this particular order.
 
-#### 2a. Quality checks
+#### Quality checks
 
 This sub-section should cover aspects of data quality such as missing and erroneous values. The main aim is to identify potential data to drop, repair or impute.
 
-#### 2b. Distribution checks
+#### Distribution checks
 
 This sub-section should cover the understanding of each individual feature. The main aim is to find out the chracteristics of each feature, and also to uncover trends or patterns in the data.
 
-#### 2c. Relationship checks
+#### Relationship checks
 
 This sub-section should cover more in-depth analyses such as bivariate relationships between features, and between features and target. The main aim is to generate ideas for feature engineering and selection based on observed relationships.
 
-## 1. Structure investigation
+## Structure investigation
 
 This section should be short (about less than 10 notebook cells), as it only aims to gain some insights on the size and datatype of the data. This sections does not go into the content of each variable/feature. 
 
@@ -45,9 +45,9 @@ Expected ouputs of structure investigation:
 - Datatype of features, which features are numeric/continuous, or categorical
 - (Optional) Further discussion with stakeholders on handling private/sensitive data and duplicate rows
 
-## 2. Content investigation
+## Content investigation
 
-### 2a. Quality checks
+### Quality checks
 
 This sub-section should cover matters relating to data cleaning and imputation. If there are too many missing values, consider dropping the column. However if dropping is not an option, a more sophisticated method for imputing the missing value is to use the other avaiable features to predict the value of that particular column (model-based imputation/multiple imputation). 
 
@@ -63,7 +63,7 @@ Expected ouputs:
 - Cleaned version of data ready for plotting charts
 - Identify data/column(s) that requires preprocessing in the datapipeline
 
-### 2b. Distribution checks
+### Distribution checks
 
 This sub-section should cover the generation of distribution and summary statistics. Understanding properties like central tendency (mean), spread (variance) and skewness help you to spot erroneous values and potential outliers easily.
 
@@ -86,7 +86,7 @@ Expected ouputs:
 - Summary of the findings
 - Potential feature characteristics that can be used for feature transformation in the data pipeline
 
-### 2c. Relationship checks
+### Relationship checks
 
 This section aims to find out the relationship between feature and target so as to generate ideas for feature engineering and selection (feature importance). The goal is to identify correlated features or categories. Correlated features distort interpretability and feature importance. As such, it is worth exploring dropping or merging collinear features based on domain knowledge. 
 

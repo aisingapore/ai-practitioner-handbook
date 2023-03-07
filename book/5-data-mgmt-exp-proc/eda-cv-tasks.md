@@ -89,6 +89,7 @@ To explore this for all classes, we can firstly average the colour intensity of 
 Secondly, countplot of the average colour intensity values could be generated. The image below shows the counts of each annotation with the average values of the red channels separated by classes. In this case, there are three classes, with one of the class having very spread out red channel intensity, and the other two classes having colour intensity being normally distributed.
 
 ![title](../assets/images/screenshots/BBox_HW_by_class.png)  
+
 Example of a Height-Width comparison among bboxes separated by class.  
 
 ### Mode Intensity per channel    
@@ -119,19 +120,25 @@ This was a short survey of some of the areas in which the AI Engineer can begin 
 ## References
 
 Perceptual Hashing - https://www.phash.org/  
+
 VOC annotation guide - http://host.robots.ox.ac.uk/pascal/VOC/voc2011/guidelines.html  
+cd 
 The Scientist and Engineer's Guide to Digital Signal Processing - https://www.dspguide.com/ch23/5.htm  
 
 ### Further EDA readings
 
-Histogram - 
+Histograms:
 
-https://homepages.inf.ed.ac.uk/rbf/HIPR2/histgram.htm
-http://web.cs.wpi.edu/~emmanuel/courses/cs545/S14/slides/lecture02.pdf
-https://www.allaboutcircuits.com/technical-articles/image-histogram-characteristics-machine-learning-image-processing/
+https://homepages.inf.ed.ac.uk/rbf/HIPR2/histgram.htm  
 
-Anchor Boxes - 
-https://d2l.ai/chapter_computer-vision/anchor.html
+http://web.cs.wpi.edu/~emmanuel/courses/cs545/S14/slides/lecture02.pdf  
 
-Other Data Exploration Ideas -   
+https://www.allaboutcircuits.com/technical-articles/image-histogram-characteristics-machine-learning-image-processing/  
+
+Anchor Boxes:
+
+https://d2l.ai/chapter_computer-vision/anchor.html  
+
+Other Data Exploration Ideas:
+
 https://neptune.ai/blog/data-exploration-for-image-segmentation-and-object-detection

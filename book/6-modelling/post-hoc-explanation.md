@@ -40,15 +40,21 @@ Global model-agnostic methods describe how input features affect the output pred
 Examples:
     
 1. Permutation feature importance: measures the importance of a feature as an increase in loss when the feature is permuted.
+
 ![importance](../assets/images/diagrams/importance.png)
+
 *[[Source]](https://docs.oracle.com/en-us/iaas/tools/ads-sdk/latest/user_guide/mlx/permutation_importance.html#:~:text=Feature%20permutation%20importance%20measures%20the,to%20measure%20the%20prediction%20error.) In the Titanic dataset, passenger gender is the most important feature to survival outcome, and about twice as important as passenger class and age.*
 
 2. SHAP (SHapley Additive exPlanations): globally estimates the contribution of every input feature with a combination of high/low and positive/negative Shapley value(s). Useful for sense-checking feature-target relationship.
+
 ![shapley_global](../assets/images/diagrams/shapley_global.png)
+
 *[[Source]](https://www.analyticsvidhya.com/blog/2019/11/shapley-value-machine-learning-interpretability-game-theory/) Summary plot of feature importance and feature effects, where each dot represents an instance per feature.*
 
 3. Partial Dependence Plot (PDP): shows the marginal impact that one or two features have on the predictions. Useful to deep dive and understand the direction of the relationship between specific feature(s) and the target, although limited to easy visualisation of maximum two features.
+
 ![pdp](../assets/images/diagrams/pdp.jpeg)
+
 *[[Source]](https://christophm.github.io/interpretable-ml-book/pdp.html) PDP of cancer probability VS the interaction of age and number of pregnancies. The plot shows the increase in cancer probability at 45. For ages below 25, women who had 1 or 2 pregnancies have a lower predicted cancer risk, compared to women who had 0 or more than 2 pregnancies. Caution: These relationships should not be interpreted causally.*
 
 ### B. Explaining learned representations inside a neural network
@@ -62,6 +68,7 @@ Examples:
     A model can learn - with increasing complexity across the network layers - the various edges, textures, patterns, parts, and eventually objects in images. Assessing these network layers helps you understand the features learned (or missed).
 
     ![features](../assets/images/diagrams/features.png)
+    
     *[[Source]](https://distill.pub/2017/feature-visualization/)*
 
     Similarly, models can learn features from text or tabular data.
@@ -70,6 +77,7 @@ Examples:
 
     Saliency maps provide another visualisation using ranked coloured pixels to indicate their contribution to the model prediction.
     ![saliency_map](../assets/images/diagrams/saliency_map.png)
+
     *[[Source]](https://usmanr149.github.io/urmlblog/cnn/2020/05/01/Salincy-Maps.html) Input image (left) and corresponding saliency map (right).*
 
 ## References

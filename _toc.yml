@@ -67,12 +67,5 @@ chapters:
   - file: book/8-documentation-handover/documenting-architecture-processes
   # - file: 
 # ===== Miscellaneous ========================================
-- file: book/_contributing
-  title: How To Contribute
-  sections:
-  - file: book/markdown-template
-  - file: book/notebook-template
-  - file: REVIEWING
 - file: book/cite
   title: Cite This Book
-- file: book/feedback

@@ -1,4 +1,4 @@
-# 1. Pre-project Phase
+# Pre-project Phase
 
 ## Overview
 

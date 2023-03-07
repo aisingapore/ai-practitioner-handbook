@@ -19,6 +19,7 @@ However, these evaluation metrics might not be adequate to fairly assess time-se
 Consider the following anomaly detection example:
 
 ![Groundtruth and Detected graph](../assets/images/diagrams/groundtruth-and-detected.png)  
+
 [Image credit](https://medium.com/mit-data-to-ai-lab/time-series-anomaly-detection-in-the-era-of-deep-learning-64b9d2cff6eb)
 
 Here we have 3 ground truth anomalies, and 2 predicted anomalies.
@@ -26,6 +27,7 @@ Here we have 3 ground truth anomalies, and 2 predicted anomalies.
 In this approach, we will view timepoints as segments. In the graph below, there are 7 segments, which consist of 2 True Positives (TP), 1 False Positive (FP), 1 False Negatives (FN) and 3 True Negatives (TN). Note that each segment is equally treated as a single instance regardless of its length. This prevents excessive emphasis on long segments.
 
 ![Time Segment graph](../assets/images/diagrams/time-segmented-graph.png)  
+
 [Image credit](https://medium.com/mit-data-to-ai-lab/time-series-anomaly-detection-in-the-era-of-deep-learning-64b9d2cff6eb)
     
 ## Overlapping segment
@@ -33,6 +35,7 @@ In this approach, we will view timepoints as segments. In the graph below, there
 Another way would be to view any “overlapping” predictions between the ground truth and predictions as 1 continuous True Positive.
 
 ![Overlapped Segment graph](../assets/images/diagrams/overlapped-segment-graph.png)  
+
 [Image credit](https://medium.com/mit-data-to-ai-lab/time-series-anomaly-detection-in-the-era-of-deep-learning-64b9d2cff6eb)
 
 Taking the above diagram as an example, we can see that there are 2 True Positives. Unlike the earlier approach, no False Positives are recorded here as the relevant ground truth and predicted segments are overlapping. This approach is more lenient, and it rewards the model for *any* successful detection of anomalies.

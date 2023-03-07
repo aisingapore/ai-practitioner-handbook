@@ -1,4 +1,4 @@
-# 5. Data Management, Exploration & Processing
+# Data Management, Exploration & Processing
 
 ## Overview
 

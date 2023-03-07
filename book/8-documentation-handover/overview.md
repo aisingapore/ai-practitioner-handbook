@@ -1,4 +1,4 @@
-# 8. Documentation & Handover
+# Documentation & Handover
 
 ## Overview
 

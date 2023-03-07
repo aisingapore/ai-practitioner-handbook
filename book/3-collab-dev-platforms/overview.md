@@ -1,4 +1,4 @@
-# 3. Collaborative Development Platforms
+# Collaborative Development Platforms
 
 ## Overview
 

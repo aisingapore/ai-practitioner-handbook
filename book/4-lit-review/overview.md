@@ -1,4 +1,4 @@
-# 4. Literature Review
+# Literature Review
 
 ## Overview
 

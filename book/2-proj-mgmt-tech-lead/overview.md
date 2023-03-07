@@ -1,4 +1,4 @@
-# 2. Project Management & Technical Leadership
+# Project Management & Technical Leadership
 
 ## Overview
 
