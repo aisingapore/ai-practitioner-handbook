@@ -41,7 +41,7 @@ Our AI Engineers come from diverse academic disciplines and industry experience.
 
 ## Conclusion
 
-Since 2017, we have engaged more than 600 companies, approved more than 100 projects and completed more than 50 of these AI projects under the 100E programme, and trained more than 200 AI Apprentices.
+Since 2017, we have engaged more than 600 companies, approved more than 90 projects and completed more than 60 of these AI projects under the 100E programme, and trained more than 200 AI Apprentices.
 
 ![Diverse AI projects approved and delivered](assets/images/diagrams/diverse_ai_projects.png)
 
