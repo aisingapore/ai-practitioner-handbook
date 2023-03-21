@@ -41,7 +41,7 @@ Our AI Engineers come from diverse academic disciplines and industry experience.
 
 ## Conclusion
 
-Since 2017, we have engaged more than 600 companies, approved more than 100 projects and completed more than 50 of these AI projects under the 100E programme, and trained more than 200 AI Apprentices.
+Since 2017, we have engaged more than 600 companies, approved more than 100[^3] projects and completed more than 60 of these AI projects under the 100E programme, and trained more than 250 AI Apprentices.
 
 ![Diverse AI projects approved and delivered](assets/images/diagrams/diverse_ai_projects.png)
 
@@ -57,3 +57,4 @@ Laurence Liew, Director (AI Innovation)
 
 [^1]: AI Singapore and other Singapore agencies have other programmes which assist companies that are AI Unaware and AI Aware.  
 [^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://epoch.aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)
+[^3]: Information to date
