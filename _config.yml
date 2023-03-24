@@ -3,7 +3,7 @@
 #######################################################################################
 # Book settings
 title: AI Practitioner Handbook
-author: Edited by Kenny WJ Chua, Ryzal Kamis, Sivash Sakhavi, Anand Natarajan, Kevin Oh, Najib Ninaba, Kim Hock Ng and Laurence Liew
+author: Edited by Kenny WJ Chua, Ryzal Kamis, Siavash Sakhavi, Anand Natarajan, Kevin Oh, Najib Ninaba, Kim Hock Ng and Laurence Liew
 logo: "book/assets/images/logos/AISG(R) Horizontal Logo CMYK Full Colour.png"
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: [CHANGELOG.md, CODE_OF_CONDUCT.md, CONTRIBUTING.md, README.md]
