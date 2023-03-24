@@ -55,6 +55,18 @@ Laurence Liew, Director (AI Innovation)
 
 ---
 
+# What Our Reviewers Say
+
+"*Whether your role in an AI project is that of a technical lead, AI model implementor, data manager, domain or business function expert, or business-side project manager, this handbook will accelerate your learning curve for understanding the end-to-end aspects of the AI project.*"  
+- [Steven Miller](https://www.linkedin.com/in/iamstevenmiller/), Professor Emeritus of Information Systems, Singapore Management University and co-author of [*Working with AI*](https://mitpress.mit.edu/9780262047241/working-with-ai/), MIT Press
+
+"*This is a fantastic book because it focuses on an often overlooked aspect of ML education—the actual problems, people and teams you deploy it for. It's a great resource for anyone who wants to successfully put the theory of ML into practice. BAM!*"  
+-[ Josh Starmer](https://www.linkedin.com/in/joshua-starmer-phd/), Founder and CEO at [StatQuest](https://statquest.org/)
+
+“*AISG’s release of the AI Practitioner Handbook as a practical and credible guide to accelerate the learning curve of incoming AI scientists and engineers is a generous service to Singapore’s growing AI community.*”  
+- [Jason Tamara Widjaja](https://www.linkedin.com/in/jasontamarawidjaja/), Global AI Lead at a multinational biopharmaceutical company
+
+
 [^1]: AI Singapore and other Singapore agencies have other programmes which assist companies that are AI Unaware and AI Aware.  
 [^2]: Who are the AI Apprentices? See [How Did AI Singapore Build a “200” Strong All-Singaporean AI Engineering Team With the Blue Ocean Strategy?](https://epoch.aisingapore.org/2021/04/how-did-ai-singapore-build-a-200-strong-ai-engineering-team-with-the-blue-ocean-strategy/)
 [^3]: Information to date
